@@ -165,7 +165,7 @@ header {
 }
 
 #home {
-  background-image: url("assets/first.jpg");
+  background-image: url("./images/first.jpg");
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100vh;

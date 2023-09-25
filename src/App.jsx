@@ -83,7 +83,6 @@ export default function App() {
           >
             <div className="navbar-brand">
               <Logo />
-
               <button
                 onClick={() => setOpen((v) => !v)}
                 className={`navbar-burger burger link-touch ${
@@ -113,14 +112,6 @@ export default function App() {
         </div>
       </header>
       <div className="has-navbar-fixed-top">
-        {/* <SEO
-          title="Landing page"
-          description="4Space is a multi-award winning interior design and architecture firm in Dubai. We work with local residents and global companies to create beautiful spaces."
-          keywords="4Space, 4Space Interior Design, 4Space Interior Design Dubai, 4Space Interior Design UAE, 4Space Interior Design Company, 4Space Interior Design Company Dubai, 4Space Interior Design Company UAE, 4Space Interior Design Company in Dubai, 4Space Interior Design Company in UAE, 4Space Interior Design Company in Dubai UAE, 4Space Interior Design Company in UAE Dubai, 4Space Interior Design Company in Dubai UAE, 4Space Interior Design Company in UAE Dubai, 4Space Interior Design Company in Dubai UAE, 4Space Interior Design Company in UAE Dubai, 4Space Interior Design Company in Dubai UAE, 4Space Interior Design Company in UAE Dubai, 4Space Interior Design Company in Dubai UAE, 4Space Interior Design Company in UAE Dubai, 4Space Interior Design Company in Dubai UAE, 4Space Interior Design Company in UAE Dubai, 4Space Interior Design Company in Dubai UAE, 4Space Interior Design Company in UAE Dubai"
-          lang={"en"}
-          pathname={"/landing"}
-          translated
-        /> */}
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           <Form />
