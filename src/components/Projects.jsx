@@ -1,11 +1,12 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation } from "swiper/modules";
+import { Pagination, Navigation, Zoom } from "swiper/modules";
 
 import "swiper/css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/zoom";
 
 const LandingProjects = () => {
   return (
@@ -19,7 +20,9 @@ const LandingProjects = () => {
                 <Swiper
                   spaceBetween={50}
                   slidesPerView={1}
-                  modules={[Pagination, Navigation]}
+                  modules={[Pagination, Navigation, Zoom]}
+                  lazy={true}
+                  zoom={true}
                   pagination={{
                     dynamicBullets: true,
                   }}
