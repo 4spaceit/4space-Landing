@@ -1,0 +1,97 @@
+.project-page, .post-page{
+  //max-width: 600px;
+  margin: auto;
+
+  h1{
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 1rem;
+    color:$white-ter;
+  }
+
+  .page-content{
+    .aligncenter {
+      margin: auto;
+    }
+  }
+
+  .gatsby-image-wrapper{
+    margin: 0 0 1.5rem 0;
+    @include from($desktop) {
+      margin: 0 0 3rem 0;
+    }
+  }
+
+  p {
+    margin: 0 0 2rem 0;
+    font-size: 1.25rem;
+    line-height: 1.7;
+  }
+}
+
+ .post-page{
+   max-width: 800px;
+   margin: auto;
+
+   h1{
+     font-size: 3rem;
+     font-weight: 800;
+     line-height: 1.1;
+   }
+
+   .post-image{
+     margin-bottom: 1rem;
+   }
+
+  .page-content figure{
+    width: 100% !important;
+    margin-bottom: 1rem;
+  }
+
+  .wp-video {
+    width: 100% !important;
+  }
+
+    .inline-gatsby-image-wrapper {
+       //width: 100% !important;
+   }
+
+   .tags {
+     text-transform: capitalize;
+   }
+
+ }
+
+ .services{
+   h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1em;
+    font-weight: 300;
+  }
+ }
+
+.project-page{
+  h1{
+    display: inline-block;
+
+  }
+
+  .back-icon{
+    margin-right: .5rem;
+    margin-bottom: -.25rem;
+    display: none;
+  }
+
+  .gallery{
+    display: none;
+  }
+  // p {
+  //   @include from($desktop) {
+  //     font-size: 1.125rem;
+  //   }
+  // }
+}
+
+.portfolioCategoryContent{
+  h1,h2,h3,h4,h5,h6 {color: #e8e8e8;}
+}

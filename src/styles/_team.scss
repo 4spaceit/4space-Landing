@@ -1,0 +1,51 @@
+.team.list {
+
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .list-item {
+    flex-basis: calc( 50% - .75rem );
+    margin-bottom: 3rem;
+
+    @include from($desktop){
+      flex-basis: calc(33% - 1.5rem);
+    }
+
+  }
+
+  h2 {
+    position: relative;
+    max-height: calc(1rem * 1.5 * 2);
+    overflow: hidden;
+    margin-top: 1rem;
+
+    margin-bottom: 0.125rem;
+    font-size: 1.125rem;
+    font-weight: 400;
+    color: $grey-lighter;
+
+    @include from($desktop){
+      // font-size: 1.125rem;
+      // max-height: calc(1.125rem * 1.5 * 2);
+    }
+  }
+
+  h3 {
+    position: relative;
+    max-height: calc(1rem * 1.5 * 2);
+    overflow: hidden;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: .75rem;
+    text-transform: uppercase;
+    color: $grey;
+    letter-spacing: .5px;
+
+    @include from($desktop){
+      // font-size: 1.125rem;
+      // max-height: calc(1.125rem * 1.5 * 2);
+    }
+  }
+}

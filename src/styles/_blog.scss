@@ -1,0 +1,133 @@
+.blog-page{
+  //max-width: 900px;
+  margin: auto;
+
+  h1 {
+      font-size: 2rem;
+      text-align: center;
+      padding: 0 0 3rem 0;
+      font-weight: 300;
+  }
+
+  .post{
+
+    //box-shadow: hsl(0deg 0% 100% / 12%) 0px 3px 8px;
+
+    .gatsby-image-wrapper{
+      //margin-bottom: 2rem;
+      //box-shadow: hsla(0, 0%, 100%, .15) 2px 2px 8px 0px;
+      //filter: sepia(.4) saturate(1.2);
+      //border-radius: 0;
+      //transition: all .25s ease;
+
+      //filter: sepia(0);
+
+      &:hover{
+        //filter: sepia(1);
+      }
+    }
+
+
+
+    .post-text {
+      max-width: 600px;
+      margin: 0 auto 1rem;
+      display: none;
+    }
+
+    h2{
+      font-size: 1.5rem;
+      font-weight: 300;
+      margin-bottom: 0rem;
+      font-size: 1rem;
+      font-weight: bolder;
+      line-height: 1.1;
+      text-align: center;
+      margin-top: 0.75rem;
+      display: none;
+      a {
+        //color:$white-bis;
+      }
+    }
+
+
+
+    .category{
+      //margin-bottom: .5rem;
+      color: $info;
+    }
+
+    .post-excerpt {
+      margin-bottom: 1rem;
+
+      p {
+        font-size: 1.25rem;
+        line-height: 1.7;
+      }
+    }
+
+    .category{
+      //margin-bottom: .5rem;
+      color: $info;
+    }
+
+    .screen-reader-text{
+      display: none;
+    }
+  }
+}
+
+.blog-black.blog-page{
+
+  .post{
+
+    .gatsby-image-wrapper{
+
+      transition: all .2s ease;
+      filter: sepia(1);
+
+      &:hover{
+        filter: sepia(0);
+      }
+    }
+  }
+}
+
+.my-masonry-grid {
+  --masonry: var(--spacing);
+
+  display: -webkit-box; /* Not needed if autoprefixing */
+  display: -ms-flexbox; /* Not needed if autoprefixing */
+  display: flex;
+  margin-left: calc( -1 * var(--masonry)); /* gutter size offset */
+  width: auto;
+
+}
+
+.my-masonry-grid_column {
+  padding-left: var(--masonry); /* gutter size */
+  background-clip: padding-box;
+}
+
+/* Style your items */
+.my-masonry-grid_column > div {
+  /* change div to reference your elements you put in <Masonry> */
+  // background: grey;
+  // margin-bottom: 30px;
+  margin-bottom: var(--masonry);
+}
+
+.awards-blog-page{
+  h3{
+    font-size: 2rem;
+    text-align: center;
+    margin: 0 0 2rem 0;
+    font-weight: 300;
+  }
+
+
+}
+
+.pagination{
+  display: none;
+}

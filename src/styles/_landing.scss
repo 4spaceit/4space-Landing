@@ -1,0 +1,183 @@
+#landing footer {
+  // sticky bottom
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  font-size: 0.75rem;
+  z-index: 100;
+  background-color: hsl(0deg, 0%, 7%);
+}
+
+#landing .our-figures h2 {
+  margin-bottom: 0;
+}
+
+#landing .footer .columns {
+  gap: 2rem;
+}
+#landing #header .navbar .navbar-menu .navbar-item:last-child {
+  margin: 0 0 0 0 !important;
+}
+
+#landing .footer .button:hover,
+.CTA:hover {
+  background: #202021;
+  border-color: #a7a7a7;
+}
+
+#landing .button:hover {
+  background: white;
+  border-color: #a7a7a7;
+}
+
+#landing .footer .level {
+  padding: 0;
+}
+#landing .footer .level .level-left {
+  margin-top: 0;
+  align-self: center;
+}
+#landing .button.buttonOutlined {
+  margin: 1rem 0 2rem 0;
+}
+
+#landing .icon-item {
+  width: 50px;
+}
+
+#landing .right-1-footer {
+  border-right: 2px solid #ffffff;
+}
+
+#landing .right-1-footer,
+#landing .right-2-footer {
+  width: 25%;
+  align-self: center;
+}
+
+#landing .form {
+  width: 30%;
+  float: right;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 10rem;
+}
+
+#landing .swiper-button-prev,
+#landing .swiper-button-next {
+  color: #ffffff;
+}
+
+#landing .swiper-pagination-bullet,
+#landing .swiper-pagination-bullet-active {
+  background: #ffffff;
+  width: 15px;
+  height: 15px;
+}
+
+#landing .swiper-pagination {
+  bottom: 0;
+  background-color: #202021;
+  border-radius: 15px;
+  padding: 5px;
+}
+
+#landing .right-2-footer svg,
+#landing .right-1-footer svg {
+  width: 16px;
+  height: 16px;
+}
+
+#landing .left-footer {
+  width: 50%;
+  background-color: #fff;
+
+  padding: 16px 0px 16px 0px;
+}
+
+#landing .icon-links a {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+  margin: 1rem;
+}
+
+#landing .footer-items {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  z-index: 35;
+  box-shadow: -1px -1px 9px 0 rgb(0 0 0 / 10%);
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#landing footer {
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+#landing p {
+  margin-bottom: 0;
+}
+
+#landing header {
+  padding: 0rem 1.5rem !important;
+}
+
+#landing .cta {
+  position: fixed;
+  background-color: #fff;
+  min-width: 300px;
+  height: auto;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+  white-space: nowrap;
+}
+
+#landing .cta .column {
+  padding: 0.25rem;
+}
+
+#landing #home {
+  background-image: url("../media/landingTest/first.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+}
+
+#landing .mobile-padding {
+  padding: 0 6rem;
+}
+
+#landing nav {
+  box-shadow: 0px 3px 10px 5px rgba(0, 0, 0.5, 0.5);
+}
+
+#landing .title {
+  font-size: 2rem;
+  padding: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-shadow: #202020 1px 0 10px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+#landing #header .navbar .navbar-menu .navbar-item:last-child {
+  margin: 0 0 0 0.5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  #landing .mobile-padding {
+    padding: 0 2rem;
+  }
+  #landing .section {
+    padding: 1rem 1.5rem;
+  }
+}

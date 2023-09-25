@@ -1,0 +1,80 @@
+
+.footer{
+  .level{
+    flex-direction: column-reverse;
+    display: flex;
+    padding: 1rem 0;
+
+    @include from($desktop) {
+      flex-direction: row;
+    }
+
+
+    .level-right {
+      margin-top: 0;
+    }
+
+
+    .level-left{
+      margin-top: 2rem;
+    }
+
+    @include from($desktop) {
+      .level-left, .level-right {
+        margin-top: 0;
+      }
+    }
+  }
+  .icon-links{
+    text-align: right;
+    a {
+      width: 1.4rem;
+      height: 1.4rem;
+      display: inline-block;
+      margin: 1rem;
+      svg {
+       width: 100%;
+       fill: $link;
+      }
+    &:hover svg{
+      fill: $link-hover;
+    }
+    }
+  }
+}
+
+.call-us {
+    font-size: 1.5rem;
+    padding: 1rem 0;
+    text-align: center;
+    line-height: 2;
+
+    .link{
+      white-space: nowrap;
+    }
+}
+
+.widelinks.breadcrumb li{
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.widelinks.breadcrumb li+li:before {
+    color: unset;
+    content: "|";
+}
+
+.breadcrumb a {
+    align-items: center;
+    color: unset;
+    display: flex;
+    justify-content: center;
+    padding: 0px 0.5rem;
+    letter-spacing: 1px;
+}
+
+.level-center {
+  margin-top: 2rem;
+  @include from($desktop) {
+    margin-top: 0;
+  }
+}
