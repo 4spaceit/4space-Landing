@@ -53,24 +53,18 @@ export default function Form() {
         <h1 className="center">Leave a message</h1>
         <div className="field">
           <label className="label">Name</label>
-          <div className="control">
-            <input className="input" type="text" name="name" required />
-          </div>
+          <input className="input" type="text" name="name" required />
         </div>
 
         <div className="field">
           <label className="label">Email</label>
-          <div className="control">
-            <input className="input" type="email" name="email" required />
-          </div>
+          <input className="input" type="email" name="email" required />
           {/*<p className="help is-danger">This email is invalid</p>*/}
         </div>
 
         <div className="field">
           <label className="label">Mobile</label>
-          <div className="control">
-            <input className="input" type="text" name="mobile" />
-          </div>
+          <input className="input" type="text" name="mobile" />
         </div>
 
         {error && (

@@ -1,10 +1,15 @@
-
-p , h2 {
+p,
+h2 {
   margin: 0;
   margin-bottom: 0;
 }
 
-.page h1, .page h2, .page h3, .page h4, .page h5, .page h6 {
+.page h1,
+.page h2,
+.page h3,
+.page h4,
+.page h5,
+.page h6 {
   margin-bottom: 0;
 }
 
@@ -196,10 +201,10 @@ nav {
   margin: 0 0 0 0.5rem;
 }
 
-.button.is-primary.is-outlined:hover {
-  background: transparent;
-  border-color: #a7a7a7;
-  color: rgb(238, 235, 235);
+.button:hover {
+  background: transparent !important;
+  border-color: #a7a7a7 !important;
+  color: rgb(238, 235, 235) !important;
 }
 
 .navbar-end {
@@ -216,5 +221,8 @@ nav {
   }
   .section {
     padding: 1rem 1.5rem;
+  }
+  .swiper-image {
+    height: 400px;
   }
 }

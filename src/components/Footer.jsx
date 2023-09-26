@@ -16,14 +16,14 @@ export default function Footer() {
           }}
         >
           <svg>
-            <a >
+            <a rel="nofollow">
               <FontAwesomeIcon icon={faEnvelope} />
             </a>
           </svg>
         </div>
         <div className="right-2-footer">
           <svg>
-            <a >
+            <a rel="nofollow">
               <FontAwesomeIcon icon={faPhoneAlt} />
             </a>
           </svg>

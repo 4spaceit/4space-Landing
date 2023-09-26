@@ -29,6 +29,7 @@ export default function Header() {
           <div className={`navbar-menu link-touch ${open ? "is-active" : ""}`}>
             <div className="navbar-end">
               <Link
+                rel="nofollow"
                 to="projects"
                 spy={true}
                 offset={-70}
@@ -39,6 +40,7 @@ export default function Header() {
                 Projects
               </Link>
               <Link
+                rel="nofollow"
                 to="about"
                 spy={true}
                 smooth={true}
@@ -48,6 +50,7 @@ export default function Header() {
                 About
               </Link>
               <Link
+                rel="nofollow"
                 to="awards"
                 spy={true}
                 smooth={true}

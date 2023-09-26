@@ -2,7 +2,7 @@ export default function Awards() {
   return (
     <section className="section awards-grid">
       <div className="container">
-        <h3>Awards</h3>
+        <h1 className="has-text-black has-text-centered">Awards</h1>
 
         <div className="columns is-multiline is-mobile is-6-desktop is-variable grid">
           <div className="column is-half-mobile is-3-tablet">
