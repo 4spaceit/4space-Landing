@@ -130,13 +130,13 @@ export default function App() {
           <div className="left-footer">
             <p className="has-text-black is-size-6"> TALK TO US</p>
           </div>
-          <div className="right-1-footer">
+          <div className="right-1-footer" onClick={() => {
+                  document.getElementById("modal").classList.add("is-active");
+                }}>
             <svg>
               <a
                 href="javascript:void(0);"
-                onClick={() => {
-                  document.getElementById("modal").classList.add("is-active");
-                }}
+                
               >
                 <FontAwesomeIcon icon={faEnvelope} />
               </a>
