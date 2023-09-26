@@ -5,7 +5,7 @@ function Figuers() {
   return (
     <section className="section page our-figures">
       <div className="container">
-        <div className="columns is-multiline is-centered is-8 is-variable">
+        <div className="columns is-multiline is-centered is-8">
           <div className="column is-4">
             <div className=" has-text-centered">
               <h2 className="has-text-white is-size-2"><CountUp end={500} enableScrollSpy={true} scrollSpyOnce={true}  duration={1}/></h2>
