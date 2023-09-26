@@ -52,19 +52,25 @@ export default function Form() {
       <form onSubmit={submit} id="form-dekstop">
         <h1 className="center">Leave a message</h1>
         <div className="field">
-          <label className="label">Name</label>
-          <input className="input" type="text" name="name" required />
+          <label className="label" htmlFor="name" >Name</label>
+          <div className="control">
+            <input className="input" type="text" name="name" id="name" required />
+          </div>
         </div>
 
         <div className="field">
-          <label className="label">Email</label>
-          <input className="input" type="email" name="email" required />
+          <label className="label" htmlFor="email">Email</label>
+          <div className="control">
+            <input className="input" type="email" name="email" id="email" required />
+          </div>
           {/*<p className="help is-danger">This email is invalid</p>*/}
         </div>
 
         <div className="field">
-          <label className="label">Mobile</label>
-          <input className="input" type="text" name="mobile" />
+          <label className="label" htmlFor="mobile">Mobile</label>
+          <div className="control">
+            <input className="input" type="text" id="mobile" name="mobile" />
+          </div>
         </div>
 
         {error && (
