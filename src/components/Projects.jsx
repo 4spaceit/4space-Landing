@@ -1,6 +1,8 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Navigation, Zoom } from "swiper/modules";
+import { Pagination, Navigation } from "swiper/modules";
+import Zoom from "react-medium-image-zoom";
+import "react-medium-image-zoom/dist/styles.css";
 
 import "swiper/css";
 import "swiper/css";
@@ -20,7 +22,7 @@ const LandingProjects = () => {
                 <Swiper
                   spaceBetween={50}
                   slidesPerView={1}
-                  modules={[Pagination, Navigation, Zoom]}
+                  modules={[Pagination, Navigation]}
                   zoom={true}
                   pagination={{
                     dynamicBullets: true,
@@ -28,37 +30,43 @@ const LandingProjects = () => {
                   navigation={true}
                 >
                   <SwiperSlide>
-                    <div className="swiper-image">
-                      <img
-                        alt="Landing Image"
-                        loading="lazy"
-                        width={800}
-                        height={600}
-                        src="assets/1/4SPACE_Aya-01.jpg"
-                      />
-                    </div>
+                    <Zoom>
+                      <div className="swiper-image">
+                        <img
+                          alt="Landing Image"
+                          loading="lazy"
+                          width={800}
+                          height={600}
+                          src="assets/1/4SPACE_Aya-01.jpg"
+                        />
+                      </div>
+                    </Zoom>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="swiper-image">
-                      <img
-                        alt="Landing Image"
-                        loading="lazy"
-                        width={800}
-                        height={600}
-                        src="assets/1/4SPACE_Aya-02.jpg"
-                      />
-                    </div>
+                    <Zoom>
+                      <div className="swiper-image">
+                        <img
+                          alt="Landing Image"
+                          loading="lazy"
+                          width={800}
+                          height={600}
+                          src="assets/1/4SPACE_Aya-02.jpg"
+                        />
+                      </div>
+                    </Zoom>
                   </SwiperSlide>
                   <SwiperSlide>
-                    <div className="swiper-image">
-                      <img
-                        alt="Landing Image"
-                        loading="lazy"
-                        width={800}
-                        height={600}
-                        src="assets/1/4SPACE_Aya-03.jpg"
-                      />
-                    </div>
+                    <Zoom>
+                      <div className="swiper-image">
+                        <img
+                          alt="Landing Image"
+                          loading="lazy"
+                          width={800}
+                          height={600}
+                          src="assets/1/4SPACE_Aya-03.jpg"
+                        />
+                      </div>
+                    </Zoom>
                   </SwiperSlide>
                 </Swiper>
               </div>
@@ -262,6 +270,7 @@ const LandingProjects = () => {
                   navigation={true}
                 >
                   <SwiperSlide>
+                    <Zoom>
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
@@ -270,9 +279,9 @@ const LandingProjects = () => {
                         height={600}
                         src="assets/2/PAPA-01-2.jpg"
                       />
-                    </div>
+                    </div></Zoom>
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide> <Zoom>
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
@@ -281,9 +290,9 @@ const LandingProjects = () => {
                         height={600}
                         src="assets/2/PAPA-02-2.jpg"
                       />
-                    </div>
+                    </div> </Zoom>
                   </SwiperSlide>
-                  <SwiperSlide>
+                  <SwiperSlide> <Zoom>
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
@@ -292,7 +301,7 @@ const LandingProjects = () => {
                         height={600}
                         src="assets/2/PAPA-03-2.jpg"
                       />
-                    </div>
+                    </div> </Zoom>
                   </SwiperSlide>
                 </Swiper>
                 <div className={` pt-6`}>
