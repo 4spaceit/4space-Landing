@@ -1,0 +1,66 @@
+import { useState } from "react";
+import Logo from "../svg/logo_black.svg?react";
+import Menu from "../svg/menu0.svg?react";
+import { Link, animateScroll as scroll } from "react-scroll";
+
+export default function Header() {
+  const [open, setOpen] = useState(false);
+
+  return (
+    <header className=" is-active " id="header">
+      <div className="container ">
+        <nav
+          className="navbar is-fixed-top is-dark py-1 mobile-padding"
+          role="navigation"
+          aria-label="main navigation"
+        >
+          <div className="navbar-brand">
+            <Logo />
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className={`navbar-burger burger link-touch ${
+                open ? "is-active" : ""
+              }`}
+              aria-label="Menu"
+            >
+              <Menu />
+            </button>
+          </div>
+          <div className={`navbar-menu link-touch ${open ? "is-active" : ""}`}>
+            <div className="navbar-end">
+              <Link
+                to="projects"
+                spy={true}
+                offset={-70}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                Projects
+              </Link>
+              <Link
+                to="about"
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                to="awards"
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                Awards
+              </Link>
+              <button className="button is-primary is-outlined ">Project Inquiry</button>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+  );
+}

@@ -12,7 +12,7 @@ const LandingProjects = () => {
   return (
     <>
       <div className="container projects">
-        <h1 className="has-text-centered pb-6">Projects we love</h1>
+        <h1 className="has-text-centered pb-6">OUR EXPERTISE</h1>
         <div>
           <div className="container">
             <div className="columns is-hidden-touch is-multiline">

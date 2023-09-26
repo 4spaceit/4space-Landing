@@ -8,20 +8,20 @@ function Figuers() {
         <div className="columns is-multiline is-centered is-8 is-variable">
           <div className="column is-4">
             <div className=" has-text-centered">
-              <h2 className="has-text-white is-size-2"><CountUp end={15} enableScrollSpy={true}  duration={4}/></h2>
-              <p className="subtitle is-size-5 has-text-white">Years of experince</p>
+              <h2 className="has-text-white is-size-2"><CountUp end={500} enableScrollSpy={true} scrollSpyOnce={true}  duration={1}/></h2>
+              <p className="subtitle is-size-5 has-text-white">Artworks</p>
             </div>
           </div>
           <div className="column is-4">
             <div className="has-text-centered">
-              <h2 className="has-text-white is-size-2">+ <CountUp end={1500} enableScrollSpy={true} duration={4} /></h2>
-              <p className="subtitle is-size-5 has-text-white">Projects</p>
+              <h2 className="has-text-white is-size-2"> <CountUp end={15} enableScrollSpy={true} scrollSpyOnce={true} duration={1} /></h2>
+              <p className="subtitle is-size-5 has-text-white">15 Satisfied Clients</p>
             </div>
           </div>
           <div className="column is-4">
             <div className=" has-text-centered">
-              <h2 className="has-text-white is-size-2"><CountUp end={100} enableScrollSpy={true} duration={4} /></h2>
-              <p className="subtitle is-size-5 has-text-white">Awards</p>
+              <h2 className="has-text-white is-size-2"><CountUp end={10} enableScrollSpy={true} scrollSpyOnce={true} duration={1} /></h2>
+              <p className="subtitle is-size-5 has-text-white">Award-winnings</p>
             </div>
           </div>
         </div>

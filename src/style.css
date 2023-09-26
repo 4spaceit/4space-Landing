@@ -168,7 +168,7 @@ header {
   background-image: url("./images/first.jpg");
   background-position: center;
   background-repeat: no-repeat;
-  min-height: 100vh;
+  min-height: 100dvh;
 }
 
 .mobile-padding {
@@ -191,6 +191,16 @@ nav {
 
 #header .navbar .navbar-menu .navbar-item:last-child {
   margin: 0 0 0 0.5rem;
+}
+
+.button.is-primary.is-outlined:hover {
+  background: transparent;
+  border-color: #a7a7a7;
+  color: rgb(238, 235, 235);
+}
+
+.navbar-end {
+  gap: 10px;
 }
 
 @media screen and (max-width: 1024px) {

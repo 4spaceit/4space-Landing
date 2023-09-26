@@ -36,6 +36,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
       if (response.ok) {
         setSuccess(true);
+        document.getElementById("form-modal").hidden = true;
       } else {
         setError(true);
       }
@@ -58,8 +59,8 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
         }}
       ></button>
       <div className="modal-content">
-        <h1 className="center">Talk to Us</h1>
-        <form onSubmit={submit}>
+        <form onSubmit={submit} id="form-modal">
+          <h1 className="center">Talk to Us</h1>
           <div className="field">
             <label className="label">Name</label>
             <div className="control">
@@ -88,12 +89,6 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           )}
 
-          {success && (
-            <div className="notification is-success">
-              Thanks!, we will get back to you soon.
-            </div>
-          )}
-
           <div className="field is-grouped is-align-items-flex-end">
             <div className="control">
               <button
@@ -107,6 +102,11 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
         </form>
+        {success && (
+          <div className="notification is-success">
+            Thanks!, we will get back to you soon.
+          </div>
+        )}
       </div>
     </div>
   );

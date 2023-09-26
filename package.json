@@ -20,6 +20,7 @@
     "react-countup": "^6.4.2",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
+    "react-scroll": "^1.8.9",
     "sass": "^1.68.0",
     "swiper": "^10.3.0",
     "utm-params-saver": "^1.5.0",

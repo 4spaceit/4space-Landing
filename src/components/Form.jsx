@@ -36,6 +36,7 @@ export default function Form() {
 
       if (response.ok) {
         setSuccess(true);
+        document.getElementById("form-dekstop").hidden = true;
       } else {
         setError(true);
       }
@@ -48,8 +49,8 @@ export default function Form() {
   };
   return (
     <div className="has-background-black form is-hidden-touch">
-      <h1 className="center">Leave a message</h1>
-      <form onSubmit={submit}>
+      <form onSubmit={submit} id="form-dekstop">
+        <h1 className="center">Leave a message</h1>
         <div className="field">
           <label className="label">Name</label>
           <div className="control">
@@ -77,13 +78,6 @@ export default function Form() {
             We couldnt submit the form, can you try again.
           </div>
         )}
-
-        {success && (
-          <div className="notification is-success">
-            Thanks!, we will get back to you soon.
-          </div>
-        )}
-
         <div className="field is-grouped is-align-items-flex-end">
           <div className="control">
             <button
@@ -97,6 +91,11 @@ export default function Form() {
           </div>
         </div>
       </form>
+      {success && (
+        <div className="notification is-success">
+          Thanks!, we will get back to you soon.
+        </div>
+      )}
     </div>
   );
 }

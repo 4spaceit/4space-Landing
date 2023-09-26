@@ -1,4 +1,3 @@
-import React, { useState } from "react";
 import LandingProjects from "./components/Projects";
 import Figuers from "./components/Figuers";
 import InstantQuote from "./components/InstantQuote";
@@ -6,17 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import Form from "./components/Form";
 import Awards from "./components/AwardsLanding";
-
-import Logo from "./svg/logo_black.svg?react";
-import Menu from "./svg/menu0.svg?react";
+import Header from "./components/Header";
 
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
 import "./style.css";
 
 export default function App() {
-  const [open, setOpen] = useState(false);
-
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -74,44 +69,8 @@ export default function App() {
   updateUTMParameters();
   return (
     <>
-      <header className=" is-active " id="header">
-        <div className="container ">
-          <nav
-            className="navbar is-fixed-top is-dark py-3 mobile-padding"
-            role="navigation"
-            aria-label="main navigation"
-          >
-            <div className="navbar-brand">
-              <Logo />
-              <button
-                onClick={() => setOpen((v) => !v)}
-                className={`navbar-burger burger link-touch ${
-                  open ? "is-active" : ""
-                }`}
-                aria-label="Menu"
-              >
-                <Menu />
-              </button>
-            </div>
-            <div
-              className={`navbar-menu link-touch ${open ? "is-active" : ""}`}
-            >
-              <div className="navbar-end">
-                <a href="#projects" className="navbar-item">
-                  Projects
-                </a>
-                <a href="#about" className="navbar-item">
-                  About
-                </a>
-                <a href="#awards" className="navbar-item">
-                  Awards
-                </a>
-              </div>
-            </div>
-          </nav>
-        </div>
-      </header>
-      <div className="has-navbar-fixed-top">
+      <Header />
+      <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           <Form />
@@ -130,14 +89,16 @@ export default function App() {
             <div className="columns is-multiline">
               <div className="column has-text-centered">
                 <p>
-                  4Space is a multi-award winning interior design and
-                  architecture firm in Dubai. We work with local residents and
-                  global companies to create beautiful spaces.
-                </p>
-                <p>
-                  We are a team of architects and interior designers with a
-                  passion to create, driven by attention to detail and a focus
-                  on delivering unique design solutions.
+                  Firas Alsahin and Amjad Hourieh, the founders, relocated their
+                  practice to Dubai to be near the heart of this thriving
+                  market. The emirate's rapid growth in the commercial sector
+                  provided an impetus for the firm to investigate all
+                  opportunities in the design industry. Overcoming an uphill
+                  battle, 4Space Design has gone on to create noteworthy
+                  projects in the UAE. Eschewing quantity for quality, profile
+                  of the project, and relationship with clients, the studio
+                  credits its people’s distinct ideas for strategic business
+                  development.
                 </p>
               </div>
             </div>
@@ -163,7 +124,7 @@ export default function App() {
             </p>
           </div>
         </div>
-      </div>
+      </main>
       <footer className=" has-navbar-fixed-top is-hidden-desktop">
         <div className="footer-items">
           <div className="left-footer">
