@@ -21,7 +21,6 @@ const LandingProjects = () => {
                   spaceBetween={50}
                   slidesPerView={1}
                   modules={[Pagination, Navigation, Zoom]}
-                  lazy={true}
                   zoom={true}
                   pagination={{
                     dynamicBullets: true,
@@ -32,6 +31,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/1/4SPACE_Aya-01.jpg"
@@ -42,6 +42,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/1/4SPACE_Aya-02.jpg"
@@ -52,6 +53,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/1/4SPACE_Aya-03.jpg"
@@ -100,6 +102,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-01-2.jpg"
@@ -110,6 +113,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-02-2.jpg"
@@ -120,6 +124,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-03-2.jpg"
@@ -142,6 +147,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/1/4SPACE_Aya-01.jpg"
@@ -152,6 +158,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/1/4SPACE_Aya-02.jpg"
@@ -162,6 +169,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src=" assets/1/4SPACE_Aya-03.jpg"
@@ -210,6 +218,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-01-2.jpg"
@@ -220,6 +229,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-02-2.jpg"
@@ -230,6 +240,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-03-2.jpg"
@@ -254,6 +265,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-01-2.jpg"
@@ -264,6 +276,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-02-2.jpg"
@@ -274,6 +287,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-03-2.jpg"
@@ -310,6 +324,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-01-2.jpg"
@@ -320,6 +335,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-02-2.jpg"
@@ -330,6 +346,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-03-2.jpg"
@@ -366,6 +383,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-01-2.jpg"
@@ -376,6 +394,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-02-2.jpg"
@@ -386,6 +405,7 @@ const LandingProjects = () => {
                     <div className="swiper-image">
                       <img
                         alt="Landing Image"
+                        loading="lazy"
                         width={800}
                         height={600}
                         src="assets/2/PAPA-03-2.jpg"

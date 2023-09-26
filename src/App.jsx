@@ -1,11 +1,11 @@
 import LandingProjects from "./components/Projects";
 import Figuers from "./components/Figuers";
 import InstantQuote from "./components/InstantQuote";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faEnvelope, faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
 import Form from "./components/Form";
 import Awards from "./components/AwardsLanding";
 import Header from "./components/Header";
+import Footer from "./components/Footer";
+
 
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
@@ -74,6 +74,9 @@ export default function App() {
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           <Form />
+          {/* <h1 className="title is-1 has-text-white">
+            Transforming Spaces <br /><br /> Framing Experiences
+          </h1> */}
         </section>
 
         <div className="container has-text-centered"></div>
@@ -125,32 +128,7 @@ export default function App() {
           </div>
         </div>
       </main>
-      <footer className=" has-navbar-fixed-top is-hidden-desktop">
-        <div className="footer-items">
-          <div className="left-footer">
-            <p className="has-text-black is-size-6"> TALK TO US</p>
-          </div>
-          <div className="right-1-footer" onClick={() => {
-                  document.getElementById("modal").classList.add("is-active");
-                }}>
-            <svg>
-              <a
-                href="javascript:void(0);"
-                
-              >
-                <FontAwesomeIcon icon={faEnvelope} />
-              </a>
-            </svg>
-          </div>
-          <div className="right-2-footer">
-            <svg>
-              <a href="">
-                <FontAwesomeIcon icon={faPhoneAlt} />
-              </a>
-            </svg>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </>
   );
 }

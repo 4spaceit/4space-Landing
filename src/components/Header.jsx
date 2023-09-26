@@ -56,7 +56,9 @@ export default function Header() {
               >
                 Awards
               </Link>
-              <button className="button is-primary is-outlined ">Project Inquiry</button>
+              <button className="button is-primary is-outlined ">
+                Project Inquiry
+              </button>
             </div>
           </div>
         </nav>

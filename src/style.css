@@ -186,6 +186,9 @@ nav {
   text-transform: uppercase;
   text-shadow: #202020 1px 0 10px;
   backdrop-filter: blur(10px);
+  background-clip: text;
+  width: 50%;
+  margin-top: 100px;
   -webkit-backdrop-filter: blur(10px);
 }
 
@@ -204,6 +207,10 @@ nav {
 }
 
 @media screen and (max-width: 1024px) {
+  .title {
+    width: 100%;
+    text-align: center;
+  }
   .mobile-padding {
     padding: 0 2rem;
   }
