@@ -256,6 +256,10 @@ nav {
  -webkit-backdrop-filter: blur(10px);
 }
 
+.is-centered {
+  text-align: center;
+}
+
 @media screen and (max-width: 769px) {
   .title {
     width: 100%;

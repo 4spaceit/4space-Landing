@@ -4,7 +4,7 @@ export default function Awards() {
       <div className="container">
         <h1 className="has-text-black has-text-centered">Awards</h1>
 
-        <div className="columns is-multiline is-mobile is-6-desktop is-variable grid">
+        <div className="columns is-multiline is-mobile is-6-desktop is-variable grid is-centered">
           <div className="column is-half-mobile is-3-tablet">
             <img
               src="/assets/awards/2.png"
