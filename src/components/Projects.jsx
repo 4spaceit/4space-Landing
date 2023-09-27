@@ -5,15 +5,11 @@ import "react-gallery-carousel/dist/index.css";
 import data from "./data.json";
 
 const LandingProjects = () => {
-  const [isMobile, setIsMobile] = useState("");
   const [isHeight, setIsHeight] = useState(500);
 
   useEffect(() => {
     if (window.innerWidth < 768) {
-      setIsMobile(false);
       setIsHeight(300);
-    } else {
-      setIsMobile("topRight");
     }
   }, []);
 
@@ -26,7 +22,9 @@ const LandingProjects = () => {
             <div className="columns is-multiline">
               {data.map((item, index) => (
                 <div
-                  className={`column is-full is-multiline columns ${index % 2 === 1 ? "odd" : ""}`}
+                  className={`column is-full is-multiline columns ${
+                    index % 2 === 1 ? "odd" : ""
+                  }`}
                   key={index}
                 >
                   <div className={`column is-6 is-half`}>
@@ -36,20 +34,24 @@ const LandingProjects = () => {
                       hasThumbnails={false}
                       hasDotButtons={"bottom"}
                       hasIndexBoard={false}
+                      hasm
                       shouldMaximizeOnClick={true}
                       shouldMinimizeOnClick={true}
                       // show size button only on mobile
-                      hasSizeButton={isMobile}
+                      hasSizeButton={false}
                       hasMediaButton={false}
                       objectFit={"cover"}
                     />
                   </div>
-                  <div
-                    className={`column is-6 is-half has-text-centered-touch`}
-                  >
-                    <h2 className="mb-2">{item.client}</h2>
-                    <h2 className="mb-2">{item.place}</h2>
-                    <p className="mb-2 has-text-justified">{item.descr}</p>
+                  <div className={`column is-half has-text-centered-touch`}>
+                    <h2 className="mb-2 is-size-4">{item.client}</h2>
+                    <h2 className="mb-4 is-size-7">{item.place}</h2>
+                    <h2 className="mb-4 is-size-7">
+                      ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
+                    </h2>
+                    <p className="mb-2 has-text-justified is-size-5">
+                      {item.descr}
+                    </p>
                   </div>
                 </div>
               ))}

@@ -188,8 +188,9 @@ header {
 
 ._FP5OY {
   font: var(--fa-font-solid);
-  cursor: "\f002";
-}
+  cursor: url('/src/svg/magnifying-glass-solid.svg'), auto;
+fill: white;}
+  
 
 nav {
   box-shadow: 0px 3px 10px 5px rgba(0, 0, 0.5, 0.5);
