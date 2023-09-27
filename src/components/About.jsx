@@ -16,7 +16,7 @@ export default function About() {
         {/* <div className="about-image column is-full">
           <img src="assets/4SPACE-team.jpg" alt="" />
         </div> */}
-        <div className="container column is-full py-6">
+        <div className="section container column is-full py-6">
           <h1 className="center mb-4">About</h1>
           <div className="columns is-multiline">
             <div className="column has-text-centered">

@@ -262,6 +262,10 @@ nav {
     text-align: center;
   }
 
+  .Para-placeholder {
+    height: 400px;
+  }
+
   .odd {
     display: flex;
     flex-direction: column;

@@ -32,7 +32,7 @@ export default function Header() {
                 rel="nofollow"
                 to="projects"
                 spy={true}
-                offset={-70}
+                offset={-50}
                 smooth={true}
                 className="navbar-item"
                 onClick={() => setOpen(false)}
@@ -42,6 +42,8 @@ export default function Header() {
               <Link
                 rel="nofollow"
                 to="about"
+                offset={-50}
+
                 spy={true}
                 smooth={true}
                 className="navbar-item"
