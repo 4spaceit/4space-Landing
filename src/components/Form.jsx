@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import {useState} from "react";
 import { parseUTMParameters } from "../utmParser";
 
 export default function Form() {
@@ -50,7 +50,7 @@ export default function Form() {
   return (
     <div className="has-background-black form is-hidden-touch">
       <form onSubmit={submit} id="form-dekstop">
-        <h1 className="center">Leave a message</h1>
+        <h1 className="center">Consult Us</h1>
         <div className="field">
           <label className="label" htmlFor="name" >Name</label>
           <div className="control">

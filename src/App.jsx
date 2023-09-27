@@ -6,11 +6,13 @@ import Awards from "./components/AwardsLanding";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-
-
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
 import "./style.css";
+import { Link } from "react-scroll";
+import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import About from "./components/About";
 
 export default function App() {
   function saveUTMParameters() {
@@ -68,6 +70,19 @@ export default function App() {
   saveUTMParameters();
 
   updateUTMParameters();
+
+  addEventListener("scroll", () => {
+    const topButton = document.getElementById("topButton");
+    if (topButton) {
+      if (window.scrollY > 500) {
+        topButton.classList.remove("is-hidden");
+        document.getElementById("formButton").classList.remove("is-invisible");
+      } else {
+        topButton.classList.add("is-hidden");
+        document.getElementById("formButton").classList.add("is-invisible");
+      }
+    }
+  });
   return (
     <>
       <Header />
@@ -75,44 +90,15 @@ export default function App() {
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           <Form />
-          {/* <h1 className="title is-1 has-text-white">
-            Transforming Spaces <br /><br /> Framing Experiences
-          </h1> */}
+          <h1 className="title is-1 has-text-white is-size-3-mobile">
+            Transforming Spaces <br />
+            <br /> Framing Experiences
+          </h1>
         </section>
-
-        <div className="container has-text-centered"></div>
-        <Figuers />
-
-        <section className="section page projects" id="projects">
-          <LandingProjects />
-        </section>
-
-        <section className="section page about" id="about">
-          <div className="container">
-            <h1 className="center">About</h1>
-            <div className="columns is-multiline">
-              <div className="column has-text-centered">
-                <p>
-                  Firas Alsahin and Amjad Hourieh, the founders, relocated their
-                  practice to Dubai to be near the heart of this thriving
-                  market. The emirate's rapid growth in the commercial sector
-                  provided an impetus for the firm to investigate all
-                  opportunities in the design industry. Overcoming an uphill
-                  battle, 4Space Design has gone on to create noteworthy
-                  projects in the UAE. Eschewing quantity for quality, profile
-                  of the project, and relationship with clients, the studio
-                  credits its people’s distinct ideas for strategic business
-                  development.
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
+        <LandingProjects />
+        <About />
         {/* <OurClients /> */}
-        <section className="page awards" id="awards">
-          <Awards />
-        </section>
-
+        <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div className="column ">
             <p className="has-text-black is-size-7 has-text-centered">
@@ -127,6 +113,11 @@ export default function App() {
               Call Us <br /> +971 4 438 5537
             </p>
           </div>
+        </div>
+        <div className="topButton is-hidden" id="topButton">
+          <Link rel="nofollow" to="home" spy={true} smooth={true}>
+            <FontAwesomeIcon icon={faChevronUp} />
+          </Link>
         </div>
       </main>
       <Footer />

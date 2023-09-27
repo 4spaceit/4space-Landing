@@ -59,8 +59,21 @@ export default function Header() {
               >
                 Awards
               </Link>
-              <button className="button is-primary is-outlined ">
-                Project Inquiry
+              <button
+                className="button is-primary is-outlined is-invisible "
+                id="formButton"
+              >
+                <Link
+                  rel="nofollow"
+                  spy={true}
+                  smooth={true}
+                  onClick={() => {
+                    document.getElementById("modal").classList.add("is-active");
+                  }}
+                  
+                >
+                  Project Inquiry
+                </Link>
               </button>
             </div>
           </div>

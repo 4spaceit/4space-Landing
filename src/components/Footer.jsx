@@ -4,6 +4,10 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Footer() {
   return (
+    <>
+    <h1 className="has-text-centered py-2">
+    Copyright © 4SPACE Design
+    </h1>
     <footer className=" has-navbar-fixed-top is-hidden-desktop">
       <div className="footer-items">
         <div className="left-footer">
@@ -30,5 +34,6 @@ export default function Footer() {
         </div>
       </div>
     </footer>
+    </>
   );
 }
