@@ -16,7 +16,7 @@ const LandingProjects = ({data}) => {
   return (
     <section className="section page projects" id="projects">
       <div className="container projects">
-        <h1 className="has-text-centered pb-6">مشاريعنا</h1>
+        <h2 className="has-text-centered py-6 is-size-3">مشاريعنا</h2>
         <div>
           <div className="container">
             <div className="columns is-multiline">
@@ -45,12 +45,10 @@ const LandingProjects = ({data}) => {
                     />
                   </div>
                   <div className={`column is-half has-text-centered-touch`} style={{direction:"rtl"}}>
-                    <h2 className="mb-2 is-size-4">{item.client}</h2>
-                    <h2 className="mb-4 is-size-7">{item.place}</h2>
-                    <h2 className="mb-4 is-size-7">
-                      ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-                    </h2>
-                    <p className="mb-2 has-text-justified is-size-5 has-text-centered-touch">
+                    <h2 className=" is-size-4">{item.client}</h2>
+                    <h2 className="has-text-weight-semibold is-size-5">{item.place}</h2>
+
+                    <p className="mb-2 has-text-right is-size-5 has-text-centered-touch">
                       {item.descr}
                     </p>
                   </div>

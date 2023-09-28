@@ -41,19 +41,43 @@ const LandingProjects = ({ data }) => {
                         shouldMinimizeOnClick={true}
                         // show size button only on mobile
                         hasSizeButton={false}
-                        hasSizeButtonAtMax={true}
                         hasMediaButton={false}
                         objectFit={"cover"}
                         // hasLeftButton={false}
                         // hasRightButton={false}
-                      />
+                      >
+                        <div className="next-button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="1.5em"
+                            fill="#fff"
+                            viewBox="0 0 320 512"
+                          >
+                            <path d="M310.6 233.4c12.5 12.5 12.5 32.8 0 45.3l-192 192c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L242.7 256 73.4 86.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l192 192z" />
+                          </svg>
+                        </div>
+
+                        <div className="prev-button">
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill="#fff"
+                            height="1.5em"
+                            viewBox="0 0 320 512"
+                          >
+                            <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l192 192c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256 246.6 86.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-192 192z" />
+                          </svg>
+                        </div>
+                      </Carousel>
                     </div>
+
                     <div className={`column is-half has-text-centered-touch`}>
-                      <h3 className="has-text-weight-semibold is-size-4">{item.client}</h3>
+                      <h3 className="has-text-weight-semibold is-size-4">
+                        {item.client}
+                      </h3>
                       <h3 className="mb-4 is-size-6 has-text-weight-normal">
                         {item.place}
                       </h3>
-                      
+
                       <p className="mb-2 has-text-left is-size-5 has-text-centered-touch">
                         {item.descr}
                       </p>

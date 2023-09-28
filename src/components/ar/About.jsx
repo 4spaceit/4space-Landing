@@ -17,10 +17,10 @@ export default function About() {
           <img src="assets/4SPACE-team.jpg" alt="" />
         </div> */}
         <div className="section container column is-full py-6">
-          <h1 className="center mb-4">عن 4SPACE</h1>
+          <h1 className="center mb-6">عن 4SPACE</h1>
           <div className="columns is-multiline">
-            <div className="column has-text-centered">
-              <p className="has-text-justified">
+            <div className="column has-text-right">
+              <p className="has-text-right">
               فيراس الساحين وأمجد حورية، المؤسسان، قاما بنقل ممارستهما إلى دبي ليكونوا قرب قلب هذا السوق النابض بالحياة. نمو الإمارة السريع في القطاع التجاري قدم دافعًا للشركة لاستكشاف جميع الفرص في صناعة التصميم. عبر تجاوز معركة صعبة، استطاعت 4Space Design أن تقوم بإنشاء مشاريع ملحوظة في الإمارات العربية المتحدة. ومن خلال التركيز على الجودة بدلاً من الكمية، وتوجه المشروع، والعلاقة مع العملاء، يعزى الاستوديو نجاحه لأفكار فريقه المتميزة في تطوير الأعمال بشكل استراتيجي.
               </p>
             </div>

@@ -51,8 +51,8 @@ export default function Form(props) {
     setLoading(false);
   };
   return (
-    <div className="has-background-black " id={id}>
-      <form className="has-background-black form" onSubmit={submit}>
+    <div className=" mt-3" id={id}>
+      <form className=" form" onSubmit={submit}>
         <h1 className="center">استشرنا</h1>
         <div className="field">
           <label className="label has-text-left" htmlFor="name">
