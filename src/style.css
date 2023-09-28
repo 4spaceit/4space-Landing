@@ -12,7 +12,10 @@ h2 {
 .page h6 {
   margin-bottom: 0;
 }
-
+.head-text {
+  font-weight: bolder!important;
+  text-transform: uppercase;
+}
 h2 {
   font-weight: 900!important;
   font-size: 2rem!important;
@@ -189,7 +192,7 @@ header {
   background-repeat: no-repeat;
   min-height: 100dvh;
 }.Para-placeholder {
-  height: 800px;
+  height: 600px;
 }
 
 .about-image {
@@ -217,7 +220,6 @@ nav {
   text-shadow: #202020 1px 0 10px;
   backdrop-filter: blur(5px);
   background-clip: text;
-  width: 50%;
   margin-top: 100px;
   -webkit-backdrop-filter: blur(5px);
 }

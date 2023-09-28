@@ -90,7 +90,7 @@ export default function App({data}) {
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
           <div className="title is-1 has-text-white is-size-3-mobile">
-            <h1 className="has-text-white has-text-weight-bold ">Transforming Spaces, Framing Experiences</h1>
+            <h1 className="has-text-white has-text-weight-bold head-text">Transforming Spaces, Framing Experiences</h1>
             <p className="mt-4 has-text-weight-normal ">
               We believe that design is more than just aesthetics; it is the
               embodiment of a brand's essence, an expression of its values, and

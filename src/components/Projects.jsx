@@ -48,7 +48,7 @@ const LandingProjects = ({ data }) => {
                       />
                     </div>
                     <div className={`column is-half has-text-centered-touch`}>
-                      <h3 className="mb-2 is-size-4">{item.client}</h3>
+                      <h3 className="has-text-weight-semibold is-size-4">{item.client}</h3>
                       <h3 className="mb-4 is-size-6 has-text-weight-normal">
                         {item.place}
                       </h3>
