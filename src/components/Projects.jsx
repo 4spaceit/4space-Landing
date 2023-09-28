@@ -22,7 +22,7 @@ const LandingProjects = () => {
           <div className="container">
             <div className="columns is-multiline">
               {data.map((item, index) => (
-                <Fade  key={index} direction={index % 2 === 1 ? "left" : "right"}  triggerOnce={true} >
+                <Fade  key={index} direction={index % 2 === 1 ? "left" : "right"}  triggerOnce={true} fraction={0.5} >
                 <div
                   className={`column is-full is-multiline columns ${
                     index % 2 === 1 ? "odd" : ""

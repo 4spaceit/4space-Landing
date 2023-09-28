@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Logo from "../svg/logo_black.svg?react";
 import Menu from "../svg/menu0.svg?react";
-import { Link, animateScroll as scroll } from "react-scroll";
+import { Link } from "react-scroll";
 
 export default function Header() {
   const [open, setOpen] = useState(false);

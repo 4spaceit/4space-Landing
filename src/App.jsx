@@ -1,5 +1,4 @@
 import LandingProjects from "./components/Projects";
-import Figuers from "./components/Figuers";
 import InstantQuote from "./components/InstantQuote";
 import Form from "./components/Form";
 import Awards from "./components/AwardsLanding";
