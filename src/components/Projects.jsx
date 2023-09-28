@@ -17,7 +17,7 @@ const LandingProjects = ({ data }) => {
   return (
     <section className="section page projects" id="projects">
       <div className="container projects">
-        <h2 className="has-text-centered pb-6 is-size-3">OUR EXPERTISE</h2>
+        <h2 className="has-text-centered py-6 is-size-3">OUR EXPERTISE</h2>
         <div>
           <div className="container">
             <div className="columns is-multiline">

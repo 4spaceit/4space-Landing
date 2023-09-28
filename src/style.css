@@ -31,6 +31,14 @@ h2 {
 .figure-fix {
   width: 100%;
     margin: 0;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal {
+  z-index: 120;
 }
 footer {
   position: fixed;
@@ -133,15 +141,15 @@ img {
 
 .right-2-footer svg,
 .right-1-footer svg {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
 .left-footer {
   width: 50%;
   background-color: #fff;
 
-  padding: 16px 0px 16px 0px;
+  padding: 13px 0px 13px 0px;
 }
 
 

@@ -88,16 +88,16 @@ export default function App({ data }) {
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
-          <div className="title is-1 has-text-white is-size-3-mobile">
+          <div className="title is-1 has-text-white is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-weight-bold head-text">
-              Transforming Spaces, Framing Experiences
+              Transforming Spaces, <br/>Framing Experiences
             </h1>
-            <p className="mt-4 has-text-weight-normal ">
+            <p className="mt-4 has-text-weight-normal has-text-left ">
               We believe that design is more than just aesthetics; it is the
               embodiment of a brand's essence, an expression of its values, and
               a catalyst for success.
             </p>
-            <p className="mt-4 has-text-weight-normal">
+            <p className="mt-4 has-text-weight-normal has-text-left">
               With our unwavering commitment to innovation and a passion for
               pushing boundaries, we have positioned ourselves as the go-to
               destination for those seeking truly unique and captivating
@@ -110,7 +110,7 @@ export default function App({ data }) {
         {/* <OurClients /> */}
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
-          <div className="column has-text-centered has-text-weight-bold">
+          <div className="column has-text-centered has-text-weight-bold has-text-black">
             GET IN TOUCH
             <span className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
               Write to 4Space

@@ -62,7 +62,7 @@ export default function Header() {
                 Awards
               </Link>
               <button
-                className="button is-primary is-outlined "
+                className="button is-primary is-outlined is-hidden-touch "
                 id="formButton"
               >
                 <Link

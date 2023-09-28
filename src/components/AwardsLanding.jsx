@@ -5,7 +5,7 @@ export default function Awards() {
     <section className="page awards section awards-grid" id="awards">
       <div className="container">
         <Fade triggerOnce={true} fraction={0.5}>
-          <h2 className="has-text-black has-text-centered mb-6">AWARDS</h2>
+          <h2 className="has-text-black has-text-centered py-6">AWARDS</h2>
           <div className="columns is-multiline is-mobile is-6-desktop is-variable grid is-centered">
             <div className="column is-half-mobile is-3-tablet">
               <img
