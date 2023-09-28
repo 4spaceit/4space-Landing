@@ -20,7 +20,7 @@ export default function About() {
           <h2 className="center mb-6 ">ABOUT</h2>
           <div className="columns is-multiline">
             <div className="column has-text-left">
-              <p className="has-text-justified">
+              <p className="has-text-left">
                 Firas Alsahin and Amjad Hourieh, the founders, relocated their
                 practice to Dubai to be near the heart of this thriving market.
                 The emirate's rapid growth in the commercial sector provided an

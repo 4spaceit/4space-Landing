@@ -31,10 +31,6 @@ h2 {
 .figure-fix {
   width: 100%;
     margin: 0;
-    gap: 2rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .modal {
@@ -338,6 +334,13 @@ nav {
   .title {
     width: 100%;
     text-align: center;
+  }
+
+  .figure-fix {
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
   }
 
   .Para-placeholder {
