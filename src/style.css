@@ -81,7 +81,7 @@ img {
   align-self: center;
 }
 
-.form {
+#form-desktop form {
   width: 320px;
   float: right;
   padding: 20px;
@@ -244,6 +244,25 @@ nav {
 
 .svg-inline--fa {
   width: 2rem;
+}
+
+.about {
+  width: 100%;
+    margin: 0;
+}
+
+#form-footer {
+  margin:  3rem auto;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 600px;
+}
+
+#form-footer form {
+  
+  margin: 0;
+  padding: 2rem;
+  border-radius: 15px;
 }
 
 .odd {

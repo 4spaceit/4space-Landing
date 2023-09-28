@@ -1,10 +1,13 @@
-import {useState} from "react";
+import { useState } from "react";
 import { parseUTMParameters } from "../utmParser";
 
-export default function Form() {
+export default function Form(props) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
+
+  // eslint-disable-next-line react/prop-types
+  const { id } = props;
 
   const utmData = parseUTMParameters();
 
@@ -48,26 +51,43 @@ export default function Form() {
     setLoading(false);
   };
   return (
-    <div className="has-background-black form is-hidden-touch">
-      <form onSubmit={submit} id="form-dekstop">
+    <div className="has-background-black " id={id}>
+      <form className="has-background-black form" onSubmit={submit}>
         <h1 className="center">Consult Us</h1>
         <div className="field">
-          <label className="label" htmlFor="name" >Name</label>
+          <label className="label has-text-left" htmlFor="name">
+            Name
+          </label>
           <div className="control">
-            <input className="input" type="text" name="name" id="name" required />
+            <input
+              className="input"
+              type="text"
+              name="name"
+              id="name"
+              required
+            />
           </div>
         </div>
-
         <div className="field">
-          <label className="label" htmlFor="email">Email</label>
+          <label className="label has-text-left" htmlFor="email">
+            Email
+          </label>
           <div className="control">
-            <input className="input" type="email" name="email" id="email" required />
+            <input
+              className="input"
+              type="email"
+              name="email"
+              id="email"
+              required
+            />
           </div>
           {/*<p className="help is-danger">This email is invalid</p>*/}
         </div>
 
         <div className="field">
-          <label className="label" htmlFor="mobile">Mobile</label>
+          <label className="label has-text-left" htmlFor="mobile">
+            Mobile
+          </label>
           <div className="control">
             <input className="input" type="text" id="mobile" name="mobile" />
           </div>

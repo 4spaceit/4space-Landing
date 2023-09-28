@@ -13,6 +13,7 @@ import { Link } from "react-scroll";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
+import Contact from "./components/Contact";
 
 export default function App() {
   function saveUTMParameters() {
@@ -89,7 +90,7 @@ export default function App() {
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <Form />
+          {/* <Form id="form-desktop" /> */}
           <h1 className="title is-1 has-text-white is-size-3-mobile">
             Transforming Spaces <br />
             <br /> Framing Experiences
@@ -119,6 +120,7 @@ export default function App() {
             <FontAwesomeIcon icon={faChevronUp} />
           </Link>
         </div>
+        <Contact />
       </main>
       <Footer />
     </>

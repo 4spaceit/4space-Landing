@@ -3,6 +3,7 @@ import { useState } from "react";
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 import data from "./data.json";
+import { Fade } from "react-awesome-reveal";
 
 const LandingProjects = () => {
   const [isHeight, setIsHeight] = useState(500);
@@ -21,6 +22,7 @@ const LandingProjects = () => {
           <div className="container">
             <div className="columns is-multiline">
               {data.map((item, index) => (
+                <Fade  key={index} direction={index % 2 === 1 ? "left" : "right"}  triggerOnce={true} >
                 <div
                   className={`column is-full is-multiline columns ${
                     index % 2 === 1 ? "odd" : ""
@@ -54,6 +56,7 @@ const LandingProjects = () => {
                     </p>
                   </div>
                 </div>
+                </Fade>
               ))}
             </div>
           </div>

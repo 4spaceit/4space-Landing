@@ -61,6 +61,16 @@ export default function Header() {
               >
                 Awards
               </Link>
+              <Link
+                rel="nofollow"
+                to="contact"
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                Contact
+              </Link>
               <button
                 className="button is-primary is-outlined is-invisible "
                 id="formButton"
