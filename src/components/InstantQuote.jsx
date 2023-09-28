@@ -60,7 +60,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       ></button>
       <div className="modal-content">
         <form onSubmit={submit} id="form-modal">
-          <h1 className="center">Talk to Us</h1>
+          <h2 className="center">Talk to Us</h2>
           <div className="field">
             <label className="label">Name</label>
             <div className="control">

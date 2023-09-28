@@ -76,10 +76,8 @@ export default function LandingRu({data}) {
     if (topButton) {
       if (window.scrollY > 500) {
         topButton.classList.remove("is-hidden");
-        document.getElementById("formButton").classList.remove("is-invisible");
       } else {
         topButton.classList.add("is-hidden");
-        document.getElementById("formButton").classList.add("is-invisible");
       }
     }
   });
@@ -91,13 +89,13 @@ export default function LandingRu({data}) {
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
           <div className="title is-1 has-text-white is-size-3-mobile">
-            <h1 className="has-text-white">Transforming Spaces, Framing Experiences</h1>
-            <p className="mt-6 ">
+            <h1 className="has-text-white has-text-weight-bold">Transforming Spaces, Framing Experiences</h1>
+            <p className="mt-4 has-text-weight-normal">
               We believe that design is more than just aesthetics; it is the
               embodiment of a brand's essence, an expression of its values, and
               a catalyst for success.
             </p>
-            <p className="mt-6 ">
+            <p className="mt-4 has-text-weight-normal">
               With our unwavering commitment to innovation and a passion for
               pushing boundaries, we have positioned ourselves as the go-to
               destination for those seeking truly unique and captivating

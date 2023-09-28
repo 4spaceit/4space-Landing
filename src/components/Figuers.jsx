@@ -8,7 +8,7 @@ function Figuers() {
           <div className="column is-4">
             <div className=" has-text-centered">
               <h2 className="has-text-white is-size-2"><CountUp end={15}  enableScrollSpy={true} scrollSpyOnce={true}  duration={2}/></h2>
-              <p className="subtitle is-size-5 has-text-white">Years <br/> Of Experince</p>
+              <p className="subtitle is-size-5 has-text-white">Years Of Experince</p>
             </div>
           </div>
           <div className="column is-4">

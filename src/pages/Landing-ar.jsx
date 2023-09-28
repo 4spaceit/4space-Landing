@@ -76,10 +76,8 @@ export default function LandingAr({ data }) {
     if (topButton) {
       if (window.scrollY > 500) {
         topButton.classList.remove("is-hidden");
-        document.getElementById("formButton").classList.remove("is-invisible");
       } else {
         topButton.classList.add("is-hidden");
-        document.getElementById("formButton").classList.add("is-invisible");
       }
     }
   });
@@ -91,8 +89,8 @@ export default function LandingAr({ data }) {
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
           <div className="title is-1 has-text-white is-size-3-mobile">
-            <h1 className="has-text-white">تحويل المساحات، و هيكلة التجارب</h1>
-            <p className="mt-6 ">
+            <h1 className="has-text-white has-text-weight-bold">تحويل المساحات، و هيكلة التجارب</h1>
+            <p className="mt-4 has-text-weight-normal">
               نحن نعتقد أن التصميم هو أكثر من مجرد الجماليات؛ إنه تجسيد لجوهر
               العلامة التجارية، وتعبير عن قيمها، ودافع للنجاح. من خلال اهتمامنا
               بالابتكار وشغفنا في الفوز على التحديات، لقد وضعنا أنفسنا كوجهة

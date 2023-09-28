@@ -24,7 +24,7 @@
                 "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     },
     {
         "client": "Jun's Restaurant",
@@ -51,7 +51,7 @@
                 "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     },
     {
         "client": "VAGA",
@@ -78,7 +78,7 @@
                 "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     },
     {
         "client": "NONSENSE",
@@ -101,6 +101,6 @@
                 "src": "assets/Restaurant/NONSENSE/NONSENSE0004.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     }
 ]

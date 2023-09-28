@@ -53,7 +53,6 @@ export default function Form(props) {
   return (
     <div className="has-background-black " id={id}>
       <form className="has-background-black form" onSubmit={submit}>
-        <h1 className="center">Consult Us</h1>
         <div className="field">
           <label className="label has-text-left" htmlFor="name">
             Name

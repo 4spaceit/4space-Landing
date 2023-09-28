@@ -26,6 +26,59 @@ import App from "./App.jsx";
 import LandingAr from "./pages/Landing-ar.jsx";
 import LandingRu from "./pages/Landing-ru.jsx";
 
+function saveOrUpdateUTMParameters() {
+  if (typeof window !== "undefined") {
+    const queryParams = new URLSearchParams(window.location.search);
+
+    // Define an array to store UTM parameters
+    const utmParams = [];
+
+    if (queryParams.has("utm_source")) {
+      utmParams.push({ key: "utm_source", value: queryParams.get("utm_source") });
+    }
+    if (queryParams.has("utm_medium")) {
+      utmParams.push({ key: "utm_medium", value: queryParams.get("utm_medium") });
+    }
+    if (queryParams.has("utm_campaign")) {
+      utmParams.push({ key: "utm_campaign", value: queryParams.get("utm_campaign") });
+    }
+    if (queryParams.has("utm_term")) {
+      utmParams.push({ key: "utm_term", value: queryParams.get("utm_term") });
+    }
+    if (queryParams.has("utm_content")) {
+      utmParams.push({ key: "utm_content", value: queryParams.get("utm_content") });
+    }
+
+    // Loop through the UTM parameters and save each one in a separate cookie
+    utmParams.forEach(param => {
+      setCookie(`${param.key}`, param.value, 30);
+    });
+  }
+}
+
+// Call the function to save or update UTM parameters
+saveOrUpdateUTMParameters();
+
+// Function to set a cookie
+function setCookie(name, value, days) {
+  const expires = new Date();
+  expires.setTime(expires.getTime() + days * 24 * 60 * 60 * 1000);
+  const cookie = `${name}=${value};expires=${expires.toUTCString()};path=/`;
+  document.cookie = cookie; // Set the cookie in the browser environment
+}
+
+// Function to get a cookie by name
+function getCookie(name) {
+  const cookies = document.cookie.split(';');
+  for (let i = 0; i < cookies.length; i++) {
+    const cookie = cookies[i].trim();
+    if (cookie.startsWith(name + '=')) {
+      return cookie.substring(name.length + 1);
+    }
+  }
+  return null;
+}
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>

@@ -5,7 +5,7 @@ import { Fade } from "react-awesome-reveal";
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 
-const LandingProjects = ({data}) => {
+const LandingProjects = ({ data }) => {
   const [isHeight, setIsHeight] = useState(500);
 
   useEffect(() => {
@@ -17,46 +17,48 @@ const LandingProjects = ({data}) => {
   return (
     <section className="section page projects" id="projects">
       <div className="container projects">
-        <h1 className="has-text-centered pb-6">OUR EXPERTISE</h1>
+        <h2 className="has-text-centered pb-4 is-size-3">OUR EXPERTISE</h2>
         <div>
           <div className="container">
             <div className="columns is-multiline">
               <Fade className="fix-index" triggerOnce={true} fraction={0.5}>
-              {data.map((item, index) => (
-                <div
-                  className={`column is-full is-multiline columns ${
-                    index % 2 === 1 ? "odd" : ""
-                  }`}
-                  key={index}
-                >
-                  <div className={`column is-6 is-half`}>
-                    <Carousel
-                      images={item.images}
-                      style={{ height: isHeight }}
-                      hasThumbnails={false}
-                      hasDotButtons={"bottom"}
-                      hasIndexBoard={false}
-                      hasm
-                      shouldMaximizeOnClick={true}
-                      shouldMinimizeOnClick={true}
-                      // show size button only on mobile
-                      hasSizeButton={false}
-                      hasMediaButton={false}
-                      objectFit={"cover"}
-                    />
+                {data.map((item, index) => (
+                  <div
+                    className={`column is-full is-multiline columns ${
+                      index % 2 === 1 ? "odd" : ""
+                    }`}
+                    key={index}
+                  >
+                    <div className={`column is-6 is-half`}>
+                      <Carousel
+                        images={item.images}
+                        style={{ height: isHeight }}
+                        hasThumbnails={false}
+                        hasDotButtons={"bottom"}
+                        hasIndexBoard={false}
+                        hasm
+                        shouldMaximizeOnClick={true}
+                        shouldMinimizeOnClick={true}
+                        // show size button only on mobile
+                        hasSizeButton={false}
+                        hasMediaButton={false}
+                        objectFit={"cover"}
+                        // hasLeftButton={false}
+                        // hasRightButton={false}
+                      />
+                    </div>
+                    <div className={`column is-half has-text-centered-touch`}>
+                      <h3 className="mb-2 is-size-4">{item.client}</h3>
+                      <h3 className="mb-4 is-size-6 has-text-weight-normal">
+                        {item.place}
+                      </h3>
+                      
+                      <p className="mb-2 has-text-justified is-size-5 has-text-centered-touch">
+                        {item.descr}
+                      </p>
+                    </div>
                   </div>
-                  <div className={`column is-half has-text-centered-touch`}>
-                    <h2 className="mb-2 is-size-4">{item.client}</h2>
-                    <h2 className="mb-4 is-size-7">{item.place}</h2>
-                    <h2 className="mb-4 is-size-7">
-                      ــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــــ
-                    </h2>
-                    <p className="mb-2 has-text-justified is-size-5 has-text-centered-touch">
-                      {item.descr}
-                    </p>
-                  </div>
-                </div>
-              ))}
+                ))}
               </Fade>
             </div>
           </div>

@@ -72,7 +72,7 @@ export default function Header() {
                 Contact
               </Link>
               <button
-                className="button is-primary is-outlined is-invisible "
+                className="button is-primary is-outlined "
                 id="formButton"
               >
                 <Link
