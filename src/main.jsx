@@ -30,19 +30,19 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<App data={dataRestaurantEn} />} />
+        <Route path="/resturant" element={<App data={dataRestaurantEn} />} />
         <Route path="/retail" element={<App data={dataRetailEn} />} />
         <Route path="/residential" element={<App data={dataResidentialEn} />} />
         <Route path="/commercial" element={<App data={dataCommercialEn} />} />
         <Route path="/branding" element={<App data={dataBrandingEn} />} />
 
-        <Route path="/ar/" element={<LandingAr data={dataRestaurantAr} />} />
+        <Route path="/ar/resturant" element={<LandingAr data={dataRestaurantAr} />} />
         <Route path="/ar/retail" element={<LandingAr data={dataRetailAr} />} />
         <Route path="/ar/residential" element={<LandingAr data={dataResidentialAr} />} />
         <Route path="/ar/commercial" element={<LandingAr data={dataCommercialAr} />} />
         <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} />} />
 
-        <Route path="/ru/" element={<LandingRu data={dataRestaurantRu} />} />
+        <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} />} />
         <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} />} />
         <Route path="/ru/residential" element={<LandingRu data={dataResidentialRu} />} />
         <Route path="/ru/commercial" element={<LandingRu data={dataCommercialRu} />} />
