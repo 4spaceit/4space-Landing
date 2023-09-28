@@ -109,17 +109,15 @@ export default function App({data}) {
         {/* <OurClients /> */}
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
-          <div className="column ">
-            <p className="has-text-black is-size-7 has-text-centered">
-              WE ARE IN TOUCH!
-            </p>
-            <p className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
+          <div className="column has-text-centered has-text-weight-bold">
+              GET IN TOUCH
+            <span className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
               Write to 4Space
-            </p>
+            </span>
           </div>
           <div className="column has-background-black ">
             <p className="has-text-white is-size-6 has-text-centered">
-              Call Us <br /> +971 4 438 5537
+              CALL US <br /> +971 4 438 5537
             </p>
           </div>
         </div>

@@ -182,6 +182,14 @@ header {
   white-space: nowrap;
 }
 
+.cta span {
+  display: block;
+}
+
+.cta div {
+  line-height: 1;
+}
+
 .cta .column {
   padding: 0.25rem;
 }
@@ -220,6 +228,7 @@ nav {
   text-shadow: #202020 1px 0 10px;
   backdrop-filter: blur(5px);
   background-clip: text;
+  width: 50%;
   margin-top: 100px;
   -webkit-backdrop-filter: blur(5px);
 }
