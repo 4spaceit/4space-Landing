@@ -2,7 +2,7 @@ import CountUp from 'react-countup';
 
 function Figuers() {
   return (
-    <section className="section page our-figures">
+    <section className=" page our-figures">
       <div className="container">
         <div className="columns is-multiline is-centered is-8">
           <div className="column is-4">

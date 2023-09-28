@@ -5,7 +5,6 @@ import Awards from "./components/AwardsLanding";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 
-
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
 import "./style.css";
@@ -15,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
-export default function App({data}) {
+export default function App({ data }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -90,7 +89,9 @@ export default function App({data}) {
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
           <div className="title is-1 has-text-white is-size-3-mobile">
-            <h1 className="has-text-white has-text-weight-bold head-text">Transforming Spaces, Framing Experiences</h1>
+            <h1 className="has-text-white has-text-weight-bold head-text">
+              Transforming Spaces, Framing Experiences
+            </h1>
             <p className="mt-4 has-text-weight-normal ">
               We believe that design is more than just aesthetics; it is the
               embodiment of a brand's essence, an expression of its values, and
@@ -110,15 +111,16 @@ export default function App({data}) {
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div className="column has-text-centered has-text-weight-bold">
-              GET IN TOUCH
+            GET IN TOUCH
             <span className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
               Write to 4Space
             </span>
           </div>
-          <div className="column has-background-black ">
-            <p className="has-text-white is-size-6 has-text-centered">
-              CALL US <br /> +971 4 438 5537
-            </p>
+          <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
+            CALL US
+            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
+              +971 4 438 5537
+            </span>
           </div>
         </div>
         <div className="topButton is-hidden" id="topButton">

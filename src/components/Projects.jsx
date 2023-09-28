@@ -53,7 +53,7 @@ const LandingProjects = ({ data }) => {
                         {item.place}
                       </h3>
                       
-                      <p className="mb-2 has-text-justified is-size-5 has-text-centered-touch">
+                      <p className="mb-2 has-text-left is-size-5 has-text-centered-touch">
                         {item.descr}
                       </p>
                     </div>

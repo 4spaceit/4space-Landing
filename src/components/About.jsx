@@ -16,10 +16,10 @@ export default function About() {
         {/* <div className="about-image column is-full">
           <img src="assets/4SPACE-team.jpg" alt="" />
         </div> */}
-        <div className="section container column is-full py-6">
+        <div className=" container column is-full py-6">
           <h2 className="center mb-6 ">ABOUT</h2>
           <div className="columns is-multiline">
-            <div className="column has-text-centered">
+            <div className="column has-text-left">
               <p className="has-text-justified">
                 Firas Alsahin and Amjad Hourieh, the founders, relocated their
                 practice to Dubai to be near the heart of this thriving market.

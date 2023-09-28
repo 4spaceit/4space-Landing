@@ -193,6 +193,13 @@ header {
 .cta .column {
   padding: 0.25rem;
 }
+._2ljUm {
+  margin-bottom: 15px;
+}
+
+.our-figures {
+  margin-bottom: 5rem;
+}
 
 #home {
   background-image: url("./images/first.jpg");

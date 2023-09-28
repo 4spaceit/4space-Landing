@@ -10,9 +10,9 @@ $primary: $white-ter;
 $info: #a7a7a7;
 $control-radius: 0;
 
-$dark: hsl(0deg, 0%, 7%);
+$dark: hsl(0, 0%, 0%);
 //$light: $white-ter;
-$light: hsl(0deg 0% 90%);
+$light: hsl(0deg 0% 100%);
 
 
 $body-background-color: $dark;
@@ -23,7 +23,7 @@ $link: $grey-lighter;
 $link-hover: $white-bis;
 $link-visited: $white-ter;
 
-$header: hsl(0deg 0% 90%);
+$header: hsl(0deg 0% 100%);
 
 
 $navbar-background-color: transparent;
