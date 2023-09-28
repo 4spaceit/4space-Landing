@@ -25,7 +25,12 @@ h2 {
   font-size: 2rem!important;
 }
 ._1_Dg2 {
-  scrollbar-width: none;
+  overflow: hidden;
+}
+
+.figure-fix {
+  width: 100%;
+    margin: 0;
 }
 footer {
   position: fixed;
