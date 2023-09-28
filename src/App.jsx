@@ -125,7 +125,7 @@ export default function App({ data }) {
         </div>
         <div className="topButton is-hidden" id="topButton">
           <Link rel="nofollow" to="home" spy={true} smooth={true}>
-            <FontAwesomeIcon icon={faChevronUp} />
+            <FontAwesomeIcon icon={faChevronUp} fill="white" />
           </Link>
         </div>
         <Contact />

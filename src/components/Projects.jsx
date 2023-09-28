@@ -41,6 +41,7 @@ const LandingProjects = ({ data }) => {
                         shouldMinimizeOnClick={true}
                         // show size button only on mobile
                         hasSizeButton={false}
+                        hasSizeButtonAtMax={true}
                         hasMediaButton={false}
                         objectFit={"cover"}
                         // hasLeftButton={false}

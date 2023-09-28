@@ -4,6 +4,10 @@ h2 {
   margin-bottom: 0;
 }
 
+body{
+  color: white;
+}
+
 .page h1,
 .page h2,
 .page h3,
@@ -20,7 +24,9 @@ h2 {
   font-weight: 900!important;
   font-size: 2rem!important;
 }
-
+._1_Dg2 {
+  scrollbar-width: none;
+}
 footer {
   position: fixed;
   bottom: 0;
