@@ -16,7 +16,7 @@ const LandingProjects = ({data}) => {
   return (
     <section className="section page projects" id="projects">
       <div className="container projects">
-        <h1 className="has-text-centered pb-6">OUR EXPERTISE</h1>
+        <h1 className="has-text-centered pb-6">مشاريعنا</h1>
         <div>
           <div className="container">
             <div className="columns is-multiline">
@@ -44,7 +44,7 @@ const LandingProjects = ({data}) => {
                       objectFit={"cover"}
                     />
                   </div>
-                  <div className={`column is-half has-text-centered-touch`}>
+                  <div className={`column is-half has-text-centered-touch`} style={{direction:"rtl"}}>
                     <h2 className="mb-2 is-size-4">{item.client}</h2>
                     <h2 className="mb-4 is-size-7">{item.place}</h2>
                     <h2 className="mb-4 is-size-7">

@@ -5,27 +5,23 @@
         "images": [
             {
                 "alt": "PAPA Dubai",
-                "src": "assets/PAPA Dubai/PAPA Dubai0001.jpg"
+                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0001.jpg"
             },
             {
                 "alt": "PAPA Dubai",
-                "src": "assets/PAPA Dubai/PAPA Dubai0002.jpg"
+                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0002.jpg"
             },
             {
                 "alt": "PAPA Dubai",
-                "src": "assets/PAPA Dubai/PAPA Dubai0003.jpg"
+                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0003.jpg"
             },
             {
                 "alt": "PAPA Dubai",
-                "src": "assets/PAPA Dubai/PAPA Dubai0004.jpg"
+                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0004.jpg"
             },
             {
                 "alt": "PAPA Dubai",
-                "src": "assets/PAPA Dubai/PAPA Dubai0005.jpg"
-            },
-            {
-                "alt": "PAPA Dubai",
-                "src": "assets/PAPA Dubai/PAPA Dubai0006.jpg"
+                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0005.jpg"
             }
         ],
         "place": "Dubai"
@@ -36,23 +32,23 @@
         "images": [
             {
                 "alt": "Juns Restaurant",
-                "src": "assets/Juns Restaurant/Juns Restaurant0001.jpg"
+                "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0001.jpg"
             },
             {
                 "alt": "Juns Restaurant",
-                "src": "assets/Juns Restaurant/Juns Restaurant0002.jpg"
+                "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0002.jpg"
             },
             {
                 "alt": "Juns Restaurant",
-                "src": "assets/Juns Restaurant/Juns Restaurant0003.jpg"
+                "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0003.jpg"
             },
             {
                 "alt": "Juns Restaurant",
-                "src": "assets/Juns Restaurant/Juns Restaurant0004.jpg"
+                "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0004.jpg"
             },
             {
                 "alt": "Juns Restaurant",
-                "src": "assets/Juns Restaurant/Juns Restaurant0005.jpg"
+                "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0005.jpg"
             }
         ],
         "place": "Dubai"
@@ -63,27 +59,23 @@
         "images": [
             {
                 "alt": "VAGA Dubai",
-                "src": "assets/VAGA Dubai/VAGA Dubai0001.jpg"
+                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0001.jpg"
             },
             {
                 "alt": "VAGA Dubai",
-                "src": "assets/VAGA Dubai/VAGA Dubai0002.jpg"
+                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0002.jpg"
             },
             {
                 "alt": "VAGA Dubai",
-                "src": "assets/VAGA Dubai/VAGA Dubai0003.jpg"
+                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0003.jpg"
             },
             {
                 "alt": "VAGA Dubai",
-                "src": "assets/VAGA Dubai/VAGA Dubai0004.jpg"
+                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0004.jpg"
             },
             {
                 "alt": "VAGA Dubai",
-                "src": "assets/VAGA Dubai/VAGA Dubai0005.jpg"
-            },
-            {
-                "alt": "VAGA Dubai",
-                "src": "assets/VAGA Dubai/VAGA Dubai0006.jpg"
+                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0005.jpg"
             }
         ],
         "place": "Dubai"
@@ -94,19 +86,19 @@
         "images": [
             {
                 "alt": "NONSENSE",
-                "src": "assets/NONSENSE/NONSENSE0001.jpg"
+                "src": "assets/Restaurant/NONSENSE/NONSENSE0001.jpg"
             },
             {
                 "alt": "NONSENSE",
-                "src": "assets/NONSENSE/NONSENSE0002.jpg"
+                "src": "assets/Restaurant/NONSENSE/NONSENSE0002.jpg"
             },
             {
                 "alt": "NONSENSE",
-                "src": "assets/NONSENSE/NONSENSE0003.jpg"
+                "src": "assets/Restaurant/NONSENSE/NONSENSE0003.jpg"
             },
             {
                 "alt": "NONSENSE",
-                "src": "assets/NONSENSE/NONSENSE0004.jpg"
+                "src": "assets/Restaurant/NONSENSE/NONSENSE0004.jpg"
             }
         ],
         "place": "Dubai"

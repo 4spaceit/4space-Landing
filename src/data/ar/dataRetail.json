@@ -1,0 +1,102 @@
+[
+    {
+        "client": "نان سينس من فاغا",
+        "descr": "عالم أحلام مستقبلي مصمم بواسطة 4SPACE تصميم AYA Universe يجمع بين القديم والمستقبل، حيث يمزج بين الطبيعة والبناء الذكي. تقنيات البناء المتقدمة المستخدمة في هذا المشروع تعطي انطباعًا بأن AYA Universe نمت وبنيت في توقع للتدخلات الطبيعية. تجمع العناصر الطبيعية القوية والمساحة المبنية لخلق تجربة لا تُنسى للزوار. ",
+        "images": [
+            {
+                "alt": "AYA Universe",
+                "src": "assets/Retail/AYA/4SPACE_Aya-01.jpg"
+            },
+            {
+                "alt": "AYA Universe",
+                "src": "assets/Retail/AYA/4SPACE_Aya-02.jpg"
+            },
+            {
+                "alt": "AYA Universe",
+                "src": "assets/Retail/AYA/4SPACE_Aya-03.jpg"
+            }
+        ],
+        "place": "دبي"
+    },
+    {
+        "client": "AYA Universe: عالم أحلام مستقبلي مصمم بواسطة 4SPACE",
+        "descr": "يعد VR PARK، دليلاً على التزامنا بالابتكار والتفوق. تم تصميمه بالشراكة مع إعمار للترفيه، يتحدى هذا الحديقة الافتراضية حدود ما هو ممكن وتقدم تجربة لا تُنسى للزوار. تم تكليف فريقنا بتصميم مساحة ليست مبتكرة وغامرة فحسب، بل أيضًا مذهلة بصريًا، وقد قمنا بتحقيق ذلك.",
+        "images": [
+            {
+                "alt": "VR PARK",
+                "src": "assets/Retail/VR PARK/VR-Park-1-e1521699056966.jpg"
+            },
+            {
+                "alt": "VR PARK",
+                "src": "assets/Retail/VR PARK/VR-Park-3-scaled.jpg"
+            },
+            {
+                "alt": "VR PARK",
+                "src": "assets/Retail/VR PARK/VR-Park-6-scaled.jpg"
+            },
+            {
+                "alt": "VR PARK",
+                "src": "assets/Retail/VR PARK/VR-Park-8-scaled.jpg"
+            },
+            {
+                "alt": "VR PARK",
+                "src": "assets/Retail/VR PARK/VR-Park-12-scaled.jpg"
+            }
+        ],
+        "place": "دبي"
+    },
+    {
+        "client": "بياض",
+        "descr": "عندما يتعلق الأمر بتصميم المتجر، يلعب دورًا حاسمًا في جذب العملاء وضمان وجود مساحة مريحة ووظيفية. تدور مخططات الألوان حول ألوان محايدة ومهدئة مثل الأبيض والأزرق السماوي. يعرض تصميم نظرة نظيفة وعصرية مع إشراق المساحة وجعلها تبدو مشرقة ومفتوحة، مما يخلق تصميم داخلي عصري ووظيفي للتجزئة. عناصر الجدران الزخرفية بسيطة وأنيقة؛ فهي تعزز الجمال العام للمساحة مع الحفاظ على مظهر نظيف ومرتب. حافظت 4SPACE على الجودة عوضًا عن الكمية واختارت قطعًا تضيف اهتمامًا بصريًا دون أن تغمر المساحة المرئياً. من خلال الابتعاد عن التعقيد، قامت 4SPACE بتصميم داخلي للتجزئة عصري ووظيفي. ",
+        "images": [
+            {
+                "alt": "WHITES",
+                "src": "assets/Retail/WHITES/4S_WH-01v2.jpg"
+            },
+            {
+                "alt": "WHITES",
+                "src": "assets/Retail/WHITES/4S_WH-02v2.jpg"
+            },
+            {
+                "alt": "WHITES",
+                "src": "assets/Retail/WHITES/4S_WH-03.jpg"
+            },
+            {
+                "alt": "WHITES",
+                "src": "assets/Retail/WHITES/4S_WH-04.jpg"
+            },
+            {
+                "alt": "WHITES",
+                "src": "assets/Retail/WHITES/4S_WH-05.jpg"
+            }
+        ],
+        "place": "دبي"
+    },
+    {
+        "client": "لينا للتجميل",
+        "descr": "مركز لينا للتجميل عندما تدخل المركز، ستُستقبل بتصميم داخلي ساحر يتميز بأجواء فاخرة ولوحة ألوان ذهبية. تم تصميم الديكورات الداخلية بعناية لتوفير أجواء دافئة ومرحبة تجعلك تشعر بالراحة على الفور. تتجلى الاهتمام بالتفاصيل في كل زاوية من زوايا المركز، من الأثاث المختار بعناية إلى الديكور الأنيق الذي يعكس تصميم صالون فاخر.",
+        "images": [
+            {
+                "alt": "Lina Beauty Center",
+                "src": "assets/Retail/Lina Beauty Center/Lina-01-1.jpg"
+            },
+            {
+                "alt": "Lina Beauty Center",
+                "src": "assets/Retail/Lina Beauty Center/Lina-02.jpg"
+            },
+            {
+                "alt": "Lina Beauty Center",
+                "src": "assets/Retail/Lina Beauty Center/Lina-03-1.jpg"
+            },
+            {
+                "alt": "Lina Beauty Center",
+                "src": "assets/Retail/Lina Beauty Center/Lina-04-1.jpg"
+            },
+            {
+                "alt": "Lina Beauty Center",
+                "src": "assets/Retail/Lina Beauty Center/Lina-05-1.jpg"
+            }
+        ],
+        "place": "دبي"
+    }
+]

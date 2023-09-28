@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "../components/ar/About";
 import Contact from "../components/ar/Contact";
 
-export default function LandingAr({data}) {
+export default function LandingAr({ data }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -84,16 +84,21 @@ export default function LandingAr({data}) {
     }
   });
   return (
-    <div style={{direction: 'rtl'}}>
+    <div style={{ direction: "rtl" }}>
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
-          <h1 className="title is-1 has-text-white is-size-3-mobile">
-            Transforming Spaces <br />
-            <br /> Framing Experiences
-          </h1>
+          <div className="title is-1 has-text-white is-size-3-mobile">
+            <h1 className="has-text-white">تحويل المساحات، و هيكلة التجارب</h1>
+            <p className="mt-6 ">
+              نحن نعتقد أن التصميم هو أكثر من مجرد الجماليات؛ إنه تجسيد لجوهر
+              العلامة التجارية، وتعبير عن قيمها، ودافع للنجاح. من خلال اهتمامنا
+              بالابتكار وشغفنا في الفوز على التحديات، لقد وضعنا أنفسنا كوجهة
+              مفضلة لأولئك الذين يبحثون عن تصاميم فريدة وجذابة حقًا.
+            </p>
+          </div>
         </section>
         <LandingProjects data={data} />
         <About />
@@ -102,15 +107,15 @@ export default function LandingAr({data}) {
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div className="column ">
             <p className="has-text-black is-size-7 has-text-centered">
-              WE ARE IN TOUCH!
+              نحن معك
             </p>
             <p className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
               تواصل معنا
             </p>
           </div>
           <div className="column has-background-black ">
-            <p className="has-text-white is-size-6 has-text-centered">
-              Call Us <br /> +971 4 438 5537
+            <p className="has-text-white is-size-6 has-text-centered" style={{direction: 'ltr'}}>
+              اتصل بنا على <br /> +971 4 338 6255
             </p>
           </div>
         </div>

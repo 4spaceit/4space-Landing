@@ -37,7 +37,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                Projects
+                مشاريعنا
               </Link>
               <Link
                 rel="nofollow"
@@ -49,7 +49,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                About
+                عنا
               </Link>
               <Link
                 rel="nofollow"
@@ -59,7 +59,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                Awards
+                جوائز
               </Link>
               <Link
                 rel="nofollow"
@@ -69,7 +69,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                Contact
+                اتصل بنا
               </Link>
               <button
                 className="button is-primary is-outlined is-invisible "
@@ -84,7 +84,7 @@ export default function Header() {
                   }}
                   
                 >
-                  Project Inquiry
+                   طلب عرض سعر 
                 </Link>
               </button>
             </div>

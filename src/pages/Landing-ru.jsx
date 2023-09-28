@@ -90,10 +90,20 @@ export default function LandingRu({data}) {
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
-          <h1 className="title is-1 has-text-white is-size-3-mobile">
-            Transforming Spaces <br />
-            <br /> Framing Experiences
-          </h1>
+          <div className="title is-1 has-text-white is-size-3-mobile">
+            <h1 className="has-text-white">Transforming Spaces, Framing Experiences</h1>
+            <p className="mt-6 ">
+              We believe that design is more than just aesthetics; it is the
+              embodiment of a brand's essence, an expression of its values, and
+              a catalyst for success.
+            </p>
+            <p className="mt-6 ">
+              With our unwavering commitment to innovation and a passion for
+              pushing boundaries, we have positioned ourselves as the go-to
+              destination for those seeking truly unique and captivating
+              designs.
+            </p>
+          </div>
         </section>
         <LandingProjects data={data} />
         <About />

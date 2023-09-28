@@ -60,16 +60,16 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       ></button>
       <div className="modal-content">
         <form onSubmit={submit} id="form-modal">
-          <h1 className="center">Talk to Us</h1>
+          <h1 className="center">اتصل بنا</h1>
           <div className="field">
-            <label className="label">Name</label>
+            <label className="label">الأسم</label>
             <div className="control">
               <input className="input" type="text" name="name" required />
             </div>
           </div>
 
           <div className="field">
-            <label className="label">Email</label>
+            <label className="label">البريد الإلكتروني</label>
             <div className="control">
               <input className="input" type="email" name="email" required />
             </div>
@@ -77,7 +77,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           </div>
 
           <div className="field">
-            <label className="label">Mobile</label>
+            <label className="label">رقم الهاتف</label>
             <div className="control">
               <input className="input" type="text" name="mobile" />
             </div>
@@ -85,7 +85,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
           {error && (
             <div className="notification is-warning">
-              We couldnt submit the form, can you try again.
+              حدث خطأ ما. يرجى المحاولة مرة أخرى.
             </div>
           )}
 
@@ -97,14 +97,14 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 disabled={loading}
                 aria-label="submit"
               >
-                {loading ? "Sending..." : "Submit"}
+                {loading ? "جاري الإرسال..." : "إرسال"}
               </button>
             </div>
           </div>
         </form>
         {success && (
           <div className="notification is-success">
-            Thanks!, we will get back to you soon.
+            تم إرسال النموذج بنجاح. شكرا لك.
           </div>
         )}
       </div>

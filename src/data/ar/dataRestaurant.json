@@ -1,7 +1,7 @@
 [
     {
-        "client": "PAPA Village",
-        "descr": "PAPA Dubai takes its patrons on a gastronomic and cutting-edge mixology journey. Everyone can find something to enjoy at this restaurant and bar design, whether it is a quiet dinner with friends or a late-night party.",
+        "client": "بابا بار فلج",
+        "descr": "يأخذ باب دبي زبائنه في رحلة تذوق مبتكرة في عالم الطهي والخلطات. يمكن للجميع أن يجد شيئًا يستمتع به في تصميم هذا المطعم والبار، سواء كانت عشاءً هادئًا مع الأصدقاء أو حفلة متأخرة في الليل.",
         "images": [
             {
                 "alt": "PAPA Dubai",
@@ -24,11 +24,11 @@
                 "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "دبي"
     },
     {
-        "client": "Jun's Restaurant Description",
-        "descr": "Jun's Restaurant Design, located in Dubai, has a combined area of 515 sq m. Our Designers added a warm and inviting atmosphere. The neutral color scheme gives diners a feeling of calmness and relaxation, while the textures create a cozy atmosphere.        ",
+        "client": "مطعم جونز في دبي",
+        "descr": "تصميم مطعم جونز، الموجود في دبي، يمتلك مساحة مجتمعة تبلغ 515 متر مربع. قام مصممونا بإضافة جو دافئ ومرحب. تعطي المخططات اللونية النيوترالية للمأكولات شعورًا بالهدوء والاسترخاء، في حين تخلق التأثيرات البصرية جوًا مريحًا.",
         "images": [
             {
                 "alt": "Juns Restaurant",
@@ -51,12 +51,11 @@
                 "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "دبي"
     },
     {
-        "client": "VAGA",
-        "descr": "VAGA’s resident DJ sits centrally in a rotating booth in the main bar, providing the perfect ambiance to enjoy the exceptional Bar Design in Dubai. Revelers looking for a hint of secrecy can enjoy the private room, accessible through an old red Arabic wooden door. This secret room offers a world of speakeasy fantasy, perfect for those looking to add a little adventure to their dining experience while enjoying the unique Bar Design.",
-        "images": [
+        "client": "فاغا دبي",
+        "descr": "يخلق المطعم جوًا يشعرك وكأنك مسافر عبر الزمن في عالم مليء بالطاقة الحيوية، حيث يأخذك في رحلة عبر المأكولات العربية التقليدية وثقافة أرمينية ملونة، وذلك بينما تستمتع بتصميم البار الاستثنائي الفريد لـ فاغا. دي جي فاغا مكانه في منتصف البار الرئيسي في حجيرة دوارة، مما يوفر الأجواء المثالية للاستمتاع بتصميم البار الاستثنائي في دبي. يمكن للمحتفلين الباحثين عن لمسة من السرية الاستمتاع بالغرفة الخاصة، التي يمكن الوصول إليها من خلال باب خشبي عربي أحمر قديم. توفر هذه الغرفة السرية عالمًا من الخيال السري، مثالية لأولئك الذين يبحثون عن بعض المغامرة في تجربتهم الطعام بينما يستمتعون بتصميم البار الفريد. ","images": [
             {
                 "alt": "VAGA Dubai",
                 "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0001.jpg"
@@ -78,11 +77,11 @@
                 "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "دبي"
     },
     {
-        "client": "NONSENSE",
-        "descr": "The bar’s designers have carefully curated the furniture, décor, and lighting to create a visually stunning and functional space. It also features a listening area with a state-of-the-art music program that is timed to the lighting show. The bar is ideal for a night out with friends while experiencing unique music and design elements.",
+        "client": "نان سينس من فاغا",
+        "descr": "قام مصممو البار بعناية بتنسيق الأثاث والديكور والإضاءة لإنشاء مساحة بصرية مذهلة ووظيفية. كما يتميز بمنطقة للاستماع مع برنامج موسيقى حديث يتم توقيته مع عرض الإضاءة. يعد البار مثاليًا لقضاء ليلة مع الأصدقاء مع تجربة موسيقية وعناصر تصميم فريدة.",
         "images": [
             {
                 "alt": "NONSENSE",
@@ -101,6 +100,6 @@
                 "src": "assets/Restaurant/NONSENSE/NONSENSE0004.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "دبي"
     }
 ]

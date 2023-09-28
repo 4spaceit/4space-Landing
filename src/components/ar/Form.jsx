@@ -53,10 +53,10 @@ export default function Form(props) {
   return (
     <div className="has-background-black " id={id}>
       <form className="has-background-black form" onSubmit={submit}>
-        <h1 className="center">Consult Us</h1>
+        <h1 className="center">استشرنا</h1>
         <div className="field">
           <label className="label has-text-left" htmlFor="name">
-            Name
+            الأسم
           </label>
           <div className="control">
             <input
@@ -70,7 +70,7 @@ export default function Form(props) {
         </div>
         <div className="field">
           <label className="label has-text-left" htmlFor="email">
-            Email
+            البريد الإلكتروني
           </label>
           <div className="control">
             <input
@@ -86,7 +86,7 @@ export default function Form(props) {
 
         <div className="field">
           <label className="label has-text-left" htmlFor="mobile">
-            Mobile
+            رقم الهاتف
           </label>
           <div className="control">
             <input className="input" type="text" id="mobile" name="mobile" />
@@ -95,7 +95,7 @@ export default function Form(props) {
 
         {error && (
           <div className="notification is-warning">
-            We couldnt submit the form, can you try again.
+            لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى.
           </div>
         )}
         <div className="field is-grouped is-align-items-flex-end">
@@ -106,14 +106,14 @@ export default function Form(props) {
               disabled={loading}
               aria-label="submit"
             >
-              {loading ? "Sending..." : "Submit"}
+              {loading ? "جاري الإرسال..." : "إرسال"}
             </button>
           </div>
         </div>
       </form>
       {success && (
         <div className="notification is-success">
-          Thanks!, we will get back to you soon.
+          شكرا! ، سنعود إليك قريبًا.
         </div>
       )}
     </div>

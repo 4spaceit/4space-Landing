@@ -17,19 +17,11 @@ export default function About() {
           <img src="assets/4SPACE-team.jpg" alt="" />
         </div> */}
         <div className="section container column is-full py-6">
-          <h1 className="center mb-4">عنا</h1>
+          <h1 className="center mb-4">عن 4SPACE</h1>
           <div className="columns is-multiline">
             <div className="column has-text-centered">
               <p className="has-text-justified">
-                Firas Alsahin and Amjad Hourieh, the founders, relocated their
-                practice to Dubai to be near the heart of this thriving market.
-                The emirate's rapid growth in the commercial sector provided an
-                impetus for the firm to investigate all opportunities in the
-                design industry. Overcoming an uphill battle, 4Space Design has
-                gone on to create noteworthy projects in the UAE. Eschewing
-                quantity for quality, profile of the project, and relationship
-                with clients, the studio credits its people’s distinct ideas for
-                strategic business development.
+              فيراس الساحين وأمجد حورية، المؤسسان، قاما بنقل ممارستهما إلى دبي ليكونوا قرب قلب هذا السوق النابض بالحياة. نمو الإمارة السريع في القطاع التجاري قدم دافعًا للشركة لاستكشاف جميع الفرص في صناعة التصميم. عبر تجاوز معركة صعبة، استطاعت 4Space Design أن تقوم بإنشاء مشاريع ملحوظة في الإمارات العربية المتحدة. ومن خلال التركيز على الجودة بدلاً من الكمية، وتوجه المشروع، والعلاقة مع العملاء، يعزى الاستوديو نجاحه لأفكار فريقه المتميزة في تطوير الأعمال بشكل استراتيجي.
               </p>
             </div>
           </div>

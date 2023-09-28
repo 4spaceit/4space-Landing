@@ -11,7 +11,7 @@ export default function Footer() {
     <footer className=" has-navbar-fixed-top is-hidden-desktop">
       <div className="footer-items">
         <div className="left-footer">
-          <p className="has-text-black is-size-6"> TALK TO US</p>
+          <p className="has-text-black is-size-6"> تحدث معنا</p>
         </div>
         <div
           className="right-1-footer"
