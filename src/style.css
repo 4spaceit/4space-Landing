@@ -38,6 +38,10 @@ img {
   height: 500px;
 }
 
+.fix-index {
+  animation-fill-mode: backwards !important;
+}
+
 .footer .columns {
   gap: 2rem;
 }
@@ -200,7 +204,6 @@ nav {
   font-size: 2rem;
   padding: 2rem;
   font-weight: bold;
-  text-transform: uppercase;
   text-shadow: #202020 1px 0 10px;
   backdrop-filter: blur(5px);
   background-clip: text;
@@ -249,6 +252,10 @@ nav {
 .about {
   width: 100%;
     margin: 0;
+}
+
+#projects {
+  direction: ltr;
 }
 
 #form-footer {

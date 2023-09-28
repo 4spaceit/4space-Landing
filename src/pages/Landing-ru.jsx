@@ -1,21 +1,20 @@
-import LandingProjects from "./components/Projects";
-import InstantQuote from "./components/InstantQuote";
-import Form from "./components/Form";
-import Awards from "./components/AwardsLanding";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-
+import LandingProjects from "../components/ar/Projects";
+import InstantQuote from "../components/ar/InstantQuote";
+import Form from "../components/ar/Form";
+import Awards from "../components/ar/AwardsLanding";
+import Header from "../components/ar/Header";
+import Footer from "../components/ar/Footer";
 
 import "bulma/css/bulma.css";
-import "./styles/index.scss";
-import "./style.css";
+import "../styles/index.scss";
+import "../style.css";
 import { Link } from "react-scroll";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import About from "./components/About";
-import Contact from "./components/Contact";
+import About from "../components/ar/About";
+import Contact from "../components/ar/Contact";
 
-export default function App({data}) {
+export default function LandingRu({data}) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -91,20 +90,10 @@ export default function App({data}) {
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
           {/* <Form id="form-desktop" /> */}
-          <div className="title is-1 has-text-white is-size-3-mobile">
-            <h1 className="has-text-white">Transforming Spaces, Framing Experiences</h1>
-            <p className="mt-6 ">
-              We believe that design is more than just aesthetics; it is the
-              embodiment of a brand's essence, an expression of its values, and
-              a catalyst for success.
-            </p>
-            <p className="mt-6 ">
-              With our unwavering commitment to innovation and a passion for
-              pushing boundaries, we have positioned ourselves as the go-to
-              destination for those seeking truly unique and captivating
-              designs.
-            </p>
-          </div>
+          <h1 className="title is-1 has-text-white is-size-3-mobile">
+            Transforming Spaces <br />
+            <br /> Framing Experiences
+          </h1>
         </section>
         <LandingProjects data={data} />
         <About />
@@ -116,7 +105,7 @@ export default function App({data}) {
               WE ARE IN TOUCH!
             </p>
             <p className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
-              Write to 4Space
+              تواصل معنا
             </p>
           </div>
           <div className="column has-background-black ">
