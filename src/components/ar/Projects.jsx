@@ -3,6 +3,10 @@ import { useState } from "react";
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 import { Fade } from "react-awesome-reveal";
+import leftIcon from "../../svg/arrow-left.svg";
+import rightIcon from "../../svg/arrow-right.svg";
+import plusIcon from "../../svg/magnifying-glass-plus.svg"
+import minusIcon from "../../svg/magnifying-glass-minus.svg"
 
 const LandingProjects = ({data}) => {
   const [isHeight, setIsHeight] = useState(500);
@@ -12,6 +16,39 @@ const LandingProjects = ({data}) => {
       setIsHeight(300);
     }
   }, []);
+
+
+  const leftArrow = (
+    <img
+      src={leftIcon}
+      alt="left arrow"
+      style={{ width: "30px", height: "30px", margin: "0px 10px" }}
+    />
+  );
+
+  const rightArrow = (
+    <img
+      src={rightIcon}
+      alt="right arrow"
+      style={{ width: "30px", height: "30px", margin: "0px 10px" }}
+    />
+  );
+
+  const magnify = (
+    <img
+      src={plusIcon}
+      alt="magnifying glass plus"
+      style={{ width: "30px", height: "30px", margin:"10px" }}
+      />
+  );
+
+  const demagnify = (
+    <img
+      src={minusIcon}
+      alt="magnifying glass minus"
+      style={{ width: "30px", height: "30px", margin:"10px" }}
+      />
+  );
 
   return (
     <section className="section page projects" id="projects">
@@ -39,9 +76,12 @@ const LandingProjects = ({data}) => {
                       shouldMaximizeOnClick={true}
                       shouldMinimizeOnClick={true}
                       // show size button only on mobile
-                      hasSizeButton={false}
                       hasMediaButton={false}
                       objectFit={"cover"}
+                      leftIcon={leftArrow}
+                      rightIcon={rightArrow}
+                      maxIcon={magnify}
+                      minIcon={demagnify}
                     />
                   </div>
                   <div className={`column is-half has-text-centered-touch`} style={{direction:"rtl"}}>

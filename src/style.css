@@ -4,7 +4,7 @@ h2 {
   margin-bottom: 0;
 }
 
-body{
+body {
   color: white;
 }
 
@@ -20,16 +20,17 @@ body{
   margin-bottom: 0;
 }
 
-.navbar-brand, .navbar-tabs {
+.navbar-brand,
+.navbar-tabs {
   justify-content: space-between;
 }
 .head-text {
-  font-weight: bolder!important;
+  font-weight: bolder !important;
   text-transform: uppercase;
 }
 h2 {
-  font-weight: 900!important;
-  font-size: 2rem!important;
+  font-weight: 900 !important;
+  font-size: 2rem !important;
 }
 ._1_Dg2 {
   overflow: hidden;
@@ -37,7 +38,7 @@ h2 {
 
 .figure-fix {
   width: 100%;
-    margin: 0;
+  margin: 0;
 }
 
 .modal {
@@ -113,7 +114,6 @@ img {
 .footer-rtl {
   border-left: 2px solid #ffffff;
   border-right: 0;
-  
 }
 
 .right-1-footer,
@@ -163,14 +163,6 @@ img {
 
 .left-footer p {
   padding-top: 7%;
-}
-
-._1Pekn svg{
-display: none;
-}
-
-.next-button {
-  position: absolute;
 }
 
 .icon-links a {
@@ -241,7 +233,8 @@ header {
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100dvh;
-}.Para-placeholder {
+}
+.Para-placeholder {
   height: 600px;
 }
 
@@ -252,12 +245,6 @@ header {
 .mobile-padding {
   padding: 0 6rem;
 }
-
-._FP5OY {
-  font: var(--fa-font-solid);
-  cursor: url('/src/svg/magnifying-glass-solid.svg'), auto;
-fill: white;}
-  
 
 nav {
   box-shadow: 0px 3px 10px 5px rgba(0, 0, 0.5, 0.5);
@@ -314,7 +301,7 @@ nav {
 
 .about {
   width: 100%;
-    margin: 0;
+  margin: 0;
 }
 
 #projects {
@@ -322,14 +309,13 @@ nav {
 }
 
 #form-footer {
-  margin:  3rem auto;
+  margin: 3rem auto;
   border-radius: 15px;
   width: 90%;
   max-width: 600px;
 }
 
 #form-footer form {
-  
   margin: 0;
   padding: 2rem;
   border-radius: 15px;
@@ -340,11 +326,10 @@ nav {
   flex-direction: row-reverse;
 }
 
-.about-blur{
+.about-blur {
   backdrop-filter: blur(10px);
- -webkit-backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }
-
 
 .is-centered {
   text-align: center;
@@ -357,10 +342,10 @@ nav {
   }
 
   .figure-fix {
-      gap: 2rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .Para-placeholder {
