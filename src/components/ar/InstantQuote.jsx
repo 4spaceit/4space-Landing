@@ -6,11 +6,13 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const utmData = parseUTMParameters();
+ 
 
   const submit = async (e) => {
     setLoading(true);
     e.preventDefault();
+
+    const utmData = parseUTMParameters();
 
     const formData = new FormData();
     formData.append("applicant", e.target.elements.name.value);

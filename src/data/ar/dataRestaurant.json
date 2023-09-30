@@ -24,7 +24,7 @@
                 "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0005.jpg"
             }
         ],
-        "place": "دبي"
+        "place": "دبي, الإمارات"
     },
     {
         "client": "مطعم جونز في دبي",
@@ -51,7 +51,7 @@
                 "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0005.jpg"
             }
         ],
-        "place": "دبي"
+        "place": "دبي, الإمارات"
     },
     {
         "client": "فاغا دبي",
@@ -77,7 +77,7 @@
                 "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0005.jpg"
             }
         ],
-        "place": "دبي"
+        "place": "دبي, الإمارات"
     },
     {
         "client": "نان سينس من فاغا",
@@ -100,6 +100,6 @@
                 "src": "assets/Restaurant/NONSENSE/NONSENSE0004.jpg"
             }
         ],
-        "place": "دبي"
+        "place": "دبي, الإمارات"
     }
 ]

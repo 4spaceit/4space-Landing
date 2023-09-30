@@ -3,8 +3,8 @@ import { useState } from "react";
 import { Fade } from "react-awesome-reveal";
 import leftIcon from "../svg/arrow-left.svg";
 import rightIcon from "../svg/arrow-right.svg";
-import plusIcon from "../svg/magnifying-glass-plus.svg"
-import minusIcon from "../svg/magnifying-glass-minus.svg"
+import plusIcon from "../svg/magnifying-glass-plus.svg";
+import minusIcon from "../svg/magnifying-glass-minus.svg";
 
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
@@ -37,17 +37,19 @@ const LandingProjects = ({ data }) => {
   const magnify = (
     <img
       src={plusIcon}
+      className="is-hidden-touch"
       alt="magnifying glass plus"
-      style={{ width: "30px", height: "30px", margin:"10px" }}
-      />
+      style={{ width: "30px", height: "30px", margin: "10px" }}
+    />
   );
 
   const demagnify = (
     <img
       src={minusIcon}
+      className="is-hidden-touch"
       alt="magnifying glass minus"
-      style={{ width: "30px", height: "30px", margin:"10px" }}
-      />
+      style={{ width: "30px", height: "30px", margin: "10px" }}
+    />
   );
 
   return (

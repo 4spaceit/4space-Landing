@@ -6,7 +6,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const utmData = parseUTMParameters();
+ 
   useEffect(() => {
     const scrollableContainer = document.querySelector('.scrollable-container');
 
@@ -27,6 +27,8 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   const submit = async (e) => {
     setLoading(true);
     e.preventDefault();
+
+    const utmData = parseUTMParameters();
 
     const formData = new FormData();
     formData.append("applicant", e.target.elements.name.value);
@@ -90,7 +92,6 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             <div className="control">
               <input className="input" type="email" name="email" required />
             </div>
-            {/*<p className="help is-danger">This email is invalid</p>*/}
           </div>
 
           <div className="field">

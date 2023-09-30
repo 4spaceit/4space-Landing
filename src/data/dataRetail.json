@@ -16,7 +16,7 @@
                 "src": "assets/Retail/AYA/4SPACE_Aya-03.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     },
     {
         "client": "VR PARK Dubai Mall",
@@ -43,7 +43,7 @@
                 "src": "assets/Retail/VR PARK/VR-Park-12-scaled.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     },
     {
         "client": "WHITES",
@@ -70,7 +70,7 @@
                 "src": "assets/Retail/WHITES/4S_WH-05.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     },
     {
         "client": "Lina Beauty Center",
@@ -97,6 +97,6 @@
                 "src": "assets/Retail/Lina Beauty Center/Lina-05-1.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Dubai, United Arab Emirates"
     }
 ]

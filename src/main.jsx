@@ -15,16 +15,16 @@ import dataResidentialAr from "./data/ar/dataResidential.json";
 import dataCommercialAr from "./data/ar/dataCommercial.json";
 import dataBrandingAr from "./data/ar/dataBranding.json";
 
-import dataRestaurantRu from "./data/ru/dataRestaurant.json";
-import dataRetailRu from "./data/ru/dataRetail.json";
-import dataResidentialRu from "./data/ru/dataResidential.json";
-import dataCommercialRu from "./data/ru/dataCommercial.json";
-import dataBrandingRu from "./data/ru/dataBranding.json";
+// import dataRestaurantRu from "./data/ru/dataRestaurant.json";
+// import dataRetailRu from "./data/ru/dataRetail.json";
+// import dataResidentialRu from "./data/ru/dataResidential.json";
+// import dataCommercialRu from "./data/ru/dataCommercial.json";
+// import dataBrandingRu from "./data/ru/dataBranding.json";
 
 
 import App from "./App.jsx";
 import LandingAr from "./pages/Landing-ar.jsx";
-import LandingRu from "./pages/Landing-ru.jsx";
+// import LandingRu from "./pages/Landing-ru.jsx";
 
 function saveOrUpdateUTMParameters() {
   if (typeof window !== "undefined") {
@@ -95,11 +95,11 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/ar/commercial" element={<LandingAr data={dataCommercialAr} />} />
         <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} />} />
 
-        <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} />} />
+        {/* <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} />} />
         <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} />} />
         <Route path="/ru/residential" element={<LandingRu data={dataResidentialRu} />} />
         <Route path="/ru/commercial" element={<LandingRu data={dataCommercialRu} />} />
-        <Route path="/ru/branding" element={<LandingRu data={dataBrandingRu} />} />
+        <Route path="/ru/branding" element={<LandingRu data={dataBrandingRu} />} /> */}
 
       </Routes>
     </BrowserRouter>
