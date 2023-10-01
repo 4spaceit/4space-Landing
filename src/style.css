@@ -1,3 +1,9 @@
+@font-face {
+  font-family: "Montserrat-Arabic";
+  src: local("Montserrat-Arabic"),
+    url("./styles/fonts/Montserrat-Arabic.ttf") format("truetype");
+}
+
 p,
 h2 {
   margin: 0;
@@ -71,6 +77,10 @@ img {
 
 .fix-index {
   animation-fill-mode: backwards !important;
+}
+
+.fix-index svg {
+  filter: drop-shadow(3px 5px 3px black);
 }
 
 .footer .columns {
@@ -314,7 +324,9 @@ nav {
   width: 90%;
   max-width: 600px;
 }
-
+svg {
+  filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
 #form-footer form {
   margin: 0;
   padding: 2rem;

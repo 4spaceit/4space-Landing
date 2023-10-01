@@ -22,7 +22,7 @@ const LandingProjects = ({data}) => {
     <img
       src={leftIcon}
       alt="left arrow"
-      style={{ width: "30px", height: "30px", margin: "0px 10px" }}
+      style={{ width: "30px", height: "30px", margin: "0px 10px", filter: "drop-shadow(3px 5px 3px black)" }}
     />
   );
 
@@ -30,7 +30,7 @@ const LandingProjects = ({data}) => {
     <img
       src={rightIcon}
       alt="right arrow"
-      style={{ width: "30px", height: "30px", margin: "0px 10px" }}
+      style={{ width: "30px", height: "30px", margin: "0px 10px", filter: "drop-shadow(3px 5px 3px black)" }}
     />
   );
 
@@ -38,7 +38,7 @@ const LandingProjects = ({data}) => {
     <img
       src={plusIcon}
       alt="magnifying glass plus"
-      style={{ width: "30px", height: "30px", margin:"10px" }}
+      style={{ width: "30px", height: "30px", margin:"10px", filter: "drop-shadow(3px 5px 3px black)"  }}
       />
   );
 
@@ -46,7 +46,7 @@ const LandingProjects = ({data}) => {
     <img
       src={minusIcon}
       alt="magnifying glass minus"
-      style={{ width: "30px", height: "30px", margin:"10px" }}
+      style={{ width: "30px", height: "30px", margin:"10px", filter: "drop-shadow(3px 5px 3px black)"  }}
       />
   );
 

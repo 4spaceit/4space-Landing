@@ -1,6 +1,3 @@
-
-
-
 import LandingProjects from "../components/ar/Projects";
 import InstantQuote from "../components/ar/InstantQuote";
 import Awards from "../components/ar/AwardsLanding";
@@ -15,6 +12,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "../components/ar/About";
 import Contact from "../components/ar/Contact";
+
 
 export default function LandingAr({ data }) {
   function saveUTMParameters() {
@@ -84,7 +82,7 @@ export default function LandingAr({ data }) {
     }
   });
   return (
-    <div style={{ direction: "rtl" }} >
+    <div style={{ direction: "rtl", fontFamily:"Montserrat-Arabic" }} >
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
@@ -115,7 +113,7 @@ export default function LandingAr({ data }) {
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
           اتصل بنا على 
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold" style={{direction: 'ltr'}}>
+            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold pt-1" style={{direction: 'ltr'}}>
               +971 4 438 5537
             </span>
           </div>

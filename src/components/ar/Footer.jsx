@@ -6,13 +6,13 @@ export default function Footer() {
   return (
     <>
       <h3 className="has-text-centered py-2">Copyright © 4SPACE Design</h3>
-      <footer className=" has-navbar-fixed-top is-hidden-desktop">
+      <footer className=" has-navbar-fixed-top is-hidden-desktop"  style={{direction: "ltr"}}>
         <div className="footer-items">
           <div className="left-footer">
             <p className="has-text-black is-size-6"> تحدث معنا</p>
           </div>
           <div
-            className="right-1-footer footer-rtl"
+            className="right-1-footer"
             onClick={() => {
               document.getElementById("modal").classList.add("is-active");
             }}
