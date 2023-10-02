@@ -83,7 +83,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/resturant" element={<App data={dataRestaurantEn} bg={"https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-02-scaled.jpg"} />} />
+        <Route path="/resturant" element={<App data={dataRestaurantEn} />} />
         <Route path="/retail" element={<App data={dataRetailEn} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
         <Route path="/residential" element={<App data={dataResidentialEn} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
         <Route path="/commercial" element={<App data={dataCommercialEn} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />

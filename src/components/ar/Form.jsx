@@ -39,7 +39,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
-        document.getElementById("form-dekstop").hidden = true;
+        document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
       }
@@ -52,7 +52,7 @@ export default function Form(props) {
   };
   return (
     <div className=" mt-3" id={id}>
-      <form className=" form" onSubmit={submit}>
+      <form className="form" onSubmit={submit} id="form-mobile">
         <div className="field">
           <label className="label has-text-right" htmlFor="name">
             الأسم
@@ -88,7 +88,7 @@ export default function Form(props) {
             رقم الهاتف
           </label>
           <div className="control">
-            <input className="input" type="text" id="mobile" name="mobile" />
+            <input className="input" type="tel" id="mobile" name="mobile" required />
           </div>
         </div>
 
@@ -100,7 +100,7 @@ export default function Form(props) {
         <div className="field">
           <div className="control is-pulled-left	">
             <button
-              className="button buttonOutlined"
+              className="button buttonOutlined is-centered"
               type="submit"
               disabled={loading}
               aria-label="submit"

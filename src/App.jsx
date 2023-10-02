@@ -109,11 +109,11 @@ export default function App({ data, bg }) {
         {/* <OurClients /> */}
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
-          <div className="column has-text-centered has-text-weight-bold has-text-black">
+          <div className="column has-text-centered has-text-weight-bold has-text-black" onClick={() => {
+              document.getElementById("modal").classList.add("is-active");
+            }}>
             GET IN TOUCH
-            <span className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
-              Write to 4Space
-            </span>
+
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
             CALL US

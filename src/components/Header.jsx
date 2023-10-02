@@ -74,7 +74,7 @@ export default function Header() {
                   }}
                   
                 >
-                  Send Enquiry
+                  Get In Touch
                 </Link>
               </button>
             </div>

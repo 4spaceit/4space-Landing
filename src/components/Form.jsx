@@ -39,7 +39,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
-        document.getElementById("form-dekstop").hidden = true;
+        document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
       }
@@ -52,7 +52,7 @@ export default function Form(props) {
   };
   return (
     <div className=" mt-3" id={id}>
-      <form className=" form" onSubmit={submit}>
+      <form className=" form" onSubmit={submit} id="form-mobile">
         <div className="field">
           <label className="label has-text-left" htmlFor="name">
             Name
@@ -88,7 +88,7 @@ export default function Form(props) {
             Mobile
           </label>
           <div className="control">
-            <input className="input" type="text" id="mobile" name="mobile" />
+            <input className="input" type="tel" id="mobile" name="mobile" />
           </div>
         </div>
 
@@ -97,8 +97,8 @@ export default function Form(props) {
             We couldnt submit the form, can you try again.
           </div>
         )}
-        <div className="field is-grouped is-align-items-flex-end">
-          <div className="control">
+        <div className="field is-align-items-flex-center ">
+          <div className="control ">
             <button
               className="button buttonOutlined"
               type="submit"

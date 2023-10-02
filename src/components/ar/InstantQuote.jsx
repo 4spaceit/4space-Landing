@@ -81,7 +81,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           <div className="field">
             <label className="label" >رقم الهاتف</label>
             <div className="control">
-              <input className="input" type="text" name="mobile" />
+              <input className="input" type="tel" name="mobile" required />
             </div>
           </div>
 
@@ -91,7 +91,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           )}
 
-          <div className="field is-grouped is-align-items-flex-end">
+          <div className="field is-align-items-flex-center">
             <div className="control">
               <button
                 className="button buttonOutlined"
