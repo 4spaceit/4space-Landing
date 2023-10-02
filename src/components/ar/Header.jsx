@@ -79,6 +79,7 @@ export default function Header() {
                   rel="nofollow"
                   spy={true}
                   smooth={true}
+                  style={{fontFamily:"Montserrat-Arabic"}}
                   onClick={() => {
                     document.getElementById("modal").classList.add("is-active");
                   }}

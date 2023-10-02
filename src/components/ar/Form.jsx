@@ -104,6 +104,7 @@ export default function Form(props) {
               type="submit"
               disabled={loading}
               aria-label="submit"
+              style={{fontFamily:"Montserrat-Arabic"}}
             >
               {loading ? "جاري الإرسال..." : "إرسال"}
             </button>
