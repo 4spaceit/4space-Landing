@@ -54,7 +54,7 @@ export default function Form(props) {
     <div className=" mt-3" id={id}>
       <form className=" form" onSubmit={submit}>
         <div className="field">
-          <label className="label has-text-left" htmlFor="name">
+          <label className="label has-text-right" htmlFor="name">
             الأسم
           </label>
           <div className="control">
@@ -68,7 +68,7 @@ export default function Form(props) {
           </div>
         </div>
         <div className="field">
-          <label className="label has-text-left" htmlFor="email">
+          <label className="label has-text-right" htmlFor="email">
             البريد الإلكتروني
           </label>
           <div className="control">
@@ -84,7 +84,7 @@ export default function Form(props) {
         </div>
 
         <div className="field">
-          <label className="label has-text-left" htmlFor="mobile">
+          <label className="label has-text-right" htmlFor="mobile">
             رقم الهاتف
           </label>
           <div className="control">
