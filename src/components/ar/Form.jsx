@@ -97,8 +97,8 @@ export default function Form(props) {
             لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى.
           </div>
         )}
-        <div className="field is-grouped is-align-items-flex-end">
-          <div className="control">
+        <div className="field">
+          <div className="control is-pulled-left	">
             <button
               className="button buttonOutlined"
               type="submit"

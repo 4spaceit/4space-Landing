@@ -83,16 +83,16 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/resturant" element={<App data={dataRestaurantEn} />} />
-        <Route path="/retail" element={<App data={dataRetailEn} />} />
-        <Route path="/residential" element={<App data={dataResidentialEn} />} />
-        <Route path="/commercial" element={<App data={dataCommercialEn} />} />
+        <Route path="/resturant" element={<App data={dataRestaurantEn} bg={"https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-02-scaled.jpg"} />} />
+        <Route path="/retail" element={<App data={dataRetailEn} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
+        <Route path="/residential" element={<App data={dataResidentialEn} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
+        <Route path="/commercial" element={<App data={dataCommercialEn} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
         <Route path="/branding" element={<App data={dataBrandingEn} />} />
 
-        <Route path="/ar/resturant" element={<LandingAr data={dataRestaurantAr} />} />
-        <Route path="/ar/retail" element={<LandingAr data={dataRetailAr} />} />
-        <Route path="/ar/residential" element={<LandingAr data={dataResidentialAr} />} />
-        <Route path="/ar/commercial" element={<LandingAr data={dataCommercialAr} />} />
+        <Route path="/ar/resturant" element={<LandingAr data={dataRestaurantAr} bg={"https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-02-scaled.jpg"} />} />
+        <Route path="/ar/retail" element={<LandingAr data={dataRetailAr} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
+        <Route path="/ar/residential" element={<LandingAr data={dataResidentialAr} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
+        <Route path="/ar/commercial" element={<LandingAr data={dataCommercialAr} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
         <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} />} />
 
         {/* <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} />} />

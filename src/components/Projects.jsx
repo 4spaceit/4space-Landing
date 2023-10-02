@@ -37,7 +37,6 @@ const LandingProjects = ({ data }) => {
   const magnify = (
     <img
       src={plusIcon}
-      className="is-hidden-touch"
       alt="magnifying glass plus"
       style={{ width: "30px", height: "30px", margin: "10px", filter: "drop-shadow(3px 5px 3px black)"  }}
     />
@@ -46,7 +45,6 @@ const LandingProjects = ({ data }) => {
   const demagnify = (
     <img
       src={minusIcon}
-      className="is-hidden-touch"
       alt="magnifying glass minus"
       style={{ width: "30px", height: "30px", margin: "10px", filter: "drop-shadow(3px 5px 3px black)"  }}
     />
@@ -90,7 +88,7 @@ const LandingProjects = ({ data }) => {
                       ></Carousel>
                     </div>
 
-                    <div className={`column is-half has-text-centered-touch`}>
+                    <div className={`column is-half `}>
                       <h3 className="has-text-weight-semibold is-size-4">
                         {item.client}
                       </h3>
@@ -98,7 +96,7 @@ const LandingProjects = ({ data }) => {
                         {item.place}
                       </h3>
 
-                      <p className="mb-2 has-text-left is-size-5 has-text-centered-touch">
+                      <p className="mb-2 has-text-left is-size-6-mobile ">
                         {item.descr}
                       </p>
                     </div>

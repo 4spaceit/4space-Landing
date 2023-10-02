@@ -14,7 +14,7 @@ import About from "../components/ar/About";
 import Contact from "../components/ar/Contact";
 
 
-export default function LandingAr({ data }) {
+export default function LandingAr({ data, bg }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -86,7 +86,7 @@ export default function LandingAr({ data }) {
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
-        <section className="section page" id="home">
+        <section className="section page" id="home" style={{backgroundImage: `url(${bg})`}}>
           {/* <Form id="form-desktop" /> */}
           <div className="title is-1 has-text-white is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-weight-bold head-text">

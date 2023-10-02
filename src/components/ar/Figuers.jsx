@@ -14,13 +14,13 @@ function Figuers() {
           <div className="column is-4">
             <div className="has-text-centered">
               <h2 className="has-text-white is-size-2"> <CountUp end={50} start={20} enableScrollSpy={true} scrollSpyOnce={true} duration={2} /></h2>
-              <p className="subtitle is-size-5 has-text-white">عملاء راضون</p>
+              <p className="subtitle is-size-5 has-text-white">عميل سعيد</p>
             </div>
           </div>
           <div className="column is-4">
             <div className=" has-text-centered">
               <h2 className="has-text-white is-size-2"><CountUp end={10} enableScrollSpy={true} scrollSpyOnce={true} duration={3} /></h2>
-              <p className="subtitle is-size-5 has-text-white">جوائز</p>
+              <p className="subtitle is-size-5 has-text-white">الجوائز و التكريمات</p>
             </div>
           </div>
         </div>

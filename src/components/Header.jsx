@@ -74,7 +74,7 @@ export default function Header() {
                   }}
                   
                 >
-                  Project Inquiry
+                  Send Enquiry
                 </Link>
               </button>
             </div>

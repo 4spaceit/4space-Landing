@@ -84,11 +84,11 @@ const LandingProjects = ({data}) => {
                       minIcon={demagnify}
                     />
                   </div>
-                  <div className={`column is-half has-text-centered-touch`} style={{direction:"rtl"}}>
+                  <div className={`column is-half`} style={{direction:"rtl"}}>
                     <h2 className=" is-size-4">{item.client}</h2>
-                    <h2 className="has-text-weight-semibold is-size-5">{item.place}</h2>
+                    <h2 className="has-text-weight-semibold is-size-6">{item.place}</h2>
 
-                    <p className="mb-2 has-text-right is-size-5 has-text-centered-touch">
+                    <p className="mb-2 has-text-right is-size-5 is-size-6-mobile ">
                       {item.descr}
                     </p>
                   </div>

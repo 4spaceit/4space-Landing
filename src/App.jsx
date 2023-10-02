@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
-export default function App({ data }) {
+export default function App({ data, bg }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -86,10 +86,9 @@ export default function App({ data }) {
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
-        <section className="section page" id="home">
-          {/* <Form id="form-desktop" /> */}
+        <section className="section page" id="home"  style={bg ? {backgroundImage: `url(${bg})`} : {}}>
           <div className="title is-1 has-text-white is-size-4-mobile p-2">
-            <h1 className="has-text-white has-text-weight-bold head-text">
+            <h1 className="has-text-white has-text-weight-bold head-text has-text-left">
               Transforming Spaces, <br/>Framing Experiences
             </h1>
             <p className="mt-4 has-text-weight-normal has-text-left ">
