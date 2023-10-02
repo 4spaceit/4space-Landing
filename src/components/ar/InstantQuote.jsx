@@ -79,7 +79,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           </div>
 
           <div className="field">
-            <label className="label">رقم الهاتف</label>
+            <label className="label" >رقم الهاتف</label>
             <div className="control">
               <input className="input" type="text" name="mobile" />
             </div>
@@ -98,6 +98,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 type="submit"
                 disabled={loading}
                 aria-label="submit"
+                style={{fontFamily:"Montserrat-Arabic"}}
               >
                 {loading ? "جاري الإرسال..." : "إرسال"}
               </button>
