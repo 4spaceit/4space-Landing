@@ -7,31 +7,28 @@ export default function About() {
       <div className="columns is-multiline about">
         <Parallax
           bgImage="assets/4SPACE-team.jpg"
-          bgImageAlt="the cat"
+          bgImageAlt="4SPACE-team"
           strength={-100}
           className="about-image column is-full"
-          bgStyle={{ "background-size": "contain" }}
         >
           <div className="Para-placeholder"></div>
         </Parallax>
         {/* <div className="about-image column is-full">
           <img src="assets/4SPACE-team.jpg" alt="" />
         </div> */}
-        <div className=" container column is-full py-6">
+        <div className="section container column is-full py-6">
           <h2 className="center mb-6 ">ABOUT</h2>
           <div className="columns is-multiline">
             <div className="column has-text-left">
-              <p >
+              <p>
                 Firas Alsahin and Amjad Hourieh, the founders, decided to move
                 to Dubai and start their journey of success while relocating
                 their practices to be at the heart of the thriving market.
-
                 <br />
                 <br />
                 The emirate's rapid growth in the commercial sector provided an
                 impetus for the firm to investigate all opportunities in the
                 design industry.
-
                 <br />
                 <br />
                 Overcoming an uphill battle, 4Space Design has continued to
