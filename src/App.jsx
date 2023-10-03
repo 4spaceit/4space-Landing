@@ -14,7 +14,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
 import Contact from "./components/Contact";
 
-export default function App({ data, bg }) {
+export default function App({ data, bg, txt }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -92,15 +92,13 @@ export default function App({ data, bg }) {
               Transforming Spaces, <br/>Framing Experiences
             </h1>
             <p className="mt-4 has-text-weight-normal has-text-left ">
-              We believe that design is more than just aesthetics; it is the
-              embodiment of a brand's essence, an expression of its values, and
-              a catalyst for success.
+             {txt.intro}
             </p>
-            <p className="mt-4 has-text-weight-normal has-text-left">
-              With our unwavering commitment to innovation and a passion for
-              pushing boundaries, we have positioned ourselves as the go-to
-              destination for those seeking truly unique and captivating
-              designs.
+            <p className="mt-4 has-text-weight-normal has-text-left ">
+             {txt.bodyPart1}
+            </p>
+            <p className="mt-4 has-text-weight-normal has-text-left ">
+             {txt.bodyPart2}
             </p>
           </div>
         </section>

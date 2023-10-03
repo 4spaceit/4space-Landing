@@ -21,23 +21,21 @@ export default function About() {
           <div className="columns is-multiline">
             <div className="column has-text-left">
               <p>
-                Firas Alsahin and Amjad Hourieh, the founders, decided to move
-                to Dubai and start their journey of success while relocating
-                their practices to be at the heart of the thriving market.
+                Meet the founders,&nbsp;
+                <span className="has-text-weight-bold">
+                   Firas Alsahin and Amjad Hourieh
+                </span>
+                , who relocated to Dubai to embark on their journey to success
+                in a thriving market.
                 <br />
                 <br />
-                The emirate's rapid growth in the commercial sector provided an
-                impetus for the firm to investigate all opportunities in the
-                design industry.
+                In a rapidly growing commercial landscape, 4Space Design
+                prioritizes quality over quantity, focusing on unique projects
+                and strong client relationships.
                 <br />
                 <br />
-                Overcoming an uphill battle, 4Space Design has continued to
-                create noteworthy projects in the UAE. Eschewing quantity for
-                quality, profile of the project, and relationship with clients,
-                the company credits its people’s distinct ideas for strategic
-                business development. They managed to grow and stand still in
-                the market, showing their success and innovation to all their
-                clients.
+                Their innovative approach has solidified their position in the
+                market, showcasing their success to clients.
               </p>
             </div>
           </div>

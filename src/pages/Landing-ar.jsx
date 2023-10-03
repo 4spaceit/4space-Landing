@@ -106,8 +106,9 @@ export default function LandingAr({ data, bg }) {
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div className="column has-text-centered has-text-weight-bold has-text-black">
-          نحن معك
-            <span className="has-text-black is-size-6 has-text-centered has-text-weight-bold">
+            <span className="has-text-black is-size-6 has-text-centered has-text-weight-bold is-clickable" onClick={() => {
+              document.getElementById("modal").classList.add("is-active");
+            }}>
             تواصل معنا
             </span>
           </div>

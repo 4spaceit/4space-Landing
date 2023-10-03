@@ -1,7 +1,7 @@
 [
     {
         "client": "AYA Universe",
-        "descr": "The design of AYA Universe is both ancient and deeply futuristic, blending nature with intelligent construction. The advanced construction techniques used in this project give the impression that AYA Universe was grown and built in anticipation of natural incursions. The powerful combination of natural elements and constructed space creates an unforgettable experience for visitors.",
+        "descr": "Spanning an impressive 3,000 sqm, this awe-inspiring project transports guests to a realm where surrealism reigns supreme. Wander through gardens where gravity defies convention, where stars harmonize in cosmic symphonies, and where flowers bloom in the ethereal embrace of moon dust.",
         "images": [
             {
                 "alt": "AYA Universe",
@@ -20,7 +20,7 @@
     },
     {
         "client": "VR PARK Dubai Mall",
-        "descr": "The VR PARK, is a testament to our commitment to innovation and excellence. Designed in partnership with Emaar Entertainment, this virtual reality park challenges the boundaries of what’s possible and delivers an unforgettable experience to visitors. Our team was tasked with designing a space that was not only innovative and immersive but also visually stunning, and we delivered.",
+        "descr": "In collaboration with Emaar Entertainment, we've forged a virtual reality park that redefines the limits of possibility, promising an unforgettable journey for all who enter. This is a space that isn't just immersive, but visually stunning. Welcome to the future of entertainment.",
         "images": [
             {
                 "alt": "VR PARK",
@@ -47,7 +47,7 @@
     },
     {
         "client": "WHITES",
-        "descr": "When it comes to the design of the shop, it plays a crucial role in attracting customers and ensuring a comfortable and functional space. The color scheme revolves around neutral and calming colors such as white and sky blue. It showcases a clean and modern look while also making the space feel bright and open, creating a modern and functional Retail Interior Design. The decorative wall elements are very simple and minimalist; they enhance the overall aesthetic of the space while maintaining a clean and uncluttered look. 4SPACE maintained quality over quantity and chose pieces that add visual interest without overwhelming the aesthetically pleasing space. By keeping it simple, 4SPACE created a modern and functional retail interior design.",
+        "descr": "The palette dances with serene hues like pristine white and soothing sky blue, orchestrating a clean, contemporary ambiance. The result? A bright, open, and utterly modern Retail Interior Design that's as functional as it is fashionable.",
         "images": [
             {
                 "alt": "WHITES",
@@ -74,7 +74,7 @@
     },
     {
         "client": "Lina Beauty Center",
-        "descr": "As you enter the center, you will be greeted by a stunning interior with a luxurious feel and a gold palette. The interiors have been carefully designed to offer a warm and welcoming ambiance that instantly puts you at ease. The attention to detail is evident in every corner of the center, from the carefully chosen furnishings to the elegant decor that showcases luxury salon design.",
+        "descr": "As you enter the center, you will be greeted by a stunning interior with a luxurious feel and a gold palette. The interiors have been carefully designed to offer a warm and welcoming ambiance that instantly puts you at ease.At Lina Beauty Center, you can be assured of a luxurious and relaxing experience.",
         "images": [
             {
                 "alt": "Lina Beauty Center",
@@ -97,6 +97,6 @@
                 "src": "assets/Retail/Lina Beauty Center/Lina-05-1.jpg"
             }
         ],
-        "place": "Dubai, United Arab Emirates"
+        "place": "Saudi Arabia"
     }
 ]
