@@ -2,5 +2,6 @@
   "Restaurant": {"place": "restaurant interiors"},
   "Residential": { "place": "living areas and room interiors" },
   "Retail": { "place": "retail interior" },
-  "Commercial": { "place": "commercial interior design" }
+  "Commercial": { "place": "commercial interior design" },
+  "Branding": { "place": "brand identity design" }
 }
