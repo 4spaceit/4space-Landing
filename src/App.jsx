@@ -109,7 +109,8 @@ export default function App({ data, bg }) {
         {/* <OurClients /> */}
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
-          <div className="column has-text-centered has-text-weight-bold has-text-black" onClick={() => {
+          
+          <div className="column has-text-centered has-text-weight-bold has-text-black is-clickable" onClick={() => {
               document.getElementById("modal").classList.add("is-active");
             }}>
             GET IN TOUCH
