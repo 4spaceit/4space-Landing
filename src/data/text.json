@@ -1,22 +1,6 @@
 {
-  "Restaurant": {
-    "intro": "Welcome to the 4Space luxury design company! Here is our portfolio of best cases in restaurant interiors!",
-    "bodyPart1": "We're firm believers that design goes far beyond aesthetics. It's the very heart and soul of a brand, a vivid expression of its values, and a powerful driver of success.",
-    "bodyPart2": "With our commitment to innovation and passion for pushing creative limits, we've become the ultimate destination for those who crave designs that are not just unique but absolutely mesmerizing."
-  },
-  "Residential": {
-    "intro": "Welcome to the 4Space luxury design company! Here is our portfolio of best cases in living areas and room interiors!",
-    "bodyPart1": "We're firm believers that design goes far beyond aesthetics. It's the very heart and soul of a brand, a vivid expression of its values, and a powerful driver of success.",
-    "bodyPart2": "With our commitment to innovation and passion for pushing creative limits, we've become the ultimate destination for those who crave designs that are not just unique but absolutely mesmerizing."
-  },
-  "Retail": {
-    "intro": "Welcome to the 4Space luxury design company! Here is our portfolio of retail interior design best cases!",
-    "bodyPart1": "We're firm believers that design goes far beyond aesthetics. It's the very heart and soul of a brand, a vivid expression of its values, and a powerful driver of success.",
-    "bodyPart2": "With our commitment to innovation and passion for pushing creative limits, we've become the ultimate destination for those who crave designs that are not just unique but absolutely mesmerizing."
-  },
-  "Commercial": {
-    "intro": "Welcome to the 4Space luxury design company! Here is our portfolio of the best cases for commercial interior design!",
-    "bodyPart1": "We're firm believers that design goes far beyond aesthetics. It's the very heart and soul of a brand, a vivid expression of its values, and a powerful driver of success.",
-    "bodyPart2": "With our commitment to innovation and passion for pushing creative limits, we've become the ultimate destination for those who crave designs that are not just unique but absolutely mesmerizing."
-  }
+  "Restaurant": {"place": "restaurant interiors"},
+  "Residential": { "place": "living areas and room interiors" },
+  "Retail": { "place": "retail interior" },
+  "Commercial": { "place": "commercial interior design" }
 }

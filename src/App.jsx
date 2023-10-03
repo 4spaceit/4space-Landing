@@ -92,13 +92,13 @@ export default function App({ data, bg, txt }) {
               Transforming Spaces, <br/>Framing Experiences
             </h1>
             <p className="mt-4 has-text-weight-normal has-text-left ">
-             {txt.intro}
+            Welcome to the 4Space luxury design company! Here is our portfolio of best cases in {txt.place}!
             </p>
             <p className="mt-4 has-text-weight-normal has-text-left ">
-             {txt.bodyPart1}
+            We're firm believers that design goes far beyond aesthetics. It's the very heart and soul of a brand, a vivid expression of its values, and a powerful driver of success.
             </p>
             <p className="mt-4 has-text-weight-normal has-text-left ">
-             {txt.bodyPart2}
+            With our commitment to innovation and passion for pushing creative limits, we've become the ultimate destination for those who crave designs that are not just unique, but absolutely mesmerizing.
             </p>
           </div>
         </section>

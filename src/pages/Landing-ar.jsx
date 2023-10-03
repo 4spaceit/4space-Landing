@@ -14,7 +14,7 @@ import About from "../components/ar/About";
 import Contact from "../components/ar/Contact";
 
 
-export default function LandingAr({ data, bg }) {
+export default function LandingAr({ data, bg, txt }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -90,13 +90,14 @@ export default function LandingAr({ data, bg }) {
           {/* <Form id="form-desktop" /> */}
           <div className="title is-1 has-text-white is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-weight-bold head-text">
-            تحويل المساحات <br/>و هيكلة التجارب
+            تحويل المساحات،<br/>
+            لإعادة صياغة التجارب
             </h1>
             <p className="mt-4 has-text-weight-normal has-text-right ">
-            نحن نعتقد أن التصميم هو أكثر من مجرد الجماليات؛ إنه تجسيد لجوهر
-              العلامة التجارية، وتعبير عن قيمها، ودافع للنجاح. من خلال اهتمامنا
-              بالابتكار وشغفنا في الفوز على التحديات، لقد وضعنا أنفسنا كوجهة
-              مفضلة لأولئك الذين يبحثون عن تصاميم فريدة وجذابة حقًا.
+            نحن نؤمن بأن التصميم الداخلي أكثر من مجرد ديكور؛ فهو تجسيد لجوهر العلامة التجارية، وتعبير عن قيمها، كما أنه حافز لنجاحها.
+            </p>
+            <p className="mt-4 has-text-weight-normal has-text-right ">
+            بفضل التزامنا الراسخ بالابتكار وشغفنا بتخطي الحدود، وضعنا أنفسنا كوجهة مفضلة لأولئك الذين يبحثون عن تصاميم خاصة وجذابة {txt.place}
             </p>
           </div>
         </section>

@@ -1,0 +1,7 @@
+{
+  "Restaurant": {"place": "لمطاعمهم"},
+  "Residential": { "place": "لمنازلهم" },
+  "Retail": { "place": "لمتاجرهم" },
+  "Commercial": { "place": "لمكاتبهم وشركاتهم" },
+  "Branding": { "place": "لعلامتهم التجارية" }
+}

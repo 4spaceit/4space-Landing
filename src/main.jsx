@@ -8,22 +8,21 @@ import dataRetailEn from "./data/dataRetail.json";
 import dataResidentialEn from "./data/dataResidential.json";
 import dataCommercialEn from "./data/dataCommercial.json";
 import dataBrandingEn from "./data/dataBranding.json";
-import text from "./data/text.json";
+import textEn from "./data/text.json";
 
 import dataRestaurantAr from "./data/ar/dataRestaurant.json";
 import dataRetailAr from "./data/ar/dataRetail.json";
 import dataResidentialAr from "./data/ar/dataResidential.json";
 import dataCommercialAr from "./data/ar/dataCommercial.json";
 import dataBrandingAr from "./data/ar/dataBranding.json";
+import textAr from "./data/ar/text.json";
+
 
 // import dataRestaurantRu from "./data/ru/dataRestaurant.json";
 // import dataRetailRu from "./data/ru/dataRetail.json";
 // import dataResidentialRu from "./data/ru/dataResidential.json";
 // import dataCommercialRu from "./data/ru/dataCommercial.json";
 // import dataBrandingRu from "./data/ru/dataBranding.json";
-
-let RsEn =
-  "Welcome to the 4Space luxury design company! Here is our portfolio of best cases in restaurant interiors! We're firm believers that design goes far beyond aesthetics. It's the very heart and soul of a brand, a vivid expression of its values, and a powerful driver of success. With our commitment to innovation and passion for pushing creative limits, we've become the ultimate destination for those who crave designs that are not just unique, but absolutely mesmerizing.";
 
 import App from "./App.jsx";
 import LandingAr from "./pages/Landing-ar.jsx";
@@ -87,94 +86,18 @@ ReactDOM.createRoot(document.getElementById("root")).render(
       <Routes>
         <Route
           path="/resturant"
-          element={<App data={dataRestaurantEn} txt={text.Restaurant} />}
+          element={<App data={dataRestaurantEn} txt={textEn.Restaurant} />}
         />
-        <Route
-          path="/retail"
-          element={
-            <App
-              data={dataRetailEn}
-              txt={text.Retail}
-              bg={
-                "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"
-              }
-            />
-          }
-        />
-        <Route
-          path="/residential"
-          element={
-            <App
-              data={dataResidentialEn}
-              txt={text.Residential}
-              bg={
-                "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"
-              }
-            />
-          }
-        />
-        <Route
-          path="/commercial"
-          element={
-            <App
-              data={dataCommercialEn}
-              txt={text.Commercial}
-              bg={
-                "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"
-              }
-            />
-          }
-        />
-        <Route path="/branding" element={<App data={dataBrandingEn} />} />
+        <Route path="/retail" element={ <App data={dataRetailEn} txt={textEn.Retail} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
+        <Route path="/residential" element={ <App data={dataResidentialEn} txt={textEn.Residential} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
+        <Route path="/commercial" element={ <App data={dataCommercialEn} txt={textEn.Commercial} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
+        <Route path="/branding" element={<App data={dataBrandingEn} txt={textEn.Commercial} />} />
 
-        <Route
-          path="/ar/resturant"
-          element={
-            <LandingAr
-              data={dataRestaurantAr}
-              bg={
-                "https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-02-scaled.jpg"
-              }
-            />
-          }
-        />
-        <Route
-          path="/ar/retail"
-          element={
-            <LandingAr
-              data={dataRetailAr}
-              bg={
-                "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"
-              }
-            />
-          }
-        />
-        <Route
-          path="/ar/residential"
-          element={
-            <LandingAr
-              data={dataResidentialAr}
-              bg={
-                "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"
-              }
-            />
-          }
-        />
-        <Route
-          path="/ar/commercial"
-          element={
-            <LandingAr
-              data={dataCommercialAr}
-              bg={
-                "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"
-              }
-            />
-          }
-        />
-        <Route
-          path="/ar/branding"
-          element={<LandingAr data={dataBrandingAr} />}
-        />
+        <Route path="/ar/resturant" element={ <LandingAr data={dataRestaurantAr} txt={textAr.Restaurant} bg={ "https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-02-scaled.jpg" } /> } />
+        <Route path="/ar/retail" element={ <LandingAr data={dataRetailAr} txt={textAr.Retail} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
+        <Route path="/ar/residential" element={ <LandingAr data={dataResidentialAr} txt={textAr.Residential} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
+        <Route path="/ar/commercial" element={ <LandingAr data={dataCommercialAr} txt={textAr.Commercial} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
+        <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} txt={textAr.Commercial}  />} />
 
         {/* <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} />} />
         <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} />} />
