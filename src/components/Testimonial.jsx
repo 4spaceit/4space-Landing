@@ -1,13 +1,12 @@
 import QuoteL from "../svg/quoteL.svg?react";
 import QuoteR from "../svg/quoteR.svg?react";
 
-
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { Navigation, Pagination  } from "swiper/modules";
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
 
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
@@ -20,11 +19,12 @@ export default function Testimonial() {
       <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
       <div className="is-centered">
         <Swiper
-          slidesPerView={1}
+          slidesPerView={"auto"}
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
           navigation={true}
           slidesPerGroup={1}
+          longSwipes={false}
           breakpoints={{
             1024: {
               slidesPerView: 3,
@@ -110,3 +110,6 @@ export default function Testimonial() {
     </section>
   );
 }
+
+
+

@@ -10,7 +10,7 @@ export default function About() {
         {/* <div className="about-image column is-full">
           <img src="assets/4SPACE-team.jpg" alt="" />
         </div> */}
-        <div className="section column is-full py-6">
+        <div className="section column is-full py-4">
           <h2 className="center m-6 has-text-black ">ABOUT</h2>
           <div className="columns is-multiline">
             <div className="column container has-text-justified	">
