@@ -4,6 +4,7 @@ import Form from "./components/Form";
 import Awards from "./components/AwardsLanding";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import video from "/bg1.mp4";
 
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
@@ -13,6 +14,7 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Testimonial from "./components/Testimonial";
 
 export default function App({ data, bg, txt }) {
   function saveUTMParameters() {
@@ -86,33 +88,30 @@ export default function App({ data, bg, txt }) {
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
-        <section className="section page" id="home"  style={bg ? {backgroundImage: `url(${bg})`} : {}}>
-          <div className="title is-1 has-text-white is-size-4-mobile p-2">
-            <h1 className="has-text-white has-text-weight-bold head-text has-text-left">
-              Transforming Spaces, <br/>Framing Experiences
+        <section className="section page" id="home" style={bg ? { backgroundImage: `url(${bg})` } : {}} >
+          <video autoPlay muted loop id="bg-video">
+            <source src={video} type="video/mp4" />
+          </video>
+          <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
+            <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
+              Transforming Spaces, <br />
+              Framing Experiences
             </h1>
-            <p className="mt-4 has-text-weight-normal has-text-left ">
-            Welcome to the 4Space luxury design company! Here is our portfolio of best cases in {txt.place}!
-            </p>
-            <p className="mt-4 has-text-weight-normal has-text-left ">
-            We're firm believers that design goes far beyond aesthetics. It's the very heart and soul of a brand, a vivid expression of its values, and a powerful driver of success.
-            </p>
-            <p className="mt-4 has-text-weight-normal has-text-left ">
-            With our commitment to innovation and passion for pushing creative limits, we've become the ultimate destination for those who crave designs that are not just unique, but absolutely mesmerizing.
-            </p>
           </div>
         </section>
         <LandingProjects data={data} />
         <About />
+        <Testimonial />
         {/* <OurClients /> */}
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
-          
-          <div className="column has-text-centered has-text-weight-bold has-text-black is-clickable" onClick={() => {
+          <div
+            className="column has-text-centered has-text-weight-bold has-text-black is-clickable"
+            onClick={() => {
               document.getElementById("modal").classList.add("is-active");
-            }}>
+            }}
+          >
             GET IN TOUCH
-
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
             CALL US

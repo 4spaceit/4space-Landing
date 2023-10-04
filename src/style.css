@@ -125,7 +125,6 @@ img {
   padding: 13px 0px 13px 0px;
 }
 
-
 .right-1-footer,
 .right-2-footer {
   width: 25%;
@@ -173,7 +172,6 @@ footer {
 .left-footer {
   width: 75%;
   margin: 0;
-
 }
 
 .left-footer p {
@@ -250,11 +248,24 @@ header {
   margin-bottom: 5rem;
 }
 
+#bg-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: -50;
+}
+
 #home {
-  background-image: url("./images/first.jpg");
+  background-image: none !important;
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100dvh;
+  position: relative;
 }
 .Para-placeholder {
   height: 600px;
@@ -276,12 +287,9 @@ nav {
   font-size: 2rem;
   padding: 2rem;
   font-weight: bold;
-  text-shadow: #202020 1px 0 10px;
-  backdrop-filter: blur(5px);
-  background-clip: text;
-  width: 50%;
+  text-shadow: 1px 1px 1px black;
+  width: 100%;
   margin-top: 100px;
-  -webkit-backdrop-filter: blur(5px);
 }
 
 #header .navbar .navbar-menu .navbar-item:last-child {
@@ -293,6 +301,22 @@ nav {
   background: transparent !important;
   border-color: #a7a7a7 !important;
   color: rgb(238, 235, 235) !important;
+}
+
+.testimonial-box {
+  border: 1px solid white;
+  border-radius: 15px;
+  margin: 15px;
+  max-width: 400px;
+  padding: 15px;
+}
+
+.testimonial {
+  gap: 15px;
+}
+/* the slides */
+.slick-slide {
+  margin: 0 27px;
 }
 
 .navbar-end {
@@ -365,6 +389,10 @@ svg {
     text-align: center;
   }
 
+  #bg-video {
+    container: size;
+  }
+
   .figure-fix {
     gap: 2rem;
     display: flex;
@@ -373,8 +401,7 @@ svg {
   }
 
   #home {
-    min-height: 85dvh;
-
+    min-height: 40dvh;
   }
 
   .Para-placeholder {
@@ -390,7 +417,7 @@ svg {
     bottom: 4rem;
   }
   .mobile-padding {
-    padding: 0 .5rem;
+    padding: 0 0.5rem;
   }
   .section {
     padding: 1rem 1.5rem;
