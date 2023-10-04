@@ -220,7 +220,8 @@ header {
 
 .cta {
   position: fixed;
-  background-color: #fff;
+  background-color: #999999;
+  color: white;
   min-width: 300px;
   height: auto;
   bottom: 2rem;
@@ -245,7 +246,7 @@ header {
 }
 
 .our-figures {
-padding-bottom: 2rem;
+  padding-bottom: 2rem;
 }
 
 #bg-video {
@@ -271,7 +272,6 @@ padding-bottom: 2rem;
   margin-top: 4rem;
   display: flex;
   align-items: center;
-  
 }
 
 #home h1 {
@@ -315,7 +315,7 @@ nav {
 
 .testimonial-box {
   border: 1px solid white;
-  border-radius: 15px;
+  border-radius: 6px;
   margin: 15px;
   max-width: 400px;
   padding: 15px;
@@ -323,9 +323,19 @@ nav {
 
 .testimonial {
   gap: 15px;
-  background-color: #999999;
-
 }
+
+.testimonial .box {
+  height: 100%;
+}
+.testimonial .columns:last-child {
+  margin-bottom: 0!important;
+}
+.testimonial svg {
+  width: 15px;
+  filter: none;
+}
+
 /* the slides */
 .slick-slide {
   margin: 0 27px;
