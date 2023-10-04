@@ -2,8 +2,8 @@ import CountUp from 'react-countup';
 
 function Figuers() {
   return (
-    <section className="has-background-white page our-figures pb-6">
-      <div className="container mb-6">
+    <section className="has-background-white page our-figures py-6">
+      <div className="container ">
         <div className="columns is-multiline is-centered is-8 figure-fix">
           <div className="column is-4">
             <div className=" has-text-centered">
