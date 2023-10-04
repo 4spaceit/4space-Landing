@@ -4,7 +4,9 @@ import Form from "./components/Form";
 import Awards from "./components/AwardsLanding";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import video from "/bg1.mp4";
+import video from "/bg1.mp4?react";
+import Figuers from "./components/Figuers";
+
 
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
@@ -69,6 +71,8 @@ export default function App({ data, bg, txt }) {
     }
   }
 
+  console.log(video);
+
   saveUTMParameters();
 
   updateUTMParameters();
@@ -89,9 +93,7 @@ export default function App({ data, bg, txt }) {
       <main >
         <InstantQuote openQuote={false} />
         <section className="section page" id="home" style={bg ? { backgroundImage: `url(${bg})` } : {}} >
-          <video autoPlay muted loop id="bg-video">
-            <source src={video} type="video/mp4" />
-          </video>
+          <video autoPlay muted loop id="bg-video" src={video} playsInline  />
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
               Transforming Spaces, <br />
@@ -101,12 +103,14 @@ export default function App({ data, bg, txt }) {
         </section>
         <LandingProjects data={data} />
         <About />
+        <Figuers />
+
         <Testimonial />
         {/* <OurClients /> */}
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div
-            className="column has-text-centered has-text-weight-bold has-text-black is-clickable"
+            className="column has-text-centered has-text-weight-bold has-text-white is-clickable"
             onClick={() => {
               document.getElementById("modal").classList.add("is-active");
             }}

@@ -71,9 +71,6 @@ img {
   max-width: 100%;
 }
 
-.swiper-image {
-  height: 500px;
-}
 
 .fix-index {
   animation-fill-mode: backwards !important;
@@ -245,9 +242,6 @@ header {
   margin-bottom: 15px;
 }
 
-.our-figures {
-  padding-bottom: 2rem;
-}
 
 #bg-video {
   position: absolute;
@@ -306,6 +300,12 @@ nav {
   margin: 0 0 0 0.5rem;
 }
 
+.swiper-button-prev, .swiper-button-next {
+  width: 30px!important;
+  height: 30px!important;
+  color: white!important;
+}
+
 .button:hover,
 .button:focus {
   background: transparent !important;
@@ -317,8 +317,12 @@ nav {
   border: 1px solid white;
   border-radius: 6px;
   margin: 15px;
-  max-width: 400px;
+  max-width: 350px;
   padding: 15px;
+}
+
+.swiper-slide-active {
+  text-align: -webkit-center;
 }
 
 .testimonial {
@@ -417,6 +421,7 @@ svg {
     flex-direction: column;
     align-items: center;
   }
+  
 
   #home {
     min-height: 80dvh;
