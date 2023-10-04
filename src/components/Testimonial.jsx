@@ -5,8 +5,9 @@ import QuoteR from "../svg/quoteR.svg?react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { Navigation  } from "swiper/modules";
+import { Navigation, Pagination  } from "swiper/modules";
 import 'swiper/css/navigation';
+import 'swiper/css/pagination';
 
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
@@ -15,13 +16,13 @@ register();
 
 export default function Testimonial() {
   return (
-    <section className="section page testimonial">
+    <section className="section page testimonial mb-6">
       <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
       <div className="is-centered">
         <Swiper
           slidesPerView={1}
-          slid
-          modules={[Navigation]}
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
           navigation={true}
           slidesPerGroup={1}
           breakpoints={{
