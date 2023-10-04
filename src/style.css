@@ -245,7 +245,7 @@ header {
 }
 
 .our-figures {
-  margin-bottom: 5rem;
+padding-bottom: 2rem;
 }
 
 #bg-video {
@@ -253,8 +253,9 @@ header {
   right: 0;
   bottom: 0;
   min-width: 100%;
+  min-height: 100%;
   height: auto;
-  z-index: -100;
+  z-index: 2;
   background-size: cover;
   overflow: hidden;
   max-width: -moz-fit-content;
@@ -262,12 +263,20 @@ header {
 }
 
 #home {
-  background-image: none !important;
+  background-image: url("./images/first.jpg");
   background-position: center;
   background-repeat: no-repeat;
   min-height: 100dvh;
   position: relative;
   margin-top: 4rem;
+  display: flex;
+  align-items: center;
+  
+}
+
+#home h1 {
+  position: relative;
+  z-index: 4;
 }
 .Para-placeholder {
   height: 600px;
@@ -314,6 +323,8 @@ nav {
 
 .testimonial {
   gap: 15px;
+  background-color: #999999;
+
 }
 /* the slides */
 .slick-slide {
@@ -384,7 +395,7 @@ svg {
   text-align: center;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1024px) {
   .title {
     width: 100%;
     text-align: center;
@@ -399,6 +410,10 @@ svg {
 
   #home {
     min-height: 80dvh;
+  }
+
+  #bg-video {
+    height: 100%;
   }
 
   .Para-placeholder {

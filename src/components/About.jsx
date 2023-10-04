@@ -3,7 +3,7 @@ import Figuers from "./Figuers";
 
 export default function About() {
   return (
-    <section className=" page about" id="about">
+    <section className=" page about has-background-white has-text-black" id="about">
       <div className="columns is-multiline about">
         <Parallax
           bgImage="assets/4SPACE-team.jpg"
@@ -16,10 +16,10 @@ export default function About() {
         {/* <div className="about-image column is-full">
           <img src="assets/4SPACE-team.jpg" alt="" />
         </div> */}
-        <div className="section container column is-full py-6">
-          <h2 className="center mb-6 ">ABOUT</h2>
+        <div className="section column is-full py-6">
+          <h2 className="center mb-6 has-text-black ">ABOUT</h2>
           <div className="columns is-multiline">
-            <div className="column has-text-justified	">
+            <div className="column container has-text-justified	">
               <p>
                 Meet the founders,&nbsp;
                 <span className="has-text-weight-bold">
