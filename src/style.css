@@ -250,14 +250,15 @@ header {
 
 #bg-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  right: 0;
+  bottom: 0;
   min-width: 100%;
-  min-height: 100%;
-  width: auto;
   height: auto;
-  transform: translate(-50%, -50%);
-  z-index: -50;
+  z-index: -100;
+  background-size: cover;
+  overflow: hidden;
+  max-width: -moz-fit-content;
+  max-width: fit-content;
 }
 
 #home {
@@ -266,6 +267,7 @@ header {
   background-repeat: no-repeat;
   min-height: 100dvh;
   position: relative;
+  margin-top: 4rem;
 }
 .Para-placeholder {
   height: 600px;
@@ -289,7 +291,6 @@ nav {
   font-weight: bold;
   text-shadow: 1px 1px 1px black;
   width: 100%;
-  margin-top: 100px;
 }
 
 #header .navbar .navbar-menu .navbar-item:last-child {
@@ -389,10 +390,6 @@ svg {
     text-align: center;
   }
 
-  #bg-video {
-    container: size;
-  }
-
   .figure-fix {
     gap: 2rem;
     display: flex;
@@ -401,7 +398,7 @@ svg {
   }
 
   #home {
-    min-height: 40dvh;
+    min-height: 80dvh;
   }
 
   .Para-placeholder {

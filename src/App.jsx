@@ -86,7 +86,7 @@ export default function App({ data, bg, txt }) {
   return (
     <>
       <Header />
-      <main className="has-navbar-fixed-top">
+      <main >
         <InstantQuote openQuote={false} />
         <section className="section page" id="home" style={bg ? { backgroundImage: `url(${bg})` } : {}} >
           <video autoPlay muted loop id="bg-video">

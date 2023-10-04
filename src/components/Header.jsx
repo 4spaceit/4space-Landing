@@ -7,10 +7,10 @@ export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className=" is-active " id="header">
+    <header className=" is-active   " id="header">
       <div className="container ">
         <nav
-          className="navbar is-fixed-top is-dark py-1 mobile-padding"
+          className="navbar  is-dark py-1 is-fixed-top mobile-padding is-expanded"
           role="navigation"
           aria-label="main navigation"
         >
