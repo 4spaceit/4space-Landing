@@ -1,0 +1,25 @@
+diff --git a/node_modules/swiper/modules/navigation.mjs b/node_modules/swiper/modules/navigation.mjs
+index 07eb863..b5937bb 100644
+--- a/node_modules/swiper/modules/navigation.mjs
++++ b/node_modules/swiper/modules/navigation.mjs
+@@ -126,6 +126,20 @@ function Navigation(_ref) {
+       init();
+       update();
+     }
++
++    swiper.navigation?.destroy();
++      const breakpoint = swiper.getBreakpoint(swiper.params.breakpoints);
++      const currentBreakpoint = swiper.params.breakpoints?.[breakpoint];
++      const { navigation: currentBreakpointNavConfig } = currentBreakpoint || {};
++
++      if (!currentBreakpointNavConfig) {
++        return;
++      }
++
++      if (currentBreakpointNavConfig === true || currentBreakpointNavConfig?.enabled) {
++        swiper.navigation.init();
++        swiper.navigation.update();
++      }
+   });
+   on('toEdge fromEdge lock unlock', () => {
+     update();
