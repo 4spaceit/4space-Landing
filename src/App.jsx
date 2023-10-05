@@ -4,8 +4,8 @@ import Form from "./components/Form";
 import Awards from "./components/AwardsLanding";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import video from "/bg1.mp4?react";
 import Figuers from "./components/Figuers";
+import OurClients from "./components/OurClients";
 
 
 import "bulma/css/bulma.css";
@@ -18,7 +18,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
 
-export default function App({ data, bg }) {
+export default function App({ data, bg,video }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -71,8 +71,6 @@ export default function App({ data, bg }) {
     }
   }
 
-  console.log(video);
-
   saveUTMParameters();
 
   updateUTMParameters();
@@ -104,10 +102,9 @@ export default function App({ data, bg }) {
         <LandingProjects data={data} />
         <About />
         <Figuers />
-
         <Testimonial />
-        {/* <OurClients /> */}
         <Awards />
+        <OurClients />
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div
             className="column has-text-centered has-text-weight-bold has-text-white is-clickable"

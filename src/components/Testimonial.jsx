@@ -19,6 +19,7 @@ export default function Testimonial() {
       <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
       <div className="is-centered">
         <Swiper
+          autoHeight={true}
           slidesPerView={"auto"}
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
@@ -38,20 +39,23 @@ export default function Testimonial() {
               <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself &nbsp;
+                  &nbsp; 4Space was our designer for the office Fit-out project
+                  in Cluster I, JLT. We loved the creativity, dedication, and
+                  professionalism shown by your team. 4Space was able to execute
+                  the task before the agreed deadline and to our complete
+                  satisfaction. You also did a fantastic job as a project
+                  manager and ensured very smooth coordination between our main
+                  contractor, sub-contractor, and all other vendors. We highly
+                  recommend 4Space, as they get things creatively done on time!
+                  What else can one expect from a designer? &nbsp;
                 </span>
 
                 <QuoteR />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
-                  <span className="font-semibold has-text-weight-bold">
-                    Reviewee
-                  </span>
-                  <span className="is-size-7 is-flex has-text-black is-align-items-center">
-                    Position
+                  <span className="font-semibold has-text-weight-bold has-text-left">
+                    CEO, Better Experience DMCC
                   </span>
                 </div>
               </div>
@@ -62,20 +66,25 @@ export default function Testimonial() {
               <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself &nbsp;
+                  &nbsp; We are writing to express our sincere appreciation for
+                  your efforts in completing the IDA Bakery Project in Dubai.
+                  The quality of work delivered and adherence to the timeline
+                  had a pivotal impact on the timely completion and operation of
+                  IDA Bakery. Overall, we are pleased with the collaboration,
+                  positive input, and professional handling of this project by
+                  all parties. We rely on your continued cooperation and
+                  support. Please extend our thanks to your teams. &nbsp;
                 </span>
 
                 <QuoteR />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
-                  <span className="font-semibold has-text-weight-bold">
-                    Reviewee
+                  <span className="font-semibold has-text-weight-bold has-text-left">
+                    Abdul Hakim Dwaik
                   </span>
                   <span className="is-size-7 is-flex has-text-black is-align-items-center">
-                    Position
+                    Projects Director at Raibal
                   </span>
                 </div>
               </div>
@@ -86,20 +95,52 @@ export default function Testimonial() {
               <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; To get social media testimonials like these, keep your
-                  customers engaged with your social media accounts by posting
-                  regularly yourself &nbsp;
+                  &nbsp; It was a very interesting experience. They are very
+                  creative and trendy; their work is very meticulous and they
+                  create harmony between our personalities and the spirit of our
+                  home. The most important thing is their punctuality, which I
+                  appreciate. &nbsp;
                 </span>
 
                 <QuoteR />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
-                  <span className="font-semibold has-text-weight-bold">
-                    Reviewee
+                  <span className="font-semibold has-text-weight-bold has-text-left">
+                    Talal Al safadi
                   </span>
                   <span className="is-size-7 is-flex has-text-black is-align-items-center">
-                    Position
+                    Chief Planning Officer at IKK Group
+                  </span>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="box  testimonial-box">
+              <p className="has-text-black">
+                <QuoteL />
+                <span>
+                  &nbsp; I will definitely recommend 4 Space Design to all my
+                  friends. Their attentive creative service, integrity,
+                  efficiency, and high responsiveness to monitoring are
+                  impressive. Thank you, everyone, for all the perfect services
+                  you have provided in the past few months, including design,
+                  supervision, suggestions, and so on, which have been a great
+                  help to our beautiful home. In particular, Ms.Mais is so
+                  conscientious and responsible; she is sensitive to colors and
+                  moods, and her perfect design and ideas can always draw out my
+                  very vague thoughts. She created the home that I wanted. My
+                  poor vocabulary makes me unable to express my gratitude to her
+                  and all of you. &nbsp;
+                </span>
+
+                <QuoteR />
+              </p>
+              <div className="is-flex is-align-items-center is-justify-content-start mt-4">
+                <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
+                  <span className="font-semibold has-text-weight-bold has-text-left">
+                    Iris Wang
                   </span>
                 </div>
               </div>
@@ -110,6 +151,3 @@ export default function Testimonial() {
     </section>
   );
 }
-
-
-

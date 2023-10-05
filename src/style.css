@@ -328,11 +328,15 @@ nav {
   border: 1px solid white;
   border-radius: 6px;
   margin: 15px;
-  max-width: 350px;
+  max-width: 400px;
   padding: 30px 15px;
 }
 
-.swiper-slide-active {
+#our-clients img {
+  object-fit: contain;
+}
+
+.swiper-slide-active, .swiper-slide {
   text-align: -webkit-center;
 }
 
@@ -420,6 +424,10 @@ svg {
   text-align: center;
 }
 
+.box-arabic {
+  direction: rtl!important;
+}
+
 
 
 @media screen and (max-width: 1024px) {
@@ -437,7 +445,11 @@ svg {
 
 
   .testimonial-box {
-    max-width: 225px;
+    max-width: 70%;
+  }
+
+  .testimonial {
+    padding: 1rem 0.5rem!important;
   }
 
   #home {

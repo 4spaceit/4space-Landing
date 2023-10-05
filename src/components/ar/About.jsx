@@ -7,9 +7,6 @@ export default function About() {
         <Parallax bgImage="assets/4SPACE-team.jpg" bgImageAlt="4SPACE-team" strength={-100} className="about-image column is-full" >
           <div className="Para-placeholder"></div>
         </Parallax>
-        {/* <div className="about-image column is-full">
-          <img src="assets/4SPACE-team.jpg" alt="" />
-        </div> */}
         <div className="section column is-full py-4">
           <h1 className="center m-6 has-text-black">عن 4SPACE</h1>
           <div className="columns is-multiline">

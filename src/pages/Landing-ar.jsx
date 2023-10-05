@@ -5,8 +5,6 @@ import Header from "../components/ar/Header";
 import Footer from "../components/ar/Footer";
 import Figuers from "../components/ar/Figuers";
 
-import video from "/bg1.mp4?react";
-
 
 import "bulma/css/bulma.css";
 import "../styles/index.scss";
@@ -19,7 +17,7 @@ import Contact from "../components/ar/Contact";
 import Testimonial from "../components/ar/Testimonial";
 
 
-export default function LandingAr({ data, bg }) {
+export default function LandingAr({ data, bg, video }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
