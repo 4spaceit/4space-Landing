@@ -1,6 +1,3 @@
-import { faEnvelope } from "@fortawesome/free-regular-svg-icons";
-import { faPhoneAlt } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Phone from "../svg/phone.svg?react";
 import Email from "../svg/envelope.svg?react";
 
@@ -16,10 +13,7 @@ export default function Footer() {
               document.getElementById("modal").classList.add("is-active");
             }}
           >
-            <p className="is-size-6">
-              {" "}
-              <Email /> GET IN TOUCH
-            </p>
+            <p className="is-size-6"> <Email /> GET IN TOUCH </p>
           </div>
 
           <div className="right-2-footer ">

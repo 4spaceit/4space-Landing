@@ -3,6 +3,10 @@ import InstantQuote from "../components/ar/InstantQuote";
 import Awards from "../components/ar/AwardsLanding";
 import Header from "../components/ar/Header";
 import Footer from "../components/ar/Footer";
+import Figuers from "../components/ar/Figuers";
+
+import video from "/bg1.mp4?react";
+
 
 import "bulma/css/bulma.css";
 import "../styles/index.scss";
@@ -12,9 +16,10 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "../components/ar/About";
 import Contact from "../components/ar/Contact";
+import Testimonial from "../components/ar/Testimonial";
 
 
-export default function LandingAr({ data, bg, txt }) {
+export default function LandingAr({ data, bg }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -82,34 +87,32 @@ export default function LandingAr({ data, bg, txt }) {
     }
   });
   return (
-    <div style={{ direction: "rtl", fontFamily:"Montserrat-Arabic" }} >
+    <div style={{ direction: "rtl", fontFamily: "Montserrat-Arabic" }} >
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
-        <section className="section page" id="home" style={{backgroundImage: `url(${bg})`}}>
-          {/* <Form id="form-desktop" /> */}
+        <section className="section page" id="home" style={{ backgroundImage: `url(${bg})` }}>
+          <video autoPlay muted loop id="bg-video" src={video} playsInline />
           <div className="title is-1 has-text-white has-text-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-weight-bold head-text">
-            تحويل المساحات،<br/>
-            لإعادة صياغة التجارب
+              تحويل المساحات،<br />
+              لإعادة صياغة التجارب
             </h1>
           </div>
         </section>
         <LandingProjects data={data} />
         <About />
         {/* <OurClients /> */}
+        <Figuers />
+        <Testimonial />
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div className="column has-text-centered has-text-weight-bold has-text-black">
-            <span className="has-text-black is-size-6 has-text-centered has-text-weight-bold is-clickable" onClick={() => {
-              document.getElementById("modal").classList.add("is-active");
-            }}>
-            تواصل معنا
-            </span>
+            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold is-clickable" onClick={() => { document.getElementById("modal").classList.add("is-active"); }}> تواصل معنا </span>
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
-          اتصل بنا على 
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold pt-1" style={{direction: 'ltr'}}>
+            اتصل بنا على
+            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold pt-1" style={{ direction: 'ltr' }}>
               +971 4 438 5537
             </span>
           </div>

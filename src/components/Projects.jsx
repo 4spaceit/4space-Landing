@@ -18,37 +18,13 @@ const LandingProjects = ({ data }) => {
     }
   }, []);
 
-  const leftArrow = (
-    <img
-      src={leftIcon}
-      alt="left arrow"
-      style={{ width: "30px", height: "30px", margin: "0px 10px", filter: "drop-shadow(3px 5px 3px black)"  }}
-    />
-  );
+  const leftArrow = (<img src={leftIcon} alt="left arrow" style={{ width: "30px", height: "30px", margin: "0px 10px", filter: "drop-shadow(3px 5px 3px black)" }} />);
 
-  const rightArrow = (
-    <img
-      src={rightIcon}
-      alt="right arrow"
-      style={{ width: "30px", height: "30px", margin: "0px 10px", filter: "drop-shadow(3px 5px 3px black)"  }}
-    />
-  );
+  const rightArrow = (<img src={rightIcon} alt="right arrow" style={{ width: "30px", height: "30px", margin: "0px 10px", filter: "drop-shadow(3px 5px 3px black)" }} />);
 
-  const magnify = (
-    <img
-      src={plusIcon}
-      alt="magnifying glass plus"
-      style={{ width: "30px", height: "30px", margin: "10px", filter: "drop-shadow(3px 5px 3px black)"  }}
-    />
-  );
+  const magnify = (<img src={plusIcon} alt="magnifying glass plus" style={{ width: "30px", height: "30px", margin: "10px", filter: "drop-shadow(3px 5px 3px black)" }} />);
 
-  const demagnify = (
-    <img
-      src={minusIcon}
-      alt="magnifying glass minus"
-      style={{ width: "30px", height: "30px", margin: "10px", filter: "drop-shadow(3px 5px 3px black)"  }}
-    />
-  );
+  const demagnify = (<img src={minusIcon} alt="magnifying glass minus" style={{ width: "30px", height: "30px", margin: "10px", filter: "drop-shadow(3px 5px 3px black)" }} />);
 
   return (
     <section className="section page projects" id="projects">
@@ -57,35 +33,11 @@ const LandingProjects = ({ data }) => {
         <div>
           <div className="container">
             <div className="columns is-multiline">
-              <Fade className="fix-index" triggerOnce={true} fraction={0.5}>
-                {data.map((item, index) => (
-                  <div
-                    className={`column is-full is-multiline columns ${
-                      index % 2 === 1 ? "odd" : ""
-                    }`}
-                    key={index}
-                  >
+              {data.map((item, index) => (
+                <Fade className="fix-index" key={index} direction={index % 2 === 1 ? "left" : "right"} triggerOnce={true} fraction={0.5}>
+                  <div className={`column is-full is-multiline columns ${index % 2 === 1 ? "odd" : ""}`} key={index} >
                     <div className={`column is-6 is-half`}>
-                      <Carousel
-                        images={item.images}
-                        style={{ height: isHeight }}
-                        hasThumbnails={false}
-                        hasDotButtons={"bottom"}
-                        hasIndexBoard={false}
-                        hasm
-                        shouldMaximizeOnClick={true}
-                        shouldMinimizeOnClick={true}
-                        // show size button only on mobile
-                        hasMediaButton={false}
-                        objectFit={"cover"}
-                        leftIcon={leftArrow}
-                        rightIcon={rightArrow}
-                        maxIcon={magnify}
-                        minIcon={demagnify}
-
-                        // hasLeftButton={false}
-                        // hasRightButton={false}
-                      ></Carousel>
+                      <Carousel images={item.images} style={{ height: isHeight }} hasThumbnails={false} hasDotButtons={"bottom"} hasIndexBoard={false} hasm shouldMaximizeOnClick={true} shouldMinimizeOnClick={true} hasMediaButton={false} objectFit={"cover"} leftIcon={leftArrow} rightIcon={rightArrow} maxIcon={magnify} minIcon={demagnify} ></Carousel>
                     </div>
 
                     <div className={`column is-half `}>
@@ -101,8 +53,8 @@ const LandingProjects = ({ data }) => {
                       </p>
                     </div>
                   </div>
-                ))}
-              </Fade>
+                </Fade>
+              ))}
             </div>
           </div>
         </div>

@@ -8,14 +8,12 @@ import dataRetailEn from "./data/dataRetail.json";
 import dataResidentialEn from "./data/dataResidential.json";
 import dataCommercialEn from "./data/dataCommercial.json";
 import dataBrandingEn from "./data/dataBranding.json";
-import textEn from "./data/text.json";
 
 import dataRestaurantAr from "./data/ar/dataRestaurant.json";
 import dataRetailAr from "./data/ar/dataRetail.json";
 import dataResidentialAr from "./data/ar/dataResidential.json";
 import dataCommercialAr from "./data/ar/dataCommercial.json";
 import dataBrandingAr from "./data/ar/dataBranding.json";
-import textAr from "./data/ar/text.json";
 
 
 // import dataRestaurantRu from "./data/ru/dataRestaurant.json";
@@ -84,17 +82,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/resturant" element={<App data={dataRestaurantEn} txt={textEn.Restaurant} />} />
-        <Route path="/retail" element={ <App data={dataRetailEn} txt={textEn.Retail} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
-        <Route path="/residential" element={ <App data={dataResidentialEn} txt={textEn.Residential} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
-        <Route path="/commercial" element={ <App data={dataCommercialEn} txt={textEn.Commercial} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
-        <Route path="/branding" element={<App data={dataBrandingEn} txt={textEn.Branding} />} />
+        <Route path="/resturant" element={<App data={dataRestaurantEn} />} />
+        <Route path="/retail" element={ <App data={dataRetailEn} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
+        <Route path="/residential" element={ <App data={dataResidentialEn} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
+        <Route path="/commercial" element={ <App data={dataCommercialEn} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
+        <Route path="/branding" element={<App data={dataBrandingEn} />} />
 
-        <Route path="/ar/resturant" element={ <LandingAr data={dataRestaurantAr} txt={textAr.Restaurant} bg={ "https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-02-scaled.jpg" } /> } />
-        <Route path="/ar/retail" element={ <LandingAr data={dataRetailAr} txt={textAr.Retail} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
-        <Route path="/ar/residential" element={ <LandingAr data={dataResidentialAr} txt={textAr.Residential} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
-        <Route path="/ar/commercial" element={ <LandingAr data={dataCommercialAr} txt={textAr.Commercial} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
-        <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} txt={textAr.Branding}  />} />
+        <Route path="/ar/resturant" element={ <LandingAr data={dataRestaurantAr} bg={ "https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-02-scaled.jpg" } /> } />
+        <Route path="/ar/retail" element={ <LandingAr data={dataRetailAr} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
+        <Route path="/ar/residential" element={ <LandingAr data={dataResidentialAr} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
+        <Route path="/ar/commercial" element={ <LandingAr data={dataCommercialAr} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
+        <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr}  />} />
 
         {/* <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} />} />
         <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} />} />
