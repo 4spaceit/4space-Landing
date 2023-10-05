@@ -1,4 +1,5 @@
 import React from "react";
+import { Fade } from "react-awesome-reveal";
 
 function OurClients() {
   return (
@@ -11,6 +12,7 @@ function OurClients() {
               OUR CLIENTS
             </h2>
           </div>
+          <Fade triggerOnce={true} fraction={0.5}>
           <div className="column is-12">
             <div className="columns is-mobile is-multiline has-text-centered is-centered">
               <div className="column is-4 is-5-desktop ">
@@ -61,6 +63,7 @@ function OurClients() {
               </div>
             </div>
           </div>
+          </Fade>
         </div>
       </div>
     </section>
