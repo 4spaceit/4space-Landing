@@ -13,11 +13,8 @@ register();
 function OurClients() {
   return (
     // Out clients section with some image in a row
-    <section className="section has-background-white pt-1 " id="our-clients">
-      <div className="container pb-4">
-        <div className="columns is-multiline">
-          <div className="column is-12">
-          </div>
+    <section className="section has-background-white py-0 " id="our-clients">
+      <div className="container py-6">
           <Swiper
             autoplay={{
               delay: 500,
@@ -87,7 +84,6 @@ function OurClients() {
               </div> </SwiperSlide>
             </div>
           </Swiper>
-        </div>
       </div>
     </section>
   );
