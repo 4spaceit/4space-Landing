@@ -17,9 +17,6 @@ function OurClients() {
       <div className="container pb-4">
         <div className="columns is-multiline">
           <div className="column is-12">
-            <h2 className="has-text-black has-text-centered py-6">
-              OUR CLIENTS
-            </h2>
           </div>
           <Swiper
             autoplay={{
