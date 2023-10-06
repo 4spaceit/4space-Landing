@@ -17,7 +17,7 @@ export default function Testimonial() {
   return (
     <section className="section page testimonial mb-6" id="testimonial">
       <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
-      <div className="is-centered" style={{direction:"ltr"}}>
+      <div className="is-centered" style={{ direction: "ltr" }}>
         <Swiper
           autoHeight={true}
           slidesPerView={"auto"}
@@ -36,14 +36,19 @@ export default function Testimonial() {
           }}
         >
           <SwiperSlide>
-            <div className="box  testimonial-box box-arabic" >
-              <p className="has-text-black"  >
+            <div className="box  testimonial-box box-arabic">
+              <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; كانت شركة 4Space هي المصممة لمشروع تجهيز المكاتب في المجموعة الأولى لدينا، أبراج بحيرات جميرا.
-لقد أحببنا الإبداع والتفاني والاحترافية التي أظهرها فريق 4Space. تمكنت 4Space من تنفيذ المهمة قبل الموعد النهائي المتفق عليه ونالت رضانا الكامل. لقد قامت أيضًا بعمل رائع كمدير للمشروع وضمنت التنسيق السلس بين المقاول الرئيسي والمقاول الداخلي وجميع البائعين الآخرين.
-نحن نوصي بشدة بشركة 4Space، لأنها تنجز الأمور بطريقة إبداعية في الوقت المحدد! ماذا يمكن للمرء أن يتوقع من المصمم الداخلي أكثر من ذلك؟
- &nbsp;
+                  &nbsp; كانت شركة 4Space هي المصممة لمشروع تجهيز المكاتب في
+                  المجموعة الأولى لدينا، أبراج بحيرات جميرا. لقد أحببنا الإبداع
+                  والتفاني والاحترافية التي أظهرها فريق 4Space. تمكنت 4Space من
+                  تنفيذ المهمة قبل الموعد النهائي المتفق عليه ونالت رضانا
+                  الكامل. لقد قامت أيضًا بعمل رائع كمدير للمشروع وضمنت التنسيق
+                  السلس بين المقاول الرئيسي والمقاول الداخلي وجميع البائعين
+                  الآخرين. نحن نوصي بشدة بشركة 4Space، لأنها تنجز الأمور بطريقة
+                  إبداعية في الوقت المحدد! ماذا يمكن للمرء أن يتوقع من المصمم
+                  الداخلي أكثر من ذلك؟ &nbsp;
                 </span>
 
                 <QuoteR />
@@ -51,7 +56,7 @@ export default function Testimonial() {
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
                   <span className="font-semibold has-text-weight-bold has-text-right">
-                  المدير التنفيذي لشركة Better Experience DMCC
+                    المدير التنفيذي لشركة Better Experience DMCC
                   </span>
                 </div>
               </div>
@@ -62,10 +67,13 @@ export default function Testimonial() {
               <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; نكتب إليكم للتعبير عن تقديرنا الصادق لجهودكم في استكمال مشروع مخبز IDA في دبي. كان لجودة العمل المنجز والالتزام بالجدول الزمني تأثير محوري على استكمال وتشغيل مخبز IDA في الوقت المناسب.
- بشكل عام، نحن سعداء بالتعاون والمساهمة الإيجابية والتعامل الاحترافي مع 4Space من قبل جميع الأطراف. ونحن نعتمد على تعاونكم ودعمكم المستمر.
-يرجى تقديم شكرنا لفرقكم.
- &nbsp;
+                  &nbsp; نكتب إليكم للتعبير عن تقديرنا الصادق لجهودكم في استكمال
+                  مشروع مخبز IDA في دبي. كان لجودة العمل المنجز والالتزام
+                  بالجدول الزمني تأثير محوري على استكمال وتشغيل مخبز IDA في
+                  الوقت المناسب. بشكل عام، نحن سعداء بالتعاون والمساهمة
+                  الإيجابية والتعامل الاحترافي مع 4Space من قبل جميع الأطراف.
+                  ونحن نعتمد على تعاونكم ودعمكم المستمر. يرجى تقديم شكرنا
+                  لفرقكم. &nbsp;
                 </span>
 
                 <QuoteR />
@@ -73,10 +81,10 @@ export default function Testimonial() {
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
                   <span className="font-semibold has-text-weight-bold has-text-right">
-                  عبد الحكيم الدويك
+                    عبد الحكيم الدويك
                   </span>
                   <span className="is-size-7 is-flex has-text-black is-align-items-center">
-                  مدير المشاريع في رايبال
+                    مدير المشاريع في رايبال
                   </span>
                 </div>
               </div>
@@ -87,7 +95,10 @@ export default function Testimonial() {
               <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; لقد كانت تجربة مثيرة للاهتمام مع 4Space، فهم مبدعون للغاية وعصريون، وعملهم دقيق ويجعلون الانسجام بين شخصياتنا وروح منزلنا ممكناً، أهم شيء هو التزامهم بالمواعيد وهو ما أقدره بشدة. &nbsp;
+                  &nbsp; لقد كانت تجربة مثيرة للاهتمام مع 4Space، فهم مبدعون
+                  للغاية وعصريون، وعملهم دقيق ويجعلون الانسجام بين شخصياتنا وروح
+                  منزلنا ممكناً، أهم شيء هو التزامهم بالمواعيد وهو ما أقدره
+                  بشدة. &nbsp;
                 </span>
 
                 <QuoteR />
@@ -95,11 +106,10 @@ export default function Testimonial() {
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
                   <span className="font-semibold has-text-weight-bold has-text-right">
-                  طلال الصفدي
+                    طلال الصفدي
                   </span>
                   <span className="is-size-7 is-flex has-text-black is-align-items-center">
-                  كبير مسؤولي التخطيط في مجموعة IKK
-
+                    كبير مسؤولي التخطيط في مجموعة IKK
                   </span>
                 </div>
               </div>
@@ -110,12 +120,13 @@ export default function Testimonial() {
               <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; سأوصي بالتأكيد بـ 4 Space Design لجميع أصدقائي. إن خدمتهم الإبداعية اليقظة والنزاهة والكفاءة والاستجابة العالية للدقة مثيرة للإعجاب.
-
-شكرًا لكم جميعًا على جميع الخدمات المثالية التي قدمتموها في الأشهر القليلة الماضية، بما في ذلك التصميم والإشراف والاقتراحات وغير ذلك، والتي كانت بمثابة مساعدة كبيرة لمنزلنا الجميل.
-
-على وجه الخصوص، تتمتع السيدة ميس بالضمير والمسؤولية؛ إنها حساسة للألوان والحالات المزاجية، ويمكن لتصميمها وأفكارها المثالية دائمًا أن تجذب أفكاري الغامضة للغاية. لقد أنشأت المنزل الذي أردته. مفرداتي الضعيفة تجعلني غير قادر على التعبير عن امتناني لها ولكم جميعًا.
- &nbsp;
+                  &nbsp; شكرًا لكم جميعًا على جميع الخدمات المثالية التي
+                  قدمتموها في الأشهر القليلة الماضية، بما في ذلك التصميم
+                  والإشراف والاقتراحات وغير ذلك، والتي كانت بمثابة مساعدة كبيرة
+                  لمنزلنا الجميل. على وجه الخصوص، تتمتع السيدة ميس بالضمير
+                  والمسؤولية؛ إنها حساسة للألوان والحالات المزاجية، ويمكن
+                  لتصميمها وأفكارها المثالية دائمًا أن تجذب أفكاري الغامضة
+                  للغاية. &nbsp;
                 </span>
 
                 <QuoteR />
@@ -123,7 +134,7 @@ export default function Testimonial() {
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
                   <span className="font-semibold has-text-weight-bold has-text-right">
-                  ايريس وانغ
+                    ايريس وانغ
                   </span>
                 </div>
               </div>

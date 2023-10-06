@@ -90,8 +90,7 @@ export default function App({ data, bg, video }) {
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <video autoPlay muted loop id="bg-video" playsInline poster={bg}>
-            <source src={video} />
+          <video src={video} autoPlay muted loop id="bg-video" playsInline poster={bg}>
           </video>
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">

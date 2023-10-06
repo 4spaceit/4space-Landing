@@ -120,16 +120,13 @@ export default function Testimonial() {
               <p className="has-text-black ">
                 <QuoteL />
                 <span>
-                  &nbsp; I highly recommend 4 Space Design to my friends. Their
-                  attentive, creative service, integrity, efficiency, and quick
-                  responsiveness are truly impressive. Thanks to everyone for
-                  the exceptional services over the past months, including design,
-                  supervision, and valuable suggestions that greatly enhanced
-                  our home. Special appreciation to Ms. Mais, who is remarkably
-                  conscientious and sensitive to colors and moods. Her perfect
-                  design brought my vague thoughts to life, creating the home I
-                  envisioned. My limited vocabulary fails to fully express my
-                  gratitude to her and the entire team. &nbsp;
+                  &nbsp; Thank you, everyone, for all the perfect services you
+                  have provided in the past few months, including design,
+                  supervision, suggestions, and so on, which have been a great
+                  help to our beautiful home. In particular, Ms.Mais is so
+                  conscientious and responsible; she is sensitive to colors and
+                  moods, and her perfect design and ideas can always draw out my
+                  very vague thoughts. &nbsp;
                 </span>
 
                 <QuoteR />
