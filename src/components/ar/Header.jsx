@@ -25,8 +25,8 @@ export default function Header() {
               <Link rel="nofollow" to="projects" spy={true} offset={-50} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > المشاريع </Link>
               <Link rel="nofollow" to="about" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > من نحن </Link>
               <Link rel="nofollow" to="awards" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > جوائز </Link>
-              <Link rel="nofollow" to="testimonial" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > شهادات </Link>
-              <Link rel="nofollow" to="our-clients" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > عملائنا </Link>
+              <Link rel="nofollow" to="our-clients" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > عملائنا </Link>
+              <Link rel="nofollow" to="testimonial"  offset={-50}spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > شهادات </Link>
               <button className="button is-primary is-outlined is-hidden-touch" id="formButton" >
                 <Link rel="nofollow" spy={true} smooth={true} style={{ fontFamily: "Montserrat-Arabic" }} onClick={() => { document.getElementById("modal").classList.add("is-active"); }} > اخبرنا طلبك </Link>
               </button>

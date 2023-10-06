@@ -15,6 +15,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "../components/ar/About";
 import Contact from "../components/ar/Contact";
 import Testimonial from "../components/ar/Testimonial";
+import OurClients from "../components/ar/OurClients";
 
 
 export default function LandingAr({ data, bg, video }) {
@@ -100,8 +101,8 @@ export default function LandingAr({ data, bg, video }) {
         </section>
         <LandingProjects data={data} />
         <About />
-        {/* <OurClients /> */}
         <Figuers />
+        <OurClients />
         <Testimonial />
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
@@ -109,10 +110,11 @@ export default function LandingAr({ data, bg, video }) {
             <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold is-clickable" onClick={() => { document.getElementById("modal").classList.add("is-active"); }}> تواصل معنا </span>
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
-            اتصل بنا على
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold pt-1" style={{ direction: 'ltr' }}>
-              +971 4 438 5537
-            </span>
+          <a href="tel:+971589344000">
+            أتصل بنا على
+            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
+            +971 58 934 4000
+            </span></a>
           </div>
         </div>
         <div className="topButton is-hidden" id="topButton">

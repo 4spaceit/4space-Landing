@@ -19,21 +19,25 @@ export default function Testimonial() {
       <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
       <div className="is-centered" style={{ direction: "ltr" }}>
         <Swiper
-          autoHeight={true}
-          slidesPerView={"auto"}
-          modules={[Navigation, Pagination]}
-          pagination={{ clickable: true }}
-          navigation={true}
-          slidesPerGroup={1}
-          initialSlide={4}
-          longSwipes={false}
-          breakpoints={{
-            1024: {
-              slidesPerView: 3,
-              spaceBetween: 30,
-              slidesPerGroup: 1,
-            },
+          speed={600}
+          autoplay={{
+            delay: 2000,
+            disableOnInteraction: false,
           }}
+          loop={true}
+            slidesPerView={1}
+            modules={[Navigation, Pagination]}
+            pagination={{ clickable: true }}
+            navigation={true}
+            slidesPerGroup={1}
+            longSwipes={false}
+            breakpoints={{
+              1024: {
+                slidesPerView: 2,
+                spaceBetween: 0,
+                slidesPerGroup: 1,
+              },
+            }}
         >
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
