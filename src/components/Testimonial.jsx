@@ -19,7 +19,13 @@ export default function Testimonial() {
       <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
       <div className="is-centered">
         <Swiper
-          slidesPerView={3}
+        speed={600}
+        autoplay={{
+          delay: 2000,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+          slidesPerView={1}
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
           navigation={true}
@@ -38,15 +44,12 @@ export default function Testimonial() {
               <p className="has-text-black">
                 <QuoteL />
                 <span>
-                  &nbsp; 4Space was our designer for the office Fit-out project
-                  in Cluster I, JLT. We loved the creativity, dedication, and
+                  &nbsp; We loved the creativity, dedication, and
                   professionalism shown by your team. 4Space was able to execute
                   the task before the agreed deadline and to our complete
                   satisfaction. You also did a fantastic job as a project
                   manager and ensured very smooth coordination between our main
-                  contractor, sub-contractor, and all other vendors. We highly
-                  recommend 4Space, as they get things creatively done on time!
-                  What else can one expect from a designer? &nbsp;
+                  contractor, sub-contractor, and all other vendors. &nbsp;
                 </span>
 
                 <QuoteR />
@@ -71,8 +74,7 @@ export default function Testimonial() {
                   had a pivotal impact on the timely completion and operation of
                   IDA Bakery. Overall, we are pleased with the collaboration,
                   positive input, and professional handling of this project by
-                  all parties. We rely on your continued cooperation and
-                  support. Please extend our thanks to your teams. &nbsp;
+                  all parties.&nbsp;
                 </span>
 
                 <QuoteR />

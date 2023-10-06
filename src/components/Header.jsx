@@ -24,7 +24,6 @@ export default function Header() {
               <Link rel="nofollow" to="about" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > About </Link>
               <Link rel="nofollow" to="awards" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > Awards </Link>
               <Link rel="nofollow" to="testimonial" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > Testimonial </Link>
-              <Link rel="nofollow" to="our-clients" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > Our Clients </Link>
               <button className="button is-primary is-outlined is-hidden-touch " id="formButton" >
                 <Link rel="nofollow" spy={true} smooth={true} onClick={() => { document.getElementById("modal").classList.add("is-active"); }} > PROJECT INQUIRY </Link>
               </button>

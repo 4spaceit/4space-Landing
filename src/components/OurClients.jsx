@@ -16,8 +16,9 @@ function OurClients() {
     <section className="section has-background-white py-0 " id="our-clients">
       <div className="container py-6">
           <Swiper
+          speed={600}
             autoplay={{
-              delay: 500,
+              delay: 1500,
               disableOnInteraction: false,
             }}
             loop={true}
