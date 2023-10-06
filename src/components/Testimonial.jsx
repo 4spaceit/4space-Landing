@@ -33,7 +33,7 @@ export default function Testimonial() {
           longSwipes={false}
           breakpoints={{
             1024: {
-              slidesPerView: 3,
+              slidesPerView: 2,
               spaceBetween: 0,
               slidesPerGroup: 1,
             },

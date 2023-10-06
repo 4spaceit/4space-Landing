@@ -116,10 +116,11 @@ export default function App({ data, bg, video }) {
             GET IN TOUCH
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
+            <a href="tel:+971589344000">
             CALL US
             <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
-              +971 4 438 5537
-            </span>
+            +971 58 934 4000
+            </span></a>
           </div>
         </div>
         <div className="topButton is-hidden" id="topButton">

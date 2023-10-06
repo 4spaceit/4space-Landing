@@ -17,7 +17,7 @@ export default function Footer() {
           </div>
 
           <div className="right-2-footer ">
-            <a rel="nofollow" href="tel:+97144385537">
+            <a rel="nofollow" href="tel:+971589344000">
               <svg>
                 <Phone />
               </svg>

@@ -2,9 +2,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import {  Pagination } from "swiper/modules";
-import "swiper/css/pagination";
-
 // import function to register Swiper custom elements
 import { register } from "swiper/element/bundle";
 // register Swiper custom elements
@@ -24,10 +21,9 @@ function OurClients() {
             loop={true}
             centeredSlides={true}
             slidesPerView={6}
-            modules={[ Pagination]}
-            pagination={{ clickable: true }}
             slidesPerGroup={1}
             longSwipes={false}
+            spaceBetween={30}
             breakpoints={{
               1024: {
                 slidesPerView: 6,
