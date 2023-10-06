@@ -1,10 +1,8 @@
-import { Fade } from "react-awesome-reveal";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css/navigation";
+import {  Pagination } from "swiper/modules";
 import "swiper/css/pagination";
 
 // import function to register Swiper custom elements
@@ -31,15 +29,14 @@ function OurClients() {
             loop={true}
             centeredSlides={true}
             slidesPerView={6}
-            modules={[Navigation, Pagination]}
+            modules={[ Pagination]}
             pagination={{ clickable: true }}
-            navigation={true}
             slidesPerGroup={1}
             longSwipes={false}
             breakpoints={{
               1024: {
                 slidesPerView: 6,
-                spaceBetween: 20,
+                spaceBetween: 30,
                 slidesPerGroup: 1,
               },
             }}
