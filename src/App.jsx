@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import Figuers from "./components/Figuers";
 import OurClients from "./components/OurClients";
 
-
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
 import "./style.css";
@@ -18,7 +17,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
 
-export default function App({ data, bg,video }) {
+export default function App({ data, bg, video }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -88,10 +87,12 @@ export default function App({ data, bg,video }) {
   return (
     <>
       <Header />
-      <main >
+      <main>
         <InstantQuote openQuote={false} />
-        <section className="section page" id="home" >
-          <video autoPlay muted loop id="bg-video" src={video} playsInline poster={bg}  />
+        <section className="section page" id="home">
+          <video autoPlay muted loop id="bg-video" playsInline poster={bg}>
+            <source src={video} />
+          </video>
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
               Transforming Spaces, <br />
@@ -105,9 +106,14 @@ export default function App({ data, bg,video }) {
         <Figuers />
         <Testimonial />
         <Awards />
-       
+
         <div className="cta is-hidden-touch columns is-align-items-center	">
-          <div className="column has-text-centered has-text-weight-bold has-text-white is-clickable" onClick={() => { document.getElementById("modal").classList.add("is-active"); }} >
+          <div
+            className="column has-text-centered has-text-weight-bold has-text-white is-clickable"
+            onClick={() => {
+              document.getElementById("modal").classList.add("is-active");
+            }}
+          >
             GET IN TOUCH
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">

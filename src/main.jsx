@@ -88,17 +88,17 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/resturant" element={<App data={dataRestaurantEn} video={ResturantVideo} />} />
+        <Route path="/resturant" element={<App data={dataRestaurantEn} video={ResturantVideo} bg={"../src/images/first.jpg"} />} />
         <Route path="/retail" element={ <App data={dataRetailEn} video={RetailVideo} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
         <Route path="/residential" element={ <App data={dataResidentialEn} video={ResidentialVideo} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
         <Route path="/commercial" element={ <App data={dataCommercialEn} video={CommercialVideo} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
-        <Route path="/branding" element={<App data={dataBrandingEn} video={BrandingVideo} />} />
+        <Route path="/branding" element={<App data={dataBrandingEn} video={BrandingVideo} bg={"../src/images/first.jpg"} />} />
 
-        <Route path="/ar/resturant" element={ <LandingAr data={dataRestaurantAr} video={ResturantVideo} /> } />
+        <Route path="/ar/resturant" element={ <LandingAr data={dataRestaurantAr} video={ResturantVideo} bg={"../src/images/first.jpg"} /> } />
         <Route path="/ar/retail" element={ <LandingAr data={dataRetailAr}  video={RetailVideo} bg={ "https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg" } /> } />
         <Route path="/ar/residential" element={ <LandingAr data={dataResidentialAr} video={ResidentialVideo} bg={ "https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg" } /> } />
         <Route path="/ar/commercial" element={ <LandingAr data={dataCommercialAr} video={CommercialVideo} bg={ "https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg" } /> } />
-        <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} video={BrandingVideo}  />} />
+        <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} video={BrandingVideo} bg={"../src/images/first.jpg"}  />} />
 
         {/* <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} />} />
         <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} />} />

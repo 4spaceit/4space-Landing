@@ -256,9 +256,9 @@ header {
 }
 
 #home {
-  /* background-image: url("./images/first.jpg");
+  /* background-image: url("./images/first.jpg");*/
   background-position: center;
-  background-repeat: no-repeat; */
+  background-repeat: no-repeat; 
   min-height: 100dvh;
   position: relative;
   margin-top: 4rem;
