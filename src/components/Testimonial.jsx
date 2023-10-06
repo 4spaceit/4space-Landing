@@ -19,8 +19,7 @@ export default function Testimonial() {
       <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
       <div className="is-centered">
         <Swiper
-          autoHeight={true}
-          slidesPerView={"auto"}
+          slidesPerView={3}
           modules={[Navigation, Pagination]}
           pagination={{ clickable: true }}
           navigation={true}
@@ -29,7 +28,7 @@ export default function Testimonial() {
           breakpoints={{
             1024: {
               slidesPerView: 3,
-              spaceBetween: 30,
+              spaceBetween: 0,
               slidesPerGroup: 1,
             },
           }}
@@ -117,22 +116,20 @@ export default function Testimonial() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="box  testimonial-box">
-              <p className="has-text-black">
+            <div className="box testimonial-box">
+              <p className="has-text-black ">
                 <QuoteL />
                 <span>
-                  &nbsp; I will definitely recommend 4 Space Design to all my
-                  friends. Their attentive creative service, integrity,
-                  efficiency, and high responsiveness to monitoring are
-                  impressive. Thank you, everyone, for all the perfect services
-                  you have provided in the past few months, including design,
-                  supervision, suggestions, and so on, which have been a great
-                  help to our beautiful home. In particular, Ms.Mais is so
-                  conscientious and responsible; she is sensitive to colors and
-                  moods, and her perfect design and ideas can always draw out my
-                  very vague thoughts. She created the home that I wanted. My
-                  poor vocabulary makes me unable to express my gratitude to her
-                  and all of you. &nbsp;
+                  &nbsp; I highly recommend 4 Space Design to my friends. Their
+                  attentive, creative service, integrity, efficiency, and quick
+                  responsiveness are truly impressive. Thanks to everyone for
+                  the exceptional services over the past months, including design,
+                  supervision, and valuable suggestions that greatly enhanced
+                  our home. Special appreciation to Ms. Mais, who is remarkably
+                  conscientious and sensitive to colors and moods. Her perfect
+                  design brought my vague thoughts to life, creating the home I
+                  envisioned. My limited vocabulary fails to fully express my
+                  gratitude to her and the entire team. &nbsp;
                 </span>
 
                 <QuoteR />

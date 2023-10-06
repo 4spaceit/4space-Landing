@@ -102,8 +102,8 @@ export default function App({ data, bg, video }) {
         </section>
         <LandingProjects data={data} />
         <About />
-        <OurClients />
         <Figuers />
+        <OurClients />
         <Testimonial />
         <Awards />
 
