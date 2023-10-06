@@ -317,6 +317,15 @@ nav {
   height: 15px;
 }
 
+.swiper-wrapper{
+  place-items: center;
+}
+
+.swiper-autoheight .swiper-wrapper {
+  place-items: center;
+
+}
+
 .button:hover,
 .button:focus {
   background: transparent !important;
@@ -334,7 +343,16 @@ nav {
 
 #our-clients img {
   object-fit: contain;
+  border-radius: 0;
 }
+
+#our-clients .swiper-button-prev,
+#our-clients .swiper-button-next {
+  width: 30px !important;
+  height: 30px !important;
+  color: black !important;
+}
+
 
 .swiper-slide-active, .swiper-slide {
   text-align: -webkit-center;

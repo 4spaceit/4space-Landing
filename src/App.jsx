@@ -101,17 +101,13 @@ export default function App({ data, bg,video }) {
         </section>
         <LandingProjects data={data} />
         <About />
+        <OurClients />
         <Figuers />
         <Testimonial />
         <Awards />
-        <OurClients />
+       
         <div className="cta is-hidden-touch columns is-align-items-center	">
-          <div
-            className="column has-text-centered has-text-weight-bold has-text-white is-clickable"
-            onClick={() => {
-              document.getElementById("modal").classList.add("is-active");
-            }}
-          >
+          <div className="column has-text-centered has-text-weight-bold has-text-white is-clickable" onClick={() => { document.getElementById("modal").classList.add("is-active"); }} >
             GET IN TOUCH
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
