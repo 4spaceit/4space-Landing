@@ -112,7 +112,7 @@ export default function LandingAr({ data, bg, video }) {
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
           <a href="tel:+971589344000">
             أتصل بنا على
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
+            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold pt-1" style={{direction:"ltr"}}>
             +971 58 934 4000
             </span></a>
           </div>
