@@ -16,7 +16,7 @@ register();
 export default function Testimonial() {
   return (
     <section className="section page testimonial mb-6" id="testimonial">
-      <h2 className="center m-6 ">WHAT PEOPLE SAY ABOUT US</h2>
+      <h2 className="center m-6 ">أراء عملائنا</h2>
       <div className="is-centered" style={{ direction: "ltr" }}>
         <Swiper
           speed={600}
