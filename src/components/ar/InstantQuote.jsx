@@ -106,7 +106,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           )}
 
-          <div className="field is-align-items-flex-center">
+          <div className="field is-align-items-flex-center is-pulled-left">
             <div className="control">
               <button
                 className="button buttonOutlined"
