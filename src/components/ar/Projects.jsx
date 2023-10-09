@@ -40,11 +40,9 @@ const LandingProjects = ({ data }) => {
                       <Carousel images={item.images} style={{ height: isHeight }} hasThumbnails={false} hasDotButtons={"bottom"} hasIndexBoard={false} hasm shouldMaximizeOnClick={true} shouldMinimizeOnClick={true} hasMediaButton={false} objectFit={"cover"} leftIcon={leftArrow} rightIcon={rightArrow} maxIcon={magnify} minIcon={demagnify} />
                     </div>
                     <div className={`column is-half`} style={{ direction: "rtl" }}>
-                      <h2 className=" is-size-4">{item.client}</h2>
-                      <h2 className="has-text-weight-semibold is-size-6">{item.place}</h2>
-                      <p className="mb-2 has-text-right is-size-5 is-size-6-mobile ">
-                        {item.descr}
-                      </p>
+                      <h2 className="has-text-weight-semibold is-size-4">{item.client}</h2>
+                      <h2 className="mb-4 is-size-6 has-text-weight-normal">{item.place}</h2>
+                      <p className="mb-2 has-text-right is-size-6-mobile "> {item.descr} </p>
                     </div>
                   </div>
                 </Fade>

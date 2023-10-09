@@ -39,18 +39,10 @@ const LandingProjects = ({ data }) => {
                     <div className={`column is-6 is-half`}>
                       <Carousel images={item.images} style={{ height: isHeight }} hasThumbnails={false} hasDotButtons={"bottom"} hasIndexBoard={false} hasm shouldMaximizeOnClick={true} shouldMinimizeOnClick={true} hasMediaButton={false} objectFit={"cover"} leftIcon={leftArrow} rightIcon={rightArrow} maxIcon={magnify} minIcon={demagnify} ></Carousel>
                     </div>
-
                     <div className={`column is-half `}>
-                      <h3 className="has-text-weight-semibold is-size-4">
-                        {item.client}
-                      </h3>
-                      <h3 className="mb-4 is-size-6 has-text-weight-normal">
-                        {item.place}
-                      </h3>
-
-                      <p className="mb-2 has-text-left is-size-6-mobile ">
-                        {item.descr}
-                      </p>
+                      <h3 className="has-text-weight-semibold is-size-4"> {item.client} </h3>
+                      <h3 className="mb-4 is-size-6 has-text-weight-normal"> {item.place} </h3>
+                      <p className="mb-2 has-text-left is-size-6-mobile "> {item.descr} </p>
                     </div>
                   </div>
                 </Fade>

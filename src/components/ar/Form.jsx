@@ -98,7 +98,7 @@ export default function Form(props) {
           </div>
         )}
         <div className="field">
-          <div className="control is-pulled-left	">
+          <div className="control is-align-items-flex-center	">
             <button
               className="button buttonOutlined is-centered"
               type="submit"
