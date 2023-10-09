@@ -28,7 +28,7 @@ export default function Header() {
               <Link rel="nofollow" to="testimonial"  offset={-50}spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > أراء عملائنا </Link>
               <Link rel="nofollow" to="awards" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > جوائز </Link>
               <button className="button is-primary is-outlined is-hidden-touch" id="formButton" >
-                <Link rel="nofollow" spy={true} smooth={true} style={{ fontFamily: "Montserrat-Arabic" }} onClick={() => { document.getElementById("modal").classList.add("is-active"); }} > اخبرنا طلبك </Link>
+                <Link rel="nofollow" spy={true} smooth={true} style={{ fontFamily: "Cairo-Regular" }} onClick={() => { document.getElementById("modal").classList.add("is-active"); }} > اخبرنا طلبك </Link>
               </button>
             </div>
           </div>

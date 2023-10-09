@@ -1,7 +1,7 @@
 @font-face {
-  font-family: "Montserrat-Arabic";
-  src: local("Montserrat-Arabic"),
-    url("./styles/fonts/Montserrat-Arabic.ttf") format("truetype");
+  font-family: "Cairo-Regular";
+  src: local("Cairo-Regular"),
+    url("./styles/fonts/Cairo-Regular.ttf") format("truetype");
 }
 
 p,

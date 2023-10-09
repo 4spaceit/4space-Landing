@@ -86,7 +86,7 @@ export default function LandingAr({ data, bg, video }) {
     }
   });
   return (
-    <div style={{ direction: "rtl", fontFamily: "Montserrat-Arabic" }} >
+    <div style={{ direction: "rtl", fontFamily: "Cairo-Regular" }} >
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
