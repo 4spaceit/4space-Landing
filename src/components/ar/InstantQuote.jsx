@@ -113,7 +113,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 type="submit"
                 disabled={loading}
                 aria-label="submit"
-                style={{fontFamily:"Cairo-Regular"}}
+                style={{fontFamily:"NotoNaskhArabic-Regular"}}
               >
                 {loading ? "جاري الإرسال..." : "إرسال"}
               </button>

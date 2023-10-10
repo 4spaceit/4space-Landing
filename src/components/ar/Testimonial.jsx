@@ -42,7 +42,7 @@ export default function Testimonial() {
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL />
+                <QuoteL style={{transform: "scale(-1,1)"}} />
                 <span>
                   &nbsp; كانت شركة 4Space هي المصممة لمشروع تجهيز المكاتب في
                   المجموعة الأولى لدينا، أبراج بحيرات جميرا. لقد أحببنا الإبداع
@@ -55,7 +55,7 @@ export default function Testimonial() {
                   الداخلي أكثر من ذلك؟ &nbsp;
                 </span>
 
-                <QuoteR />
+                <QuoteR style={{transform: "scale(-1,1)"}} />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
@@ -69,7 +69,7 @@ export default function Testimonial() {
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL />
+                <QuoteL style={{transform: "scale(-1,1)"}} />
                 <span>
                   &nbsp; نكتب إليكم للتعبير عن تقديرنا الصادق لجهودكم في استكمال
                   مشروع مخبز IDA في دبي. كان لجودة العمل المنجز والالتزام
@@ -80,7 +80,7 @@ export default function Testimonial() {
                   لفرقكم. &nbsp;
                 </span>
 
-                <QuoteR />
+                <QuoteR  style={{transform: "scale(-1,1)"}}/>
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
@@ -97,7 +97,7 @@ export default function Testimonial() {
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL />
+                <QuoteL style={{transform: "scale(-1,1)"}}/>
                 <span>
                   &nbsp; لقد كانت تجربة مثيرة للاهتمام مع 4Space، فهم مبدعون
                   للغاية وعصريون، وعملهم دقيق ويجعلون الانسجام بين شخصياتنا وروح
@@ -105,7 +105,7 @@ export default function Testimonial() {
                   بشدة. &nbsp;
                 </span>
 
-                <QuoteR />
+                <QuoteR style={{transform: "scale(-1,1)"}} />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
@@ -122,7 +122,7 @@ export default function Testimonial() {
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL />
+                <QuoteL style={{transform: "scale(-1,1)"}}/>
                 <span>
                   &nbsp; شكرًا لكم جميعًا على جميع الخدمات المثالية التي
                   قدمتموها في الأشهر القليلة الماضية، بما في ذلك التصميم
@@ -133,7 +133,7 @@ export default function Testimonial() {
                   للغاية. &nbsp;
                 </span>
 
-                <QuoteR />
+                <QuoteR style={{transform: "scale(-1,1)"}} />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">

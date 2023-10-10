@@ -14,10 +14,10 @@ function OurClients() {
       <div className="container py-6">
         <Swiper
           speed={600}
-          autoplay={{
-            delay: 1500,
-            disableOnInteraction: false,
-          }}
+          // autoplay={{
+          //   delay: 1500,
+          //   disableOnInteraction: false,
+          // }}
           loop={true}
           centeredSlides={true}
           slidesPerView={6}
