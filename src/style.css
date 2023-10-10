@@ -158,6 +158,7 @@ footer svg {
   width: 20px;
   height: 20px;
   filter: none;
+  vertical-align: bottom;
 }
 
 footer {

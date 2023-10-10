@@ -17,7 +17,7 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
 
-export default function App({ data, bg, video }) {
+export default function App({ data, bg, video, videoM }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -84,13 +84,17 @@ export default function App({ data, bg, video }) {
       }
     }
   });
+
+  //Check if mobile
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   return (
     <>
       <Header />
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <video src={video} autoPlay muted loop id="bg-video" playsInline poster={bg}>
+          <video src={isMobile ? videoM : video} autoPlay muted loop id="bg-video" playsInline poster={bg}>
           </video>
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">

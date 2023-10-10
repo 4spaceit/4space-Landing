@@ -34,50 +34,50 @@ function OurClients() {
         >
           <div className="column is-12">
 
-            <SwiperSlide ><div>
+          <SwiperSlide ><div>
               <img src="assets/clients/1.png" alt="King Abdullah Financial District" width={50} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/11.png" alt="Moli by Shi" width={50} loading="lazy" />
+              <img src="assets/clients/11.png" alt="Moli by Shi" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/5.svg" alt="EMAAR" width={50} loading="lazy" />
+              <img src="assets/clients/5.svg" alt="EMAAR" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/13.png" alt="House of Hype" width={50} loading="lazy" />
+              <img src="assets/clients/13.png" alt="House of Hype" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/4.png" alt="PAPA Dubai" width={50} loading="lazy" />
+              <img src="assets/clients/4.png" alt="PAPA Dubai" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/9.png" alt="Automobili Lamborghini" width={50} loading="lazy" />
+              <img src="assets/clients/9.png" alt="Automobili Lamborghini" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/2.svg" alt="Diriyah Gate Development Authority" width={50} loading="lazy" />
+              <img src="assets/clients/2.svg" alt="Diriyah Gate Development Authority" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/3.png" alt="Abu Dhabi Global Market" width={50} loading="lazy" />
+              <img src="assets/clients/3.png" alt="Abu Dhabi Global Market" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/6.png" alt="Huawei" width={50} loading="lazy" />
+              <img src="assets/clients/6.png" alt="Huawei" width={70} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/7.png" alt="Crescent Enterprise" width={50} loading="lazy" />
+              <img src="assets/clients/7.png" alt="Crescent Enterprise" width={110} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/8.png" alt="Agora" width={50} loading="lazy" />
+              <img src="assets/clients/8.png" alt="Agora" width={110} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/10.png" alt="Al Qana" width={50} loading="lazy" />
+              <img src="assets/clients/10.png" alt="Al Qana" width={110} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/12.png" alt="Tutus Kurniati" width={50} loading="lazy" />
+              <img src="assets/clients/12.png" alt="Tutus Kurniati" width={90} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/14.png" alt="AYA Universe" width={50} loading="lazy" />
+              <img src="assets/clients/14.png" alt="AYA Universe" width={100} loading="lazy" />
             </div> </SwiperSlide>
             <SwiperSlide ><div>
-              <img src="assets/clients/15.svg" alt="BE" width={50} loading="lazy" />
+              <img src="assets/clients/15.svg" alt="BE" width={70} loading="lazy" />
             </div> </SwiperSlide>
           </div>
         </Swiper>

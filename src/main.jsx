@@ -15,7 +15,9 @@ import dataResidentialAr from "./data/ar/dataResidential.json";
 import dataCommercialAr from "./data/ar/dataCommercial.json";
 import dataBrandingAr from "./data/ar/dataBranding.json";
 
-import ResturantVideo from "/assets/Restaurant/Restaurant~2.mp4"
+import ResturantVideo from "/assets/Restaurant/Restaurant.mp4"
+import ResturantVideoM from "/assets/Restaurant/RestaurantMobile.mp4"
+ 
 import RetailVideo from "/assets/Retail/Retail.mp4"
 import ResidentialVideo from "/assets/Residential/Residential.mp4"
 import CommercialVideo from "/assets/Commercial/Commercial.mp4"
@@ -88,7 +90,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index path="/en/resturant" element={<App data={dataRestaurantEn} video={ResturantVideo} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
+        <Route index path="/en/resturant" element={<App data={dataRestaurantEn} video={ResturantVideo} videoM={ResturantVideoM} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
         <Route path="/en/retail" element={<App data={dataRetailEn} video={RetailVideo} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
         <Route path="/en/residential" element={<App data={dataResidentialEn} video={ResidentialVideo} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
         <Route path="/en/commercial" element={<App data={dataCommercialEn} video={CommercialVideo} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
