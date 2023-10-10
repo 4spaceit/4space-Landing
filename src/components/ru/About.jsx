@@ -1,9 +1,11 @@
 import { Parallax } from "react-parallax";
-import Figuers from "./Figuers";
 
 export default function About() {
   return (
-    <section className=" page about" id="about">
+    <section
+      className=" page about has-background-white has-text-black"
+      id="about"
+    >
       <div className="columns is-multiline about">
         <Parallax
           bgImage="assets/4SPACE-team.jpg"
@@ -13,29 +15,27 @@ export default function About() {
         >
           <div className="Para-placeholder"></div>
         </Parallax>
-        {/* <div className="about-image column is-full">
-          <img src="assets/4SPACE-team.jpg" alt="" />
-        </div> */}
-        <div className="section container column is-full py-6">
-          <h1 className="center mb-4">عنا</h1>
+        <div className="section column is-full py-4">
+          <h2 className="center m-6 has-text-black">О нас</h2>
           <div className="columns is-multiline">
-            <div className="column has-text-centered">
-              <p className="has-text-justified">
-                Firas Alsahin and Amjad Hourieh, the founders, relocated their
-                practice to Dubai to be near the heart of this thriving market.
-                The emirate's rapid growth in the commercial sector provided an
-                impetus for the firm to investigate all opportunities in the
-                design industry. Overcoming an uphill battle, 4Space Design has
-                gone on to create noteworthy projects in the UAE. Eschewing
-                quantity for quality, profile of the project, and relationship
-                with clients, the studio credits its people’s distinct ideas for
-                strategic business development.
+            <div className="column container has-text-justified	">
+              <p>
+                Основатели 4space,&nbsp;
+                <span className="has-text-weight-bold">Фирас Альсахин</span>
+                &nbsp;и&nbsp;
+                <span className="has-text-weight-bold">Амджад Хуриех</span>
+                ,переехали в Дубай много лет назад и открыли перспективный
+                бизнес в уже тогда процветающей индустрии интерьерного дизайна.
+                4Space Design всегда ставит качество работы на первое место,
+                уделяет внимание проектам, которые требуют эксклюзивного
+                подхода, и инвестирует в долгосрочные отношениям с клиентами.
+                Инновационный и креативный подход в работе стал визитной
+                карточкой компании на рынке.
               </p>
             </div>
           </div>
         </div>
       </div>
-      <Figuers/>
     </section>
   );
 }

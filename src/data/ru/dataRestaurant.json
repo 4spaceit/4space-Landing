@@ -1,7 +1,7 @@
 [
     {
         "client": "PAPA Village",
-        "descr": "PAPA Dubai takes its patrons on a gastronomic and cutting-edge mixology journey. Everyone can find something to enjoy at this restaurant and bar design, whether it is a quiet dinner with friends or a late-night party.",
+        "descr": "Дизайн этого ресторана и бара можно назвать смелой коллаборацией разнообразных концепций под одной крышей, каждая из которых уникальна. Здесь будет комфортно провести тихий ужин с друзьями или вечеринку на целую ночь.",
         "images": [
             {
                 "alt": "PAPA Dubai",
@@ -24,11 +24,11 @@
                 "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     },
     {
-        "client": "Jun's Restaurant Description",
-        "descr": "Jun's Restaurant Design, located in Dubai, has a combined area of 515 sq m. Our Designers added a warm and inviting atmosphere. The neutral color scheme gives diners a feeling of calmness and relaxation, while the textures create a cozy atmosphere.        ",
+        "client": "Ресторан Jun's",
+        "descr": "Теплое и уютное пространство ресторана идеально подойдет для встречи с любимыми людьми. Дизайн вдохновлен атмосферой конного клуба с использованием натуральных материалов, гладких линий и деревянных текстур для создания элегантности и грациозности.",
         "images": [
             {
                 "alt": "Juns Restaurant",
@@ -51,11 +51,11 @@
                 "src": "assets/Restaurant/Juns Restaurant/Juns Restaurant0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     },
     {
         "client": "VAGA",
-        "descr": "VAGA’s resident DJ sits centrally in a rotating booth in the main bar, providing the perfect ambiance to enjoy the exceptional Bar Design in Dubai. Revelers looking for a hint of secrecy can enjoy the private room, accessible through an old red Arabic wooden door. This secret room offers a world of speakeasy fantasy, perfect for those looking to add a little adventure to their dining experience while enjoying the unique Bar Design.",
+        "descr": "Здесь начинается уникальное кулинарное приключение на острове Блювотерс (Bluewaters Island). Каждый посетитель оценит захватывающие виды на район Дубай Марина (Dubai Marina) и концепцию пространства, объединяющую в себе традиции и современность.",
         "images": [
             {
                 "alt": "VAGA Dubai",
@@ -78,11 +78,11 @@
                 "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0005.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     },
     {
         "client": "NONSENSE",
-        "descr": "The bar’s designers have carefully curated the furniture, décor, and lighting to create a visually stunning and functional space. It also features a listening area with a state-of-the-art music program that is timed to the lighting show. The bar is ideal for a night out with friends while experiencing unique music and design elements.",
+        "descr": "Дизайнеры тщательно подобрали мебель, декор и освещение, чтобы создать функциональное пространство. Здесь есть шикарная музыкальная зона, дополненная световым шоу. Бар идеально подходит для вечернего времяпрепровождения с друзьями, предлагая уникальный музыкальный опыт.",
         "images": [
             {
                 "alt": "NONSENSE",
@@ -101,6 +101,6 @@
                 "src": "assets/Restaurant/NONSENSE/NONSENSE0004.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     }
 ]

@@ -39,7 +39,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
-        document.getElementById("form-dekstop").hidden = true;
+        document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
       }
@@ -51,12 +51,11 @@ export default function Form(props) {
     setLoading(false);
   };
   return (
-    <div className="has-background-black " id={id}>
-      <form className="has-background-black form" onSubmit={submit}>
-        <h1 className="center">Consult Us</h1>
+    <div className=" mt-3" id={id}>
+      <form className=" form" onSubmit={submit} id="form-mobile">
         <div className="field">
           <label className="label has-text-left" htmlFor="name">
-            Name
+          Имя
           </label>
           <div className="control">
             <input
@@ -86,34 +85,35 @@ export default function Form(props) {
 
         <div className="field">
           <label className="label has-text-left" htmlFor="mobile">
-            Mobile
+          Телефон
           </label>
           <div className="control">
-            <input className="input" type="text" id="mobile" name="mobile" />
+            <input className="input" type="tel" id="mobile" name="mobile" />
           </div>
         </div>
 
         {error && (
           <div className="notification is-warning">
-            We couldnt submit the form, can you try again.
+            Не удалось отправить форму. Попробуйте еще раз.
           </div>
         )}
-        <div className="field is-grouped is-align-items-flex-end">
-          <div className="control">
+        <div className="field is-align-items-flex-center ">
+          <div className="control ">
             <button
               className="button buttonOutlined"
               type="submit"
               disabled={loading}
               aria-label="submit"
             >
-              {loading ? "Sending..." : "Submit"}
+              {loading ? "Отправка..." : "Отправить"}
             </button>
           </div>
         </div>
       </form>
       {success && (
         <div className="notification is-success">
-          Thanks!, we will get back to you soon.
+          Спасибо! Мы скоро свяжемся с вами.
+
         </div>
       )}
     </div>

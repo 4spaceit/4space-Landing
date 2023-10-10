@@ -1,62 +1,86 @@
-import React from "react";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
+// import function to register Swiper custom elements
+import { register } from "swiper/element/bundle";
+// register Swiper custom elements
+register();
 
 function OurClients() {
   return (
     // Out clients section with some image in a row
+    <section className="section has-background-white py-0 " id="our-clients">
+      <div className="container py-6">
+        <Swiper
+          speed={600}
+          autoplay={{
+            delay: 1500,
+            disableOnInteraction: false,
+          }}
+          loop={true}
+          centeredSlides={true}
+          slidesPerView={6}
+          slidesPerGroup={1}
+          longSwipes={false}
+          spaceBetween={30}
+          breakpoints={{
+            1024: {
+              slidesPerView: 6,
+              spaceBetween: 30,
+              slidesPerGroup: 1,
+            },
+          }}
+        >
+          <div className="column is-12">
 
-    <section className="section" id="figuers">
-      <div className="container">
-        <div className="columns is-multiline">
-          <div className="column is-12">
-            <h1 className="center is-size-2">Our Clients</h1>
+          <SwiperSlide ><div>
+              <img src="assets/clients/1.png" alt="King Abdullah Financial District" width={50} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/11.png" alt="Moli by Shi" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/5.svg" alt="EMAAR" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/13.png" alt="House of Hype" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/4.png" alt="PAPA Dubai" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/9.png" alt="Automobili Lamborghini" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/2.svg" alt="Diriyah Gate Development Authority" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/3.png" alt="Abu Dhabi Global Market" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/6.png" alt="Huawei" width={70} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/7.png" alt="Crescent Enterprise" width={110} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/8.png" alt="Agora" width={110} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/10.png" alt="Al Qana" width={110} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/12.png" alt="Tutus Kurniati" width={90} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/14.png" alt="AYA Universe" width={100} loading="lazy" />
+            </div> </SwiperSlide>
+            <SwiperSlide ><div>
+              <img src="assets/clients/15.svg" alt="BE" width={70} loading="lazy" />
+            </div> </SwiperSlide>
           </div>
-          <div className="column is-12">
-            <div className="columns is-multiline has-text-centered">
-              <div className="column is-2 ">
-                <img
-                  src="../../media/svg/logo_black.svg"
-                  alt="Placeholder"
-                  width={200}
-                />
-              </div>
-              <div className="column is-2">
-                <img
-                  src="../../media/svg/logo_black.svg"
-                  alt="Placeholder"
-                  width={200}
-                />
-              </div>
-              <div className="column is-2">
-                <img
-                  src="../../media/svg/logo_black.svg"
-                  alt="Placeholder"
-                  width={200}
-                />
-              </div>
-              <div className="column is-2">
-                <img
-                  src="../../media/svg/logo_black.svg"
-                  alt="Placeholder"
-                  width={200}
-                />
-              </div>
-              <div className="column is-2">
-                <img
-                  src="../../media/svg/logo_black.svg"
-                  alt="Placeholder"
-                  width={200}
-                />
-              </div>
-              <div className="column is-2">
-                <img
-                  src="../../media/svg/logo_black.svg"
-                  alt="Placeholder"
-                  width={200}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        </Swiper>
       </div>
     </section>
   );

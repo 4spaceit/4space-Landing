@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { parseUTMParameters } from "../../utmParser";
 
 export default function InstantQuote({ openQuote, onCloseQuote }) {
@@ -6,11 +6,29 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  const utmData = parseUTMParameters();
+ 
+  useEffect(() => {
+    const scrollableContainer = document.querySelector('.scrollable-container');
+
+    const preventScrolling = (e) => {
+      e.preventDefault();
+    };
+
+    scrollableContainer.addEventListener('wheel', preventScrolling);
+    scrollableContainer.addEventListener('touchmove', preventScrolling);
+
+    return () => {
+      // Remove event listeners when the component unmounts
+      scrollableContainer.removeEventListener('wheel', preventScrolling);
+      scrollableContainer.removeEventListener('touchmove', preventScrolling);
+    };
+  }, []);
 
   const submit = async (e) => {
     setLoading(true);
     e.preventDefault();
+
+    const utmData = parseUTMParameters();
 
     const formData = new FormData();
     formData.append("applicant", e.target.elements.name.value);
@@ -46,10 +64,11 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     }
 
     setLoading(false);
+    
   };
 
   return (
-    <div className={`modal ${openQuote ? "is-active" : ""}`} id="modal">
+    <div className={`modal ${openQuote ? "is-active" : ""} scrollable-container`} id="modal">
       <div className="modal-background"></div>
       <button
         className="modal-close is-large"
@@ -58,11 +77,11 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           document?.getElementById("modal")?.classList?.remove("is-active");
         }}
       ></button>
-      <div className="modal-content">
+      <div className="modal-content scrollable-content">
         <form onSubmit={submit} id="form-modal">
-          <h1 className="center">Talk to Us</h1>
+          <h2 className="center">Расскажите о вашем проекте </h2>
           <div className="field">
-            <label className="label">Name</label>
+            <label className="label">Имя</label>
             <div className="control">
               <input className="input" type="text" name="name" required />
             </div>
@@ -73,11 +92,10 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             <div className="control">
               <input className="input" type="email" name="email" required />
             </div>
-            {/*<p className="help is-danger">This email is invalid</p>*/}
           </div>
 
           <div className="field">
-            <label className="label">Mobile</label>
+            <label className="label">Телефон</label>
             <div className="control">
               <input className="input" type="text" name="mobile" />
             </div>
@@ -85,7 +103,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
           {error && (
             <div className="notification is-warning">
-              We couldnt submit the form, can you try again.
+              Не удалось отправить форму. Попробуйте еще раз.
             </div>
           )}
 
@@ -97,14 +115,14 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 disabled={loading}
                 aria-label="submit"
               >
-                {loading ? "Sending..." : "Submit"}
+                {loading ? "Отправка..." : "Отправить"}
               </button>
             </div>
           </div>
         </form>
         {success && (
           <div className="notification is-success">
-            Thanks!, we will get back to you soon.
+            Спасибо! Мы скоро свяжемся с вами.
           </div>
         )}
       </div>
