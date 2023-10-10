@@ -103,13 +103,15 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/ar/commercial" element={<LandingAr data={dataCommercialAr} video={CommercialVideo} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
         <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} video={BrandingVideo} bg={"./images/first.jpg"} />} />
 
-        <Route path="*" element={<Navigate to="/en/restaurant" replace  />} />
 
         <Route path="/ru/resturant" element={<LandingRu data={dataRestaurantRu} video={ResturantVideo} videoM={ResturantVideoM} bg={"https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-06-scaled.jpg"} />} />
         <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} video={RetailVideo} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
         <Route path="/ru/residential" element={<LandingRu data={dataResidentialRu} video={ResidentialVideo} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
         <Route path="/ru/commercial" element={<LandingRu data={dataCommercialRu}  video={CommercialVideo} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
         <Route path="/ru/branding" element={<LandingRu data={dataBrandingRu} video={BrandingVideo} bg={"./images/first.jpg"} />} />
+
+        
+        <Route path="*" element={<Navigate to="/en/restaurant" replace  />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
