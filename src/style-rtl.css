@@ -1,0 +1,5 @@
+@media screen and (max-width: 1024px) {
+  p {
+    font-size: 1.125rem!important;
+  }
+}

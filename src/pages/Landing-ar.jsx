@@ -9,6 +9,7 @@ import Figuers from "../components/ar/Figuers";
 import "bulma/css/bulma.css";
 import "../styles/index.scss";
 import "../style.css";
+import "../style-rtl.css";
 import { Link } from "react-scroll";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -18,7 +19,7 @@ import Testimonial from "../components/ar/Testimonial";
 import OurClients from "../components/ar/OurClients";
 
 
-export default function LandingAr({ data, bg, video }) {
+export default function LandingAr({ data, bg, video, videoM }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -85,13 +86,16 @@ export default function LandingAr({ data, bg, video }) {
       }
     }
   });
+
+  //Check if mobile
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
   return (
     <div style={{ direction: "rtl", fontFamily: "NotoNaskhArabic-Regular" }} >
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
         <section className="section page" id="home" style={{ backgroundImage: `url(${bg})` }}>
-          <video autoPlay muted loop id="bg-video" src={video} playsInline />
+          <video autoPlay muted loop id="bg-video" src={isMobile ? videoM : video} playsInline poster={bg} />
           <div className="title is-1 has-text-white has-text-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-weight-bold head-text">
               تحويل المساحات،<br />

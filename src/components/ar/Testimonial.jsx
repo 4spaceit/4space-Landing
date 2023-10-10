@@ -25,37 +25,33 @@ export default function Testimonial() {
             disableOnInteraction: false,
           }}
           loop={true}
-            slidesPerView={1}
-            modules={[Navigation, Pagination]}
-            pagination={{ clickable: true }}
-            navigation={true}
-            slidesPerGroup={1}
-            longSwipes={false}
-            breakpoints={{
-              1024: {
-                slidesPerView: 2,
-                spaceBetween: 0,
-                slidesPerGroup: 1,
-              },
-            }}
+          slidesPerView={1}
+          modules={[Navigation, Pagination]}
+          pagination={{ clickable: true }}
+          navigation={true}
+          slidesPerGroup={1}
+          longSwipes={false}
+          breakpoints={{
+            1024: {
+              slidesPerView: 2,
+              spaceBetween: 0,
+              slidesPerGroup: 1,
+            },
+          }}
         >
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL style={{transform: "scale(-1,1)"}} />
+                <QuoteL style={{ transform: "scale(-1,1)" }} />
                 <span>
-                  &nbsp; كانت شركة 4Space هي المصممة لمشروع تجهيز المكاتب في
-                  المجموعة الأولى لدينا، أبراج بحيرات جميرا. لقد أحببنا الإبداع
-                  والتفاني والاحترافية التي أظهرها فريق 4Space. تمكنت 4Space من
-                  تنفيذ المهمة قبل الموعد النهائي المتفق عليه ونالت رضانا
-                  الكامل. لقد قامت أيضًا بعمل رائع كمدير للمشروع وضمنت التنسيق
-                  السلس بين المقاول الرئيسي والمقاول الداخلي وجميع البائعين
-                  الآخرين. نحن نوصي بشدة بشركة 4Space، لأنها تنجز الأمور بطريقة
-                  إبداعية في الوقت المحدد! ماذا يمكن للمرء أن يتوقع من المصمم
-                  الداخلي أكثر من ذلك؟ &nbsp;
+                  &nbsp;لقد أحببنا الإبداع والتفاني والمهنية التي أظهرها فريق
+                  4Space. تمكنت 4Space من تنفيذ المهمة قبل الموعد النهائي المتفق
+                  عليه وبرضانا التام. لقد قامت أيضاً بعمل رائع كمدير للمشروع
+                  وضمنت تنسيقاً سلساً جداً بين مقاولنا الرئيسي ومقاولنا الداخلي
+                  وجميع البائعين الآخرين&nbsp;
                 </span>
 
-                <QuoteR style={{transform: "scale(-1,1)"}} />
+                <QuoteR style={{ transform: "scale(-1,1)" }} />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
@@ -69,18 +65,17 @@ export default function Testimonial() {
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL style={{transform: "scale(-1,1)"}} />
+                <QuoteL style={{ transform: "scale(-1,1)" }} />
                 <span>
-                  &nbsp; نكتب إليكم للتعبير عن تقديرنا الصادق لجهودكم في استكمال
-                  مشروع مخبز IDA في دبي. كان لجودة العمل المنجز والالتزام
-                  بالجدول الزمني تأثير محوري على استكمال وتشغيل مخبز IDA في
-                  الوقت المناسب. بشكل عام، نحن سعداء بالتعاون والمساهمة
-                  الإيجابية والتعامل الاحترافي مع 4Space من قبل جميع الأطراف.
-                  ونحن نعتمد على تعاونكم ودعمكم المستمر. يرجى تقديم شكرنا
-                  لفرقكم. &nbsp;
+                  &nbsp;نكتب لنعرب عن خالص تقديرنا لجهودكم في إكمال مشروع مخبز
+                  المؤسسة الدولية للتنمية في دبي. كان لجودة العمل المقدم
+                  والالتزام بالجدول الزمني تأثير محوري على الانتهاء من مخبز
+                  المؤسسة الدولية للتنمية وتشغيله في الوقت المناسب. بشكل عام،
+                  نحن سعداء بالتعاون، والاضافات الإيجابية، والتعامل المهني مع
+                  هذا المشروع من قبل جميع الأطراف.&nbsp;
                 </span>
 
-                <QuoteR  style={{transform: "scale(-1,1)"}}/>
+                <QuoteR style={{ transform: "scale(-1,1)" }} />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
@@ -97,15 +92,14 @@ export default function Testimonial() {
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL style={{transform: "scale(-1,1)"}}/>
+                <QuoteL style={{ transform: "scale(-1,1)" }} />
                 <span>
-                  &nbsp; لقد كانت تجربة مثيرة للاهتمام مع 4Space، فهم مبدعون
-                  للغاية وعصريون، وعملهم دقيق ويجعلون الانسجام بين شخصياتنا وروح
-                  منزلنا ممكناً، أهم شيء هو التزامهم بالمواعيد وهو ما أقدره
-                  بشدة. &nbsp;
+                  &nbsp; لقد كانت تجربة مثيرة للاهتمام. إنهم مبدعون وعصريون
+                  للغاية؛ عملهم دقيق ولقد قاموا بخلق ذاك الانسجام بين شخصياتنا
+                  وروح منزلنا. أهم شيء هو التزامهم بالمواعيد التي أقدرها &nbsp;
                 </span>
 
-                <QuoteR style={{transform: "scale(-1,1)"}} />
+                <QuoteR style={{ transform: "scale(-1,1)" }} />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
@@ -122,18 +116,17 @@ export default function Testimonial() {
           <SwiperSlide>
             <div className="box  testimonial-box box-arabic">
               <p className="has-text-black">
-                <QuoteL style={{transform: "scale(-1,1)"}}/>
+                <QuoteL style={{ transform: "scale(-1,1)" }} />
                 <span>
-                  &nbsp; شكرًا لكم جميعًا على جميع الخدمات المثالية التي
+                  &nbsp; شكراً لكم جميعاً على جميع الخدمات المثالية التي
                   قدمتموها في الأشهر القليلة الماضية، بما في ذلك التصميم
-                  والإشراف والاقتراحات وغير ذلك، والتي كانت بمثابة مساعدة كبيرة
-                  لمنزلنا الجميل. على وجه الخصوص، تتمتع السيدة ميس بالضمير
-                  والمسؤولية؛ إنها حساسة للألوان والحالات المزاجية، ويمكن
-                  لتصميمها وأفكارها المثالية دائمًا أن تجذب أفكاري الغامضة
-                  للغاية. &nbsp;
+                  والإشراف والاقتراحات وغيرها، والتي كانت مساعدة كبيرة لمنزلنا
+                  الجميل. على وجه الخصوص، السيدة ميس إنها واعية ومسؤولة جداً،
+                  كما أنها حساسة للألوان والحالات المزاجية، ويمكن لتصميمها
+                  وأفكارها المثالية أن ترسم دائماً أفكاري الغامضة &nbsp;
                 </span>
 
-                <QuoteR style={{transform: "scale(-1,1)"}} />
+                <QuoteR style={{ transform: "scale(-1,1)" }} />
               </p>
               <div className="is-flex is-align-items-center is-justify-content-start mt-4">
                 <div className="is-flex is-flex-direction-column ml-2 is-align-content-space-between">
