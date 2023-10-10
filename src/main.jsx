@@ -15,7 +15,7 @@ import dataResidentialAr from "./data/ar/dataResidential.json";
 import dataCommercialAr from "./data/ar/dataCommercial.json";
 import dataBrandingAr from "./data/ar/dataBranding.json";
 
-import ResturantVideo from "/assets/Restaurant/Restaurant.mp4"
+import ResturantVideo from "/assets/Restaurant/Restaurant~2.mp4"
 import RetailVideo from "/assets/Retail/Retail.mp4"
 import ResidentialVideo from "/assets/Residential/Residential.mp4"
 import CommercialVideo from "/assets/Commercial/Commercial.mp4"
