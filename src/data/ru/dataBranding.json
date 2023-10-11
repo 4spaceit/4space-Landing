@@ -1,7 +1,7 @@
 [
     {
         "client": "Sah El Nom",
-        "descr": "The logo is a perfect representation of the restaurant’s dedication to delivering a genuine Syrian dining experience. It’s elegant, simple, and authentic, with a color palette of blue and gray that exudes sophistication and class. The logo also perfectly captures the essence of the restaurant’s unique menu and ambiance, making it a perfect fit for the brand.",
+        "descr": "Логотип идеально транслирует фокус ресторана на сирийской кухне. Он элегантен и аутентичен, а цветовая палитра излучает утонченность. Нам удалось разработать логотип в корпоративном стиле заведения, в котором была использована изящная арабская каллиграфия.",
         "images": [
             {
                 "alt": "Sah El Nom",
@@ -12,11 +12,11 @@
                 "src": "assets/Branding/Sah El Nom - branding/Sah-El-Nom-Branding-Feature.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     },
     {
-        "client": "Neem Lounge",
-        "descr": "The Neem Lounge brand identity is an award-winning design characterized by a vibrant and colorful logo, featuring a color palette of green, red, orange, and blue. These colors are carefully selected to represent the natural beauty and diversity of the UAE’s landscape, from its lush greenery to its vibrant desert hues. The use of multiple colors also adds a sense of playfulness and energy to the brand, highlighting the lounge’s relaxed and welcoming atmosphere.",
+        "client": "Neem лаундж",
+        "descr": "Корпоративный стиль бренда Neem отличается ярким и красочным логотипом, использующим палитру из разных цветов. Эти цвета были выбраны, чтобы отразить природную красоту и разнообразие ландшафта ОАЭ: от пышной зелени до ярких оттенков пустыни. Использование нескольких цветов добавляет энергию в бренд.",
         "images": [
             {
                 "alt": "Neem Lounget",
@@ -27,11 +27,11 @@
                 "src": "assets/Branding/Neem Lounge - branding/Neem-Branding-Feature-1.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     },
     {
         "client": "Karamna Al Khakleej",
-        "descr": "Karamna Al Khaleej is a brand that embodies the true essence of Levantine-Gulf cuisine with a contemporary twist. The brand’s identity is reflected in the color palette of black, white, and gold, which speaks to its premium and sophisticated nature, designed by 4SPACE, a restaurant design company. At the heart of the brand’s identity is its logo, which is a beautiful Arabic calligraphy with a touch of golden leaves that adds a touch of elegance and luxury. The logo perfectly encapsulates the brand’s mission as a restaurant design company: to create a premium, cohesive experience that is both authentic and fresh. ",
+        "descr": "Идентичность бренда этого ресторана отражается в цветовой палитре из черного, белого и золотого, что говорит о премиальности и утонченном характере. Логотип представляет собой красивую арабскую каллиграфию с золотыми листьями, добавляющими нотку элегантности и роскоши.",
         "images": [
             {
                 "alt": "Karamna Al Khakleej",
@@ -42,11 +42,11 @@
                 "src": "assets/Branding/Karamna Al Khakleej/Karamna-Branding-Feature.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     },
     {
         "client": "Ayoush",
-        "descr": "Ayoush is a brand that is all about capturing the essence of modern luxury and elegance. The sleek and sophisticated design immediately draws your attention to the brand identity. The logo, with its intricate calligraphy, exudes a sense of timelessness and refinement in a restaurant design. The use of a monochromatic color scheme of black adds to the brand’s sophistication and creates a strong visual impact. The typography is clean and modern, yet classic, perfectly reflecting the brand’s values of quality and luxury. ",
+        "descr": "Строгий и утонченный дизайн привлекает внимание к идентичности бренда. Использование монохромной цветовой схемы с черным цветом добавляет бренду изысканности и создает сильное визуальное воздействие. Современная типографика идеально отражает фокусы бренда на качество и роскошь.",
         "images": [
             {
                 "alt": "Ayoush",
@@ -57,6 +57,6 @@
                 "src": "assets/Branding/Ayoush/Ayoush-Branding-Feature-1.jpg"
             }
         ],
-        "place": "Dubai"
+        "place": "Дубай, Объединенные Арабские Эмираты"
     }
 ]

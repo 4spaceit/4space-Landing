@@ -1,7 +1,7 @@
 [
   {
-    "client": "Palm Villa",
-    "descr": "Upon entering the Palm Villa, you are immediately greeted with a breathtaking view of the landscape, visible from every corner of the villa. This creates a sense of openness and connection with the outdoors, enhancing the overall ambiance of the space. 4SPACE’s attention to detail is evident in every aspect of the design, from the sleek and modern furniture to the carefully curated decor. The villa is a perfect blend of functionality and style, creating a comfortable and welcoming environment. ",
+    "client": "Вилла на Пальме",
+    "descr": "Войдя в эту виллу, вы будете восхищены ландшафтом пространства. Нам удалось создать современный и элегантный дизайн, который идеально коррелирует с персоналией клиента. Функциональность жилья, стиль, просторные комнаты и эргономичность сделали виллу идеальной для клиента.",
     "images": [
       {
         "alt": "Palm Villa",
@@ -28,11 +28,11 @@
         "src": "assets/Residential/Palm Villa/519.jpg"
       }
     ],
-    "place": "Dubai"
+    "place": "Дубай, Объединенные Арабские Эмираты"
   },
   {
-    "client": "Private Apartment",
-    "descr": "This stunning Dubai apartment design is a masterpiece of luxury and sophistication, brought to life by some of the best luxury interior designers in Dubai. From the moment you step inside, you’re greeted with a clean and sleek modern aesthetic that showcases a carefully crafted blend of high-end materials. The predominant materials used throughout the space are marble, gold, wood, and leather, all of which have been selected for their luxurious qualities and timeless appeal.",
+    "client": "Дизайн частных апартаментов",
+    "descr": "Современный дизайн и первоклассные материалы позволили создать идеальное пространство для ценителей лучших моментов жизни. Очарование и утонченная атмосфера - это то, что запомнят гости, посетившие эти апартаменты. Добро пожаловать в этот мир, где роскошь правит балом! ",
     "images": [
       {
         "alt": "Private Apartment",
@@ -55,11 +55,11 @@
         "src": "assets/Residential/Private Apartment/Private-Apartment-05.jpg"
       }
     ],
-    "place": "Dubai"
+    "place": "Дубай, Объединенные Арабские Эмираты"
   },
   {
-    "client": "Residential Villa - Al Saadiyat Island AUH",
-    "descr": "This masterpiece showcases the perfect blend of contemporary aesthetics, functionality, and luxury. Upon entering the grand foyer, you are immediately enveloped in the ambiance of modern elegance. The design exudes sleek lines, clean forms, and a minimalist color palette, creating a sense of refined sophistication From the grand staircase and grand piano to the serene side garden, the cinema room, and the stunning outdoor swimming pool and landscape, every aspect of this residential villa at Al Saadiyat Island showcases the epitome of modern residential design. The meticulous attention to detail, seamless integration of technology, and fusion of luxury and functionality create a living space that embodies the essence of contemporary living at its finest. ",
+    "client": "Вилла на острове Саадият",
+    "descr": "Остров Саадият сам по себе уже критерий роскоши для выбора жилого пространства. Мы превратили эту виллу в уединенный оазис, который позволит резидентам наслаждаться моментами, общаться с природой, но при этом быть близко к цивилизации и современности.",
     "images": [
       {
         "alt": "Residential Villa - Al Saadiyat Island AUH",
@@ -78,11 +78,11 @@
         "src": "assets/Residential/Residential Villa - Al Saadiyat Island AUH/Saadiyat-Villa-04.jpg"
       }
     ],
-    "place": "Abu Dhabi"
+    "place": "Абу-Даби, Объединенные Арабские Эмираты"
   },
   {
-    "client": "Villa in Saudi Arabia",
-    "descr": "The interior design of the villa is inspired by midcentury-modern aesthetics, featuring clean lines, warm woods, and bold upholstery hues that complement each other perfectly. The upholstered headboards of the beds in the bedrooms add to the cozy and inviting ambiance. Gold accent pieces, such as lamps and vases, add a touch of glamor and sophistication to the space. The wood paneling on the walls creates a warm and inviting ambiance, while bespoke furniture pieces elevate the space. The design philosophy is centered on form and function, a concept that still inspires designers to this day.",
+    "client": "Вилла в Саудовской Аравии",
+    "descr": "В этой вилле дизайн интерьера вдохновлен эстетикой средневековья. Здесь вы увидите утонченные линии, теплые деревянные материалы и достаточно яркую и контрастную палитру. Золотые акценты на лампах и вазах идеально отражают гламур и эстетичность в одном флаконе.",
     "images": [
       {
         "alt": "Villa in Saudi Arabia",
@@ -105,6 +105,6 @@
         "src": "assets/Residential/Villa in Saudi Arabia/Residential-Villa-in-Saudi-Arabia-by-4SPACE-005-scaled.jpg"
       }
     ],
-    "place": "Saudi Arabia"
+    "place": "Саудовская Аравия"
   }
 ]

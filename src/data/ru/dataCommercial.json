@@ -1,7 +1,7 @@
 [
   {
-    "client": "BE Meliorism Office",
-    "descr": "4SPACE drew inspiration from BE’s branding guidelines and core values of innovation, people, and insight to create a space that truly represents the company. The design features a 2.5-meter-wide glass door with LED screens and RGB lights, along with a 3D hologram and LED screens in the foyer, serving as the focal point of the design. Every room and space is equipped with advanced technology, which is crucial for a technology-centric organization like BE Meliorism. To accommodate the team’s different needs, 4SPACE, being one of the best interior design companies in Dubai, designed a variety of co-working tables, quiet pods, sound-proof phone booths, studio rooms, and formal and informal meeting rooms. ",
+    "client": "Офис BE Meliorism",
+    "descr": "Этот офис можно смело назвать технологическим раем. В одном пространстве мы объединили тренд в области напольных покрытий, соединив ковролин и высококачественную виниловую плитку. Обстановка здесь непринужденная и гостеприимная, а яркие сиденья привносят энергию в пространство.",
     "images": [
       {
         "alt": "BE Meliorism Office",
@@ -24,11 +24,11 @@
         "src": "assets/Commercial/BE Meliorism Office/BE07-4space.jpg"
       }
     ],
-    "place": "Dubai"
+    "place": "Дубай, Объединенные Арабские Эмираты"
   },
   {
-    "client": "4SPACE Design",
-    "descr": "4SPACE has created an innovative office design interior that combines the raw and brutalist elements of concrete and exposed breeze blocks with the sleek simplicity of minimalism and a touch of industrial style. The space incorporates biophilic design elements, such as verdant trees, to create a refreshing and calming environment. The unfinished concrete breeze blocks provide a playful and raw backdrop, which is enhanced with a sealer material to preserve the brutalist look. The smooth monochromatic palette adds a touch of minimalism to the office design interior, while modern furniture, stainless steel accessories, and fluorescent lighting create a sense of industrial chic ",
+    "client": "Дизайн нашего офиса 4SPACE",
+    "descr": "С особой любовью разработан дизайн нашего офиса. Открытые зоны способствуют сотрудничеству и коллаборации. Открытый потолок украшен трубами и добавляет нотку элегантности. Мы использовали элементы биофильного дизайна, чтобы создать освежающую и успокаивающую атмосферу.",
     "images": [
       {
         "alt": "4SPACE Design",
@@ -51,11 +51,11 @@
         "src": "assets/Commercial/4SPACE Design/4space-office-05-2.jpg"
       }
     ],
-    "place": "Dubai"
+    "place": "Дубай, Объединенные Арабские Эмираты"
   },
   {
-    "client": "SEE Institute at Dubai Sustainable City Expo 2020",
-    "descr": "The interior design of SEE Institute was an important aspect of the project, and 4SPACE, an interior design firm in Dubai, was assigned to handle the office interior using a biophilic approach and sustainable materials. The space promotes sustainable practices for the use of air, water, waste, and energy, and all of the materials used in its construction are LEED certified. The interior design firm in Dubai, 4SPACE, incorporates biophilic design principles, which aim to connect people with nature and create a more productive and healthy environment. The space features plenty of natural light, greenery, and other natural elements that help to reduce stress and improve well-being. Overall, SEE Institute is a beautiful and functional space that showcases the potential of sustainable office design interiors. ",
+    "client": "SEE Institute",
+    "descr": "Это идеал устойчивого дизайна интерьера офиса. Изобилие естественного света, пышной зелени и органических элементов помогают снизить уровень стресса и активизировать жизненную энергию. Это тот случай, когда красота и функциональность соединены для того, чтобы показать стандарт офисного пространство.",
     "images": [
       {
         "alt": "SEE Institute",
@@ -78,11 +78,11 @@
         "src": "assets/Commercial/SEE Institute at Dubai Sustainable City Expo 2020/5_Sustainable-City-Incubator.jpg"
       }
     ],
-    "place": "Dubai"
+    "place": "Дубай, Объединенные Арабские Эмираты"
   },
   {
-    "client": "Crescent Enterprise Office",
-    "descr": "The office design interior reflects the brand’s image by incorporating the company’s signature colors throughout the space. Moreover, real plants and a vertical garden have been strategically placed to breathe life into the office, adding a natural touch to the  otherwise modern interior. 4SPACE, the architecture office in Dubai, which is behind the office interior, has successfully created a harmonious blend of nature and modernity, resulting in a unique and inviting work environment. The design’s main focus is functionality, with various elements and features carefully placed to maximize productivity and comfort. The playful vibe of the office encourages creativity and collaboration among employees, fostering a positive and lively atmosphere. ",
+    "client": "Офис Crescent Enterprise",
+    "descr": "Живые растения и цветущий вертикальный сад придают современному интерьеру жизнь, гармонично соединяя природу и современность. Функциональность занимает центральное место: положение каждого элемента тщательно продумано, чтобы это способствовало повышению производительности в коллективе.",
     "images": [
       {
         "alt": "Crescent Enterprise Office",
@@ -105,6 +105,6 @@
         "src": "assets/Commercial/Crescent Enterprise Office/CE-7_Post.jpg"
       }
     ],
-    "place": "Dubai"
+    "place": "Дубай, Объединенные Арабские Эмираты"
   }
 ]
