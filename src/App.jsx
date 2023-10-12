@@ -95,7 +95,7 @@ export default function App({ data, images }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 4000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, []);
@@ -121,7 +121,7 @@ export default function App({ data, images }) {
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
               Transforming Spaces, <br />
-              Framing Experiences
+              Crafting Experiences
             </h1>
           </div>
         </section>
