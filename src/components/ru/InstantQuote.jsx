@@ -6,21 +6,20 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
- 
   useEffect(() => {
-    const scrollableContainer = document.querySelector('.scrollable-container');
+    const scrollableContainer = document.querySelector(".scrollable-container");
 
     const preventScrolling = (e) => {
       e.preventDefault();
     };
 
-    scrollableContainer.addEventListener('wheel', preventScrolling);
-    scrollableContainer.addEventListener('touchmove', preventScrolling);
+    scrollableContainer.addEventListener("wheel", preventScrolling);
+    scrollableContainer.addEventListener("touchmove", preventScrolling);
 
     return () => {
       // Remove event listeners when the component unmounts
-      scrollableContainer.removeEventListener('wheel', preventScrolling);
-      scrollableContainer.removeEventListener('touchmove', preventScrolling);
+      scrollableContainer.removeEventListener("wheel", preventScrolling);
+      scrollableContainer.removeEventListener("touchmove", preventScrolling);
     };
   }, []);
 
@@ -34,6 +33,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     formData.append("applicant", e.target.elements.name.value);
     formData.append("email", e.target.elements.email.value);
     formData.append("mobile", e.target.elements.mobile.value);
+    formData.append("message", e.target.elements.message.value);
     formData.append("utm_source", utmData.utm_source);
     formData.append("utm_medium", utmData.utm_medium);
     formData.append("utm_campaign", utmData.utm_campaign);
@@ -64,11 +64,13 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     }
 
     setLoading(false);
-    
   };
 
   return (
-    <div className={`modal ${openQuote ? "is-active" : ""} scrollable-container`} id="modal">
+    <div
+      className={`modal ${openQuote ? "is-active" : ""} scrollable-container`}
+      id="modal"
+    >
       <div className="modal-background"></div>
       <button
         className="modal-close is-large"
@@ -98,6 +100,20 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             <label className="label">Телефон</label>
             <div className="control">
               <input className="input" type="text" name="mobile" />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label has-text-left" htmlFor="message">
+              О проекте
+            </label>
+            <div className="control">
+              <textarea
+                className="textarea"
+                name="message"
+                id="message"
+                required
+              ></textarea>
             </div>
           </div>
 

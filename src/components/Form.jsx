@@ -19,6 +19,7 @@ export default function Form(props) {
     formData.append("applicant", e.target.elements.name.value);
     formData.append("email", e.target.elements.email.value);
     formData.append("mobile", e.target.elements.mobile.value);
+    formData.append("message", e.target.elements.message.value)
     formData.append("utm_source", utmData.utm_source);
     formData.append("utm_medium", utmData.utm_medium);
     formData.append("utm_campaign", utmData.utm_campaign);
@@ -89,6 +90,20 @@ export default function Form(props) {
           </label>
           <div className="control">
             <input className="input" type="tel" id="mobile" name="mobile" />
+          </div>
+        </div>
+
+        <div className="field">
+          <label className="label has-text-left" htmlFor="message">
+            About The Project
+          </label>
+          <div className="control">
+            <textarea
+              className="textarea"
+              name="message"
+              id="message"
+              required
+            ></textarea>
           </div>
         </div>
 

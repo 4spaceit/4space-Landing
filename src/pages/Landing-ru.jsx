@@ -17,7 +17,7 @@ import Contact from "../components/ru/Contact";
 import Testimonial from "../components/ru/Testimonial";
 import OurClients from "../components/ru/OurClients";
 
-export default function LandingRu({ data, bg, video, videoM }) {
+export default function LandingRu({ data, images}) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -94,8 +94,6 @@ export default function LandingRu({ data, bg, video, videoM }) {
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <video src={isMobile ? videoM : video} autoPlay muted loop id="bg-video" playsInline poster={bg}>
-          </video>
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
             МЫ МЕНЯЕМ ПРОСТРАНСТВА, <br />

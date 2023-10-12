@@ -16,8 +16,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
+import { useEffect, useState } from "react";
 
-export default function App({ data, bg, video, videoM }) {
+export default function App({ data, images }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -88,14 +89,35 @@ export default function App({ data, bg, video, videoM }) {
   //Check if mobile
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
+
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
+    }, 4000);
+
+    return () => clearInterval(interval);
+  }, []);
+
+  const nextImageIndex = (currentImageIndex + 1) % images.length;
+
   return (
     <>
       <Header />
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <video src={isMobile ? videoM : video} autoPlay muted loop id="bg-video" playsInline poster={bg}>
-          </video>
+          <div className="fade-in-out" id="imageContainer">
+            {images.map((src, index) => (
+              <img
+                key={index}
+                src={src}
+                className={`image ${index === currentImageIndex ? "fade-image" : "faded"} ${index === nextImageIndex ? "next" : ""}`}
+                alt={src}
+              />
+            ))}
+          </div>
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
               Transforming Spaces, <br />
@@ -121,10 +143,11 @@ export default function App({ data, bg, video, videoM }) {
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
             <a href="tel:+971589344000">
-            CALL US
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
-            +971 58 934 4000
-            </span></a>
+              CALL US
+              <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
+                +971 58 934 4000
+              </span>
+            </a>
           </div>
         </div>
         <div className="topButton is-hidden" id="topButton">

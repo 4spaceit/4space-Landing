@@ -19,7 +19,7 @@ import Testimonial from "../components/ar/Testimonial";
 import OurClients from "../components/ar/OurClients";
 
 
-export default function LandingAr({ data, bg, video, videoM }) {
+export default function LandingAr({ data, images }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -94,8 +94,7 @@ export default function LandingAr({ data, bg, video, videoM }) {
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
-        <section className="section page" id="home" style={{ backgroundImage: `url(${bg})` }}>
-          <video autoPlay muted loop id="bg-video" src={isMobile ? videoM : video} playsInline poster={bg} />
+        <section className="section page" id="home">
           <div className="title is-1 has-text-white has-text-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-weight-bold head-text">
               تحويل المساحات،<br />

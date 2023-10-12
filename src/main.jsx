@@ -15,32 +15,28 @@ import dataResidentialAr from "./data/ar/dataResidential.json";
 import dataCommercialAr from "./data/ar/dataCommercial.json";
 import dataBrandingAr from "./data/ar/dataBranding.json";
 
-import ResturantVideo from "/assets/Restaurant/Restaurant.mp4"
-import ResturantVideoM from "/assets/Restaurant/RestaurantMobile.mp4"
- 
-import RetailVideo from "/assets/Retail/Retail.mp4"
-import RetailVideoM from "/assets/Retail/RetailMobile.mp4"
-
-import ResidentialVideo from "/assets/Residential/Residential.mp4"
-import ResidentialVideoM from "/assets/Residential/ResidentialMobile.mp4"
-
-import CommercialVideo from "/assets/Commercial/Commercial.mp4"
-import CommercialVideoM from "/assets/Commercial/CommercialMobile.mp4"
-
-import BrandingVideo from "/assets/Branding/Branding.mp4"
-import BrandingVideoM from "/assets/Branding/BrandingMobile.mp4"
-
-
 import dataRestaurantRu from "./data/ru/dataRestaurant.json";
 import dataRetailRu from "./data/ru/dataRetail.json";
 import dataResidentialRu from "./data/ru/dataResidential.json";
 import dataCommercialRu from "./data/ru/dataCommercial.json";
 import dataBrandingRu from "./data/ru/dataBranding.json";
 
-
 import App from "./App.jsx";
 import LandingAr from "./pages/Landing-ar.jsx";
 import LandingRu from "./pages/Landing-ru.jsx";
+
+// Make arrya of pictures sources
+const restaurantImages = [
+  "assets/Restaurant/images/1.jpg",
+  "assets/Restaurant/images/2.jpg",
+  "assets/Restaurant/images/3.jpg",
+  "assets/Restaurant/images/4.jpg", 
+  "assets/Restaurant/images/5.jpg",
+  "assets/Restaurant/images/6.jpg",
+  "assets/Restaurant/images/7.jpg",
+]
+
+
 
 function saveOrUpdateUTMParameters() {
   if (typeof window !== "undefined") {
@@ -98,27 +94,59 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route index path="/en/restaurant" element={<App data={dataRestaurantEn} video={ResturantVideo} videoM={ResturantVideoM} bg={"https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-06-scaled.jpg"} />} />
-        <Route path="/en/retail" element={<App data={dataRetailEn} video={RetailVideo} videoM={RetailVideoM} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
-        <Route path="/en/residential" element={<App data={dataResidentialEn} video={ResidentialVideo} videoM={ResidentialVideoM} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
-        <Route path="/en/commercial" element={<App data={dataCommercialEn} video={CommercialVideo} videoM={CommercialVideoM} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
-        <Route path="/en/branding" element={<App data={dataBrandingEn} video={BrandingVideo} videoM={BrandingVideoM} bg={"./images/first.jpg"} />} />
+        <Route
+          index
+          path="/en/restaurant"
+          element={<App data={dataRestaurantEn} images={restaurantImages} />}
+        />
+        <Route path="/en/retail" element={<App data={dataRetailEn} />} />
+        <Route
+          path="/en/residential"
+          element={<App data={dataResidentialEn} />}
+        />
+        <Route
+          path="/en/commercial"
+          element={<App data={dataCommercialEn} />}
+        />
+        <Route path="/en/branding" element={<App data={dataBrandingEn} />} />
 
-        <Route path="/ar/restaurant" element={<LandingAr data={dataRestaurantAr} video={ResturantVideo} videoM={ResturantVideoM} bg={"./images/first.jpg"} />} />
-        <Route path="/ar/retail" element={<LandingAr data={dataRetailAr} video={RetailVideo} videoM={RetailVideoM} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
-        <Route path="/ar/residential" element={<LandingAr data={dataResidentialAr} video={ResidentialVideo} videoM={ResidentialVideoM} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
-        <Route path="/ar/commercial" element={<LandingAr data={dataCommercialAr} video={CommercialVideo} videoM={CommercialVideoM} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
-        <Route path="/ar/branding" element={<LandingAr data={dataBrandingAr} video={BrandingVideo} videoM={BrandingVideoM} bg={"./images/first.jpg"} />} />
+        <Route
+          path="/ar/restaurant"
+          element={<LandingAr data={dataRestaurantAr} />}
+        />
+        <Route path="/ar/retail" element={<LandingAr data={dataRetailAr} />} />
+        <Route
+          path="/ar/residential"
+          element={<LandingAr data={dataResidentialAr} />}
+        />
+        <Route
+          path="/ar/commercial"
+          element={<LandingAr data={dataCommercialAr} />}
+        />
+        <Route
+          path="/ar/branding"
+          element={<LandingAr data={dataBrandingAr} />}
+        />
 
+        <Route
+          path="/ru/restaurant"
+          element={<LandingRu data={dataRestaurantRu} />}
+        />
+        <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} />} />
+        <Route
+          path="/ru/residential"
+          element={<LandingRu data={dataResidentialRu} />}
+        />
+        <Route
+          path="/ru/commercial"
+          element={<LandingRu data={dataCommercialRu} />}
+        />
+        <Route
+          path="/ru/branding"
+          element={<LandingRu data={dataBrandingRu} />}
+        />
 
-        <Route path="/ru/restaurant" element={<LandingRu data={dataRestaurantRu} video={ResturantVideo} videoM={ResturantVideoM} bg={"https://4spacewp.com/wp-content/uploads/2017/10/KHOFO-Dubai-Restaurant-06-scaled.jpg"} />} />
-        <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} video={RetailVideo} videoM={RetailVideo} bg={"https://4spacewp.com/wp-content/uploads/2018/03/VR-Park-5-scaled.jpg"} />} />
-        <Route path="/ru/residential" element={<LandingRu data={dataResidentialRu} video={ResidentialVideo} videoM={ResidentialVideoM} bg={"https://4spacewp.com/wp-content/uploads/2019/05/Residential-Villa-in-Saudi-Arabia-by-4SPACE-001-scaled.jpg"} />} />
-        <Route path="/ru/commercial" element={<LandingRu data={dataCommercialRu}  video={CommercialVideo} videoM={CommercialVideoM} bg={"https://4spacewp.com/wp-content/uploads/2021/02/4space-office-01-2.jpg"} />} />
-        <Route path="/ru/branding" element={<LandingRu data={dataBrandingRu} video={BrandingVideo} videoM={BrandingVideoM} bg={"./images/first.jpg"} />} />
-
-        
-        <Route path="*" element={<Navigate to="/en/restaurant" replace  />} />
+        <Route path="*" element={<Navigate to="/en/restaurant" replace />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>

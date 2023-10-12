@@ -261,10 +261,8 @@ header {
 }
 
 #home {
-  /* background-image: url("./images/first.jpg");*/
-  background-position: center;
-  background-repeat: no-repeat;
   min-height: 100dvh;
+  max-height: 100dvh;
   position: relative;
   margin-top: 4rem;
   display: flex;
@@ -453,6 +451,47 @@ svg {
 
 .box-arabic {
   direction: rtl !important;
+}
+
+
+/* Animation */
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    z-index: 1;
+  }
+  100% {
+    opacity: 0;
+    z-index: -1;
+  }
+}
+
+@keyframes fadeIn {
+0% {
+  opacity: 0;
+  z-index: -1;
+}     
+100% {
+  opacity: 1;
+  z-index: 1;
+}
+}
+
+.faded, .fade-image, .next {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+}
+
+.fade-image {
+  animation: fadeOut 4s infinite;
+}
+
+.next {
+  animation: fadeIn 4s infinite;
 }
 
 @media screen and (max-width: 1024px) {
