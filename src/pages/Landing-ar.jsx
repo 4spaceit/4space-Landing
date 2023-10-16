@@ -5,7 +5,6 @@ import Header from "../components/ar/Header";
 import Footer from "../components/ar/Footer";
 import Figuers from "../components/ar/Figuers";
 
-
 import "bulma/css/bulma.css";
 import "../styles/index.scss";
 import "../style.css";
@@ -17,7 +16,7 @@ import About from "../components/ar/About";
 import Contact from "../components/ar/Contact";
 import Testimonial from "../components/ar/Testimonial";
 import OurClients from "../components/ar/OurClients";
-
+import Crossfade from "../Crossfade";
 
 export default function LandingAr({ data, images }) {
   function saveUTMParameters() {
@@ -88,16 +87,19 @@ export default function LandingAr({ data, images }) {
   });
 
   //Check if mobile
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
   return (
-    <div style={{ direction: "rtl", fontFamily: "NotoNaskhArabic-Regular" }} >
+    <div style={{ direction: "rtl", fontFamily: "NotoNaskhArabic-Regular" }}>
       <Header />
       <main className="has-navbar-fixed-top">
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
+          <Crossfade images={images} />
           <div className="title is-1 has-text-white has-text-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-weight-bold head-text">
-              تحويل المساحات،<br />
+              تحويل المساحات،
+              <br />
               لإعادة صياغة التجارب
             </h1>
           </div>
@@ -110,14 +112,26 @@ export default function LandingAr({ data, images }) {
         <Awards />
         <div className="cta is-hidden-touch columns is-align-items-center	">
           <div className="column has-text-centered has-text-weight-bold has-text-black">
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold is-clickable" onClick={() => { document.getElementById("modal").classList.add("is-active"); }}> تواصل معنا </span>
+            <span
+              className="has-text-white is-size-6 has-text-centered has-text-weight-bold is-clickable"
+              onClick={() => {
+                document.getElementById("modal").classList.add("is-active");
+              }}
+            >
+              {" "}
+              تواصل معنا{" "}
+            </span>
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
-          <a href="tel:+971589344000">
-            أتصل بنا على
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold pt-1" style={{direction:"ltr"}}>
-            +971 58 934 4000
-            </span></a>
+            <a href="tel:+971589344000">
+              أتصل بنا على
+              <span
+                className="has-text-white is-size-6 has-text-centered has-text-weight-bold pt-1"
+                style={{ direction: "ltr" }}
+              >
+                +971 58 934 4000
+              </span>
+            </a>
           </div>
         </div>
         <div className="topButton is-hidden" id="topButton">
@@ -128,7 +142,6 @@ export default function LandingAr({ data, images }) {
         <Contact />
       </main>
       <Footer />
-    </div >
+    </div>
   );
 }
-

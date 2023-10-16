@@ -5,7 +5,6 @@ import Header from "../components/ru/Header";
 import Footer from "../components/ru/Footer";
 import Figuers from "../components/ru/Figuers";
 
-
 import "bulma/css/bulma.css";
 import "../styles/index.scss";
 import "../style.css";
@@ -16,8 +15,9 @@ import About from "../components/ru/About";
 import Contact from "../components/ru/Contact";
 import Testimonial from "../components/ru/Testimonial";
 import OurClients from "../components/ru/OurClients";
+import Crossfade from "../Crossfade";
 
-export default function LandingRu({ data, images}) {
+export default function LandingRu({ data, images }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
       const queryParams = new URLSearchParams(window.location.search);
@@ -94,10 +94,10 @@ export default function LandingRu({ data, images}) {
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
+          <Crossfade images={images} />
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
-            МЫ МЕНЯЕМ ПРОСТРАНСТВА, <br />
-            И СОЗДАЕМ НОВЫЕ ВПЕЧАТЛЕНИЯ!
+              МЫ МЕНЯЕМ ПРОСТРАНСТВА, <br />И СОЗДАЕМ НОВЫЕ ВПЕЧАТЛЕНИЯ!
             </h1>
           </div>
         </section>
@@ -119,10 +119,11 @@ export default function LandingRu({ data, images}) {
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
             <a href="tel:+971589344000">
-            Позвоните нам!
-            <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
-            +971 58 934 4000
-            </span></a>
+              Позвоните нам!
+              <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
+                +971 58 934 4000
+              </span>
+            </a>
           </div>
         </div>
         <div className="topButton is-hidden" id="topButton">

@@ -30,13 +30,48 @@ const restaurantImages = [
   "assets/Restaurant/images/1.jpg",
   "assets/Restaurant/images/2.jpg",
   "assets/Restaurant/images/3.jpg",
-  "assets/Restaurant/images/4.jpg", 
+  "assets/Restaurant/images/4.jpg",
   "assets/Restaurant/images/5.jpg",
   "assets/Restaurant/images/6.jpg",
   "assets/Restaurant/images/7.jpg",
-]
+];
 
+const retailImages = [
+  "assets/Retail/images/1.jpg",
+  "assets/Retail/images/2.jpg",
+  "assets/Retail/images/3.jpg",
+  "assets/Retail/images/4.jpg",
+  "assets/Retail/images/5.jpg",
+  "assets/Retail/images/6.jpg",
+  "assets/Retail/images/7.jpg",
+];
 
+const residentialImages = [
+  "assets/Residential/images/1.jpg",
+  "assets/Residential/images/2.jpg",
+  "assets/Residential/images/3.jpg",
+  "assets/Residential/images/4.jpg",
+  "assets/Residential/images/5.jpg",
+];
+
+const commercialImages = [
+  "assets/Commercial/images/1.jpg",
+  "assets/Commercial/images/2.jpg",
+  "assets/Commercial/images/3.jpg",
+  "assets/Commercial/images/4.jpg",
+  "assets/Commercial/images/5.jpg",
+  "assets/Commercial/images/6.jpg",
+];
+
+const brandingImages = [
+  "assets/Branding/images/1.jpg",
+  "assets/Branding/images/2.jpg",
+  "assets/Branding/images/3.jpg",
+  "assets/Branding/images/4.jpg",
+  "assets/Branding/images/5.jpg",
+];
+
+// Function to save or update UTM parameters
 
 function saveOrUpdateUTMParameters() {
   if (typeof window !== "undefined") {
@@ -99,51 +134,75 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/en/restaurant"
           element={<App data={dataRestaurantEn} images={restaurantImages} />}
         />
-        <Route path="/en/retail" element={<App data={dataRetailEn} />} />
+        <Route
+          path="/en/retail"
+          element={<App data={dataRetailEn} images={retailImages} />}
+        />
         <Route
           path="/en/residential"
-          element={<App data={dataResidentialEn} />}
+          element={<App data={dataResidentialEn} images={residentialImages} />}
         />
         <Route
           path="/en/commercial"
-          element={<App data={dataCommercialEn} />}
+          element={<App data={dataCommercialEn} images={commercialImages} />}
         />
-        <Route path="/en/branding" element={<App data={dataBrandingEn} />} />
+        <Route
+          path="/en/branding"
+          element={<App data={dataBrandingEn} images={brandingImages} />}
+        />
 
         <Route
           path="/ar/restaurant"
-          element={<LandingAr data={dataRestaurantAr} />}
+          element={
+            <LandingAr data={dataRestaurantAr} images={restaurantImages} />
+          }
         />
-        <Route path="/ar/retail" element={<LandingAr data={dataRetailAr} />} />
+        <Route
+          path="/ar/retail"
+          element={<LandingAr data={dataRetailAr} images={retailImages} />}
+        />
         <Route
           path="/ar/residential"
-          element={<LandingAr data={dataResidentialAr} />}
+          element={
+            <LandingAr data={dataResidentialAr} images={residentialImages} />
+          }
         />
         <Route
           path="/ar/commercial"
-          element={<LandingAr data={dataCommercialAr} />}
+          element={
+            <LandingAr data={dataCommercialAr} images={commercialImages} />
+          }
         />
         <Route
           path="/ar/branding"
-          element={<LandingAr data={dataBrandingAr} />}
+          element={<LandingAr data={dataBrandingAr} images={brandingImages} />}
         />
 
         <Route
           path="/ru/restaurant"
-          element={<LandingRu data={dataRestaurantRu} />}
+          element={
+            <LandingRu data={dataRestaurantRu} images={restaurantImages} />
+          }
         />
-        <Route path="/ru/retail" element={<LandingRu data={dataRetailRu} />} />
+        <Route
+          path="/ru/retail"
+          element={<LandingRu data={dataRetailRu} images={retailImages} />}
+        />
         <Route
           path="/ru/residential"
-          element={<LandingRu data={dataResidentialRu} />}
+          element={
+            <LandingRu data={dataResidentialRu} images={residentialImages} />
+          }
         />
         <Route
           path="/ru/commercial"
-          element={<LandingRu data={dataCommercialRu} />}
+          element={
+            <LandingRu data={dataCommercialRu} images={commercialImages} />
+          }
         />
         <Route
           path="/ru/branding"
-          element={<LandingRu data={dataBrandingRu} />}
+          element={<LandingRu data={dataBrandingRu} images={brandingImages} />}
         />
 
         <Route path="*" element={<Navigate to="/en/restaurant" replace />} />
