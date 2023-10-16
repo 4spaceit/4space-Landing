@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
-import { useEffect, useState } from "react";
+import Crossfade from "react-crossfade-responsive";
 
 export default function App({ data, images }) {
   function saveUTMParameters() {
@@ -87,20 +87,7 @@ export default function App({ data, images }) {
   });
 
   //Check if mobile
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
-
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentImageIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, []);
-
-  const nextImageIndex = (currentImageIndex + 1) % images.length;
+  // const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   return (
     <>
@@ -108,16 +95,7 @@ export default function App({ data, images }) {
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <div className="fade-in-out" id="imageContainer">
-            {images.map((src, index) => (
-              <img
-                key={index}
-                src={src}
-                className={`image ${index === currentImageIndex ? "fade-image" : "faded"} ${index === nextImageIndex ? "next" : ""}`}
-                alt={src}
-              />
-            ))}
-          </div>
+          <Crossfade className="testingLib" images={images} interval='3000' transition='3000' />
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
               Transforming Spaces, <br />

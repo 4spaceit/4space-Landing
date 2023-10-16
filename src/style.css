@@ -256,9 +256,6 @@ header {
   max-width: fit-content;
 }
 
-.swiper-autoheight,
-.swiper-autoheight .swiper-slide {
-}
 
 #home {
   min-height: 100dvh;
@@ -453,47 +450,18 @@ svg {
   direction: rtl !important;
 }
 
-
 /* Animation */
-@keyframes fadeOut {
-  0% {
+
+.sc-aXZVg{
+  position: absolute!important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%!important;
     opacity: 1;
-    z-index: 1;
-  }
-  100% {
-    opacity: 0;
-    z-index: -1;
-  }
+    z-index: 2;
 }
 
-@keyframes fadeIn {
-0% {
-  opacity: 0;
-  z-index: -1;
-}     
-100% {
-  opacity: 1;
-  z-index: 1;
-}
-}
-
-.faded, .fade-image, .next {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: -222;
-}
-
-.fade-image {
-  animation: fadeOut 4s infinite;
-}
-
-.next {
-  animation: fadeIn 4s infinite;
-}
 
 @media screen and (max-width: 1024px) {
   .title {
