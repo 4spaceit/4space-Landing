@@ -16,7 +16,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
-import Crossfade from "react-crossfade-responsive";
+import Crossfade from "./Crossfade";
 
 export default function App({ data, images }) {
   function saveUTMParameters() {
@@ -95,7 +95,7 @@ export default function App({ data, images }) {
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <Crossfade className="testingLib" images={images} interval='3000' transition='3000' />
+          <Crossfade  images={images}  />
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
               Transforming Spaces, <br />
