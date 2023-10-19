@@ -187,7 +187,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         /> */}
                 <Route
           path="/ar/general"
-          element={<App data={dataGeneralAr} images={generalImage} />}
+          element={<LandingAr data={dataGeneralAr} images={generalImage} />}
         />
 
         <Route
@@ -218,7 +218,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         /> */}
                 <Route
           path="/ru/general"
-          element={<App data={dataGeneralRu} images={generalImage} />}
+          element={<LandingRu data={dataGeneralRu} images={generalImage} />}
         />
 
         <Route path="*" element={<Navigate to="/en/restaurant" replace />} />
