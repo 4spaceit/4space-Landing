@@ -1,0 +1,85 @@
+[
+  {
+    "client": "Офис BE Meliorism",
+    "descr": "Этот офис можно смело назвать технологическим раем. В одном пространстве мы объединили тренд в области напольных покрытий, соединив ковролин и высококачественную виниловую плитку. Обстановка здесь непринужденная и гостеприимная, а яркие сиденья привносят энергию в пространство.",
+    "images": [
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE01-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE02-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE03-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE04-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE07-4space.jpg"
+      }
+    ],
+    "place": "Дубай, Объединенные Арабские Эмираты"
+  },
+  {
+    "client": "Дизайн нашего офиса 4SPACE",
+    "descr": "С особой любовью разработан дизайн нашего офиса. Открытые зоны способствуют сотрудничеству и коллаборации. Открытый потолок украшен трубами и добавляет нотку элегантности. Мы использовали элементы биофильного дизайна, чтобы создать освежающую и успокаивающую атмосферу.",
+    "images": [
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-01-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-02-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-03-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-04-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-05-2.jpg"
+      }
+    ],
+    "place": "Дубай, Объединенные Арабские Эмираты"
+  }, {
+    "client": "Karamna Al Khaleej",
+    "descr": "Идентичность бренда этого ресторана отражается в цветовой палитре из черного, белого и золотого, что говорит о премиальности и утонченном характере. Логотип представляет собой красивую арабскую каллиграфию с золотыми листьями, добавляющими нотку элегантности и роскоши.",
+    "images": [
+        {
+            "alt": "Karamna Al Khakleej",
+            "src": "assets/Branding/Karamna Al Khakleej/Karamna-1.jpg"
+        },
+        {
+            "alt": "Karamna Al Khakleej",
+            "src": "assets/Branding/Karamna Al Khakleej/Karamna-Branding-Feature.jpg"
+        }
+    ],
+    "place": "Дубай, Объединенные Арабские Эмираты"
+},
+{
+    "client": "Ayoush",
+    "descr": "Строгий и утонченный дизайн привлекает внимание к идентичности бренда. Использование монохромной цветовой схемы с черным цветом добавляет бренду изысканности и создает сильное визуальное воздействие. Современная типографика идеально отражает фокусы бренда на качество и роскошь.",
+    "images": [
+        {
+            "alt": "Ayoush",
+            "src": "assets/Branding/Ayoush/Ayoush-1.jpg"
+        },
+        {
+            "alt": "Ayoush",
+            "src": "assets/Branding/Ayoush/Ayoush-Branding-Feature-1.jpg"
+        }
+    ],
+    "place": "Дубай, Объединенные Арабские Эмираты"
+}
+]

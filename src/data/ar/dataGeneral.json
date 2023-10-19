@@ -1,0 +1,85 @@
+[
+  {
+    "client": "مكتب بي ميليورزم",
+    "descr": "كل زاوية من زوايا المكتب هي ملاذ تكنولوجي، ومناسبة تمامًا لروح المكتب المتمحورة حول التكنولوجيا. تبنت 4SPACE أحدث صيحات الأرضيات، حيث قامت بدمج السجاد وLVT للحصول على تجربة معززة للتحفيز. تتميز الأجواء بأنها غير رسمية ومرحبة، مع ترتيبات جلوس نابضة بالحياة تبث الطاقة في الفضاء.",
+    "images": [
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE01-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE02-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE03-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE04-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE07-4space.jpg"
+      }
+    ],
+    "place": "دبي, الإمارات العربية المتحدة"
+  },
+  {
+    "client": "مكتب فورسبيس",
+    "descr": "هذه أعجوبة متعددة الأغراض، تعمل المناطق المفتوحة على تعزيز التعاون، بينما تستضيف المناطق الخاصة اجتماعات مهمة. توفر الأبواب المحورية البارزة الخصوصية عندما يكون ذلك ضروريًا، كما يضفي السقف المفتوح المزين بأنابيب معدنية صناعية لمسة من الأناقة الخام.",
+    "images": [
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-01-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-02-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-03-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-04-2.jpg"
+      },
+      {
+        "alt": "4SPACE Design",
+        "src": "assets/Commercial/4SPACE Design/4space-office-05-2.jpg"
+      }
+    ],
+    "place": "دبي, الإمارات العربية المتحدة"
+  },{
+    "client": "كرمنا الخليج",
+    "descr": "كرمنا الخليج هي علامة تجارية تجسد الجوهر الحقيقي للمطبخ الشرقي والخليجي مع لمسة عصرية. تنعكس هوية العلامة التجارية في لوحة الألوان من الأسود والأبيض والذهبي ، والتي تتحدث عن طبيعتها المتميزة والمتطورة ، التي صممتها  شركة 4SPACE لتصميم المطاعم. وفي قلب هوية العلامة التجارية شعارها، وهو عبارة عن خط عربي جميل مع لمسة من الأوراق الذهبية التي تضيف لمسة من الأناقة والفخامة. يجسد الشعار بشكل مثالي مهمة العلامة التجارية كشركة لتصميم المطاعم: خلق تجربة متميزة ومتماسكة أصيلة وجديدة.",
+    "images": [
+        {
+            "alt": "Karamna Al Khakleej",
+            "src": "assets/Branding/Karamna Al Khakleej/Karamna-1.jpg"
+        },
+        {
+            "alt": "Karamna Al Khakleej",
+            "src": "assets/Branding/Karamna Al Khakleej/Karamna-Branding-Feature.jpg"
+        }
+    ],
+    "place": "دبي, الإمارات العربية المتحدة"
+},
+{
+    "client": "عيوش",
+    "descr": "عيوش هي علامة تجارية تدور حول تجسيد جوهر الفخامة والأناقة العصرية. يلفت التصميم الأنيق والمتطور انتباهك على الفور إلى هوية العلامة التجارية. ينضح الشعار، بخطه المعقد، بإحساس الخلود والرقي في تصميم المطعم. يضيف استخدام نظام الألوان الأحادي اللون باللون الأسود إلى تعقيد العلامة التجارية ويخلق تأثيرًا بصريًا قويًا. الطباعة نظيفة وحديثة، ولكنها كلاسيكية، وتعكس تمامًا قيم العلامة التجارية للجودة والرفاهية.",
+    "images": [
+        {
+            "alt": "Ayoush",
+            "src": "assets/Branding/Ayoush/Ayoush-1.jpg"
+        },
+        {
+            "alt": "Ayoush",
+            "src": "assets/Branding/Ayoush/Ayoush-Branding-Feature-1.jpg"
+        }
+    ],
+    "place": "دبي, الإمارات العربية المتحدة"
+}
+]

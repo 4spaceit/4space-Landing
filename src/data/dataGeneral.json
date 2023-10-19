@@ -1,0 +1,85 @@
+[
+    {
+      "client": "BE Meliorism Office",
+      "descr": "Each corner is a tech haven, perfectly suited to the office’s tech-centric ethos. 4SPACE embraced the latest flooring trend, merging carpet and LVT for a motivation-boosting experience. The vibe is casual and welcoming, with vibrant seating arrangements that infuse energy into the space. ",
+      "images": [
+        {
+          "alt": "BE Meliorism Office",
+          "src": "assets/Commercial/BE Meliorism Office/BE01-4space.jpg"
+        },
+        {
+          "alt": "BE Meliorism Office",
+          "src": "assets/Commercial/BE Meliorism Office/BE02-4space.jpg"
+        },
+        {
+          "alt": "BE Meliorism Office",
+          "src": "assets/Commercial/BE Meliorism Office/BE03-4space.jpg"
+        },
+        {
+          "alt": "BE Meliorism Office",
+          "src": "assets/Commercial/BE Meliorism Office/BE04-4space.jpg"
+        },
+        {
+          "alt": "BE Meliorism Office",
+          "src": "assets/Commercial/BE Meliorism Office/BE07-4space.jpg"
+        }
+      ],
+      "place": "Dubai, United Arab Emirates"
+    },
+    {
+      "client": "4SPACE Design",
+      "descr": "This is a multi-functional marvel. Open areas fuel collaboration, while private zones host crucial meetings. The standout pivotal doors offer privacy when it counts, and the open ceiling, adorned with industrial metal piping, infuses a touch of raw elegance.",
+      "images": [
+        {
+          "alt": "4SPACE Design",
+          "src": "assets/Commercial/4SPACE Design/4space-office-01-2.jpg"
+        },
+        {
+          "alt": "4SPACE Design",
+          "src": "assets/Commercial/4SPACE Design/4space-office-02-2.jpg"
+        },
+        {
+          "alt": "4SPACE Design",
+          "src": "assets/Commercial/4SPACE Design/4space-office-03-2.jpg"
+        },
+        {
+          "alt": "4SPACE Design",
+          "src": "assets/Commercial/4SPACE Design/4space-office-04-2.jpg"
+        },
+        {
+          "alt": "4SPACE Design",
+          "src": "assets/Commercial/4SPACE Design/4space-office-05-2.jpg"
+        }
+      ],
+      "place": "Dubai, United Arab Emirates"
+    },{
+        "client": "Karamna Al Khakleej",
+        "descr": "Karamna Al Khaleej is a brand that embodies the true essence of Levantine-Gulf cuisine with a contemporary twist. The brand’s identity is reflected in the color palette of black, white, and gold, which speaks to its premium and sophisticated nature, designed by 4SPACE, a restaurant design company. At the heart of the brand’s identity is its logo, which is a beautiful Arabic calligraphy with a touch of golden leaves that adds a touch of elegance and luxury. The logo perfectly encapsulates the brand’s mission as a restaurant design company: to create a premium, cohesive experience that is both authentic and fresh. ",
+        "images": [
+            {
+                "alt": "Karamna Al Khakleej",
+                "src": "assets/Branding/Karamna Al Khakleej/Karamna-1.jpg"
+            },
+            {
+                "alt": "Karamna Al Khakleej",
+                "src": "assets/Branding/Karamna Al Khakleej/Karamna-Branding-Feature.jpg"
+            }
+        ],
+        "place": "Dubai, United Arab Emirates"
+    },
+    {
+        "client": "Ayoush",
+        "descr": "Ayoush is a brand that is all about capturing the essence of modern luxury and elegance. The sleek and sophisticated design immediately draws your attention to the brand identity. The logo, with its intricate calligraphy, exudes a sense of timelessness and refinement in a restaurant design. The use of a monochromatic color scheme of black adds to the brand’s sophistication and creates a strong visual impact. The typography is clean and modern, yet classic, perfectly reflecting the brand’s values of quality and luxury. ",
+        "images": [
+            {
+                "alt": "Ayoush",
+                "src": "assets/Branding/Ayoush/Ayoush-1.jpg"
+            },
+            {
+                "alt": "Ayoush",
+                "src": "assets/Branding/Ayoush/Ayoush-Branding-Feature-1.jpg"
+            }
+        ],
+        "place": "Dubai, United Arab Emirates"
+    }
+]

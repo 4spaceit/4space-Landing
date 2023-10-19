@@ -6,20 +6,19 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import dataRestaurantEn from "./data/dataRestaurant.json";
 import dataRetailEn from "./data/dataRetail.json";
 import dataResidentialEn from "./data/dataResidential.json";
-import dataCommercialEn from "./data/dataCommercial.json";
-import dataBrandingEn from "./data/dataBranding.json";
+import dataGeneralEn from "./data/dataGeneral.json";
 
 import dataRestaurantAr from "./data/ar/dataRestaurant.json";
 import dataRetailAr from "./data/ar/dataRetail.json";
 import dataResidentialAr from "./data/ar/dataResidential.json";
-import dataCommercialAr from "./data/ar/dataCommercial.json";
-import dataBrandingAr from "./data/ar/dataBranding.json";
+import dataGeneralAr from "./data/ar/dataGeneral.json";
+
 
 import dataRestaurantRu from "./data/ru/dataRestaurant.json";
 import dataRetailRu from "./data/ru/dataRetail.json";
 import dataResidentialRu from "./data/ru/dataResidential.json";
-import dataCommercialRu from "./data/ru/dataCommercial.json";
-import dataBrandingRu from "./data/ru/dataBranding.json";
+import dataGeneralRu from "./data/ru/dataGeneral.json";
+
 
 import App from "./App.jsx";
 import LandingAr from "./pages/Landing-ar.jsx";
@@ -54,22 +53,31 @@ const residentialImages = [
   "assets/Residential/images/5.jpg",
 ];
 
-const commercialImages = [
-  "assets/Commercial/images/1.jpg",
-  "assets/Commercial/images/2.jpg",
-  "assets/Commercial/images/3.jpg",
-  "assets/Commercial/images/4.jpg",
-  "assets/Commercial/images/5.jpg",
-  "assets/Commercial/images/6.jpg",
-];
+// const commercialImages = [
+//   "assets/Commercial/images/1.jpg",
+//   "assets/Commercial/images/2.jpg",
+//   "assets/Commercial/images/3.jpg",
+//   "assets/Commercial/images/4.jpg",
+//   "assets/Commercial/images/5.jpg",
+//   "assets/Commercial/images/6.jpg",
+// ];
 
-const brandingImages = [
+// const brandingImages = [
+//   "assets/Branding/images/1.jpg",
+//   "assets/Branding/images/2.jpg",
+//   "assets/Branding/images/3.jpg",
+//   "assets/Branding/images/4.jpg",
+//   "assets/Branding/images/5.jpg",
+// ];
+
+const generalImage =[
+  "assets/Commercial/images/4.jpg",
   "assets/Branding/images/1.jpg",
+  "assets/Commercial/images/5.jpg",
   "assets/Branding/images/2.jpg",
+  "assets/Commercial/images/6.jpg",
   "assets/Branding/images/3.jpg",
-  "assets/Branding/images/4.jpg",
-  "assets/Branding/images/5.jpg",
-];
+]
 
 // Function to save or update UTM parameters
 
@@ -143,13 +151,13 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={<App data={dataResidentialEn} images={residentialImages} />}
         />
         <Route
-          path="/en/commercial"
-          element={<App data={dataCommercialEn} images={commercialImages} />}
+          path="/en/general"
+          element={<App data={dataGeneralEn} images={generalImage} />}
         />
-        <Route
+        {/* <Route
           path="/en/branding"
           element={<App data={dataBrandingEn} images={brandingImages} />}
-        />
+        /> */}
 
         <Route
           path="/ar/restaurant"
@@ -167,7 +175,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <LandingAr data={dataResidentialAr} images={residentialImages} />
           }
         />
-        <Route
+        {/* <Route
           path="/ar/commercial"
           element={
             <LandingAr data={dataCommercialAr} images={commercialImages} />
@@ -176,6 +184,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/ar/branding"
           element={<LandingAr data={dataBrandingAr} images={brandingImages} />}
+        /> */}
+                <Route
+          path="/ar/general"
+          element={<App data={dataGeneralAr} images={generalImage} />}
         />
 
         <Route
@@ -194,7 +206,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
             <LandingRu data={dataResidentialRu} images={residentialImages} />
           }
         />
-        <Route
+        {/* <Route
           path="/ru/commercial"
           element={
             <LandingRu data={dataCommercialRu} images={commercialImages} />
@@ -203,6 +215,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/ru/branding"
           element={<LandingRu data={dataBrandingRu} images={brandingImages} />}
+        /> */}
+                <Route
+          path="/ru/general"
+          element={<App data={dataGeneralRu} images={generalImage} />}
         />
 
         <Route path="*" element={<Navigate to="/en/restaurant" replace />} />
