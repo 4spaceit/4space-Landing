@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 
-import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 
 import dataRestaurantEn from "./data/dataRestaurant.json";
 import dataRetailEn from "./data/dataRetail.json";
@@ -135,7 +135,7 @@ function setCookie(name, value, days) {
 }
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route
           index
@@ -223,6 +223,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 
         <Route path="*" element={<Navigate to="/en/general" replace />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </React.StrictMode>
 );
