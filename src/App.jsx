@@ -21,7 +21,7 @@ import Testimonial from "./components/Testimonial";
 import Crossfade from "./Crossfade";
 
 ReactGA.initialize("GTM-56C3PS8");
-ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.send("pageview")
 
 export default function App({ data, images }) {
   function saveUTMParameters() {
