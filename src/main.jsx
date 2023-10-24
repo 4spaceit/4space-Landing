@@ -23,7 +23,7 @@ import dataGeneralRu from "./data/ru/dataGeneral.json";
 import App from "./App.jsx";
 import LandingAr from "./pages/Landing-ar.jsx";
 import LandingRu from "./pages/Landing-ru.jsx";
-
+import ReactGA from "react-ga4";
 // Make arrya of pictures sources
 const restaurantImages = [
   "assets/Restaurant/images/1.jpg",
@@ -52,6 +52,8 @@ const residentialImages = [
   "assets/Residential/images/4.jpg",
   "assets/Residential/images/5.jpg",
 ];
+
+ReactGA.initialize("GTM-56C3PS8");
 
 // const commercialImages = [
 //   "assets/Commercial/images/1.jpg",

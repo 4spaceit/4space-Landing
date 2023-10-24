@@ -6,6 +6,8 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 import Figuers from "./components/Figuers";
 import OurClients from "./components/OurClients";
+import ReactGA from "react-ga4";
+
 
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
@@ -17,6 +19,9 @@ import About from "./components/About";
 import Contact from "./components/Contact";
 import Testimonial from "./components/Testimonial";
 import Crossfade from "./Crossfade";
+
+ReactGA.initialize("GTM-56C3PS8");
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 export default function App({ data, images }) {
   function saveUTMParameters() {

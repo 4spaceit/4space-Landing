@@ -4,6 +4,8 @@ import Awards from "../components/ar/AwardsLanding";
 import Header from "../components/ar/Header";
 import Footer from "../components/ar/Footer";
 import Figuers from "../components/ar/Figuers";
+import ReactGA from "react-ga4";
+
 
 import "bulma/css/bulma.css";
 import "../styles/index.scss";
@@ -17,6 +19,10 @@ import Contact from "../components/ar/Contact";
 import Testimonial from "../components/ar/Testimonial";
 import OurClients from "../components/ar/OurClients";
 import Crossfade from "../Crossfade";
+
+ReactGA.initialize("GTM-56C3PS8");
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 export default function LandingAr({ data, images }) {
   function saveUTMParameters() {

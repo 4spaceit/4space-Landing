@@ -4,6 +4,8 @@ import Awards from "../components/ru/AwardsLanding";
 import Header from "../components/ru/Header";
 import Footer from "../components/ru/Footer";
 import Figuers from "../components/ru/Figuers";
+import ReactGA from "react-ga4";
+
 
 import "bulma/css/bulma.css";
 import "../styles/index.scss";
@@ -16,6 +18,10 @@ import Contact from "../components/ru/Contact";
 import Testimonial from "../components/ru/Testimonial";
 import OurClients from "../components/ru/OurClients";
 import Crossfade from "../Crossfade";
+
+ReactGA.initialize("GTM-56C3PS8");
+ReactGA.pageview(window.location.pathname + window.location.search);
+
 
 export default function LandingRu({ data, images }) {
   function saveUTMParameters() {
