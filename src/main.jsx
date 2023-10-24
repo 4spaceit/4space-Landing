@@ -221,7 +221,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           element={<LandingRu data={dataGeneralRu} images={generalImage} />}
         />
 
-        <Route path="*" element={<Navigate to="/en/restaurant" replace />} />
+        <Route path="*" element={<Navigate to="/en/general" replace />} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
