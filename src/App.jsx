@@ -8,7 +8,6 @@ import Figuers from "./components/Figuers";
 import OurClients from "./components/OurClients";
 import ReactGA from "react-ga4";
 
-
 import "bulma/css/bulma.css";
 import "./styles/index.scss";
 import "./style.css";
@@ -21,7 +20,7 @@ import Testimonial from "./components/Testimonial";
 import Crossfade from "./Crossfade";
 
 ReactGA.initialize("GTM-56C3PS8");
-ReactGA.send("pageview")
+ReactGA.send("pageview");
 
 export default function App({ data, images }) {
   function saveUTMParameters() {
@@ -96,11 +95,36 @@ export default function App({ data, images }) {
 
   return (
     <>
+      {/* Google Tag Manager (noscript) */}
+      <noscript>
+        <iframe
+          src="https://www.googletagmanager.com/ns.html?id=GTM-56C3PS8"
+          height="0"
+          width="0"
+          style={{ display: "none", visibility: "hidden" }}
+        ></iframe>
+      </noscript>
+      {/* End Google Tag Manager (noscript) */}
+
+      {/* Google Tag Manager */}
+      <script>
+        {(function (w, d, s, l, i) {
+          w[l] = w[l] || [];
+          w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+          var f = d.getElementsByTagName(s)[0],
+            j = d.createElement(s),
+            dl = l != "dataLayer" ? "&l=" + l : "";
+          j.async = true;
+          j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+          f.parentNode.insertBefore(j, f);
+        })(window, document, "script", "dataLayer", "GTM-56C3PS8")}
+      </script>
+      {/* End Google Tag Manager */}
       <Header />
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
-          <Crossfade  images={images}  />
+          <Crossfade images={images} />
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
               Transforming Spaces, <br />
