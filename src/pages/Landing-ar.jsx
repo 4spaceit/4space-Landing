@@ -24,10 +24,6 @@ ReactGA.initialize("AW-11096146138");
 ReactGA.initialize("G-408N0QHNVQ");
 ReactGA.send("pageview");
 
-ReactGA.initialize({
-  trackingId: "11096146138",
-});
-
 export default function LandingAr({ data, images }) {
   function saveUTMParameters() {
     if (typeof window !== "undefined") {
