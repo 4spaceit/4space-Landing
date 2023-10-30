@@ -11,9 +11,7 @@ export default function Form(props) {
 
   const utmData = parseUTMParameters();
 
-
   const submit = async (e) => {
-    
     setLoading(true);
     e.preventDefault();
 
@@ -21,7 +19,7 @@ export default function Form(props) {
     formData.append("applicant", e.target.elements.name.value);
     formData.append("email", e.target.elements.email.value);
     formData.append("mobile", e.target.elements.mobile.value);
-    formData.append("message", e.target.elements.message.value)
+    formData.append("message", e.target.elements.message.value);
     formData.append("utm_source", utmData.utm_source);
     formData.append("utm_medium", utmData.utm_medium);
     formData.append("utm_campaign", utmData.utm_campaign);
@@ -41,8 +39,8 @@ export default function Form(props) {
       );
 
       if (response.ok) {
+        window.location.replace("https://4space.ae/thank-you/");
         setSuccess(true);
-        window.location.href("https://4space.ae/thank-you/")
         document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
