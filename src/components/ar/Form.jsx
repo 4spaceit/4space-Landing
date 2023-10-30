@@ -43,7 +43,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
-        navigate("https://4space.ae/ar/thank-you/");
+        window.location = "https://4space.ae/ar/thank-you/"
         document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);

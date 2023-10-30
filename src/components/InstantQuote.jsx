@@ -55,6 +55,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
       if (response.ok) {
         setSuccess(true);
+        window.location = "https://4space.ae/thank-you/"
         document.getElementById("form-modal").hidden = true;
       } else {
         setError(true);
