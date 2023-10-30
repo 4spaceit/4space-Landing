@@ -128,7 +128,7 @@ export default function LandingRu({ data, images }) {
           <Crossfade images={images} />
           <div className="title is-1 has-text-white is-centered is-size-4-mobile p-2">
             <h1 className="has-text-white has-text-centered has-text-weight-bold head-text">
-              МЫ МЕНЯЕМ ПРОСТРАНСТВА, <br />И СОЗДАЕМ НОВЫЕ ВПЕЧАТЛЕНИЯ!
+            МЫ МЕНЯЕМ ПРОСТРАНСТВА <br />И СОЗДАЕМ НОВЫЕ ВПЕЧАТЛЕНИЯ!
             </h1>
           </div>
         </section>
@@ -146,11 +146,11 @@ export default function LandingRu({ data, images }) {
               document.getElementById("modal").classList.add("is-active");
             }}
           >
-            Связаться!
+            Оставьте заявку
           </div>
           <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
             <a href="tel:+971589344000">
-              Позвоните нам!
+            Свяжитесь с нами
               <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
                 +971 58 934 4000
               </span>
