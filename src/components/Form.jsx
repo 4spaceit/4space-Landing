@@ -39,8 +39,7 @@ export default function Form(props) {
       );
 
       if (response.ok) {
-        window.location("https://4space.ae/thank-you/");
-        setSuccess(true);
+        window.location = "https://4space.ae/thank-you/"
         document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
