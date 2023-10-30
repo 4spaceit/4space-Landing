@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { parseUTMParameters } from "../../utmParser";
+import { useNavigate } from "react-router-dom";
 
 export default function Form(props) {
   const [loading, setLoading] = useState(false);
@@ -10,6 +11,8 @@ export default function Form(props) {
   const { id } = props;
 
   const utmData = parseUTMParameters();
+
+  let navigate = useNavigate();
 
   const submit = async (e) => {
     setLoading(true);
@@ -40,6 +43,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
+        navigate("https://4space.ae/ru/thank-you/");
         document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
@@ -56,7 +60,7 @@ export default function Form(props) {
       <form className=" form" onSubmit={submit} id="form-mobile">
         <div className="field">
           <label className="label has-text-left" htmlFor="name">
-          Имя
+            Имя
           </label>
           <div className="control">
             <input
@@ -86,7 +90,7 @@ export default function Form(props) {
 
         <div className="field">
           <label className="label has-text-left" htmlFor="mobile">
-          Телефон
+            Телефон
           </label>
           <div className="control">
             <input className="input" type="tel" id="mobile" name="mobile" />
@@ -94,18 +98,18 @@ export default function Form(props) {
         </div>
 
         <div className="field">
-            <label className="label has-text-left" htmlFor="message">
-              О проекте
-            </label>
-            <div className="control">
-              <textarea
-                className="textarea"
-                name="message"
-                id="message"
-                required
-              ></textarea>
-            </div>
+          <label className="label has-text-left" htmlFor="message">
+            О проекте
+          </label>
+          <div className="control">
+            <textarea
+              className="textarea"
+              name="message"
+              id="message"
+              required
+            ></textarea>
           </div>
+        </div>
 
         {error && (
           <div className="notification is-warning">
@@ -128,7 +132,6 @@ export default function Form(props) {
       {success && (
         <div className="notification is-success">
           Спасибо! Мы скоро свяжемся с вами.
-
         </div>
       )}
     </div>

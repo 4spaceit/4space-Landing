@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { parseUTMParameters } from "../../utmParser";
+import { useNavigate } from "react-router-dom";
 
 export default function Form(props) {
   const [loading, setLoading] = useState(false);
@@ -10,6 +11,8 @@ export default function Form(props) {
   const { id } = props;
 
   const utmData = parseUTMParameters();
+
+  let navigate = useNavigate();
 
   const submit = async (e) => {
     setLoading(true);
@@ -40,6 +43,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
+        navigate("https://4space.ae/ar/thank-you/");
         document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
@@ -89,23 +93,29 @@ export default function Form(props) {
             رقم الهاتف
           </label>
           <div className="control">
-            <input className="input" type="tel" id="mobile" name="mobile" required />
+            <input
+              className="input"
+              type="tel"
+              id="mobile"
+              name="mobile"
+              required
+            />
           </div>
         </div>
 
         <div className="field">
-            <label className="label has-text-left" htmlFor="message">
-              عن المشروع
-            </label>
-            <div className="control">
-              <textarea
-                className="textarea"
-                name="message"
-                id="message"
-                required
-              ></textarea>
-            </div>
+          <label className="label has-text-left" htmlFor="message">
+            عن المشروع
+          </label>
+          <div className="control">
+            <textarea
+              className="textarea"
+              name="message"
+              id="message"
+              required
+            ></textarea>
           </div>
+        </div>
 
         {error && (
           <div className="notification is-warning">
@@ -119,7 +129,7 @@ export default function Form(props) {
               type="submit"
               disabled={loading}
               aria-label="submit"
-              style={{fontFamily:"NotoNaskhArabic-Regular"}}
+              style={{ fontFamily: "NotoNaskhArabic-Regular" }}
             >
               {loading ? "جاري الإرسال..." : "إرسال"}
             </button>

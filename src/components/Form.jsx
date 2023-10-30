@@ -11,7 +11,9 @@ export default function Form(props) {
 
   const utmData = parseUTMParameters();
 
+
   const submit = async (e) => {
+    
     setLoading(true);
     e.preventDefault();
 
@@ -40,6 +42,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
+        window.location.href("https://4space.ae/thank-you/")
         document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
