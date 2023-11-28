@@ -464,6 +464,10 @@ svg {
   direction: rtl !important;
 }
 
+.button-fix {
+  margin-top: 0!important;
+}
+
 /* Animation */
 
 .cross-over {
@@ -538,4 +542,12 @@ svg {
   .field-new div {
     width: 100%;
   }
+  .field-new label {
+    width: 100%;
+  }
+
+  .button-fix {
+    margin-top: .5rem!important;
+  }
+  
 }

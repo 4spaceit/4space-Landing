@@ -13,12 +13,10 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       e.preventDefault();
     };
 
-    scrollableContainer.addEventListener('wheel', preventScrolling);
     scrollableContainer.addEventListener('touchmove', preventScrolling);
 
     return () => {
       // Remove event listeners when the component unmounts
-      scrollableContainer.removeEventListener('wheel', preventScrolling);
       scrollableContainer.removeEventListener('touchmove', preventScrolling);
     };
   }, []);
@@ -105,7 +103,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
 
-          <h3 className="float-left mt-6 has-text-right"> 
+          <h3 className="float-left mt-4 has-text-right"> 
             عن المشروع
           </h3>
 
@@ -139,7 +137,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
 
-          <div className="field field-new mt-5">
+          <div className="field field-new mt-5 mb-0">
             <label className="label has-text-right" htmlFor="message">
               وصف المشروع
             </label>
@@ -162,7 +160,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           <div className="field is-align-items-flex-center is-pulled-left">
             <div className="control">
               <button
-                className="button buttonOutlined"
+                className="button buttonOutlined button-fix"
                 type="submit"
                 disabled={loading}
                 aria-label="submit"

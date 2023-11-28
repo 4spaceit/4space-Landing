@@ -13,12 +13,10 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       e.preventDefault();
     };
 
-    scrollableContainer.addEventListener("wheel", preventScrolling);
     scrollableContainer.addEventListener("touchmove", preventScrolling);
 
     return () => {
       // Remove event listeners when the component unmounts
-      scrollableContainer.removeEventListener("wheel", preventScrolling);
       scrollableContainer.removeEventListener("touchmove", preventScrolling);
     };
   }, []);
@@ -106,7 +104,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
 
-          <h3 className="float-left mt-6 has-text-left"> About The Project</h3>
+          <h3 className="float-left mt-4 has-text-left"> About The Project</h3>
 
           <div className="field field-new mt-5">
             <label className="label has-text-left" htmlFor="location">
@@ -138,7 +136,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
 
-          <div className="field field-new mt-5">
+          <div className="field field-new mt-5 mb-0">
             <label className="label has-text-left" htmlFor="message">
             Description
             </label>
@@ -158,10 +156,10 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           )}
 
-          <div className="field is-grouped is-align-items-flex-end">
+          <div className="field is-grouped is-align-items-flex-end ">
             <div className="control">
               <button
-                className="button buttonOutlined"
+                className="button buttonOutlined button-fix"
                 type="submit"
                 disabled={loading}
                 aria-label="submit"
