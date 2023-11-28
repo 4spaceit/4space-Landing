@@ -97,7 +97,7 @@ export default function Form(props) {
           </div>
         </div>
 
-        <h3 className="float-left mt-6 has-text-left">
+        <h3 className="float-left mt-4 has-text-left">
           О проекте
         </h3>
 

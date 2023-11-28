@@ -102,7 +102,7 @@ export default function Form(props) {
           </div>
         </div>
 
-        <h3 className="float-left mt-6 has-text-right"> عن المشروع</h3>
+        <h3 className="float-left mt-4 has-text-right"> عن المشروع</h3>
 
         <div className="field field-new mt-5">
           <label className="label has-text-right" htmlFor="location">

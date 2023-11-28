@@ -215,18 +215,7 @@ header {
   padding: 0rem 1.5rem !important;
 }
 
-.field-new {
-  display: flex;
-  align-items: baseline;
-  justify-content: space-between;
-}
 
-.field-new div {
-  width: 70%;
-}
-.field-new label {
-  width: 30%;
-}
 
 .cta {
   position: fixed;
@@ -464,9 +453,6 @@ svg {
   direction: rtl !important;
 }
 
-.button-fix {
-  margin-top: 0!important;
-}
 
 /* Animation */
 
@@ -535,19 +521,6 @@ svg {
     width: 100%;
   }
 
-  .field-new {
-    display: block;
-  }
 
-  .field-new div {
-    width: 100%;
-  }
-  .field-new label {
-    width: 100%;
-  }
-
-  .button-fix {
-    margin-top: .5rem!important;
-  }
   
 }
