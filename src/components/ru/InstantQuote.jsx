@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import {  useState } from "react";
 import { parseUTMParameters } from "../../utmParser";
 
 export default function InstantQuote({ openQuote, onCloseQuote }) {
@@ -6,20 +6,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
 
-  useEffect(() => {
-    const scrollableContainer = document.querySelector(".scrollable-container");
 
-    const preventScrolling = (e) => {
-      e.preventDefault();
-    };
-
-    scrollableContainer.addEventListener("touchmove", preventScrolling);
-
-    return () => {
-      // Remove event listeners when the component unmounts
-      scrollableContainer.removeEventListener("touchmove", preventScrolling);
-    };
-  }, []);
 
   const submit = async (e) => {
     setLoading(true);
