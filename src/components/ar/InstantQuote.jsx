@@ -34,6 +34,8 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     formData.append("email", e.target.elements.email.value);
     formData.append("mobile", e.target.elements.mobile.value);
     formData.append("message", e.target.elements.message.value);
+    formData.append("location", e.target.elements.location.value);
+    formData.append("size", e.target.elements.size.value);
     formData.append("utm_source", utmData.utm_source);
     formData.append("utm_medium", utmData.utm_medium);
     formData.append("utm_campaign", utmData.utm_campaign);
@@ -103,9 +105,43 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
 
-          <div className="field">
-            <label className="label has-text-left" htmlFor="message">
-              عن المشروع
+          <h3 className="float-left mt-6 has-text-right"> 
+            عن المشروع
+          </h3>
+
+          <div className="field field-new mt-5">
+            <label className="label has-text-right" htmlFor="location">
+              الموقع
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="location"
+                name="location"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="field field-new mt-5">
+            <label className="label has-text-right" htmlFor="size">
+                المساحه (قدم مربع)
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="size"
+                name="size"
+                required
+              />
+            </div>
+          </div>
+
+          <div className="field field-new mt-5">
+            <label className="label has-text-right" htmlFor="message">
+              وصف المشروع
             </label>
             <div className="control">
               <textarea

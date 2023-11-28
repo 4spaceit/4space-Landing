@@ -92,8 +92,6 @@ export default function LandingRu({ data, images }) {
   });
 
   //Check if mobile
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-
   return (
     <>
       {/* Google Tag Manager (noscript) */}
@@ -148,14 +146,14 @@ export default function LandingRu({ data, images }) {
           >
             Оставьте заявку
           </div>
-          <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
+          {/* <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
             <a href="tel:+971589344000">
             Свяжитесь с нами
               <span className="has-text-white is-size-6 has-text-centered has-text-weight-bold">
                 +971 58 934 4000
               </span>
             </a>
-          </div>
+          </div> */}
         </div>
         <div className="topButton is-hidden" id="topButton">
           <Link rel="nofollow" to="home" spy={true} smooth={true}>
