@@ -96,12 +96,12 @@ export default function Form(props) {
           </div>
         </div>
 
-        <h3 className="float-left mt-4 has-text-left">О проекте</h3>
+        <h3 className="float-left mt-4 has-text-left">Детали по проекту</h3>
 
         <div className="field field-double mt-3">
           <div className="location">
             <label className="label has-text-left" htmlFor="location">
-              Местоположение проекта
+              Локация проекта
             </label>
             <div className="control">
               <input
@@ -115,7 +115,7 @@ export default function Form(props) {
           </div>
           <div className="size">
             <label className="label has-text-left" htmlFor="size">
-              Размер проекта (кв. м)
+              Площадь проекта (кв.футы)
             </label>
             <div className="control">
               <input
@@ -131,7 +131,7 @@ export default function Form(props) {
 
         <div className="field field-new  ">
           <label className="label has-text-left" htmlFor="message">
-            О проекте
+            Описание
           </label>
           <div className="control">
             <textarea

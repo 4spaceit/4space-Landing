@@ -67,7 +67,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       ></button>
       <div className="modal-content scrollable-content">
         <form onSubmit={submit} id="form-modal">
-          <h2 className="center">Расскажите о вашем проекте </h2>
+          <h2 className="center">РАССКАЖИТЕ НАМ О ВАШЕМ ПРОЕКТЕ </h2>
           <div className="field">
             <label className="label">Имя</label>
             <div className="control">
@@ -89,12 +89,12 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
 
-          <h3 className="float-left mt-4 has-text-left">О проекте</h3>
+          <h3 className="float-left mt-4 has-text-left">Детали по проекту</h3>
 
           <div className="field field-double mt-3">
             <div className="location">
               <label className="label has-text-left" htmlFor="location">
-                Местоположение
+              Локация проекта
               </label>
               <div className="control">
                 <input
@@ -108,7 +108,8 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
             <div className="size">
               <label className="label has-text-left" htmlFor="size">
-                Размер проекта (кв.м)
+              Площадь проекта (кв.футы)
+
               </label>
               <div className="control">
                 <input
@@ -124,7 +125,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
           <div className="field field-new   mb-0">
             <label className="label has-text-left" htmlFor="message">
-              Описание проекта
+            Описание
             </label>
             <div className="control">
               <textarea
