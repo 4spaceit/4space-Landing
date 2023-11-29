@@ -123,7 +123,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           </div>
         </div>
 
-          <div className="field field-new mt-5 mb-0">
+          <div className="field field-new   mb-0">
             <label className="label has-text-left" htmlFor="message">
             Description
             </label>
