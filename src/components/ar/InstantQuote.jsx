@@ -1,12 +1,10 @@
-import {  useState } from "react";
+import { useState } from "react";
 import { parseUTMParameters } from "../../utmParser";
 
 export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-
-
 
   const submit = async (e) => {
     setLoading(true);
@@ -41,7 +39,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
       if (response.ok) {
         setSuccess(true);
-        window.location = "https://4space.ae/ar/thank-you/"
+        window.location = "https://4space.ae/ar/thank-you/";
 
         document.getElementById("form-modal").hidden = true;
       } else {
@@ -56,7 +54,10 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   };
 
   return (
-    <div className={`modal ${openQuote ? "is-active" : ""} scrollable-container`} id="modal">
+    <div
+      className={`modal ${openQuote ? "is-active" : ""} scrollable-container`}
+      id="modal"
+    >
       <div className="modal-background"></div>
       <button
         className="modal-close is-large"
@@ -84,43 +85,42 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           </div>
 
           <div className="field">
-            <label className="label" >رقم الهاتف</label>
+            <label className="label">رقم الهاتف</label>
             <div className="control">
               <input className="input" type="tel" name="mobile" required />
             </div>
           </div>
 
-          <h3 className="float-left mt-4 has-text-right"> 
-            عن المشروع
-          </h3>
+          <h3 className="float-left mt-4 has-text-right">عن المشروع</h3>
 
-          <div className="field field-new mt-5">
-            <label className="label has-text-right" htmlFor="location">
-              الموقع
-            </label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                id="location"
-                name="location"
-                required
-              />
+          <div className="field field-double mt-3">
+            <div className="location">
+              <label className="label has-text-left" htmlFor="location">
+                الموقع
+              </label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="location"
+                  name="location"
+                  required
+                />
+              </div>
             </div>
-          </div>
-
-          <div className="field field-new mt-5">
-            <label className="label has-text-right" htmlFor="size">
+            <div className="size">
+              <label className="label has-text-left" htmlFor="size">
                 المساحه (قدم مربع)
-            </label>
-            <div className="control">
-              <input
-                className="input"
-                type="text"
-                id="size"
-                name="size"
-                required
-              />
+              </label>
+              <div className="control">
+                <input
+                  className="input"
+                  type="text"
+                  id="size"
+                  name="size"
+                  required
+                />
+              </div>
             </div>
           </div>
 
@@ -151,7 +151,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 type="submit"
                 disabled={loading}
                 aria-label="submit"
-                style={{fontFamily:"NotoNaskhArabic-Regular"}}
+                style={{ fontFamily: "NotoNaskhArabic-Regular" }}
               >
                 {loading ? "جاري الإرسال..." : "إرسال"}
               </button>

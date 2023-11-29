@@ -104,33 +104,35 @@ export default function Form(props) {
 
         <h3 className="float-left mt-4 has-text-right"> عن المشروع</h3>
 
-        <div className="field field-new mt-5">
-          <label className="label has-text-right" htmlFor="location">
-            الموقع
-          </label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="location"
-              name="location"
-              required
-            />
-          </div>
-        </div>
 
-        <div className="field field-new mt-5">
-          <label className="label has-text-right" htmlFor="size">
+        <div className="field field-double mt-3">
+          <div className="location">
+            <label className="label has-text-left" htmlFor="location">
+            الموقع
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="location"
+                name="location"
+                required
+              />
+            </div>
+          </div>
+          <div className="size">
+            <label className="label has-text-left" htmlFor="size">
             المساحة (متر مربع)
-          </label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="size"
-              name="size"
-              required
-            />
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="size"
+                name="size"
+                required
+              />
+            </div>
           </div>
         </div>
 

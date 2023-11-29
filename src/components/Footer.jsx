@@ -16,13 +16,13 @@ export default function Footer() {
             <p className="is-size-6"> <Email /> GET IN TOUCH </p>
           </div>
 
-          <div className="right-2-footer ">
+          {/* <div className="right-2-footer ">
             <a rel="nofollow" href="tel:+971589344000">
               <svg>
                 <Phone />
               </svg>
             </a>
-          </div>
+          </div> */}
         </div>
       </footer>
     </>

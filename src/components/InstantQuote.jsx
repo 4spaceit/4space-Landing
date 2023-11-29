@@ -92,7 +92,8 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
           <h3 className="float-left mt-4 has-text-left"> About The Project</h3>
 
-          <div className="field field-new mt-5">
+          <div className="field field-double mt-3">
+          <div className="location">
             <label className="label has-text-left" htmlFor="location">
               Project location
             </label>
@@ -106,8 +107,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
               />
             </div>
           </div>
-
-          <div className="field field-new mt-5">
+          <div className="size">
             <label className="label has-text-left" htmlFor="size">
               Project size (sqft)
             </label>
@@ -121,6 +121,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
               />
             </div>
           </div>
+        </div>
 
           <div className="field field-new mt-5 mb-0">
             <label className="label has-text-left" htmlFor="message">

@@ -11,7 +11,6 @@ export default function Form(props) {
 
   const utmData = parseUTMParameters();
 
-
   const submit = async (e) => {
     setLoading(true);
     e.preventDefault();
@@ -43,7 +42,7 @@ export default function Form(props) {
 
       if (response.ok) {
         setSuccess(true);
-        window.location = "https://4space.ae/ru/thank-you/"
+        window.location = "https://4space.ae/ru/thank-you/";
         document.getElementById("form-mobile").hidden = true;
       } else {
         setError(true);
@@ -97,37 +96,36 @@ export default function Form(props) {
           </div>
         </div>
 
-        <h3 className="float-left mt-4 has-text-left">
-          О проекте
-        </h3>
+        <h3 className="float-left mt-4 has-text-left">О проекте</h3>
 
-        <div className="field field-new mt-5">
-          <label className="label has-text-left" htmlFor="location">
-            Местоположение проекта
-          </label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="location"
-              name="location"
-              required
-            />
+        <div className="field field-double mt-3">
+          <div className="location">
+            <label className="label has-text-left" htmlFor="location">
+              Местоположение проекта
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="location"
+                name="location"
+                required
+              />
+            </div>
           </div>
-        </div>
-
-        <div className="field field-new mt-5">
-          <label className="label has-text-left" htmlFor="size">
-            Размер проекта (кв. м)
-          </label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="size"
-              name="size"
-              required
-            />
+          <div className="size">
+            <label className="label has-text-left" htmlFor="size">
+              Размер проекта (кв. м)
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="size"
+                name="size"
+                required
+              />
+            </div>
           </div>
         </div>
 

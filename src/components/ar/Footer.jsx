@@ -16,13 +16,13 @@ export default function Footer() {
             <p className="is-size-6" style={{borderRight:"none", borderLeft:"1px solid #858181"}}>  استفسر عن مشروع <Email /> </p>
           </div>
 
-          <div className="right-2-footer ">
+          {/* <div className="right-2-footer ">
             <a rel="nofollow" href="tel:+971589344000">
               <svg>
                 <Phone />
               </svg>
             </a>
-          </div>
+          </div> */}
         </div>
       </footer>
     </>

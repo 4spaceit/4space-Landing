@@ -41,7 +41,7 @@ export default function Form(props) {
       );
 
       if (response.ok) {
-        window.location = "https://4space.ae/thank-you/"
+        window.location = "https://4space.ae/thank-you/";
         setSuccess(true);
         document.getElementById("form-mobile").hidden = true;
       } else {
@@ -98,39 +98,40 @@ export default function Form(props) {
 
         <h3 className="float-left mt-4 has-text-left"> About The Project</h3>
 
-        <div className="field field-new mt-5">
-          <label className="label has-text-left" htmlFor="location">
-            Project location
-          </label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="location"
-              name="location"
-              required
-            />
+        <div className="field field-double mt-3">
+          <div className="location">
+            <label className="label has-text-left" htmlFor="location">
+              Project location
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="location"
+                name="location"
+                required
+              />
+            </div>
           </div>
-        </div>
-
-        <div className="field field-new mt-5">
-          <label className="label has-text-left" htmlFor="size">
-            Project size (sqft)
-          </label>
-          <div className="control">
-            <input
-              className="input"
-              type="text"
-              id="size"
-              name="size"
-              required
-            />
+          <div className="size">
+            <label className="label has-text-left" htmlFor="size">
+              Project size (sqft)
+            </label>
+            <div className="control">
+              <input
+                className="input"
+                type="text"
+                id="size"
+                name="size"
+                required
+              />
+            </div>
           </div>
         </div>
 
         <div className="field field-new mt-5">
           <label className="label has-text-left" htmlFor="message">
-          Description
+            Description
           </label>
           <div className="control">
             <textarea
