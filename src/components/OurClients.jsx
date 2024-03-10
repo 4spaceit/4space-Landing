@@ -43,9 +43,9 @@ function OurClients() {
             <SwiperSlide ><div>
               <img src="assets/clients/5.svg" alt="EMAAR" width={70} loading="lazy" />
             </div> </SwiperSlide>
-            <SwiperSlide ><div>
+            {/* <SwiperSlide ><div>
               <img src="assets/clients/13.png" alt="House of Hype" width={70} loading="lazy" />
-            </div> </SwiperSlide>
+            </div> </SwiperSlide> */}
             <SwiperSlide ><div>
               <img src="assets/clients/4.png" alt="PAPA Dubai" width={70} loading="lazy" />
             </div> </SwiperSlide>
