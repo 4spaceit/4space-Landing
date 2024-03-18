@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import SendEmail from "./components/SendEmail";
 
 import dataRestaurantEn from "./data/dataRestaurant.json";
 import dataRetailEn from "./data/dataRetail.json";
@@ -12,6 +13,7 @@ import dataRestaurantAr from "./data/ar/dataRestaurant.json";
 import dataRetailAr from "./data/ar/dataRetail.json";
 import dataResidentialAr from "./data/ar/dataResidential.json";
 import dataGeneralAr from "./data/ar/dataGeneral.json";
+
 
 
 import dataRestaurantRu from "./data/ru/dataRestaurant.json";
@@ -156,6 +158,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/en/general"
           element={<App data={dataGeneralEn} images={generalImage} />}
         />
+        <Route
+          path="/en/contacts"
+          element={<SendEmail  />}
+        />
         {/* <Route
           path="/en/branding"
           element={<App data={dataBrandingEn} images={brandingImages} />}
@@ -187,7 +193,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/ar/branding"
           element={<LandingAr data={dataBrandingAr} images={brandingImages} />}
         /> */}
-                <Route
+        <Route
           path="/ar/general"
           element={<LandingAr data={dataGeneralAr} images={generalImage} />}
         />
@@ -218,7 +224,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
           path="/ru/branding"
           element={<LandingRu data={dataBrandingRu} images={brandingImages} />}
         /> */}
-                <Route
+        <Route
           path="/ru/general"
           element={<LandingRu data={dataGeneralRu} images={generalImage} />}
         />
