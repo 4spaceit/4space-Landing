@@ -93,12 +93,13 @@ const SendEmail = () => {
     setContacts(data.contactsData);
     // console.log("data",await data.json())
   };
+  console.log("contacts",contacts)
   useEffect(() => {
     getContacts();
   }, []);
   return (
     <div>
-      {!showContent && (
+      {/*   {!showContent && (
         <div
           style={{
             display: "flex",
@@ -166,9 +167,9 @@ const SendEmail = () => {
             </form>
           </div>
         </div>
-      )}
+      )} */}
 
-      {showContent && (
+      { !showContent && (
         <>
           <div className="container">
             <div
@@ -294,13 +295,22 @@ const SendEmail = () => {
                               SetOpenModel(true);
                               setContactId(ele.id);
                               setEncodeId(ele.properties.encode_id);
-                              setEmailBody(` <p>Dear ${ele.properties.firstname},</p>
-                                         <p>Thank you for taking the time to reach out and inquire about our design services at 4Space Design. Prior to the meeting, we kindly ask you to fill out the design inquiry form in the link below so we can capture a little more detail about your restaurant project.</p>
-                                         <p>Design Inquiry Form: <span>[[form link]]</span></p>
-                                         <p>Once filled, one of our team will contact you to discuss the details of your project.</p>
-                                         <p>I've added a link to our company profile to give you a better understanding of 4Space Design.</p>
-                                         <p><a href="https://4space.ae/">4SPACE Company Profile</a></p>
-                                         <p>We are looking forward to hearing from you very soon.</p>`);
+                              setEmailBody(` <p>Dear ${
+                                ele.properties.firstname
+                              },
+                              <p>I hope this email finds you well.</p>
+                              <p>Thank you for taking the time to reach out and inquire about our design services at 4Space Design. </p>
+                              <p>We kindly ask you to fill out the Design Inquiry Form so we can capture a little more detail about your project.</p>
+                              <p>Once filled, one of our team will contact you to discuss the details of your project.</p>
+                              <p>I've added a link to our <a href=${ele.id}> ${
+                                ele.properties.industry === "Other"
+                                  ? "4Space"
+                                  : ele.properties.industry
+                              } Company Profile </a> to give you a better understanding of 4Space Design.</p>
+                              <p>We are looking forward to hearing from you very soon.</p>
+                              <p>Best regards,</p>
+
+                                        `);
                               // setEmail("Qualified");
                               setEmail(ele.properties.email);
                             }}
