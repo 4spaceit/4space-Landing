@@ -20,6 +20,22 @@ const SendEmail = () => {
   const [emailBody, setEmailBody] = useState("");
   const [contactId, setContactId] = useState();
   const [encodeID, setEncodeId] = useState("");
+
+  function textToHTMLMarkup(text) {
+    // Escape special characters in the text
+    text = text
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+
+    // Convert line breaks to <br> tags
+    text = text.replace(/\n/g, "<br>");
+
+    // Wrap the text in <p> tags
+    return `<p>${text}</p>`;
+  }
   const submit = (e) => {
     //    setLoading(true);
     e.preventDefault();
@@ -43,7 +59,8 @@ const SendEmail = () => {
   const submitSendEmail = async (e) => {
     e.preventDefault();
     setLoadingSendEmail(true);
-    const emailBody = e.target.elements.emailBody.value;
+    const emailBody = textToHTMLMarkup(e.target.elements.emailBody.value);
+   
     const res = await fetch("https://4space-backend.vercel.app/send-email", {
       method: "POST",
       headers: {
@@ -93,10 +110,25 @@ const SendEmail = () => {
     setContacts(data.contactsData);
     // console.log("data",await data.json())
   };
-  console.log("contacts",contacts)
+
   useEffect(() => {
     getContacts();
   }, []);
+
+    useEffect(() => {
+      const textarea = document.getElementById("custom-textarea");
+      if (textarea) {
+        const lines = textarea.value.split("\n");
+        const longestLineLength = Math.max(...lines.map((line) => line.length));
+        const padding = Math.floor(
+          (textarea.clientWidth - longestLineLength * 8) / 2
+        ); // Adjust the multiplier based on the font size and style
+        const styledLines = lines.map((line) =>
+          line.padStart(padding + line.length)
+        );
+        textarea.value = styledLines.join("\n");
+      }
+    }, []);
   return (
     <div>
       {/*   {!showContent && (
@@ -295,22 +327,19 @@ const SendEmail = () => {
                               SetOpenModel(true);
                               setContactId(ele.id);
                               setEncodeId(ele.properties.encode_id);
-                              setEmailBody(` <p>Dear ${
-                                ele.properties.firstname
-                              },
-                              <p>I hope this email finds you well.</p>
-                              <p>Thank you for taking the time to reach out and inquire about our design services at 4Space Design. </p>
-                              <p>We kindly ask you to fill out the Design Inquiry Form so we can capture a little more detail about your project.</p>
-                              <p>Once filled, one of our team will contact you to discuss the details of your project.</p>
-                              <p>I've added a link to our <a href=${ele.id}> ${
-                                ele.properties.industry === "Other"
-                                  ? "4Space"
-                                  : ele.properties.industry
-                              } Company Profile </a> to give you a better understanding of 4Space Design.</p>
-                              <p>We are looking forward to hearing from you very soon.</p>
-                              <p>Best regards,</p>
-
-                                        `);
+                              setEmailBody(
+                                `Dear ${ele.properties.firstname},
+I hope this email finds you well.
+Thank you for taking the time to reach out and inquire about our design services at 4Space Design.
+Kindly ask you to fill out the Design Inquiry Form so we can capture a little more detail about your project.
+Once filled, one of our team will contact you to discuss the details of your project.
+I've added a link to our <a href="https://4space.ae"> ${
+                                  ele.properties.industry === "Other"
+                                    ? "4Space"
+                                    : ele.properties.industry
+                                } Company Profile </a>  to give you a better understanding of 4Space Design. We are looking forward to hearing from you very soon.
+Best regards`
+                              );
                               // setEmail("Qualified");
                               setEmail(ele.properties.email);
                             }}
@@ -375,8 +404,9 @@ const SendEmail = () => {
                   id="message"
                   required
                   rows="20"
+                  style={{textAlign:"left"}}
                   // defaultValue={emailBody}
-                  value={formatHTMLContent(emailBody)}
+                  value={emailBody}
                   onChange={(e) => setEmailBody(e.target.value)}
                 ></textarea>
               </div>
