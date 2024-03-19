@@ -202,3 +202,18 @@ strong {
 //       width: 100%;
 //     }
 //   }
+.table-container .button:hover {
+  background-color:black !important;
+  color: inherit;
+  border-color: inherit;
+  box-shadow: none;
+}
+
+ @media screen and (max-width: 768px) {
+    .table-container {
+      overflow-x: auto;
+    }
+    .table {
+      width: 100%;
+    }
+  }
