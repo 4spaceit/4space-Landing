@@ -48,19 +48,19 @@ const SendEmail = () => {
     }
   };
 
-    const formatHTMLContent = (htmlContent) => {
-      return htmlContent
-        .split("\n") // Split the content by newline characters
-        .map((line) => line.trim()) // Trim leading and trailing whitespace from each line
-        .filter((line) => line !== "") // Remove empty lines
-        .join("\n"); 
-    };
+    // const formatHTMLContent = (htmlContent) => {
+    //   return htmlContent
+    //     .split("\n") // Split the content by newline characters
+    //     .map((line) => line.trim()) // Trim leading and trailing whitespace from each line
+    //     .filter((line) => line !== "") // Remove empty lines
+    //     .join("\n"); 
+    // };
 
   const submitSendEmail = async (e) => {
     e.preventDefault();
     setLoadingSendEmail(true);
     const emailBody = textToHTMLMarkup(e.target.elements.emailBody.value);
-   
+  //  https://4space-backend.vercel.app
     const res = await fetch("https://4space-backend.vercel.app/send-email", {
       method: "POST",
       headers: {
@@ -82,19 +82,24 @@ const SendEmail = () => {
     setLoadingSendEmail(false);
   };
 
-  const UnqualifiedContact = async (e, contactid) => {
+  const UnqualifiedContact = async (e, contactid, nameUser,email) => {
     e.preventDefault();
     setLoadingUnqualifiedContact(true);
 
-    const res = await fetch("https://4space-backend.vercel.app/unqualified-contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        contactId: contactid,
-      }),
-    });
+    const res = await fetch(
+      "https://4space-backend.vercel.app/unqualified-contact",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          contactId: contactid,
+          nameUser,
+          email,
+        }),
+      }
+    );
     if (res.status == 200) {
       setContacts(contacts.filter((contact) => contact.id != contactid));
       SetOpenModel(false);
@@ -201,7 +206,7 @@ const SendEmail = () => {
         </div>
       )} */}
 
-      { !showContent && (
+      {!showContent && (
         <>
           <div className="container">
             <div
@@ -357,7 +362,12 @@ Best regards`
                               // setEmail("Unqualified");
                               setContactId(ele.id);
                               setEncodeId(null);
-                              UnqualifiedContact(e, ele.id);
+                              UnqualifiedContact(
+                                e,
+                                ele.id,
+                                ele.properties.firstname,
+                                ele.properties.email
+                              );
                             }}
                             style={{
                               cursor: "pointer",
@@ -404,7 +414,7 @@ Best regards`
                   id="message"
                   required
                   rows="20"
-                  style={{textAlign:"left"}}
+                  style={{ textAlign: "left" }}
                   // defaultValue={emailBody}
                   value={emailBody}
                   onChange={(e) => setEmailBody(e.target.value)}
@@ -461,6 +471,9 @@ Best regards`
           {contactProjectInf}
         </div>
       </div>
+
+
+      
     </div>
   );
 };
