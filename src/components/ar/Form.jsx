@@ -114,7 +114,7 @@ export default function Form(props) {
               <input
                 className="input"
                 type="text"
-                id="location"
+                id="location" 
                 name="location"
                 required
               />
