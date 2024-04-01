@@ -95,7 +95,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
           <div className="field field-double mt-3">
             <div className="location">
-              <label className="label has-text-left" htmlFor="location">
+              <label className="label has-text-right" htmlFor="location">
                 الموقع
               </label>
               <div className="control">
@@ -109,7 +109,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
               </div>
             </div>
             <div className="size">
-              <label className="label has-text-left" htmlFor="size">
+              <label className="label has-text-right" htmlFor="size">
                 المساحه (قدم مربع)
               </label>
               <div className="control">

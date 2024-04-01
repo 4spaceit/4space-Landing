@@ -107,7 +107,7 @@ export default function Form(props) {
 
         <div className="field field-double mt-3">
           <div className="location">
-            <label className="label has-text-left" htmlFor="location">
+            <label className="label has-text-right" htmlFor="location">
             الموقع
             </label>
             <div className="control">
@@ -121,7 +121,7 @@ export default function Form(props) {
             </div>
           </div>
           <div className="size">
-            <label className="label has-text-left" htmlFor="size">
+            <label className="label has-text-right" htmlFor="size">
             المساحة (متر مربع)
             </label>
             <div className="control">
