@@ -38,7 +38,71 @@ $navbar-dropdown-background-color:transparent;
 $footer-background-color:transparent;
 $footer-padding: 3rem 1.5rem;
 
+.btest {
+  display: flex;
+  justify-content: center !important;
+  align-items: center !important;
+  border-radius: 10px;
+}
+.borderReduis {
+  border-radius: 5px;
+  border: none;
+}
 
+.selected-flag {
+  display: flex !important;
+  background-color: #e6e6e6;
+  //  background-color: red;
+}
+
+// overwrite bulma
+.input,
+.textarea,
+.select select {
+  background-color: $light;
+  font: $black;
+}
+.intl-tel-input.allow-dropdown input[type="tel"] {
+  background-color: #e6e6e6 !important;
+}
+.select:not(.is-multiple):not(.is-loading)::after {
+  border-color: black;
+}
+
+.intl-tel-input .flag-container .arrow.down:after {
+  content: "";
+  position: absolute;
+  top: 155%;
+  right: -47%;
+  color: $black;
+  padding-right: 2px;
+}
+
+.intl-tel-input .flag-container .arrow.up:after {
+  content: "";
+  position: absolute;
+  top: 155%;
+  right: -47%;
+  color: $black;
+  padding-right: 2px;
+}
+.intl-tel-input.allow-dropdown.separate-dial-code .selected-dial-code {
+  color: black;
+  display: hidden !important;
+  padding-left: 7px !important;
+}
+.mobile-error {
+  font-size: 15px;
+  color: red;
+  margin-top: 2px;
+}
+// .intl-tel-input.allow-dropdown.separate-dial-code.iti-sdc-4 .selected-flag{
+//   width:80px !important;
+// }
+.intl-tel-input .country-list {
+  font: $black !important;
+  color: $black !important;
+}
 
 //$container-max-width:$widescreen;
 
