@@ -18,6 +18,30 @@ const SendEmail = () => {
   const [contactProjectInf, setContactProjectInf] = useState();
   // const [contactTypeAndEmail, setContactTypeAndEmail] = useState({});
   const [emailBody, setEmailBody] = useState("");
+  const [emailLang,setEmailLang]=useState("")
+  const [emailIndustryLink, setEmailIndustryLink] = useState({ text: "", link: "" });
+  const [industryLinks, setIndustryLinks] = useState({
+    Other: "https://4space.ae",
+    Restaurant: "https://4space.ae/fb/",
+    Retail: "https://4space.ae/retail/",
+    Residential: "https://4space.ae/residential/",
+    Commercial: "https://4space.ae/offices/",
+    Architecture: "https://4space.ae/architecture/",
+    Hotel: "https://4space.ae",
+    Leisure: "https://4space.ae",
+    Cultural: "https://4space.ae",
+  });
+   const [industryLinksAr, setIndustryLinksAr] = useState({
+     Other: "https://4space.ae/ar",
+     Restaurant: "https://4space.ae/ar/fb/",
+     Retail: "https://4space.ae/retail/ar",
+     Residential: "https://4space.ae/ar/residential/",
+     Commercial: "https://4space.ae/ar/offices/",
+     Architecture: "https://4space.ae/ar/architecture/",
+     Hotel: "https://4space.ae/ar",
+     Leisure: "https://4space.ae/ar",
+     Cultural: "https://4space.ae/ar",
+   });
   const [contactId, setContactId] = useState();
   const [encodeID, setEncodeId] = useState("");
 
@@ -48,19 +72,11 @@ const SendEmail = () => {
     }
   };
 
-    // const formatHTMLContent = (htmlContent) => {
-    //   return htmlContent
-    //     .split("\n") // Split the content by newline characters
-    //     .map((line) => line.trim()) // Trim leading and trailing whitespace from each line
-    //     .filter((line) => line !== "") // Remove empty lines
-    //     .join("\n"); 
-    // };
-
   const submitSendEmail = async (e) => {
     e.preventDefault();
     setLoadingSendEmail(true);
     const emailBody = textToHTMLMarkup(e.target.elements.emailBody.value);
-  //  https://4space-backend.vercel.app
+    //  https://4space-backend.vercel.app
     const res = await fetch("https://4space-backend.vercel.app/send-email", {
       method: "POST",
       headers: {
@@ -71,6 +87,8 @@ const SendEmail = () => {
         emailBody,
         contactId,
         encodeID,
+        emailIndustryLink,
+        emailLang,
       }),
     });
     if (res.status == 200) {
@@ -82,10 +100,16 @@ const SendEmail = () => {
     setLoadingSendEmail(false);
   };
 
-  const UnqualifiedContact = async (e, contactid, nameUser,email) => {
+  const UnqualifiedContact = async (
+    e,
+    contactid,
+    nameUser,
+    email,
+    emailLang
+  ) => {
     e.preventDefault();
     setLoadingUnqualifiedContact(true);
-
+    // https://4space-backend.vercel.app
     const res = await fetch(
       "https://4space-backend.vercel.app/unqualified-contact",
       {
@@ -97,6 +121,7 @@ const SendEmail = () => {
           contactId: contactid,
           nameUser,
           email,
+          emailLang,
         }),
       }
     );
@@ -109,13 +134,16 @@ const SendEmail = () => {
     setLoadingUnqualifiedContact(false);
   };
   //    setLoading(true);
+  // https://4space-backend.vercel.app
   const getContacts = async () => {
-    const response = await fetch("https://4space-backend.vercel.app/first-complete-form");
+    const response = await fetch(
+      "https://4space-backend.vercel.app/first-complete-form"
+    );
     const data = await response.json();
     setContacts(data.contactsData);
     // console.log("data",await data.json())
   };
-
+console.log("contacts",contacts)
   useEffect(() => {
     getContacts();
   }, []);
@@ -332,21 +360,45 @@ const SendEmail = () => {
                               SetOpenModel(true);
                               setContactId(ele.id);
                               setEncodeId(ele.properties.encode_id);
+                              setLoadingSendEmail();
+                              setEmailLang(ele.properties.hs_language)
                               setEmailBody(
-                                `Dear ${ele.properties.firstname},
+                                `${
+                                  ele.properties.hs_language != "ar"
+                                    ? `Dear ${ele.properties.firstname},
 I hope this email finds you well.
 Thank you for taking the time to reach out and inquire about our design services at 4Space Design.
 Kindly ask you to fill out the Design Inquiry Form so we can capture a little more detail about your project.
 Once filled, one of our team will contact you to discuss the details of your project.
-I've added a link to our <a href="https://4space.ae"> ${
-                                  ele.properties.industry === "Other"
-                                    ? "4Space"
-                                    : ele.properties.industry
-                                } Company Profile </a>  to give you a better understanding of 4Space Design. We are looking forward to hearing from you very soon.
+I've added a link to our <link here>  to give you a better understanding of 4Space Design. We are looking forward to hearing from you very soon.
 Best regards`
+                                    : `عزيزي ${ele.properties.firstname}
+ . آمل أن تكون بخير
+نشكرك على الوقت الذي أمضيته للتواصل والاستفسار عن خدمات التصميم لدينا في.     Space Design 
+ . نرجو منك ملىء نموذج الاستفسار عن التصميم في الرابط أدناه حتى نتمكن من الحصول على كل التفاصيل المتعلقة بمشروعك 
+ .بمجرد أن تقوم بملئها، سيقوم بالإتصل بك أحد أعضاء فريقنا لمناقشة تفاصيل مشروعك
+ .لقد أضفت رابطًا لملفنا التعريفي الخاص بالمحلات التجارية ليتمنحك فهمًا أفضل عن تصاميم Space4  
+ .ونحن نتطلع دائما” للرد من قبلكم 
+ .أطيب التحيات
+
+`
+                                } `
                               );
                               // setEmail("Qualified");
                               setEmail(ele.properties.email);
+                              setEmailLang(ele.properties.hs_language);
+                              setEmailIndustryLink({
+                                text: `${
+                                  ele.properties.industry === "Other"
+                                    ? "4SPACE Company Profile 2024"
+                                    : `4SPACE Company Profile 2024 ${ele.properties.industry}`
+                                }`,
+                                link:
+                                  ele.properties.hs_language != "ar"
+                                    ? industryLinks[ele.properties.industry]
+                                    : industryLinksAr[ele.properties.industry],
+                              });
+
                             }}
                             style={{
                               cursor: "pointer",
@@ -362,11 +414,15 @@ Best regards`
                               // setEmail("Unqualified");
                               setContactId(ele.id);
                               setEncodeId(null);
+                              // setEmailLang(ele.properties.hs_language)
+
+
                               UnqualifiedContact(
                                 e,
                                 ele.id,
                                 ele.properties.firstname,
-                                ele.properties.email
+                                ele.properties.email,
+                                ele.properties.hs_language
                               );
                             }}
                             style={{
@@ -414,7 +470,7 @@ Best regards`
                   id="message"
                   required
                   rows="20"
-                  style={{ textAlign: "left" }}
+                  style={{ textAlign: emailLang=="ar"?"right":"left" }}
                   // defaultValue={emailBody}
                   value={emailBody}
                   onChange={(e) => setEmailBody(e.target.value)}
