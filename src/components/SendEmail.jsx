@@ -4,6 +4,16 @@ import { useEffect, useState } from "react";
 import Logo from "../svg/logo_black.svg?react";
 
 const SendEmail = () => {
+  const idustryArText = {
+    Restaurant: "رابطًا لملفنا التعريفي الخاص بالمطاعم",
+    Retail: "رابطًا لملفنا التعريفي الخاص بيع بالتجزئة",
+    Residential: "رابطًا لملفنا التعريفي الخاص بالمنازل السكنية",
+    Commercial: " رابطًا لملفنا التعريفي الخاص بالشركات التجارية",
+    Architecture: "رابطًا إلى الملف التعريفي الخاص بشركتنا المعمارية",
+    Hotel: " رابطًا إلى الملف التعريفي الخاص بنا ",
+    Leisure: "رابطًا إلى الملف التعريفي الخاص بنا",
+    Cultural: "رابطًا إلى الملف التعريفي الخاص بنا",
+  };
   const [loading, setLoading] = useState(false);
   const [loadingSendEmail, setLoadingSendEmail] = useState(false);
   const [loadingUnqualifiedContact, setLoadingUnqualifiedContact] =
@@ -33,11 +43,11 @@ const SendEmail = () => {
   });
    const [industryLinksAr, setIndustryLinksAr] = useState({
      Other: "https://4space.ae/ar",
-     Restaurant: "https://4space.ae/ar/fb/",
-     Retail: "https://4space.ae/retail/ar",
-     Residential: "https://4space.ae/ar/residential/",
-     Commercial: "https://4space.ae/ar/offices/",
-     Architecture: "https://4space.ae/ar/architecture/",
+     Restaurant: "https://4space.ae/ar/fb-2/",
+     Retail: "https://4space.ae/ar/retail-2/",
+     Residential: "https://4space.ae/ar/residential-2/",
+     Commercial: "https://4space.ae/ar/offices-2/",
+     Architecture: "https://4space.ae/ar/architecture-2/",
      Hotel: "https://4space.ae/ar",
      Leisure: "https://4space.ae/ar",
      Cultural: "https://4space.ae/ar",
@@ -108,7 +118,7 @@ const SendEmail = () => {
     emailLang
   ) => {
     e.preventDefault();
-    setLoadingUnqualifiedContact(true);
+    // setLoadingUnqualifiedContact(true);
     // https://4space-backend.vercel.app
     const res = await fetch(
       "https://4space-backend.vercel.app/unqualified-contact",
@@ -143,7 +153,7 @@ const SendEmail = () => {
     setContacts(data.contactsData);
     // console.log("data",await data.json())
   };
-console.log("contacts",contacts)
+
   useEffect(() => {
     getContacts();
   }, []);
@@ -164,7 +174,7 @@ console.log("contacts",contacts)
     }, []);
   return (
     <div>
-      {/*   {!showContent && (
+         {!showContent && (
         <div
           style={{
             display: "flex",
@@ -232,9 +242,9 @@ console.log("contacts",contacts)
             </form>
           </div>
         </div>
-      )} */}
+      )} 
 
-      {!showContent && (
+      {showContent && (
         <>
           <div className="container">
             <div
@@ -373,13 +383,15 @@ Once filled, one of our team will contact you to discuss the details of your pro
 I've added a link to our <link here>  to give you a better understanding of 4Space Design. We are looking forward to hearing from you very soon.
 Best regards`
                                     : `عزيزي ${ele.properties.firstname}
- . آمل أن تكون بخير
-نشكرك على الوقت الذي أمضيته للتواصل والاستفسار عن خدمات التصميم لدينا في.     Space Design 
- . نرجو منك ملىء نموذج الاستفسار عن التصميم في الرابط أدناه حتى نتمكن من الحصول على كل التفاصيل المتعلقة بمشروعك 
+ . نآمل أن تكون بخير
+نشكرك على الوقت الذي أمضيته للتواصل والاستفسار عن خدمات التصميم لدينا في
+    . 4Space Design 
+  نرجو منك ملىء نموذج الاستفسار عن التصميم  حتى نتمكن من الحصول على كل التفاصيل المتعلقة بمشروعك 
  .بمجرد أن تقوم بملئها، سيقوم بالإتصل بك أحد أعضاء فريقنا لمناقشة تفاصيل مشروعك
- .لقد أضفت رابطًا لملفنا التعريفي الخاص بالمحلات التجارية ليتمنحك فهمًا أفضل عن تصاميم Space4  
- .ونحن نتطلع دائما” للرد من قبلكم 
- .أطيب التحيات
+   لقد أضفت رابطًا إلى الملف التعريفي الخاص ليتمنحك فهمًا أفضل عن تصاميم  
+    . 4Space 
+ . ونحن نتطلع دائما” للرد من قبلكم 
+ . أطيب التحيات
 
 `
                                 } `
@@ -388,11 +400,18 @@ Best regards`
                               setEmail(ele.properties.email);
                               setEmailLang(ele.properties.hs_language);
                               setEmailIndustryLink({
-                                text: `${
-                                  ele.properties.industry === "Other"
-                                    ? "4SPACE Company Profile 2024"
-                                    : `4SPACE Company Profile 2024 ${ele.properties.industry}`
-                                }`,
+                                text:
+                                  ele.properties.hs_language != "en"
+                                    ? `${
+                                        ele.properties.industry === "Other"
+                                          ? "رابطًا لملفنا التعريفي الخاص بيع بالتجزئة بنا"
+                                          : `${idustryArText[`${ele.properties.industry}`]}`
+                                      }`
+                                    : `${
+                                        ele.properties.industry === "Other"
+                                          ? "4SPACE Company Profile 2024"
+                                          : `4SPACE Company Profile 2024 ${ele.properties.industry}`
+                                      }`,
                                 link:
                                   ele.properties.hs_language != "ar"
                                     ? industryLinks[ele.properties.industry]
