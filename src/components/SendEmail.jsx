@@ -31,26 +31,44 @@ const SendEmail = () => {
   const [emailLang,setEmailLang]=useState("")
   const [emailIndustryLink, setEmailIndustryLink] = useState({ text: "", link: "" });
   const [industryLinks, setIndustryLinks] = useState({
-    Other: "https://4space.ae",
-    Restaurant: "https://4space.ae/fb/",
-    Retail: "https://4space.ae/retail/",
-    Residential: "https://4space.ae/residential/",
-    Commercial: "https://4space.ae/offices/",
-    Architecture: "https://4space.ae/architecture/",
-    Hotel: "https://4space.ae",
-    Leisure: "https://4space.ae",
-    Cultural: "https://4space.ae",
+    Other:
+      "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+    Restaurant:
+      "https://drive.google.com/file/d/1ywLB1UARigKMtv_tM1QSoP5gZPIiQGi2/view",
+    Retail:
+      "https://drive.google.com/file/d/1KAXq-zxWhzJqDIANn51tTKjyFt4tRL8y/view",
+    Residential:
+      "https://drive.google.com/file/d/1ajXSzwIkXgA3ZYK-8lBlrFWizFdbN89h/view",
+    Commercial:
+      "https://drive.google.com/file/d/1pR-QN1iOrG_WocMBZ1cBV7HOFMczxHhK/view",
+    Architecture:
+      "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
+    Hotel:
+      "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+    Leisure:
+      "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+    Cultural:
+      "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
   });
    const [industryLinksAr, setIndustryLinksAr] = useState({
-     Other: "https://4space.ae/ar",
-     Restaurant: "https://4space.ae/ar/fb-2/",
-     Retail: "https://4space.ae/ar/retail-2/",
-     Residential: "https://4space.ae/ar/residential-2/",
-     Commercial: "https://4space.ae/ar/offices-2/",
-     Architecture: "https://4space.ae/ar/architecture-2/",
-     Hotel: "https://4space.ae/ar",
-     Leisure: "https://4space.ae/ar",
-     Cultural: "https://4space.ae/ar",
+     Other:
+       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+     Restaurant:
+       "https://drive.google.com/file/d/1ywLB1UARigKMtv_tM1QSoP5gZPIiQGi2/view",
+     Retail:
+       "https://drive.google.com/file/d/1KAXq-zxWhzJqDIANn51tTKjyFt4tRL8y/view",
+     Residential:
+       "https://drive.google.com/file/d/1ajXSzwIkXgA3ZYK-8lBlrFWizFdbN89h/view",
+     Commercial:
+       "https://drive.google.com/file/d/1pR-QN1iOrG_WocMBZ1cBV7HOFMczxHhK/view",
+     Architecture:
+       "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
+     Hotel:
+       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+     Leisure:
+       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+     Cultural:
+       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
    });
   const [contactId, setContactId] = useState();
   const [encodeID, setEncodeId] = useState("");
