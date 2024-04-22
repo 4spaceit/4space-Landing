@@ -42,7 +42,7 @@ const SendEmail = () => {
     Commercial:
       "https://drive.google.com/file/d/1pR-QN1iOrG_WocMBZ1cBV7HOFMczxHhK/view",
     Architecture:
-      "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
+     "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
     Hotel:
       "https://drive.google.com/file/d/1qFB-ZGssp04ue8PZRiPFiFcbpRZaIN8m/view",
     Leisure:
@@ -62,7 +62,7 @@ const SendEmail = () => {
      Commercial:
        "https://drive.google.com/file/d/1pR-QN1iOrG_WocMBZ1cBV7HOFMczxHhK/view",
      Architecture:
-       "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
+      "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
      Hotel:
        "https://drive.google.com/file/d/1qFB-ZGssp04ue8PZRiPFiFcbpRZaIN8m/view",
      Leisure:
