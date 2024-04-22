@@ -25,6 +25,7 @@ const SendEmail = () => {
   const [openModel, SetOpenModel] = useState(false);
   const [openModelProjectInf, SetOpenModelProjectInf] = useState(false);
   const [email, setEmail] = useState("");
+  const [emailType,setEmailType]=useState("")
   const [contactProjectInf, setContactProjectInf] = useState();
   // const [contactTypeAndEmail, setContactTypeAndEmail] = useState({});
   const [emailBody, setEmailBody] = useState("");
@@ -104,21 +105,40 @@ const SendEmail = () => {
     e.preventDefault();
     setLoadingSendEmail(true);
     const emailBody = textToHTMLMarkup(e.target.elements.emailBody.value);
-    //  https://4space-backend.vercel.app
-    const res = await fetch("https://4space-backend.vercel.app/send-email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        emailBody,
-        contactId,
-        encodeID,
-        emailIndustryLink,
-        emailLang,
-      }),
-    });
+    let res
+    if (emailType === "Qualified") {
+      //  https://4space-backend.vercel.app
+       res = await fetch("https://4space-backend.vercel.app/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          emailBody,
+          contactId,
+          encodeID,
+          emailIndustryLink,
+          emailLang,
+        }),
+      });
+      
+    } else {
+
+      // https://4space-backend.vercel.app
+
+       res = await fetch("https://4space-backend.vercel.app/unqualified-contact", {
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json",
+         },
+         body: JSON.stringify({
+           contactId: contactId,
+           email,
+           emailBody,
+         }),
+       });
+    }
     if (res.status == 200) {
       setContacts(contacts.filter((contact) => contact.id != contactId));
       SetOpenModel(false);
@@ -128,39 +148,39 @@ const SendEmail = () => {
     setLoadingSendEmail(false);
   };
 
-  const UnqualifiedContact = async (
-    e,
-    contactid,
-    nameUser,
-    email,
-    emailLang
-  ) => {
-    e.preventDefault();
-    // setLoadingUnqualifiedContact(true);
-    // https://4space-backend.vercel.app
-    const res = await fetch(
-      "https://4space-backend.vercel.app/unqualified-contact",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          contactId: contactid,
-          nameUser,
-          email,
-          emailLang,
-        }),
-      }
-    );
-    if (res.status == 200) {
-      setContacts(contacts.filter((contact) => contact.id != contactid));
-      SetOpenModel(false);
-    } else {
-      setError(true);
-    }
-    setLoadingUnqualifiedContact(false);
-  };
+  // const UnqualifiedContact = async (
+  //   e,
+  //   contactid,
+  //   nameUser,
+  //   email,
+  //   emailLang
+  // ) => {
+  //   e.preventDefault();
+  //   // setLoadingUnqualifiedContact(true);
+  //   // https://4space-backend.vercel.app
+  //   const res = await fetch(
+  //     "https://4space-backend.vercel.app/unqualified-contact",
+  //     {
+  //       method: "POST",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: JSON.stringify({
+  //         contactId: contactid,
+  //         nameUser,
+  //         email,
+  //         emailLang,
+  //       }),
+  //     }
+  //   );
+  //   if (res.status == 200) {
+  //     setContacts(contacts.filter((contact) => contact.id != contactid));
+  //     SetOpenModel(false);
+  //   } else {
+  //     setError(true);
+  //   }
+  //   setLoadingUnqualifiedContact(false);
+  // };
   //    setLoading(true);
   // https://4space-backend.vercel.app
   const getContacts = async () => {
@@ -414,6 +434,7 @@ Best regards`
 `
                                 } `
                               );
+                               setEmailType("Qualified");
                               // setEmail("Qualified");
                               setEmail(ele.properties.email);
                               setEmailLang(ele.properties.hs_language);
@@ -447,20 +468,57 @@ Best regards`
                           </button>
                           <button
                             className="button "
-                            onClick={(e) => {
-                              // setEmail("Unqualified");
-                              setContactId(ele.id);
-                              setEncodeId(null);
-                              // setEmailLang(ele.properties.hs_language)
+                            onClick={() => {
+                              // // setEmail("Unqualified");
+                              // setContactId(ele.id);
+                              // setEncodeId(null);
+                              // // setEmailLang(ele.properties.hs_language)
+                              // UnqualifiedContact(
+                              //   e,
+                              //   ele.id,
+                              //   ele.properties.firstname,
+                              //   ele.properties.email,
+                              //   ele.properties.hs_language
+                              // );
+
+                                SetOpenModel(true);
+                                setContactId(ele.id);
+                                setEncodeId(ele.properties.encode_id);
+                                setLoadingSendEmail();
+                              setEmailLang(ele.properties.hs_language);
+                              setEmailType("UnQualified");
+                                setEmailBody(
+                                  `${
+                                    ele.properties.hs_language != "ar"
+                                      ? `Dear ${ele.properties.firstname},
+I hope this email finds you well.
+Thank you for considering us for your project and for filling up the Inquiry form. We appreciate your trust. We have received and reviewed it.
+After careful consideration, we regret to inform you that we are unable to proceed with your project at this time. This decision was not made lightly, and we understand the importance of your endeavor.
+apologize for any inconvenience this may cause and hope you will find the perfect fit for your project completion.
+there is anything else we can do for you, please do not hesitate to contact us.
+Best regards 4Space Team`
+                                      : `عزيزي ${ele.properties.firstname}
+.أتمنى أن تكون بخير 
+    4Space شكرًا لك على اختيار
+ لاحتياجات مشروعك وعلى تخصيص الوقت لملء نموذج الاستفسار الخاص بنا نقدر ثقتك في خبرتنا بشكل كبير
+  لقد قمنا بمراجعة تقديم مشروعك بعناية, وبسبب التزاماتنا الحالية مع مشاريع أخرى، لا نستطيع قبول مشاريع جديدة في هذا الوقت. نعتقد أن كل مشروع يستحق اهتمامنا الكامل وتفانينا للحفاظ على المعايير العالية التي نعتز بها
+    نأسف لأي إزعاج قد يسببه هذا ونأمل أن تجد الشريك المناسب لتحقيق متطلبات مشروعك. يرجى أن تضعنا في اعتبارك لمبادراتك المستقبلية، حيث سيسرنا إعادة النظر في مشروعك عندما تسمح طاقتنا بذلك
+    إذا كان هناك أي شيء آخر يمكننا مساعدتك به أو إذا كان لديك أي مشاريع أخرى، لا تتردد في التواصل معنا
+   .شكرًا مرة أخرى على اهتمامك بالعمل معنا 
+    أطيب التحيات، 
+
+`
+                                  } `
+                                );
+                                // setEmail("Qualified");
+                                setEmail(ele.properties.email);
+                                setEmailLang(ele.properties.hs_language);
+                            
+                              
+                              
 
 
-                              UnqualifiedContact(
-                                e,
-                                ele.id,
-                                ele.properties.firstname,
-                                ele.properties.email,
-                                ele.properties.hs_language
-                              );
+
                             }}
                             style={{
                               cursor: "pointer",
