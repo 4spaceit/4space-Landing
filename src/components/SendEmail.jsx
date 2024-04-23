@@ -73,6 +73,7 @@ const SendEmail = () => {
    });
   const [contactId, setContactId] = useState();
   const [encodeID, setEncodeId] = useState("");
+  const [userName,setUserName]=useState("")
 
   function textToHTMLMarkup(text) {
     // Escape special characters in the text
@@ -109,35 +110,39 @@ const SendEmail = () => {
     if (emailType === "Qualified") {
       //  https://4space-backend.vercel.app
        res = await fetch("https://4space-backend.vercel.app/send-email", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          email,
-          emailBody,
-          contactId,
-          encodeID,
-          emailIndustryLink,
-          emailLang,
-        }),
-      });
-      
-    } else {
-
-      // https://4space-backend.vercel.app
-
-       res = await fetch("https://4space-backend.vercel.app/unqualified-contact", {
          method: "POST",
          headers: {
            "Content-Type": "application/json",
          },
          body: JSON.stringify({
-           contactId: contactId,
            email,
            emailBody,
+           contactId,
+           encodeID,
+           emailIndustryLink,
+           emailLang,
+           userName,
          }),
        });
+      
+    } else {
+      // https://4space-backend.vercel.app
+       res = await fetch(
+         "https://4space-backend.vercel.app/unqualified-contact",
+         {
+           method: "POST",
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: JSON.stringify({
+             contactId: contactId,
+             email,
+             emailBody,
+             userName,
+             emailLang,
+           }),
+         }
+       );
     }
     if (res.status == 200) {
       setContacts(contacts.filter((contact) => contact.id != contactId));
@@ -410,6 +415,7 @@ const SendEmail = () => {
                               setEncodeId(ele.properties.encode_id);
                               setLoadingSendEmail();
                               setEmailLang(ele.properties.hs_language)
+                              setUserName(ele.properties.firstname);
                               setEmailBody(
                                 `${
                                   ele.properties.hs_language != "ar"
@@ -487,6 +493,7 @@ Best regards`
                                 setLoadingSendEmail();
                               setEmailLang(ele.properties.hs_language);
                               setEmailType("UnQualified");
+                              setUserName(ele.properties.firstname);
                                 setEmailBody(
                                   `${
                                     ele.properties.hs_language != "ar"
