@@ -74,7 +74,14 @@ const SendEmail = () => {
    });
   const [contactId, setContactId] = useState();
   const [encodeID, setEncodeId] = useState("");
-  const [userName,setUserName]=useState("")
+  const [userName, setUserName] = useState("")
+
+
+  useEffect(() => {
+    if (sessionStorage.getItem("is-login")) {
+      SetShowContent(true);
+  } 
+},[])
 
   function textToHTMLMarkup(text) {
     // Escape special characters in the text
@@ -96,10 +103,11 @@ const SendEmail = () => {
     e.preventDefault();
 
     if (
-      e.target.elements.email.value === "inquiry@4space.ae" &&
-      e.target.elements.password.value === "4Space12345!"
+      ( e.target.elements.email.value === "inquiry@4space.ae" &&
+        e.target.elements.password.value === "4Space12345!" ) 
     ) {
       SetShowContent(true);
+      sessionStorage.setItem("is-login", true);
     }
   };
 
