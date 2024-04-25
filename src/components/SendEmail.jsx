@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Logo from "../svg/logo_black.svg?react";
 
 const SendEmail = () => {
+  const fourSpace = "4Space";
   const idustryArText = {
     Restaurant: "رابطًا لملفنا التعريفي الخاص بالمطاعم",
     Retail: "رابطًا لملفنا التعريفي الخاص بيع بالتجزئة",
@@ -424,20 +425,20 @@ I hope this email finds you well.
 Thank you for taking the time to reach out and inquire about our design services at 4Space Design.
 Kindly ask you to fill out the Design Inquiry Form so we can capture a little more detail about your project.
 Once filled, one of our team will contact you to discuss the details of your project.
-I've added a link to our <link here>  to give you a better understanding of 4Space Design. We are looking forward to hearing from you very soon.
-Best regards`
-                                    : `عزيزي ${ele.properties.firstname}
- . نآمل أن تكون بخير
-نشكرك على الوقت الذي أمضيته للتواصل والاستفسار عن خدمات التصميم لدينا في
-    . 4Space Design 
-  نرجو منك ملىء نموذج الاستفسار عن التصميم  حتى نتمكن من الحصول على كل التفاصيل المتعلقة بمشروعك 
- .بمجرد أن تقوم بملئها، سيقوم بالإتصل بك أحد أعضاء فريقنا لمناقشة تفاصيل مشروعك
-   لقد أضفت رابطًا إلى الملف التعريفي الخاص ليمنحك فهمًا أفضل عن تصاميم  
-    . 4Space 
- . ونحن نتطلع دائما” للرد من قبلكم 
- . أطيب التحيات
-
+We have added a link to our <link here>  to give you a better understanding of 4Space Design. 
+We are looking forward to hearing from you very soon.
+Kind regards,
+4Space Team.
 `
+                                    : `مرحباً ${ele.properties.firstname}
+ .نآمل أن تكون بخير
+نشكرك على الوقت الذي أمضيته للتواصل والاستفسار عن خدمات التصميم لدينا في
+    .4Space Design 
+    و نرجو منك ملىء نموذج الاستفسار عن التصميم  حتى نتمكن من الحصول على كل التفاصيل المتعلقة بمشروعك , بمجرد أن تقوم بملئها، سيقوم بالإتصال بك أحد أعضاء فريقنا لمناقشة تفاصيل مشروعك
+   لقد أضفنا رابطًا إلى الملف التعريفي الخاص ليمنحك فهمًا أفضل عن تصاميم  
+    .4Space 
+ .ونحن نتطلع دائما” للرد من قبلكم 
+أطيب التحيات،`
                                 } `
                               );
                                setEmailType("Qualified");
@@ -501,31 +502,25 @@ Best regards`
 I hope this email finds you well.
 Thank you for considering us for your project and for filling up the Inquiry form. We appreciate your trust. We have received and reviewed it.
 After careful consideration, we regret to inform you that we are unable to proceed with your project at this time. This decision was not made lightly, and we understand the importance of your endeavor.
-apologize for any inconvenience this may cause and hope you will find the perfect fit for your project completion.
-there is anything else we can do for you, please do not hesitate to contact us.
-Best regards 4Space Team`
-                                      : `عزيزي ${ele.properties.firstname}
-.أتمنى أن تكون بخير 
-    4Space شكرًا لك على اختيار
+Apologize for any inconvenience this may cause and hope you will find the perfect fit for your project completion.
+If there is anything else we can do for you, please do not hesitate to contact us.
+Kind regards,
+4Space Team.
+`
+                                      : `مرحباً ${ele.properties.firstname}
+أتمنى أن تكون بخير 
+   ${fourSpace}   شكرًا لك على اختيار  
  لاحتياجات مشروعك وعلى تخصيص الوقت لملء نموذج الاستفسار الخاص بنا نقدر ثقتك في خبرتنا بشكل كبير
   لقد قمنا بمراجعة تقديم مشروعك بعناية, وبسبب التزاماتنا الحالية مع مشاريع أخرى، لا نستطيع قبول مشاريع جديدة في هذا الوقت. نعتقد أن كل مشروع يستحق اهتمامنا الكامل وتفانينا للحفاظ على المعايير العالية التي نعتز بها
     نأسف لأي إزعاج قد يسببه هذا ونأمل أن تجد الشريك المناسب لتحقيق متطلبات مشروعك. يرجى أن تضعنا في اعتبارك لمبادراتك المستقبلية، حيث سيسرنا إعادة النظر في مشروعك عندما تسمح طاقتنا بذلك
     إذا كان هناك أي شيء آخر يمكننا مساعدتك به أو إذا كان لديك أي مشاريع أخرى، لا تتردد في التواصل معنا
-   .شكرًا مرة أخرى على اهتمامك بالعمل معنا 
-    أطيب التحيات، 
-
-`
+   شكرًا مرة أخرى على اهتمامك بالعمل معنا 
+    أطيب التحيات،`
                                   } `
                                 );
                                 // setEmail("Qualified");
                                 setEmail(ele.properties.email);
                                 setEmailLang(ele.properties.hs_language);
-                            
-                              
-                              
-
-
-
                             }}
                             style={{
                               cursor: "pointer",
