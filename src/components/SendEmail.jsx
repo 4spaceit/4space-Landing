@@ -96,8 +96,8 @@ const SendEmail = () => {
     e.preventDefault();
 
     if (
-      e.target.elements.email.value === "test@gmail.com" &&
-      e.target.elements.password.value === "123"
+      e.target.elements.email.value === "inquiry@4space.ae" &&
+      e.target.elements.password.value === "4Space12345!"
     ) {
       SetShowContent(true);
     }
