@@ -67,7 +67,19 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
        headers: { "Content-Type": "application/json" },
        body: jsonString,
      });
-
+      const res = await fetch(
+        "https://4space-backend.vercel.app/send-email-action",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            type: "first",
+            userName: dataCrm.properties.firstname,
+          }),
+        }
+      );
     try {
       const response = await fetch(
         "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
