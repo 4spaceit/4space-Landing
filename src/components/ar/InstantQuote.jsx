@@ -1,56 +1,87 @@
 import { useState } from "react";
 import { parseUTMParameters } from "../../utmParser";
+import IntlTelInput from "react-intl-tel-input";
+import "react-intl-tel-input/dist/main.css";
 
 export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(false);
   const [success, setSuccess] = useState(false);
-
-  const submit = async (e) => {
-    setLoading(true);
-    e.preventDefault();
+    const [phone, setPhone] = useState("");
+    const [phoneError, setPhoneError] = useState(false);
+    const [country, setCountry] = useState();
+    const [countryCode, setCountryCode] = useState();
 
     const utmData = parseUTMParameters();
 
-    const formData = new FormData();
-    formData.append("applicant", e.target.elements.name.value);
-    formData.append("email", e.target.elements.email.value);
-    formData.append("mobile", e.target.elements.mobile.value);
-    formData.append("message", e.target.elements.message.value);
-    formData.append("location", e.target.elements.location.value);
-    formData.append("size", e.target.elements.size.value);
-    formData.append("utm_source", utmData.utm_source);
-    formData.append("utm_medium", utmData.utm_medium);
-    formData.append("utm_campaign", utmData.utm_campaign);
-    formData.append("utm_term", utmData.utm_term);
-    formData.append("utm_content", utmData.utm_content);
+  const submit = async (e) => {
+      setLoading(true);
+      e.preventDefault();
 
-    const requestOptions = {
-      method: "POST",
-      body: formData,
-      redirect: "follow",
-    };
+      const formData = new FormData();
+      formData.append("applicant", e.target.elements.name.value);
+      formData.append("email", e.target.elements.email.value);
+      formData.append("mobile", "+" + countryCode + " " + phone);
+      formData.append("message", e.target.elements.message.value);
+      formData.append("location", e.target.elements.location.value);
+      formData.append("size", e.target.elements.size.value);
+      formData.append("industry", e.target.elements.industry.value);
+      formData.append("utm_source", utmData.utm_source);
+      formData.append("utm_medium", utmData.utm_medium);
+      formData.append("utm_campaign", utmData.utm_campaign);
+      formData.append("utm_term", utmData.utm_term);
+      formData.append("utm_content", utmData.utm_content);
 
-    try {
-      const response = await fetch(
-        "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
-        requestOptions
-      );
+      const requestOptions = {
+        method: "POST",
+        body: formData,
+        redirect: "follow",
+      };
+      const dataCrm = {
+        properties: {
+          firstname: e.target.elements.name.value,
+          phone: "+" + countryCode + " " + phone,
+          email: e.target.elements.email.value,
+          project_description: e.target.elements.message.value,
+          country: country,
+          industry: e.target.elements.industry.value,
+          project_size: e.target.elements.size.value,
+          project_location: e.target.elements.location.value,
+          hs_lead_status: "NEW",
+          hs_language: "ar",
+          source: `${utmData.utm_source}`,
+          medium: `${utmData.utm_medium}`,
+          campaign: `${utmData.utm_campaign}`,
+        },
+      };
+      const jsonString = JSON.stringify(dataCrm);
 
-      if (response.ok) {
-        setSuccess(true);
-        window.location = "https://4space.ae/ar/thank-you/";
+      const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
 
-        document.getElementById("form-modal").hidden = true;
-      } else {
+      const responseCRM = await fetch(CRMURL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: jsonString,
+      });
+      try {
+        const response = await fetch(
+          "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
+          requestOptions
+        );
+
+        if (response.ok) {
+          window.location = "https://4space.ae/ar/thank-you/";
+          setSuccess(true);
+          document.getElementById("form-mobile").hidden = true;
+        } else {
+          setError(true);
+        }
+      } catch (error) {
         setError(true);
+        console.error("Error:", error);
       }
-    } catch (error) {
-      setError(true);
-      console.error("Error:", error);
-    }
 
-    setLoading(false);
+      setLoading(false);
   };
 
   return (
@@ -67,31 +98,77 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
         }}
       ></button>
       <div className="modal-content scrollable-content">
-        <form onSubmit={submit} id="form-modal">
-          <h1 className="center">اتصل بنا</h1>
+        <form className="form" onSubmit={submit} id="form-mobile">
           <div className="field">
-            <label className="label">الأسم</label>
+            <label className="label has-text-right" htmlFor="name">
+              الأسم
+            </label>
             <div className="control">
-              <input className="input" type="text" name="name" required />
+              <input
+                className="input"
+                type="text"
+                name="name"
+                id="name"
+                required
+              />
             </div>
           </div>
-
           <div className="field">
-            <label className="label">البريد الإلكتروني</label>
+            <label className="label has-text-right" htmlFor="email">
+              البريد الإلكتروني
+            </label>
             <div className="control">
-              <input className="input" type="email" name="email" required />
+              <input
+                className="input"
+                type="email"
+                name="email"
+                id="email"
+                required
+              />
             </div>
             {/*<p className="help is-danger">This email is invalid</p>*/}
           </div>
 
+          {/* <div className="field">
+          <label className="label has-text-right" htmlFor="mobile">
+            رقم الهاتف
+          </label>
+          <div className="control">
+            <input
+              className="input"
+              type="tel"
+              id="mobile"
+              name="mobile"
+              required
+            />
+          </div>
+        </div> */}
+
           <div className="field">
-            <label className="label">رقم الهاتف</label>
-            <div className="control">
-              <input className="input" type="tel" name="mobile" required />
-            </div>
+            <label className="label has-text-right">الجوال</label>
+            <IntlTelInput
+              containerClassName="intl-tel-input btest  selected-flag"
+              inputClassName="  column  borderReduis "
+              name="phone"
+              style={{ direction: "ltr" }}
+              // style={{direction:"ltr"}}
+              defaultCountry="ae"
+              separateDialCode={true}
+              telInputProps={{
+                required: true,
+
+                className: "",
+                // "border w-full border-gray-300 rounded-md px-3 py-2 focus:ring-secondry outline-none focus:border-secondry direction-fix",
+              }}
+              onPhoneNumberChange={(status, value, countryData, number, id) => {
+                setPhone(number);
+                setCountry(countryData.iso2);
+                setCountryCode(countryData.dialCode);
+              }}
+            />
           </div>
 
-          <h3 className="float-left mt-4 has-text-right">عن المشروع</h3>
+          <h3 className="float-left mt-4 has-text-right"> عن المشروع</h3>
 
           <div className="field field-double mt-3">
             <div className="location">
@@ -110,7 +187,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
             <div className="size">
               <label className="label has-text-right" htmlFor="size">
-                المساحه (قدم مربع)
+                المساحة (متر مربع)
               </label>
               <div className="control">
                 <input
@@ -124,7 +201,31 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             </div>
           </div>
 
-          <div className="field field-new   mb-0">
+          <div className="field">
+            <label className="label has-text-right">
+              {" "}
+              <strong> الخدمة</strong>
+            </label>
+            <div className="control ">
+              <div className="select" style={{ width: "100%" }}>
+                <select style={{ width: "100%" }} name="industry" required>
+                  <option value="">الرجاء تحديد عنصر من القائمة</option>
+                  <option value="Residential">سكني</option>
+                  <option value="Hotel"> فندقى </option>
+                  <option value="Commercial">تجاري / مكاتب</option>
+                  <option value="Retail"> تجزئة</option>
+                  <option value="Leisure">ترفيه / تسلية</option>
+                  <option value="Restaurant">
+                    مطعم / مقهى / مأكولات ومشروبات
+                  </option>
+                  <option value="Cultural">ثقافي / تعليمي</option>
+                  <option value="Other">آخرين</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div className="field field-new  ">
             <label className="label has-text-right" htmlFor="message">
               وصف المشروع
             </label>
@@ -140,14 +241,13 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
           {error && (
             <div className="notification is-warning">
-              حدث خطأ ما. يرجى المحاولة مرة أخرى.
+              لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى.
             </div>
           )}
-
-          <div className="field is-align-items-flex-center is-pulled-left">
-            <div className="control">
+          <div className="field">
+            <div className="control is-align-items-flex-center	">
               <button
-                className="button buttonOutlined button-fix"
+                className="button buttonOutlined is-centered"
                 type="submit"
                 disabled={loading}
                 aria-label="submit"

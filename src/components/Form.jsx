@@ -46,11 +46,12 @@ export default function Form(props) {
             phone: "+" + countryCode + " " + phone,
             email: e.target.elements.email.value,
             project_description: e.target.elements.message.value,
-             country: country,
+            country: country,
             industry: e.target.elements.industry.value,
             project_size: e.target.elements.size.value,
             project_location: e.target.elements.location.value,
             hs_lead_status: "NEW",
+            hs_language: "en",
             // ip_country:countryCode,
             source: `${utmData.utm_source}`,
             medium: `${utmData.utm_medium}`,
@@ -66,7 +67,6 @@ export default function Form(props) {
           headers: { "Content-Type": "application/json" },
           body: jsonString,
         });
-
 
     try {
       const response = await fetch(
@@ -131,7 +131,7 @@ export default function Form(props) {
         </div> */}
 
         <div className="field">
-          <label className="label">Mobile</label>
+          <label className="label has-text-left">Mobile</label>
           <IntlTelInput
             containerClassName="intl-tel-input btest  selected-flag"
             inputClassName="  column  borderReduis "
@@ -145,7 +145,6 @@ export default function Form(props) {
               // "border w-full border-gray-300 rounded-md px-3 py-2 focus:ring-secondry outline-none focus:border-secondry direction-fix",
             }}
             onPhoneNumberChange={(status, value, countryData, number, id) => {
-              console.log("value", countryData.dialCode);
               setPhone(number);
               setCountry(countryData.iso2);
               setCountryCode(countryData.dialCode);
