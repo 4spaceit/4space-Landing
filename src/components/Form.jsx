@@ -67,6 +67,19 @@ export default function Form(props) {
           headers: { "Content-Type": "application/json" },
           body: jsonString,
         });
+     const data = await responseCRM.json();
+     const rescode = await fetch(
+       "https://4space-backend.vercel.app/update-code-crm",
+       {
+         method: "POST",
+         headers: {
+           "Content-Type": "application/json",
+         },
+         body: JSON.stringify({
+           id: data.id,
+         }),
+       }
+     );
     
       const res = await fetch(
         "https://4space-backend.vercel.app/send-email-action",
