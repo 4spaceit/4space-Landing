@@ -75,7 +75,8 @@ const SendEmail = () => {
   const [contactId, setContactId] = useState();
   const [encodeID, setEncodeId] = useState("");
   const [userName, setUserName] = useState("")
-
+  const [isActive, setIsActive]=useState(false)
+  const [deleteConfirmationText, setDeleteConfirmationText] = useState("");
 
   useEffect(() => {
     if (sessionStorage.getItem("is-login")) {
@@ -206,7 +207,54 @@ const SendEmail = () => {
     // console.log("data",await data.json())
   };
 
-  useEffect(() => {
+  const deleteLead = async (leadId) => {
+      setLoadingSendEmail(true);
+    const res = await fetch(`https://4space-backend.vercel.app/delete-lead/${leadId}`, {
+      method: "DELETE",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+        if (res.status == 200) {
+          setContacts(contacts.filter((contact) => contact.id != leadId));
+          if (deleteConfirmationText === "CV") {
+              const res = await fetch("https://4space-backend.vercel.app/send-email-cv", {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  userName,
+                  email,
+                  emailLang,
+                }),
+              });
+            console.log("send email")
+          } else if (deleteConfirmationText === "Supplier") {
+             const res = await fetch(
+               "https://4space-backend.vercel.app/send-email-supplier",
+               {
+                 method: "POST",
+                 headers: {
+                   "Content-Type": "application/json",
+                 },
+                 body: JSON.stringify({
+                   userName,
+                   email,
+                   emailLang,
+                 }),
+               }
+             );
+             console.log("send email");
+          }
+        } else {
+          setError(true);
+        }
+        setIsActive(false)
+        setLoadingSendEmail(false);
+  
+  }
+  useEffect(() => { 
     getContacts();
   }, []);
 
@@ -226,7 +274,7 @@ const SendEmail = () => {
     }, []);
   return (
     <div>
-         {!showContent && (
+      {!showContent && (
         <div
           style={{
             display: "flex",
@@ -294,7 +342,7 @@ const SendEmail = () => {
             </form>
           </div>
         </div>
-      )} 
+      )}
 
       {showContent && (
         <>
@@ -423,7 +471,7 @@ const SendEmail = () => {
                               setContactId(ele.id);
                               setEncodeId(ele.properties.encode_id);
                               setLoadingSendEmail();
-                              setEmailLang(ele.properties.hs_language)
+                              setEmailLang(ele.properties.hs_language);
                               setUserName(ele.properties.firstname);
                               setEmailBody(
                                 `${
@@ -449,7 +497,7 @@ Kind regards,
 أطيب التحيات،`
                                 } `
                               );
-                               setEmailType("Qualified");
+                              setEmailType("Qualified");
                               // setEmail("Qualified");
                               setEmail(ele.properties.email);
                               setEmailLang(ele.properties.hs_language);
@@ -459,7 +507,11 @@ Kind regards,
                                     ? `${
                                         ele.properties.industry === "Other"
                                           ? "رابطًا لملفنا التعريفي الخاص بيع بالتجزئة بنا"
-                                          : `${idustryArText[`${ele.properties.industry}`]}`
+                                          : `${
+                                              idustryArText[
+                                                `${ele.properties.industry}`
+                                              ]
+                                            }`
                                       }`
                                     : `${
                                         ele.properties.industry === "Other"
@@ -471,7 +523,6 @@ Kind regards,
                                     ? industryLinks[ele.properties.industry]
                                     : industryLinksAr[ele.properties.industry],
                               });
-
                             }}
                             style={{
                               cursor: "pointer",
@@ -484,29 +535,17 @@ Kind regards,
                           <button
                             className="button "
                             onClick={() => {
-                              // // setEmail("Unqualified");
-                              // setContactId(ele.id);
-                              // setEncodeId(null);
-                              // // setEmailLang(ele.properties.hs_language)
-                              // UnqualifiedContact(
-                              //   e,
-                              //   ele.id,
-                              //   ele.properties.firstname,
-                              //   ele.properties.email,
-                              //   ele.properties.hs_language
-                              // );
-
-                                SetOpenModel(true);
-                                setContactId(ele.id);
-                                setEncodeId(ele.properties.encode_id);
-                                setLoadingSendEmail();
+                              SetOpenModel(true);
+                              setContactId(ele.id);
+                              setEncodeId(ele.properties.encode_id);
+                              setLoadingSendEmail();
                               setEmailLang(ele.properties.hs_language);
                               setEmailType("UnQualified");
                               setUserName(ele.properties.firstname);
-                                setEmailBody(
-                                  `${
-                                    ele.properties.hs_language != "ar"
-                                      ? `Dear ${ele.properties.firstname},
+                              setEmailBody(
+                                `${
+                                  ele.properties.hs_language != "ar"
+                                    ? `Dear ${ele.properties.firstname},
 I hope this email finds you well.
 Thank you for considering us for your project and for filling up the Inquiry form. We appreciate your trust. We have received and reviewed it.
 After careful consideration, we regret to inform you that we are unable to proceed with your project at this time. This decision was not made lightly, and we understand the importance of your endeavor.
@@ -515,7 +554,7 @@ If there is anything else we can do for you, please do not hesitate to contact u
 Kind regards,
 4Space Team.
 `
-                                      : `مرحباً ${ele.properties.firstname}
+                                    : `مرحباً ${ele.properties.firstname}
 أتمنى أن تكون بخير 
    ${fourSpace}   شكرًا لك على اختيار  
  لاحتياجات مشروعك وعلى تخصيص الوقت لملء نموذج الاستفسار الخاص بنا نقدر ثقتك في خبرتنا بشكل كبير
@@ -524,11 +563,11 @@ Kind regards,
     إذا كان هناك أي شيء آخر يمكننا مساعدتك به أو إذا كان لديك أي مشاريع أخرى، لا تتردد في التواصل معنا
    شكرًا مرة أخرى على اهتمامك بالعمل معنا 
     أطيب التحيات،`
-                                  } `
-                                );
-                                // setEmail("Qualified");
-                                setEmail(ele.properties.email);
-                                setEmailLang(ele.properties.hs_language);
+                                } `
+                              );
+                              // setEmail("Qualified");
+                              setEmail(ele.properties.email);
+                              setEmailLang(ele.properties.hs_language);
                             }}
                             style={{
                               cursor: "pointer",
@@ -540,12 +579,114 @@ Kind regards,
                               ? "Loading..."
                               : "Unqualified"}
                           </button>
+
+                          <button
+                            className="button "
+                            onClick={() => {
+                              // deleteLead(ele.id);
+                              setDeleteConfirmationText("Supplier");
+                              setIsActive(true);
+                              setContactId(ele.id);
+                              setUserName(ele.properties.firstname);
+                              setEmail(ele.properties.email);
+                              setEmailLang(ele.properties.hs_language);
+                            }}
+                            style={{
+                              cursor: "pointer",
+                              boxShadow: "none",
+                              outline: "none",
+                            }} // Remove hover effect and adjust styles
+                          >
+                            Supplier
+                          </button>
+
+                          <button
+                            className="button "
+                            onClick={() => {
+                              // deleteLead(ele.id);
+                              setDeleteConfirmationText("CV");
+                              setIsActive(true);
+                              setContactId(ele.id);
+                              setUserName(ele.properties.firstname);
+                              setEmail(ele.properties.email);
+                              setEmailLang(ele.properties.hs_language);
+                            }}
+                            style={{
+                              cursor: "pointer",
+                              boxShadow: "none",
+                              outline: "none",
+                            }} // Remove hover effect and adjust styles
+                          >
+                            CV
+                          </button>
+
+                          <button
+                            className="button "
+                            onClick={() => {
+                              // deleteLead(ele.id);
+                              setDeleteConfirmationText("Delete");
+                              setIsActive(true);
+                              setContactId(ele.id);
+                            }}
+                            style={{
+                              cursor: "pointer",
+                              boxShadow: "none",
+                              outline: "none",
+                            }} // Remove hover effect and adjust styles
+                          >
+                            Delete
+                          </button>
                         </div>
                       </td>
                     </tr>
                   ))}
                 </tbody>
               </table>
+            </div>
+
+            <div className={`modal ${isActive ? "is-active" : ""}`}>
+              <div className="modal-background "></div>
+              <div className="modal-card">
+                <header className="modal-card-head">
+                  <p className="modal-card-title" style={{ padding: "20px" }}>
+                    {deleteConfirmationText} Lead
+                  </p>
+                  <button
+                    className="delete"
+                    aria-label="close"
+                    onClick={() => setIsActive(false)}
+                  ></button>
+                </header>
+                <section className="modal-card-body has-text-black">
+                  <p>
+                    Are you sure you want to {deleteConfirmationText} this lead?
+                  </p>
+                </section>
+                <footer className="modal-card-foot model-delete-container">
+                  <button
+                    className="button "
+                    style={{
+                      cursor: "pointer",
+                      boxShadow: "none",
+                      outline: "none",
+                    }}
+                    onClick={() => deleteLead(contactId)}
+                  >
+                    submit
+                  </button>
+                  <button
+                    className="button "
+                    style={{
+                      cursor: "pointer",
+                      boxShadow: "none",
+                      outline: "none",
+                    }}
+                    onClick={() => setIsActive(false)}
+                  >
+                    Cancel
+                  </button>
+                </footer>
+              </div>
             </div>
           </div>
         </>
@@ -575,7 +716,7 @@ Kind regards,
                   id="message"
                   required
                   rows="20"
-                  style={{ textAlign: emailLang=="ar"?"right":"left" }}
+                  style={{ textAlign: emailLang == "ar" ? "right" : "left" }}
                   // defaultValue={emailBody}
                   value={emailBody}
                   onChange={(e) => setEmailBody(e.target.value)}
@@ -632,9 +773,6 @@ Kind regards,
           {contactProjectInf}
         </div>
       </div>
-
-
-      
     </div>
   );
 };

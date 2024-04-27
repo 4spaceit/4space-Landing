@@ -208,6 +208,12 @@ strong {
   border-color: inherit;
   box-shadow: none;
 }
+.model-delete-container .button:hover {
+  background-color:black !important;
+  color: inherit;
+  border-color: inherit;
+  box-shadow: none;
+}
 
  @media screen and (max-width: 768px) {
     .table-container {
