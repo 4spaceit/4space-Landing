@@ -118,22 +118,38 @@ const SendEmail = () => {
     const emailBody = textToHTMLMarkup(e.target.elements.emailBody.value);
     let res
     if (emailType === "Qualified") {
+      
       //  https://4space-backend.vercel.app
-       res = await fetch("https://4space-backend.vercel.app/send-email", {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-         },
-         body: JSON.stringify({
-           email,
-           emailBody,
-           contactId,
-           encodeID,
-           emailIndustryLink,
-           emailLang,
-           userName,
-         }),
-       });
+      if (!encodeID) {
+        console.log("here is is")
+         const rescode = await fetch(
+           "https://4space-backend.vercel.app/update-code-crm",
+           {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json",
+             },
+             body: JSON.stringify({
+               id: contactId,
+             }),
+           }
+         );
+     }
+        res = await fetch("https://4space-backend.vercel.app/send-email", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            email,
+            emailBody,
+            contactId,
+            encodeID: encodeID ? encodeID : btoa(contactId),
+            emailIndustryLink,
+            emailLang,
+            userName,
+          }),
+        });
       
     } else {
       // https://4space-backend.vercel.app
@@ -503,8 +519,13 @@ Kind regards,
                               setEmailLang(ele.properties.hs_language);
                               setEmailIndustryLink({
                                 text:
-                                  ele.properties.hs_language != "en"
-                                    ? `${
+                                  ele.properties.hs_language != "ar"
+                                    ?`${
+                                        ele.properties.industry === "Other"
+                                          ? "4SPACE Company Profile 2024"
+                                          : `4SPACE Company Profile 2024 ${ele.properties.industry}`
+                                      }`
+                                    :  `${
                                         ele.properties.industry === "Other"
                                           ? "رابطًا لملفنا التعريفي الخاص بيع بالتجزئة بنا"
                                           : `${
@@ -512,11 +533,6 @@ Kind regards,
                                                 `${ele.properties.industry}`
                                               ]
                                             }`
-                                      }`
-                                    : `${
-                                        ele.properties.industry === "Other"
-                                          ? "4SPACE Company Profile 2024"
-                                          : `4SPACE Company Profile 2024 ${ele.properties.industry}`
                                       }`,
                                 link:
                                   ele.properties.hs_language != "ar"

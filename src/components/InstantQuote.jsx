@@ -52,6 +52,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
         project_size: e.target.elements.size.value,
         project_location: e.target.elements.location.value,
         hs_lead_status: "NEW",
+        hs_language:"en",
         // ip_country:countryCode,
         source: `${utmData.utm_source}`,
         medium: `${utmData.utm_medium}`,
