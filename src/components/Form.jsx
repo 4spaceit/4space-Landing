@@ -10,7 +10,9 @@ export default function Form(props) {
      const [phone, setPhone] = useState("");
      const [phoneError, setPhoneError] = useState(false);
      const [country, setCountry] = useState();
-     const [countryCode, setCountryCode] = useState();
+  const [countryCode, setCountryCode] = useState();
+    const [errorDescription, setErrorDescription] = useState("");
+    const [errorDes, setErrorDes] = useState(false);
 
   // eslint-disable-next-line react/prop-types
   const { id } = props;
@@ -18,8 +20,18 @@ export default function Form(props) {
   const utmData = parseUTMParameters();
 
   const submit = async (e) => {
-    setLoading(true);
     e.preventDefault();
+    
+    setErrorDes(false);
+    setErrorDescription("");
+    const des = e.target.elements.message.value;
+    const words = des.trim().split(/\s+/);
+    if (words.length < 20) {
+      setErrorDes(true);
+      setErrorDescription("Description must contain at least 20 words.");
+      return;
+    }
+    setLoading(true);
 
     const formData = new FormData();
     formData.append("applicant", e.target.elements.name.value);
@@ -245,6 +257,9 @@ export default function Form(props) {
               required
             ></textarea>
           </div>
+          {errorDes && (
+            <div className="notification is-warning mt-2">{errorDescription}</div>
+          )}
         </div>
 
         {error && (

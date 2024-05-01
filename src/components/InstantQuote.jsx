@@ -11,12 +11,28 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     const [phone, setPhone] = useState("");
     const [phoneError, setPhoneError] = useState(false);
   const [country, setCountry] = useState();
-    const [countryCode, setCountryCode] = useState();
+  const [countryCode, setCountryCode] = useState();
+  const [errorDescription, setErrorDescription] = useState("");
+  const [errorDes,setErrorDes]=useState(false)
+  
+   
+
 
 
   const submit = async (e) => {
-    setLoading(true);
     e.preventDefault();
+    
+    setErrorDes(false)
+    setErrorDescription("")
+    const des = e.target.elements.message.value;
+    const words = des.trim().split(/\s+/);
+    if (words.length < 20) {
+      setErrorDes(true);
+      setErrorDescription("Description must contain at least 20 words.");
+      return;
+    }
+    
+    setLoading(true);
 
     const utmData = parseUTMParameters();
 
@@ -160,9 +176,9 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 // "border w-full border-gray-300 rounded-md px-3 py-2 focus:ring-secondry outline-none focus:border-secondry direction-fix",
               }}
               onPhoneNumberChange={(status, value, countryData, number, id) => {
-               setPhone(number);
-               setCountry(countryData.iso2);
-               setCountryCode(countryData.dialCode);
+                setPhone(number);
+                setCountry(countryData.iso2);
+                setCountryCode(countryData.dialCode);
               }}
             />
           </div>
@@ -234,6 +250,11 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 required
               ></textarea>
             </div>
+            {errorDes && (
+              <div className="notification is-warning mt-2">
+               {errorDescription}
+              </div>
+            )}
           </div>
 
           {error && (

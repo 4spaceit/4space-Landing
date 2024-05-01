@@ -10,14 +10,25 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     const [phone, setPhone] = useState("");
     const [phoneError, setPhoneError] = useState(false);
     const [country, setCountry] = useState();
-    const [countryCode, setCountryCode] = useState();
+  const [countryCode, setCountryCode] = useState();
+    const [errorDescription, setErrorDescription] = useState("");
+    const [errorDes, setErrorDes] = useState(false);
 
     const utmData = parseUTMParameters();
 
   const submit = async (e) => {
+    e.preventDefault();
+    
+    setErrorDes(false);
+    setErrorDescription("");
+    const des = e.target.elements.message.value;
+    const words = des.trim().split(/\s+/);
+    if (words.length < 20) {
+       setErrorDes(true);
+       setErrorDescription("يجب أن تحتوي الوصف على ما لا يقل عن 20 كلمة.");
+       return;
+      }
       setLoading(true);
-      e.preventDefault();
-
       const formData = new FormData();
       formData.append("applicant", e.target.elements.name.value);
       formData.append("email", e.target.elements.email.value);
@@ -263,6 +274,9 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 required
               ></textarea>
             </div>
+            {errorDes && (
+              <div className="notification is-warning mt-2">{errorDescription}</div>
+            )}
           </div>
 
           {error && (
