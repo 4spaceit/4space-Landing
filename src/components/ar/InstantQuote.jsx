@@ -23,9 +23,9 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     setErrorDescription("");
     const des = e.target.elements.message.value;
     const words = des.trim().split(/\s+/);
-    if (words.length < 20) {
+    if (words.length < 5) {
        setErrorDes(true);
-       setErrorDescription("يجب أن تحتوي الوصف على ما لا يقل عن 20 كلمة.");
+       setErrorDescription("يجب أن تحتوي الوصف على ما لا يقل عن 5   كلمة.");
        return;
       }
       setLoading(true);

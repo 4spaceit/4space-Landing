@@ -26,9 +26,9 @@ export default function Form(props) {
     setErrorDescription("");
     const des = e.target.elements.message.value;
     const words = des.trim().split(/\s+/);
-    if (words.length < 20) {
+    if (words.length < 5) {
       setErrorDes(true);
-      setErrorDescription("Description must contain at least 20 words.");
+      setErrorDescription("Description must contain at least 5 words.");
       return;
     }
     setLoading(true);
