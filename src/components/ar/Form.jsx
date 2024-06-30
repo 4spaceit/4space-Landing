@@ -44,7 +44,7 @@ export default function Form(props) {
        formData.append("utm_source", utmData.utm_source);
        formData.append("utm_medium", utmData.utm_medium);
        formData.append("utm_campaign", utmData.utm_campaign);
-       formData.append("utm_term", utmData.utm_term);
+       formData.append("utm_term", decodeURIComponent(utmData.utm_term));
        formData.append("utm_content", utmData.utm_content);
 
        const requestOptions = {
