@@ -2,6 +2,7 @@ import { useState } from "react";
 import { parseUTMParameters } from "../utmParser";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
+import { parsePhoneNumber } from "libphonenumber-js";
 
 export default function Form(props) {
   const [loading, setLoading] = useState(false);
@@ -18,6 +19,18 @@ export default function Form(props) {
   const { id } = props;
 
   const utmData = parseUTMParameters();
+    const validatePhoneNumber = (phone, countryCode) => {
+      try {
+        const phoneNumber = parsePhoneNumber(`+${countryCode}${phone}`);
+        return phoneNumber.isValid();
+      } catch (error) {
+        return false;
+      }
+    };
+
+    const sanitizePhoneNumber = (phone) => {
+      return phone.replace(/\D/g, "");
+    };
 
   const submit = async (e) => {
     e.preventDefault();
@@ -31,6 +44,12 @@ export default function Form(props) {
       setErrorDescription("Description must contain at least 5 words.");
       return;
     }
+      const sanitizedPhone = sanitizePhoneNumber(phone);
+
+      if (!validatePhoneNumber(sanitizedPhone, countryCode)) {
+        setPhoneError(true);
+        return;
+      }
     setLoading(true);
 
     const formData = new FormData();
@@ -124,6 +143,7 @@ export default function Form(props) {
       setError(true);
       console.error("Error:", error);
     }
+  
 
     setLoading(false);
   };
@@ -157,19 +177,9 @@ export default function Form(props) {
               required
             />
           </div>
-          {/*<p className="help is-danger">This email is invalid</p>*/}
         </div>
 
         {/* <div className="field">
-          <label className="label has-text-left" htmlFor="mobile">
-            Mobile
-          </label>
-          <div className="control">
-            <input className="input" type="tel" id="mobile" name="mobile" />
-          </div>
-        </div> */}
-
-        <div className="field">
           <label className="label has-text-left">Mobile</label>
           <IntlTelInput
             containerClassName="intl-tel-input btest  selected-flag"
@@ -189,6 +199,33 @@ export default function Form(props) {
               setCountryCode(countryData.dialCode);
             }}
           />
+        </div> */}
+        <div className="field">
+          <label className="label">Mobile</label>
+          <IntlTelInput
+            containerClassName="intl-tel-input btest selected-flag"
+            inputClassName="column borderReduis"
+            name="phone"
+            defaultCountry="ae"
+            separateDialCode={true}
+            telInputProps={{
+              required: true,
+            }}
+            onPhoneNumberChange={(status, value, countryData, number, id) => {
+              const sanitizedPhone = sanitizePhoneNumber(number);
+              setPhone(sanitizedPhone);
+              setCountry(countryData.iso2);
+              setCountryCode(countryData.dialCode);
+              setPhoneError(
+                !validatePhoneNumber(sanitizedPhone, countryData.dialCode)
+              );
+            }}
+          />
+          {phoneError && (
+            <p className="help is-danger">
+              Invalid phone number for selected country
+            </p>
+          )}
         </div>
 
         <h3 className="float-left mt-4 has-text-left"> About The Project</h3>
@@ -258,7 +295,9 @@ export default function Form(props) {
             ></textarea>
           </div>
           {errorDes && (
-            <div className="notification is-warning mt-2">{errorDescription}</div>
+            <div className="notification is-warning mt-2">
+              {errorDescription}
+            </div>
           )}
         </div>
 
@@ -288,3 +327,6 @@ export default function Form(props) {
     </div>
   );
 }
+
+
+

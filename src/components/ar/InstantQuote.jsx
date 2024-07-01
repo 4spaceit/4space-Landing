@@ -2,6 +2,7 @@ import { useState } from "react";
 import { parseUTMParameters } from "../../utmParser";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
+import { parsePhoneNumber } from "libphonenumber-js";
 
 export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [loading, setLoading] = useState(false);
@@ -14,7 +15,19 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     const [errorDescription, setErrorDescription] = useState("");
     const [errorDes, setErrorDes] = useState(false);
 
-    const utmData = parseUTMParameters();
+  const utmData = parseUTMParameters();
+    const validatePhoneNumber = (phone, countryCode) => {
+      try {
+        const phoneNumber = parsePhoneNumber(`+${countryCode}${phone}`);
+        return phoneNumber.isValid();
+      } catch (error) {
+        return false;
+      }
+    };
+
+    const sanitizePhoneNumber = (phone) => {
+      return phone.replace(/\D/g, "");
+    };
 
   const submit = async (e) => {
     e.preventDefault();
@@ -27,7 +40,14 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
        setErrorDes(true);
        setErrorDescription("يجب أن تحتوي الوصف على ما لا يقل عن 5   كلمة.");
        return;
+    }
+      const sanitizedPhone = sanitizePhoneNumber(phone);
+
+      if (!validatePhoneNumber(sanitizedPhone, countryCode)) {
+        setPhoneError(true);
+        return;
       }
+
       setLoading(true);
       const formData = new FormData();
       formData.append("applicant", e.target.elements.name.value);
@@ -181,7 +201,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           </div>
         </div> */}
 
-          <div className="field">
+          {/* <div className="field">
             <label className="label has-text-right">الجوال</label>
             <IntlTelInput
               containerClassName="intl-tel-input btest  selected-flag"
@@ -203,6 +223,35 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                 setCountryCode(countryData.dialCode);
               }}
             />
+          </div> */}
+
+          <div className="field">
+            <label className="label has-text-right">Mobile</label>
+            <IntlTelInput
+              containerClassName="intl-tel-input btest selected-flag"
+              inputClassName="column borderReduis"
+              name="phone"
+              style={{ direction: "ltr" }}
+              defaultCountry="ae"
+              separateDialCode={true}
+              telInputProps={{
+                required: true,
+              }}
+              onPhoneNumberChange={(status, value, countryData, number, id) => {
+                const sanitizedPhone = sanitizePhoneNumber(number);
+                setPhone(sanitizedPhone);
+                setCountry(countryData.iso2);
+                setCountryCode(countryData.dialCode);
+                setPhoneError(
+                  !validatePhoneNumber(sanitizedPhone, countryData.dialCode)
+                );
+              }}
+            />
+            {phoneError && (
+              <p className="help is-danger">
+                هذا الرقم غير صحيح
+              </p>
+            )}
           </div>
 
           <h3 className="float-left mt-4 has-text-right"> عن المشروع</h3>
@@ -275,7 +324,9 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
               ></textarea>
             </div>
             {errorDes && (
-              <div className="notification is-warning mt-2">{errorDescription}</div>
+              <div className="notification is-warning mt-2">
+                {errorDescription}
+              </div>
             )}
           </div>
 
