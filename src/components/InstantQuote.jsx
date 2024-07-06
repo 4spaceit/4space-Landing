@@ -230,7 +230,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
             <label className="label">
               <strong>Industry</strong>
             </label>
-            <div className="control ">
+            {/* <div className="control ">
               <div className="select" style={{ width: "100%", font: "black" }}>
                 <select style={{ width: "100%" }} name="industry" required>
                   <option value="">Please select an item from the list</option>
@@ -240,6 +240,21 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                   <option value="Retail">Retail</option>
                   <option value="Hospitality">Hospitality</option>
                   <option value="Commercial">Commercial</option>
+                </select>
+              </div>
+            </div> */}
+            <div className="control ">
+              <div className="select" style={{ width: "100%", font: "black" }}>
+                <select style={{ width: "100%" }} name="industry" required>
+                  <option value="">Please select an item from the list</option>
+                  <option value="Residential">Residential</option>
+                  <option value="Hotel">Hotel</option>
+                  <option value="Commercial">Commercial / Offices</option>
+                  <option value="Retail">Retail</option>
+                  <option value="Leisure">Leisure / Entertainment</option>
+                  <option value="Restaurant">Restaurant / Café / F&B</option>
+                  <option value="Cultural">Cultural / Education</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
             </div>
