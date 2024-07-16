@@ -3,6 +3,7 @@ import { parseUTMParameters } from "../utmParser";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
 import { parsePhoneNumber } from "libphonenumber-js";
+import { useLocation } from "react-router-dom";
 
 export default function Form(props) {
   const [loading, setLoading] = useState(false);
@@ -13,7 +14,9 @@ export default function Form(props) {
      const [country, setCountry] = useState();
   const [countryCode, setCountryCode] = useState();
     const [errorDescription, setErrorDescription] = useState("");
-    const [errorDes, setErrorDes] = useState(false);
+  const [errorDes, setErrorDes] = useState(false);
+  const [errorMes, setErrorMes] = useState("");
+    const location = useLocation();
 
   // eslint-disable-next-line react/prop-types
   const { id } = props;
@@ -34,7 +37,12 @@ export default function Form(props) {
 
   const submit = async (e) => {
     e.preventDefault();
-    
+     const fullUrl =
+       typeof window !== "undefined"
+         ? `${window.location.origin}${location.pathname}${location.search}${location.hash}`
+         : "";
+     setError(false);
+     setErrorMes("");
     setErrorDes(false);
     setErrorDescription("");
     const des = e.target.elements.message.value;
@@ -87,44 +95,67 @@ export default function Form(props) {
             source: `${utmData.utm_source}`,
             medium: `${utmData.utm_medium}`,
             campaign: `${utmData.utm_campaign}`,
+            hs_context: `${utmData.hubspotUtckValue}`,
+            urlPage: fullUrl,
+            pagePath: `${location.pathname}-form/`,
           },
         };
-        const jsonString = JSON.stringify(dataCrm);
+    const jsonString = JSON.stringify(dataCrm);
 
-        const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
+    const CRMURL = "https://4space-backend.vercel.app/create-leade-at-hubspot";
 
-        const responseCRM = await fetch(CRMURL, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: jsonString,
-        });
-     const data = await responseCRM.json();
-     const rescode = await fetch(
-       "https://4space-backend.vercel.app/update-code-crm",
-       {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-         },
-         body: JSON.stringify({
-           id: data.id,
-         }),
-       }
-     );
+    const responseCRM = await fetch(CRMURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: jsonString,
+    });
+    console.log("res", responseCRM);
+    if (!responseCRM.ok) {
+      setLoading(false);
+      setError(true);
+      setErrorMes("fail submit lead,please try again");
+      return;
+    }
     
-      const res = await fetch(
-        "https://4space-backend.vercel.app/send-email-action",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            type: "first",
-            userName: dataCrm.properties.firstname,
-          }),
-        }
-      );
+    // old code start
+
+    //     const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
+
+    //     const responseCRM = await fetch(CRMURL, {
+    //       method: "POST",
+    //       headers: { "Content-Type": "application/json" },
+    //       body: jsonString,
+    //     });
+    //  const data = await responseCRM.json();
+    //  const rescode = await fetch(
+    //    "https://4space-backend.vercel.app/update-code-crm",
+    //    {
+    //      method: "POST",
+    //      headers: {
+    //        "Content-Type": "application/json",
+    //      },
+    //      body: JSON.stringify({
+    //        id: data.id,
+    //      }),
+    //    }
+    //  );
+    
+    //   const res = await fetch(
+    //     "https://4space-backend.vercel.app/send-email-action",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({
+    //         type: "first",
+    //         userName: dataCrm.properties.firstname,
+    //       }),
+    //     }
+    // );
+    
+
+    // old code end
 
     try {
       const response = await fetch(
@@ -137,11 +168,15 @@ export default function Form(props) {
         setSuccess(true);
         document.getElementById("form-mobile").hidden = true;
       } else {
-        setError(true);
+       setError(true);
+       setLoading(false);
+       setErrorMes("fail submit contact,please try again");
       }
     } catch (error) {
-      setError(true);
-      console.error("Error:", error);
+       setError(true);
+       setLoading(false);
+       setErrorMes("fail submit contact,please try again");
+       console.error("Error:", error);
     }
   
 
@@ -303,7 +338,7 @@ export default function Form(props) {
 
         {error && (
           <div className="notification is-warning">
-            We couldnt submit the form, can you try again.
+            {errorMes}
           </div>
         )}
         <div className="field is-align-items-flex-center ">

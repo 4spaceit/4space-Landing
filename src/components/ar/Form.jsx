@@ -3,6 +3,7 @@ import { parseUTMParameters } from "../../utmParser";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
 import { parsePhoneNumber } from "libphonenumber-js";
+import { useLocation } from "react-router-dom";
 
 export default function Form(props) {
   const [loading, setLoading] = useState(false);
@@ -12,7 +13,9 @@ export default function Form(props) {
   const [phoneError, setPhoneError] = useState(false);
   const [country, setCountry] = useState();
   const [countryCode, setCountryCode] = useState();
-    const [errorDescription, setErrorDescription] = useState("");
+  const [errorDescription, setErrorDescription] = useState("");
+  const [errorMes, setErrorMes] = useState("");
+    const location = useLocation();
   const [errorDes, setErrorDes] = useState(false);
     const validatePhoneNumber = (phone, countryCode) => {
       try {
@@ -34,7 +37,12 @@ export default function Form(props) {
 
   const submit = async (e) => {
     e.preventDefault();
-    
+     const fullUrl =
+       typeof window !== "undefined"
+         ? `${window.location.origin}${location.pathname}${location.search}${location.hash}`
+         : "";
+     setError(false);
+     setErrorMes("");
     setErrorDes(false);
     setErrorDescription("");
     const des = e.target.elements.message.value;
@@ -87,44 +95,66 @@ export default function Form(props) {
            source: `${utmData.utm_source}`,
            medium: `${utmData.utm_medium}`,
            campaign: `${utmData.utm_campaign}`,
+           hs_context: `${utmData.hubspotUtckValue}`,
+           urlPage: fullUrl,
+           pagePath: `${location.pathname}-form/`,
          },
        };
-       const jsonString = JSON.stringify(dataCrm);
+    const jsonString = JSON.stringify(dataCrm);
 
-       const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
+    const CRMURL = "https://4space-backend.vercel.app/create-leade-at-hubspot";
+    const responseCRM = await fetch(CRMURL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: jsonString,
+    });
+    if (!responseCRM.ok) {
+      setLoading(false);
+      setError(true);
+      setErrorMes(" لم نتمكن من إرسال الليد ، هل يمكنك المحاولة مرة أخرى.");
+      return;
+    }
+    
 
-       const responseCRM = await fetch(CRMURL, {
-         method: "POST",
-         headers: { "Content-Type": "application/json" },
-         body: jsonString,
-       });
-    const data = await responseCRM.json();
-      const rescode = await fetch(
-        "https://4space-backend.vercel.app/update-code-crm",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            id: data.id,
-          }),
-        }
-      );
+    // old code start
+
+    //    const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
+
+    //    const responseCRM = await fetch(CRMURL, {
+    //      method: "POST",
+    //      headers: { "Content-Type": "application/json" },
+    //      body: jsonString,
+    //    });
+    // const data = await responseCRM.json();
+    //   const rescode = await fetch(
+    //     "https://4space-backend.vercel.app/update-code-crm",
+    //     {
+    //       method: "POST",
+    //       headers: {
+    //         "Content-Type": "application/json",
+    //       },
+    //       body: JSON.stringify({
+    //         id: data.id,
+    //       }),
+    //     }
+    //   );
      
-     const res = await fetch(
-       "https://4space-backend.vercel.app/send-email-action",
-       {
-         method: "POST",
-         headers: {
-           "Content-Type": "application/json",
-         },
-         body: JSON.stringify({
-           type: "first",
-           userName: dataCrm.properties.firstname,
-         }),
-       }
-     );
+    //  const res = await fetch(
+    //    "https://4space-backend.vercel.app/send-email-action",
+    //    {
+    //      method: "POST",
+    //      headers: {
+    //        "Content-Type": "application/json",
+    //      },
+    //      body: JSON.stringify({
+    //        type: "first",
+    //        userName: dataCrm.properties.firstname,
+    //      }),
+    //    }
+    // );
+    
+    // old code end
+
        try {
          const response = await fetch(
            "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
@@ -137,10 +167,18 @@ export default function Form(props) {
            document.getElementById("form-mobile").hidden = true;
          } else {
            setError(true);
+           setLoading(false);
+           setErrorMes(
+             " لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى."
+           );
          }
        } catch (error) {
-         setError(true);
-         console.error("Error:", error);
+           setError(true);
+           setLoading(false);
+           setErrorMes(
+             " لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى."
+           );
+           console.error("Error:", error);
        }
 
        setLoading(false);
@@ -320,11 +358,7 @@ export default function Form(props) {
           )}
         </div>
 
-        {error && (
-          <div className="notification is-warning ">
-            لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى.
-          </div>
-        )}
+        {error && <div className="notification is-warning ">{errorMes} </div>}
         <div className="field">
           <div className="control is-align-items-flex-center	">
             <button

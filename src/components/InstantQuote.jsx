@@ -4,6 +4,7 @@ import { parseUTMParameters } from "../utmParser";
 import IntlTelInput from "react-intl-tel-input";
 import "react-intl-tel-input/dist/main.css";
 import { parsePhoneNumber } from "libphonenumber-js";
+import { useLocation } from "react-router-dom";
 
 export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [loading, setLoading] = useState(false);
@@ -12,9 +13,11 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
   const [phone, setPhone] = useState("");
   const [phoneError, setPhoneError] = useState(false);
   const [country, setCountry] = useState();
+  const [errorMes,setErrorMes]=useState("")
   const [countryCode, setCountryCode] = useState();
   const [errorDescription, setErrorDescription] = useState("");
   const [errorDes, setErrorDes] = useState(false);
+   const location = useLocation();
 
   const validatePhoneNumber = (phone, countryCode) => {
     try {
@@ -31,6 +34,10 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
   const submit = async (e) => {
     e.preventDefault();
+     
+ const fullUrl =  typeof window !== "undefined" ? `${window.location.origin}${location.pathname}${location.search}${location.hash}`:"";
+ setError(false)
+ setErrorMes("")
 
     setErrorDes(false);
     setErrorDescription("");
@@ -88,51 +95,77 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
         source: `${utmData.utm_source}`,
         medium: `${utmData.utm_medium}`,
         campaign: `${utmData.utm_campaign}`,
+        hs_context: `${utmData.hubspotUtckValue}`,
+        urlPage: fullUrl,
+        pagePath: `${location.pathname}-project-inquiry/`,
       },
     };
     const jsonString = JSON.stringify(dataCrm);
 
-    const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
+    const CRMURL = "https://4space-backend.vercel.app/create-leade-at-hubspot";
 
     const responseCRM = await fetch(CRMURL, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: jsonString,
     });
-    const data = await responseCRM.json();
-    await fetch("https://4space-backend.vercel.app/update-code-crm", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ id: data.id }),
-    });
-    await fetch("https://4space-backend.vercel.app/send-email-action", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        type: "first",
-        userName: dataCrm.properties.firstname,
-      }),
-    });
-
-    try {
-      const response = await fetch(
-        "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
-        requestOptions
-      );
-
-      if (response.ok) {
-        setSuccess(true);
-        window.location = "https://4space.ae/thank-you/";
-        document.getElementById("form-modal").hidden = true;
-      } else {
-        setError(true);
-      }
-    } catch (error) {
+    console.log("res", responseCRM);
+    if (!responseCRM.ok) {
+      setLoading(false);
       setError(true);
-      console.error("Error:", error);
+      setErrorMes("fail submit lead,please try again")
+      return
     }
+      // old code start
 
-    setLoading(false);
+      // const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
+
+      // const responseCRM = await fetch(CRMURL, {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: jsonString,
+      // });
+      // const data = await responseCRM.json();
+      // await fetch("https://4space-backend.vercel.app/update-code-crm", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({ id: data.id }),
+      // });
+      // await fetch("https://4space-backend.vercel.app/send-email-action", {
+      //   method: "POST",
+      //   headers: { "Content-Type": "application/json" },
+      //   body: JSON.stringify({
+      //     type: "first",
+      //     userName: dataCrm.properties.firstname,
+      //   }),
+      // });
+
+      // old code end
+
+      try {
+        const response = await fetch(
+          "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
+          requestOptions
+        );
+
+        if (response.ok) {
+          setSuccess(true);
+          window.location = "https://4space.ae/thank-you/";
+          document.getElementById("form-modal").hidden = true;
+        } else {
+          setError(true);
+           setLoading(false);
+           setErrorMes("fail submit contact,please try again");
+         
+        }
+      } catch (error) {
+        setError(true);
+           setLoading(false);
+           setErrorMes("fail submit contact,please try again");
+        console.error("Error:", error);
+      }
+
+      setLoading(false);
   };
 
   return (
@@ -286,9 +319,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
               </button>
             </div>
             {error && (
-              <p className="help is-danger has-text-centered">
-                Oops! Something went wrong.
-              </p>
+              <p className="help is-danger has-text-centered">{errorMes}</p>
             )}
             {success && (
               <p className="help is-success has-text-centered">
