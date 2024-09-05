@@ -16,19 +16,98 @@ export default function Header() {
         >
           <div className="navbar-brand">
             <Logo />
-            <button onClick={() => setOpen((v) => !v)} className={`navbar-burger burger link-touch ${open ? "is-active" : ""}`} aria-label="Menu" >
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className={`navbar-burger burger link-touch ${
+                open ? "is-active" : ""
+              }`}
+              aria-label="Menu"
+            >
               <Menu />
             </button>
           </div>
           <div className={`navbar-menu link-touch ${open ? "is-active" : ""}`}>
             <div className="navbar-end">
-              <Link rel="nofollow" to="projects" spy={true} offset={-50} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > المشاريع </Link>
-              <Link rel="nofollow" to="about" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > من نحن </Link>
-              <Link rel="nofollow" to="our-clients" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > عملائنا </Link>
-              <Link rel="nofollow" to="testimonial"  offset={-50}spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > أراء عملائنا </Link>
-              <Link rel="nofollow" to="awards" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > جوائز </Link>
-              <button className="button is-primary is-outlined is-hidden-touch" id="formButton" >
-                <Link rel="nofollow" spy={true} smooth={true} style={{ fontFamily: "NotoNaskhArabic-Regular" }} onClick={() => { document.getElementById("modal").classList.add("is-active"); }} > استفسر عن مشروع  </Link>
+              <Link
+                rel="nofollow"
+                to="projects"
+                spy={true}
+                offset={-50}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                المشاريع{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="about"
+                offset={-50}
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                من نحن{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="our-clients"
+                offset={-50}
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                عملائنا{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="testimonial"
+                offset={-50}
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                أراء عملائنا{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="awards"
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                جوائز{" "}
+              </Link>
+              <button
+                className="py-2 px-4   "
+                id="formButton"
+                style={{ backgroundColor: "white", borderRadius: "10px", cursor: "pointer" }}
+              >
+                <Link
+                  rel="nofollow"
+                  spy={true}
+                  smooth={true}
+                  style={{
+                    fontFamily: "NotoNaskhArabic-Regular",
+                    color: "#000000",
+                     fontSize: "1rem"
+                  }}
+                  onClick={() => {
+                    document.getElementById("modal").classList.add("is-active");
+                  }}
+                >
+                  {" "}
+                  استفسر عن مشروع{" "}
+                </Link>
               </button>
             </div>
           </div>
