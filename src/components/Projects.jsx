@@ -5,13 +5,23 @@ import leftIcon from "../svg/arrow-left.svg";
 import rightIcon from "../svg/arrow-right.svg";
 import plusIcon from "../svg/magnifying-glass-plus.svg";
 import minusIcon from "../svg/magnifying-glass-minus.svg";
-
+import { useLocation } from "react-router-dom";
 import Carousel from "react-gallery-carousel";
 import "react-gallery-carousel/dist/index.css";
 
+const description = {
+  "/en/restaurant":
+    "4Space Design is renowned for delivering exceptional luxury restaurant interiors in the UAE. Our experts capture the essence of a restaurant's identity, creating customized interior designs that resonate through exquisite details.",
+  "/en/general":
+    "4Space Design is a leading interior design firm, renowned for its exceptional projects that transform retail stores, restaurants, commercial, and residential spaces. Our work consistently makes a significant impact, setting new standards in design excellence.",
+  "/en/retail":
+    "At 4Space Design, we elevate retail environments, crafting distinctive spaces that capture the essence of your brand. Our expert team specializes in transforming commercial interiors across the UAE, ensuring each detail reflects luxury and creativity. From initial concept development to project management, we provide comprehensive services tailored to your vision.",
+};
+
 const LandingProjects = ({ data }) => {
   const [isHeight, setIsHeight] = useState(500);
-
+  const location = useLocation();
+  
   useEffect(() => {
     if (window.innerWidth < 768) {
       setIsHeight(300);
@@ -29,20 +39,59 @@ const LandingProjects = ({ data }) => {
   return (
     <section className="section page projects" id="projects">
       <div className="container projects">
-        <h2 className="has-text-centered py-6 is-size-3">OUR EXPERTISE</h2>
+        <h2 className="has-text-centered  is-size-3">OUR EXPERTISE</h2>
+        <p className="is-size-6-mobile py-6" style={{ textAlign: "center" }}>
+          {description[location.pathname]}
+        </p>
+
         <div>
           <div className="container">
             <div className="columns is-multiline">
               {data.map((item, index) => (
-                <Fade className="fix-index" key={index} direction={index % 2 === 1 ? "left" : "right"} triggerOnce={true} fraction={0.5}>
-                  <div className={`column is-full is-multiline columns ${index % 2 === 1 ? "odd" : ""}`} key={index} >
+                <Fade
+                  className="fix-index"
+                  key={index}
+                  direction={index % 2 === 1 ? "left" : "right"}
+                  triggerOnce={true}
+                  fraction={0.5}
+                >
+                  <div
+                    className={`column is-full is-multiline columns ${
+                      index % 2 === 1 ? "odd" : ""
+                    }`}
+                    key={index}
+                  >
                     <div className={`column is-6 is-half`}>
-                      <Carousel images={item.images} style={{ height: isHeight }} hasThumbnails={false} hasDotButtons={"bottom"} hasIndexBoard={false} hasm shouldMaximizeOnClick={true} shouldMinimizeOnClick={true} hasMediaButton={false} objectFit={"cover"} leftIcon={leftArrow} rightIcon={rightArrow} maxIcon={magnify} minIcon={demagnify} ></Carousel>
+                      <Carousel
+                        images={item.images}
+                        style={{ height: isHeight }}
+                        hasThumbnails={false}
+                        hasDotButtons={"bottom"}
+                        hasIndexBoard={false}
+                        hasm
+                        shouldMaximizeOnClick={true}
+                        shouldMinimizeOnClick={true}
+                        hasMediaButton={false}
+                        objectFit={"cover"}
+                        leftIcon={leftArrow}
+                        rightIcon={rightArrow}
+                        maxIcon={magnify}
+                        minIcon={demagnify}
+                      ></Carousel>
                     </div>
                     <div className={`column is-half `}>
-                      <h3 className="has-text-weight-semibold is-size-4"> {item.client} </h3>
-                      <h3 className="mb-4 is-size-6 has-text-weight-normal"> {item.place} </h3>
-                      <p className="mb-2 has-text-left is-size-6-mobile "> {item.descr} </p>
+                      <h3 className="has-text-weight-semibold is-size-4">
+                        {" "}
+                        {item.client}{" "}
+                      </h3>
+                      <h3 className="mb-4 is-size-6 has-text-weight-normal">
+                        {" "}
+                        {item.place}{" "}
+                      </h3>
+                      <p className="mb-2 has-text-left is-size-6-mobile ">
+                        {" "}
+                        {item.descr}{" "}
+                      </p>
                     </div>
                   </div>
                 </Fade>
