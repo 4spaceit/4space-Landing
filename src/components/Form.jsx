@@ -236,7 +236,7 @@ export default function Form(props) {
           />
         </div> */}
         <div className="field">
-          <label className="label">Mobile</label>
+          <label className="label has-text-left">Mobile</label>
           <IntlTelInput
             containerClassName="intl-tel-input btest selected-flag"
             inputClassName="column borderReduis"
@@ -336,11 +336,7 @@ export default function Form(props) {
           )}
         </div>
 
-        {error && (
-          <div className="notification is-warning">
-            {errorMes}
-          </div>
-        )}
+        {error && <div className="notification is-warning">{errorMes}</div>}
         <div className="field is-align-items-flex-center ">
           <div className="control ">
             <button

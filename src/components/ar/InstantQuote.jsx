@@ -267,7 +267,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
           </div> */}
 
           <div className="field">
-            <label className="label has-text-right">Mobile</label>
+            <label className="label has-text-right">موبيل</label>
             <IntlTelInput
               containerClassName="intl-tel-input btest selected-flag"
               inputClassName="column borderReduis"

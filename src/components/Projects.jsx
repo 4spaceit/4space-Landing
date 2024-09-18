@@ -82,7 +82,7 @@ const LandingProjects = ({ data }) => {
                     <div className={`column is-half `}>
                       <h3 className="has-text-weight-semibold is-size-4">
                         {" "}
-                        {item.client}{" "}
+                        {item.client === "AYA Universe"?"":item.client}
                       </h3>
                       <h3 className="mb-4 is-size-6 has-text-weight-normal">
                         {" "}
