@@ -38,13 +38,13 @@ const restaurantImages = [
 ];
 
 const retailImages = [
-  "assets/Retail/images/1.jpg",
-  "assets/Retail/images/2.jpg",
-  "assets/Retail/images/3.jpg",
-  "assets/Retail/images/4.jpg",
-  "assets/Retail/images/5.jpg",
-  "assets/Retail/images/6.jpg",
-  "assets/Retail/images/7.jpg",
+  "assets/Retail/images/1.png",
+  "assets/Retail/images/2.png",
+  "assets/Retail/images/3.png",
+  "assets/Retail/images/4.png",
+  "assets/Retail/images/5.png",
+  "assets/Retail/images/6.png",
+  // "assets/Retail/images/7.png",
 ];
 
 const residentialImages = [

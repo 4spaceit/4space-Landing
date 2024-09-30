@@ -1,102 +1,99 @@
 [
-    {
-        "client": "AYA Universe",
-        "descr": "Spanning an impressive 3,000 sqm, this awe-inspiring project transports guests to a realm where surrealism reigns supreme. Wander through gardens where gravity defies convention, where stars harmonize in cosmic symphonies, and where flowers bloom in the ethereal embrace of moon dust.",
-        "images": [
-            {
-                "alt": "AYA Universe",
-                "src": "assets/Retail/AYA/4SPACE_Aya-01.jpg"
-            },
-            {
-                "alt": "AYA Universe",
-                "src": "assets/Retail/AYA/4SPACE_Aya-02.jpg"
-            },
-            {
-                "alt": "AYA Universe",
-                "src": "assets/Retail/AYA/4SPACE_Aya-03.jpg"
-            }
-        ],
-        "place": "Dubai, United Arab Emirates"
-    },
-    {
-        "client": "VR PARK Dubai Mall",
-        "descr": "In collaboration with Emaar Entertainment, we've forged a virtual reality park that redefines the limits of possibility, promising an unforgettable journey for all who enter. This is a space that isn't just immersive, but visually stunning. Welcome to the future of entertainment.",
-        "images": [
-            {
-                "alt": "VR PARK",
-                "src": "assets/Retail/VR PARK/VR-Park-1-e1521699056966.jpg"
-            },
-            {
-                "alt": "VR PARK",
-                "src": "assets/Retail/VR PARK/VR-Park-3-scaled.jpg"
-            },
-            {
-                "alt": "VR PARK",
-                "src": "assets/Retail/VR PARK/VR-Park-6-scaled.jpg"
-            },
-            {
-                "alt": "VR PARK",
-                "src": "assets/Retail/VR PARK/VR-Park-8-scaled.jpg"
-            },
-            {
-                "alt": "VR PARK",
-                "src": "assets/Retail/VR PARK/VR-Park-12-scaled.jpg"
-            }
-        ],
-        "place": "Dubai, United Arab Emirates"
-    },
-    {
-        "client": "WHITES",
-        "descr": "The palette dances with serene hues like pristine white and soothing sky blue, orchestrating a clean, contemporary ambiance. The result? A bright, open, and utterly modern Retail Interior Design that's as functional as it is fashionable.",
-        "images": [
-            {
-                "alt": "WHITES",
-                "src": "assets/Retail/WHITES/4S_WH-01v2.jpg"
-            },
-            {
-                "alt": "WHITES",
-                "src": "assets/Retail/WHITES/4S_WH-02v2.jpg"
-            },
-            {
-                "alt": "WHITES",
-                "src": "assets/Retail/WHITES/4S_WH-03.jpg"
-            },
-            {
-                "alt": "WHITES",
-                "src": "assets/Retail/WHITES/4S_WH-04.jpg"
-            },
-            {
-                "alt": "WHITES",
-                "src": "assets/Retail/WHITES/4S_WH-05.jpg"
-            }
-        ],
-        "place": "Dubai, United Arab Emirates"
-    },
-    {
-        "client": "Lina Beauty Center",
-        "descr": "As you enter the center, you will be greeted by a stunning interior with a luxurious feel and a gold palette. The interiors have been carefully designed to offer a warm and welcoming ambiance that instantly puts you at ease.At Lina Beauty Center, you can be assured of a luxurious and relaxing experience.",
-        "images": [
-            {
-                "alt": "Lina Beauty Center",
-                "src": "assets/Retail/Lina Beauty Center/Lina-01-1.jpg"
-            },
-            {
-                "alt": "Lina Beauty Center",
-                "src": "assets/Retail/Lina Beauty Center/Lina-02.jpg"
-            },
-            {
-                "alt": "Lina Beauty Center",
-                "src": "assets/Retail/Lina Beauty Center/Lina-03-1.jpg"
-            },
-            {
-                "alt": "Lina Beauty Center",
-                "src": "assets/Retail/Lina Beauty Center/Lina-04-1.jpg"
-            },
-            {
-                "alt": "Lina Beauty Center",
-                "src": "assets/Retail/Lina Beauty Center/Lina-05-1.jpg"
-            }
-        ],
-        "place": "Saudi Arabia"
-    }
+  {
+      "client": "Akabeko",
+      "descr": "A Yakiniku Dining Experience Merging Tradition and Modern Design. Discover the serene beauty of wabi-sabi philosophy in our interior design, featuring organic textures and natural patterns. Enjoy an intimate dining experience with textured black walls, warm wooden accents, and the iconic red Akabeko cow centerpiece.",
+      "images": [
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/28.png"
+          },
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/29.png"
+          },
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/30.png"
+          },
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/31.png"
+          }
+      ],
+      "place": "Dubai United Arab Emirates"
+  },
+  {
+      "client": "NAS House",
+      "descr": "Elite Luxury Hospitality for Entrepreneurs. NAS House offers a private, exclusive community of 150 members with Boho-inspired interiors by 4SPACE Design. Enjoy vibrant communal spaces, including a courtyard with an olive tree, firepit, and amphitheater, fostering interaction and collaboration in a unique luxury hospitality-meets-office environment.",
+      "images": [
+          {
+              "alt": "NAS House",
+              "src": "assets/Retail/Lina Beauty Center/1.jpg"
+          },
+          {
+              "alt": "NAS House",
+              "src": "assets/Retail/Lina Beauty Center/2.jpg"
+          },
+          {
+              "alt": "NAS House",
+              "src": "assets/Retail/Lina Beauty Center/3.jpg"
+          },
+          {
+              "alt": "NAS House",
+              "src": "assets/Retail/Lina Beauty Center/4.jpg"
+          },
+          {
+              "alt": "NAS House",
+              "src": "assets/Retail/Lina Beauty Center/5.jpg"
+          }
+      ],
+      "place": "Dubai United Arab Emirates"
+  },
+
+  {
+    "client": "AYA Universe",
+    "descr": "Spanning an impressive 3,000 sqm, this awe-inspiring project transports guests to a realm where surrealism reigns supreme. Wander through gardens where gravity defies convention, where stars harmonize in cosmic symphonies, and where flowers bloom in the ethereal embrace of moon dust.",
+    "images": [
+      {
+        "alt": "AYA Universe",
+        "src": "assets/Retail/AYA/4SPACE_Aya-01.jpg"
+      },
+      {
+        "alt": "AYA Universe",
+        "src": "assets/Retail/AYA/4SPACE_Aya-02.jpg"
+      },
+      {
+        "alt": "AYA Universe",
+        "src": "assets/Retail/AYA/4SPACE_Aya-03.jpg"
+      }
+    ],
+    "place": "Dubai, United Arab Emirates"
+  },
+  {
+    "client": "VR PARK Dubai Mall",
+    "descr": "In collaboration with Emaar Entertainment, we've forged a virtual reality park that redefines the limits of possibility, promising an unforgettable journey for all who enter. This is a space that isn't just immersive, but visually stunning. Welcome to the future of entertainment.",
+    "images": [
+      {
+        "alt": "VR PARK",
+        "src": "assets/Retail/VR PARK/VR-Park-1-e1521699056966.jpg"
+      },
+      {
+        "alt": "VR PARK",
+        "src": "assets/Retail/VR PARK/VR-Park-3-scaled.jpg"
+      },
+      {
+        "alt": "VR PARK",
+        "src": "assets/Retail/VR PARK/VR-Park-6-scaled.jpg"
+      },
+      {
+        "alt": "VR PARK",
+        "src": "assets/Retail/VR PARK/VR-Park-8-scaled.jpg"
+      },
+      {
+        "alt": "VR PARK",
+        "src": "assets/Retail/VR PARK/VR-Park-12-scaled.jpg"
+      }
+    ],
+    "place": "Dubai, United Arab Emirates"
+  }
 ]
