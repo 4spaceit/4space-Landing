@@ -467,6 +467,10 @@ svg {
   text-align: justify;
 }
 
+.py-4{
+  padding: 1rem 0;
+}
+
 .box-arabic {
   direction: rtl !important;
 }

@@ -80,7 +80,7 @@ const LandingProjects = ({ data }) => {
                       ></Carousel>
                     </div>
                     <div className={`column is-half `}>
-                      <h3 className="has-text-weight-semibold is-size-4">
+                      <h3 className="has-text-weight-semibold is-size-4 py-4">
                         {" "}
                         {item.client === "AYA Universe"?"":item.client}
                       </h3>
