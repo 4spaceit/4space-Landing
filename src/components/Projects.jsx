@@ -15,7 +15,7 @@ const description = {
   "/en/general":
     "4SPACE is an award-winning luxury interior and design firm that delivers distinctive, future-focused architectural and interior solutions. Our designs stand out due to their innovative concepts, cutting-edge technology integration, and cultural relevance, making each project a landmark in its own right.",
   "/en/retail":
-    "At 4Space Design, we elevate retail environments, crafting distinctive spaces that capture the essence of your brand. Our expert team specializes in transforming commercial interiors across the UAE, ensuring each detail reflects luxury and creativity. From initial concept development to project management, we provide comprehensive services tailored to your vision.",
+    "4SPACE is an award-winning luxury interior and design firm that specializes in creating distinctive, future-focused solutions for retail and commercial spaces. Our designs stand out due to their innovative concepts, cutting-edge technology integration, and cultural relevance, making each project a landmark in its own right.",
 };
 
 const LandingProjects = ({ data }) => {
@@ -40,7 +40,7 @@ const LandingProjects = ({ data }) => {
     <section className="section page projects" id="projects">
       <div className="container projects">
         <h2 className="has-text-centered  is-size-3">OUR EXPERTISE</h2>
-        <p className="is-size-6-mobile py-6" style={{ textAlign: "center" }}>
+        <p className="is-size-6-mobile py-6 is-justify" style={{ textAlign: "center" }}>
           {description[location.pathname]}
         </p>
 
