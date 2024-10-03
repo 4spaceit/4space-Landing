@@ -1,34 +1,53 @@
 [
     {
-        "client": "PAPA Dubai",
-        "descr": "This restaurant and bar design is a canvas for diverse concepts, each brimming with unique themes and experiences. Whether you seek a tranquil dinner with friends or an all-night party extravaganza, PAPA Dubai has something exceptional waiting for you.",
+        "client": "Akabeko",
+        "descr": "A Yakiniku Dining Experience Merging Tradition and Modern Design. Inspired by the Akabeko cow, the restaurant reflects cultural storytelling. 4Space used the serene beauty of wabi-sabi philosophy in the restaurant’s interior design, featuring organic textures and natural patterns. Black textured walls, warm wood accents, and indirect lighting create a cozy and dynamic atmosphere. Guests can enjoy Japanese wagyu cooked on smokeless grills, offering a unique dining experience that honors tradition and craftsmanship.",
         "images": [
             {
-                "alt": "PAPA Dubai",
-                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0001.jpg"
+                "alt": "Akabeko",
+                "src": "assets/General/Akabeko/1.png"
             },
             {
-                "alt": "PAPA Dubai",
-                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0002.jpg"
+                "alt": "Akabeko",
+                "src": "assets/General/Akabeko/2.png"
             },
             {
-                "alt": "PAPA Dubai",
-                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0003.jpg"
+                "alt": "Akabeko",
+                "src": "assets/General/Akabeko/3.png"
             },
             {
-                "alt": "PAPA Dubai",
-                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0004.jpg"
-            },
-            {
-                "alt": "PAPA Dubai",
-                "src": "assets/Restaurant/PAPA Dubai/PAPA Dubai0005.jpg"
+                "alt": "Akabeko",
+                "src": "assets/General/Akabeko/4.png"
             }
         ],
-        "place": "Dubai, United Arab Emirates"
+        "place": "Dubai United Arab Emirates"
     },
     {
+        "client": "Moli by Shi",
+        "descr": "Where Chinese heritage art meets modern luxury 4SPACE crafted an extraordinary Chinese restaurant interior design that brings the space to life with vibrant cultural elements, artworks, and modern sophistication. When entering the restaurant, guests are greeted by guardian lion statues, and walls adorned with classic Chinese carvings create a rich cultural atmosphere. The Dougong system in the interior design adds structural integrity and aesthetic beauty to the restaurant. Jasmine-shaped light fixtures and a flowing metallic bead curtain enhance the ambiance. Every design detail, from intricate carvings to plush banquettes, celebrates the fusion of Chinese tradition and modern elegance.",
+        "images": [
+          {
+            "alt": "Moli by Shi",
+            "src": "assets/General/MoliByShi/4.png"
+          },
+          {
+            "alt": "Moli by Shi",
+            "src": "assets/General/MoliByShi/1.png"
+          },
+          {
+            "alt": "Moli by Shi",
+            "src": "assets/General/MoliByShi/2.png"
+          },
+          {
+            "alt": "Moli by Shi",
+            "src": "assets/General/MoliByShi/3.png"
+          }
+        ],
+        "place": "Dubai, United Arab Emirates"
+      },
+    {
         "client": "Jun's Restaurant",
-        "descr": "This space is a warm and inviting haven, ideal for savoring delightful meals with loved ones. The name 'Jun,' translating to 'embracing the spirit of a steed' in Mandarin, perfectly encapsulates the elegance and grace.",
+        "descr": "An ideal warm restaurant for savoring delightful meals with loved ones. 4Space-crafted restaurant interior design of Jun’s Restaurant that blends Asian, North American, and French cuisine together on Sheikh Mohammed bin Rashid Boulevard.The restaurant’s  interior design was inspired by horse stables, featuring natural materials like timber, marble, and white bricks for a sleek and rustic atmosphere. With a sand-colored palette and intriguing textures, the design fosters a warm, inviting ambiance perfect for dining with friends and family.",
         "images": [
             {
                 "alt": "Juns Restaurant",
@@ -54,51 +73,24 @@
         "place": "Dubai, United Arab Emirates"
     },
     {
-        "client": "VAGA",
-        "descr": "VAGA Dubai is your ultimate destination  for a modern, one-of-a-kind dining adventure on Bluewaters Island. With breathtaking views and a concept that bridges tradition and modernity, VAGA guarantees an unforgettable experience.",
+        "client": "Agora",
+        "descr": "Agora, a unique cocktail bar and social club in the Edition Hotel, Downtown Dubai, blends sophistication and comfort. Designed by 4SPACE, one of Dubai’s top interior design firms, it draws inspiration from ancient Greek gathering places and the Gatsby era. The space features bespoke furniture, a luxurious color palette, and a stunning bead curtain centerpiece. Forest green fabrics, copper accents, and Indian green marble enhance the elegant atmosphere. The outdoor area includes playful curtain beads and suspended pampas grass, adding to the serene ambiance.",
         "images": [
             {
-                "alt": "VAGA Dubai",
-                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0001.jpg"
+                "alt": "Agora Restaurant",
+                "src": "assets/Restaurant/Agora/1.png"
             },
             {
-                "alt": "VAGA Dubai",
-                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0002.jpg"
+                "alt": "Agora Restaurant",
+                "src": "assets/Restaurant/Agora/2.png"
             },
             {
-                "alt": "VAGA Dubai",
-                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0003.jpg"
+                "alt": "Agora Restaurant",
+                "src": "assets/Restaurant/Agora/3.png"
             },
             {
-                "alt": "VAGA Dubai",
-                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0004.jpg"
-            },
-            {
-                "alt": "VAGA Dubai",
-                "src": "assets/Restaurant/VAGA Dubai/VAGA Dubai0005.jpg"
-            }
-        ],
-        "place": "Dubai, United Arab Emirates"
-    },
-    {
-        "client": "NONSENSE",
-        "descr": "The bar’s designers have carefully curated the furniture, décor, and lighting to create a visually stunning and functional space. It also features a listening area with a state-of-the-art music program that is timed to the lighting show. The bar is ideal for a night out with friends while experiencing unique music and design elements.",
-        "images": [
-            {
-                "alt": "NONSENSE",
-                "src": "assets/Restaurant/NONSENSE/NONSENSE0001.jpg"
-            },
-            {
-                "alt": "NONSENSE",
-                "src": "assets/Restaurant/NONSENSE/NONSENSE0002.jpg"
-            },
-            {
-                "alt": "NONSENSE",
-                "src": "assets/Restaurant/NONSENSE/NONSENSE0003.jpg"
-            },
-            {
-                "alt": "NONSENSE",
-                "src": "assets/Restaurant/NONSENSE/NONSENSE0004.jpg"
+                "alt": "Agora Restaurant",
+                "src": "assets/Restaurant/Agora/4.png"
             }
         ],
         "place": "Dubai, United Arab Emirates"

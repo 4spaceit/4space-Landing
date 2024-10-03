@@ -11,7 +11,7 @@ import "react-gallery-carousel/dist/index.css";
 
 const description = {
   "/en/restaurant":
-    "4Space Design is renowned for delivering exceptional luxury restaurant interiors in the UAE. Our experts capture the essence of a restaurant's identity, creating customized interior designs that resonate through exquisite details.",
+    "4SPACE is an award-winning luxury interior and design firm that specializes in creating distinctive, future-focused solutions for restaurants. Our designs stand out due to their innovative concepts, cutting-edge technology integration, and cultural relevance, making each project a landmark in its own right.",
   "/en/general":
     "4SPACE is an award-winning luxury interior and design firm that delivers distinctive, future-focused architectural and interior solutions. Our designs stand out due to their innovative concepts, cutting-edge technology integration, and cultural relevance, making each project a landmark in its own right.",
   "/en/retail":

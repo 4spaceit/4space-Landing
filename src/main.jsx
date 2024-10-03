@@ -28,13 +28,13 @@ import LandingRu from "./pages/Landing-ru.jsx";
 import ReactGA from "react-ga4";
 // Make arrya of pictures sources
 const restaurantImages = [
-  "assets/Restaurant/images/1.jpg",
-  "assets/Restaurant/images/2.jpg",
-  "assets/Restaurant/images/3.jpg",
-  "assets/Restaurant/images/4.jpg",
-  "assets/Restaurant/images/5.jpg",
-  "assets/Restaurant/images/6.jpg",
-  "assets/Restaurant/images/7.jpg",
+  "assets/Restaurant/images/1.png",
+  "assets/Restaurant/images/2.png",
+  "assets/Restaurant/images/3.png",
+  "assets/Restaurant/images/4.png",
+  // "assets/Restaurant/images/5.jpg",
+  // "assets/Restaurant/images/6.jpg",
+  // "assets/Restaurant/images/7.jpg",
 ];
 
 const retailImages = [
