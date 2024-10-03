@@ -1,85 +1,95 @@
 [
-    {
-      "client": "BE Meliorism Office",
-      "descr": "Each corner is a tech haven, perfectly suited to the office’s tech-centric ethos. 4SPACE embraced the latest flooring trend, merging carpet and LVT for a motivation-boosting experience. The vibe is casual and welcoming, with vibrant seating arrangements that infuse energy into the space. ",
-      "images": [
+  {
+    "client": "Akabeko",
+    "descr": "A Yakiniku Dining Experience Merging Tradition and Modern Design. Inspired by the Akabeko cow, the restaurant reflects cultural storytelling. 4Space used the serene beauty of wabi-sabi philosophy in the restaurant’s interior design, featuring organic textures and natural patterns. Black textured walls, warm wood accents, and indirect lighting create a cozy and dynamic atmosphere. Guests can enjoy Japanese wagyu cooked on smokeless grills, offering a unique dining experience that honors tradition and craftsmanship.",
+    "images": [
         {
-          "alt": "BE Meliorism Office",
-          "src": "assets/Commercial/BE Meliorism Office/BE01-4space.jpg"
+            "alt": "Akabeko",
+            "src": "assets/General/Akabeko/1.png"
         },
         {
-          "alt": "BE Meliorism Office",
-          "src": "assets/Commercial/BE Meliorism Office/BE02-4space.jpg"
+            "alt": "Akabeko",
+            "src": "assets/General/Akabeko/2.png"
         },
         {
-          "alt": "BE Meliorism Office",
-          "src": "assets/Commercial/BE Meliorism Office/BE03-4space.jpg"
+            "alt": "Akabeko",
+            "src": "assets/General/Akabeko/3.png"
         },
         {
-          "alt": "BE Meliorism Office",
-          "src": "assets/Commercial/BE Meliorism Office/BE04-4space.jpg"
-        },
-        {
-          "alt": "BE Meliorism Office",
-          "src": "assets/Commercial/BE Meliorism Office/BE07-4space.jpg"
+            "alt": "Akabeko",
+            "src": "assets/General/Akabeko/4.png"
         }
-      ],
-      "place": "Dubai, United Arab Emirates"
+    ],
+    "place": "Dubai United Arab Emirates"
+},
+
+{
+  "client": "NAS House",
+  "descr": "4Space designed NAS House in Dubai, a unique hospitality experience for 150 entrepreneurs, founders, and creators. Rejecting traditional hospitality norms, 4SPACE created an exceptional interior design that merges hotel and office concepts, offering a dynamic shared experience. This innovative approach reflects a luxury design prioritizing individuality and community. The design embraces a Boho aesthetic, blending multicultural textiles and eclectic artworks to create a personalized environment. NAS House encourages social engagement, with the firepit and seating area serving as key gathering spots.",
+  "images": [
+    {
+        "alt": "NAS House",
+        "src": "assets/General/1.png"
+    },
+      {
+          "alt": "NAS House",
+          "src": "assets/Retail/Lina Beauty Center/1.jpg"
+      },
+      {
+          "alt": "NAS House",
+          "src": "assets/Retail/Lina Beauty Center/45.png"
+      },
+      {
+          "alt": "NAS House",
+          "src": "assets/Retail/Lina Beauty Center/4.jpg"
+      },
+      {
+          "alt": "NAS House",
+          "src": "assets/Retail/Lina Beauty Center/5.jpg"
+      }
+  ],
+  "place": "Dubai United Arab Emirates"
+},
+{
+  "client": "Moli by Shi",
+  "descr": "Where Chinese heritage art meets modern luxury 4SPACE crafted an extraordinary Chinese restaurant interior design that brings the space to life with vibrant cultural elements, artworks, and modern sophistication. When entering the restaurant, guests are greeted by guardian lion statues, and walls adorned with classic Chinese carvings create a rich cultural atmosphere. The Dougong system in the interior design adds structural integrity and aesthetic beauty to the restaurant. Jasmine-shaped light fixtures and a flowing metallic bead curtain enhance the ambiance. Every design detail, from intricate carvings to plush banquettes, celebrates the fusion of Chinese tradition and modern elegance.",
+  "images": [
+    {
+      "alt": "Moli by Shi",
+      "src": "assets/General/MoliByShi/4.png"
     },
     {
-      "client": "4SPACE Design",
-      "descr": "This is a multi-functional marvel. Open areas fuel collaboration, while private zones host crucial meetings. The standout pivotal doors offer privacy when it counts, and the open ceiling, adorned with industrial metal piping, infuses a touch of raw elegance.",
-      "images": [
-        {
-          "alt": "4SPACE Design",
-          "src": "assets/Commercial/4SPACE Design/4space-office-01-2.jpg"
-        },
-        {
-          "alt": "4SPACE Design",
-          "src": "assets/Commercial/4SPACE Design/4space-office-02-2.jpg"
-        },
-        {
-          "alt": "4SPACE Design",
-          "src": "assets/Commercial/4SPACE Design/4space-office-03-2.jpg"
-        },
-        {
-          "alt": "4SPACE Design",
-          "src": "assets/Commercial/4SPACE Design/4space-office-04-2.jpg"
-        },
-        {
-          "alt": "4SPACE Design",
-          "src": "assets/Commercial/4SPACE Design/4space-office-05-2.jpg"
-        }
-      ],
-      "place": "Dubai, United Arab Emirates"
-    },{
-        "client": "Karamna Al Khakleej",
-        "descr": "Karamna Al Khaleej is a brand that embodies the true essence of Levantine-Gulf cuisine with a contemporary twist. The brand’s identity is reflected in the color palette of black, white, and gold, which speaks to its premium and sophisticated nature, designed by 4SPACE, a restaurant design company. At the heart of the brand’s identity is its logo, which is a beautiful Arabic calligraphy with a touch of golden leaves that adds a touch of elegance and luxury. The logo perfectly encapsulates the brand’s mission as a restaurant design company: to create a premium, cohesive experience that is both authentic and fresh. ",
-        "images": [
-            {
-                "alt": "Karamna Al Khakleej",
-                "src": "assets/Branding/Karamna Al Khakleej/Karamna-1.jpg"
-            },
-            {
-                "alt": "Karamna Al Khakleej",
-                "src": "assets/Branding/Karamna Al Khakleej/Karamna-Branding-Feature.jpg"
-            }
-        ],
-        "place": "Dubai, United Arab Emirates"
+      "alt": "Moli by Shi",
+      "src": "assets/General/MoliByShi/1.png"
     },
     {
-        "client": "Ayoush",
-        "descr": "Ayoush is a brand that is all about capturing the essence of modern luxury and elegance. The sleek and sophisticated design immediately draws your attention to the brand identity. The logo, with its intricate calligraphy, exudes a sense of timelessness and refinement in a restaurant design. The use of a monochromatic color scheme of black adds to the brand’s sophistication and creates a strong visual impact. The typography is clean and modern, yet classic, perfectly reflecting the brand’s values of quality and luxury. ",
-        "images": [
-            {
-                "alt": "Ayoush",
-                "src": "assets/Branding/Ayoush/Ayoush-1.jpg"
-            },
-            {
-                "alt": "Ayoush",
-                "src": "assets/Branding/Ayoush/Ayoush-Branding-Feature-1.jpg"
-            }
-        ],
-        "place": "Dubai, United Arab Emirates"
+      "alt": "Moli by Shi",
+      "src": "assets/General/MoliByShi/2.png"
+    },
+    {
+      "alt": "Moli by Shi",
+      "src": "assets/General/MoliByShi/3.png"
     }
+  ],
+  "place": "Dubai, United Arab Emirates"
+}, 
+{
+  "client": "A Futuristic Dream World",
+  "descr": "Covering a breathtaking 3,000 square meters, this extraordinary interior design project invites guests into a world where surrealism takes center stage. Step into gardens that challenge the very laws of gravity, where stars unite in mesmerizing cosmic symphonies, and where delicate flowers blossom amidst the celestial glow of moon dust. Every corner of this otherworldly space immerses visitors in an experience that defies logic, elevating the imagination and awakening a sense of wonder.",
+  "images": [
+    {
+      "alt": "AYA Universe",
+      "src": "assets/Retail/AYA/4SPACE_Aya-01.jpg"
+    },
+    {
+      "alt": "AYA Universe",
+      "src": "assets/Retail/AYA/4SPACE_Aya-02.jpg"
+    },
+    {
+      "alt": "AYA Universe",
+      "src": "assets/Retail/AYA/4SPACE_Aya-03.jpg"
+    }
+  ],
+  "place": "Dubai, United Arab Emirates"
+}
 ]

@@ -463,6 +463,10 @@ svg {
   text-align: center;
 }
 
+.is-justify{
+  text-align: justify;
+}
+
 .box-arabic {
   direction: rtl !important;
 }

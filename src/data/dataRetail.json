@@ -5,49 +5,65 @@
       "images": [
           {
               "alt": "Akabeko",
-              "src": "assets/Retail/WHITES/28.png"
+              "src": "assets/Retail/WHITES/47.png"
           },
           {
               "alt": "Akabeko",
-              "src": "assets/Retail/WHITES/29.png"
+              "src": "assets/Retail/WHITES/48.png"
           },
           {
               "alt": "Akabeko",
-              "src": "assets/Retail/WHITES/30.png"
+              "src": "assets/Retail/WHITES/49.png"
           },
           {
               "alt": "Akabeko",
-              "src": "assets/Retail/WHITES/31.png"
+              "src": "assets/Retail/WHITES/50.png"
+          },
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/51.png"
+          },
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/52.png"
+          },
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/53.png"
+          },
+          {
+              "alt": "Akabeko",
+              "src": "assets/Retail/WHITES/54.png"
           }
       ],
       "place": "Dubai United Arab Emirates"
   },
   {
-      "client": "NAS House",
-      "descr": "Elite Luxury Hospitality for Entrepreneurs. NAS House offers a private, exclusive community of 150 members with Boho-inspired interiors by 4SPACE Design. Enjoy vibrant communal spaces, including a courtyard with an olive tree, firepit, and amphitheater, fostering interaction and collaboration in a unique luxury hospitality-meets-office environment.",
-      "images": [
-          {
-              "alt": "NAS House",
-              "src": "assets/Retail/Lina Beauty Center/1.jpg"
-          },
-          {
-              "alt": "NAS House",
-              "src": "assets/Retail/Lina Beauty Center/2.jpg"
-          },
-          {
-              "alt": "NAS House",
-              "src": "assets/Retail/Lina Beauty Center/3.jpg"
-          },
-          {
-              "alt": "NAS House",
-              "src": "assets/Retail/Lina Beauty Center/4.jpg"
-          },
-          {
-              "alt": "NAS House",
-              "src": "assets/Retail/Lina Beauty Center/5.jpg"
-          }
-      ],
-      "place": "Dubai United Arab Emirates"
+    "client": "BE Meliorism Office",
+    "descr": "Each corner is a tech haven, perfectly suited to the office’s tech-centric ethos. 4SPACE embraced the latest flooring trend, merging carpet and LVT for a motivation-boosting experience. The vibe is casual and welcoming, with vibrant seating arrangements that infuse energy into the space. ",
+    "images": [
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE01-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE02-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE03-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE04-4space.jpg"
+      },
+      {
+        "alt": "BE Meliorism Office",
+        "src": "assets/Commercial/BE Meliorism Office/BE07-4space.jpg"
+      }
+    ],
+    "place": "Dubai, United Arab Emirates"
   },
 
   {

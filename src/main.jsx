@@ -42,8 +42,8 @@ const retailImages = [
   "assets/Retail/images/2.png",
   "assets/Retail/images/3.png",
   "assets/Retail/images/4.png",
-  "assets/Retail/images/5.png",
-  "assets/Retail/images/6.png",
+  // "assets/Retail/images/5.png",
+  // "assets/Retail/images/6.png",
   // "assets/Retail/images/7.png",
 ];
 
@@ -75,12 +75,16 @@ ReactGA.initialize("GTM-56C3PS8");
 // ];
 
 const generalImage =[
-  "assets/Commercial/images/4.jpg",
-  "assets/Branding/images/1.jpg",
-  "assets/Commercial/images/5.jpg",
-  "assets/Branding/images/2.jpg",
-  "assets/Commercial/images/6.jpg",
-  "assets/Branding/images/3.jpg",
+  // "assets/Commercial/images/4.jpg",
+  // "assets/Branding/images/1.jpg",
+  // "assets/Commercial/images/5.jpg",
+  // "assets/Branding/images/2.jpg",
+  // "assets/Commercial/images/6.jpg",
+  // "assets/Branding/images/3.jpg",
+  "assets/General/1.png",
+  "assets/General/2.png",
+  "assets/General/3.png",
+  "assets/General/4.png",
 ]
 
 // Function to save or update UTM parameters

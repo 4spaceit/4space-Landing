@@ -13,7 +13,7 @@ const description = {
   "/en/restaurant":
     "4Space Design is renowned for delivering exceptional luxury restaurant interiors in the UAE. Our experts capture the essence of a restaurant's identity, creating customized interior designs that resonate through exquisite details.",
   "/en/general":
-    "4Space Design is a leading interior design firm, renowned for its exceptional projects that transform retail stores, restaurants, commercial, and residential spaces. Our work consistently makes a significant impact, setting new standards in design excellence.",
+    "4SPACE is an award-winning luxury interior and design firm that delivers distinctive, future-focused architectural and interior solutions. Our designs stand out due to their innovative concepts, cutting-edge technology integration, and cultural relevance, making each project a landmark in its own right.",
   "/en/retail":
     "At 4Space Design, we elevate retail environments, crafting distinctive spaces that capture the essence of your brand. Our expert team specializes in transforming commercial interiors across the UAE, ensuring each detail reflects luxury and creativity. From initial concept development to project management, we provide comprehensive services tailored to your vision.",
 };
@@ -88,7 +88,7 @@ const LandingProjects = ({ data }) => {
                         {" "}
                         {item.place}{" "}
                       </h3>
-                      <p className="mb-2 has-text-left is-size-6-mobile ">
+                      <p className="mb-2 is-justify is-size-6-mobile ">
                         {" "}
                         {item.descr}{" "}
                       </p>
