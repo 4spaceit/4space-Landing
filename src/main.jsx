@@ -28,20 +28,20 @@ import LandingRu from "./pages/Landing-ru.jsx";
 import ReactGA from "react-ga4";
 // Make arrya of pictures sources
 const restaurantImages = [
-  "assets/Restaurant/images/1.png",
-  "assets/Restaurant/images/2.png",
-  "assets/Restaurant/images/3.png",
-  "assets/Restaurant/images/4.png",
+  "assets/General/Slider/1.jpg",
+  "assets/General/Slider/7.jpg",
+  "assets/General/Slider/5.jpg",
+  "assets/General/Slider/3.jpg",
   // "assets/Restaurant/images/5.jpg",
   // "assets/Restaurant/images/6.jpg",
   // "assets/Restaurant/images/7.jpg",
 ];
 
 const retailImages = [
-  "assets/Retail/images/1.png",
-  "assets/Retail/images/2.png",
-  "assets/Retail/images/3.png",
-  "assets/Retail/images/4.png",
+  "assets/General/Slider/6.jpg",
+  "assets/General/Slider/9.jpg",
+  "assets/General/Slider/4.jpg",
+  "assets/General/Slider/8.jpg",
   // "assets/Retail/images/5.png",
   // "assets/Retail/images/6.png",
   // "assets/Retail/images/7.png",
@@ -81,10 +81,10 @@ const generalImage =[
   // "assets/Branding/images/2.jpg",
   // "assets/Commercial/images/6.jpg",
   // "assets/Branding/images/3.jpg",
-  "assets/General/1.png",
-  "assets/General/2.png",
-  "assets/General/3.png",
-  "assets/General/4.png",
+  "assets/General/Slider/1.jpg",
+  "assets/General/Slider/2.jpg",
+  "assets/General/Slider/3.jpg",
+  "assets/General/Slider/6.jpg",
 ]
 
 // Function to save or update UTM parameters
