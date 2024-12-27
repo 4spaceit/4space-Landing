@@ -116,62 +116,48 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       setErrorMes("fail submit lead,please try again")
       return
     }
-      // old code start
-
-      // const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
-
-      // const responseCRM = await fetch(CRMURL, {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: jsonString,
-      // });
-      // const data = await responseCRM.json();
-      // await fetch("https://4space-backend.vercel.app/update-code-crm", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({ id: data.id }),
-      // });
-      // await fetch("https://4space-backend.vercel.app/send-email-action", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify({
-      //     type: "first",
-      //     userName: dataCrm.properties.firstname,
-      //   }),
-      // });
-
-      // old code end
-
+     
       try {
         const response = await fetch(
           "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
           requestOptions
         );
-
+        
+        const respanseData = await response.json();
         if (response.ok) {
           setSuccess(true);
+           await fetch("http://162.243.173.169:5000/logs", {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json",
+             },
+             body: JSON.stringify({
+               industry: "4space-landing-success",
+               message: `email is : ${
+                 e.target.elements.email.value
+               } success is ${JSON.stringify(respanseData)}`,
+             }),
+           });
           window.location = "https://4space.ae/thank-you/";
           document.getElementById("form-modal").hidden = true;
         } else {
           setError(true);
            setLoading(false);
            setErrorMes("fail submit contact,please try again");
-         
+           console.log("response", error);
+           await fetch("http://162.243.173.169:5000/logs", {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json",
+             },
+             body: JSON.stringify({
+               industry: "4space-landing",
+               message: `email is : ${
+                 e.target.elements.email.value
+               } error is ${JSON.stringify(respanseData)}`,
+             }),
+           });
         }
-         const error = await response.json();
-         console.log("response", error);
-         const res = await fetch("http://162.243.173.169:5000/logs", {
-           method: "POST",
-           headers: {
-             "Content-Type": "application/json",
-           },
-           body: JSON.stringify({
-             industry: "4space-landing",
-             message: `email is : ${
-               e.target.elements.email.value
-             } error is ${JSON.stringify(error)}`,
-           }),
-         });
       } catch (error) {
         setError(true);
            setLoading(false);
