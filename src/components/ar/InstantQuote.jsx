@@ -169,7 +169,21 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
            setLoading(false);
               setErrorMes(
                 " لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى."
-              );
+          );
+           const error = await response.json();
+           console.log("response", error);
+           const res = await fetch("http://162.243.173.169:5000/logs", {
+             method: "POST",
+             headers: {
+               "Content-Type": "application/json",
+             },
+             body: JSON.stringify({
+               industry: "4space-landing",
+               message: `email is : ${
+                 e.target.elements.email.value
+               } error is ${JSON.stringify(error)}`,
+             }),
+           });
 
         }
       } catch (error) {
@@ -177,6 +191,16 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
         setLoading(false);
         setErrorMes(" لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى.");
         console.error("Error:", error);
+         const res = await fetch("http://162.243.173.169:5000/logs", {
+           method: "POST",
+           headers: {
+             "Content-Type": "application/json",
+           },
+           body: JSON.stringify({
+             industry: "4space-landing",
+             message: `email is : ${e.target.elements.email.value} error ${error}`,
+           }),
+         });
       }
 
       setLoading(false);
