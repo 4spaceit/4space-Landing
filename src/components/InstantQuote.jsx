@@ -126,18 +126,18 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
         const respanseData = await response.json();
         if (response.ok) {
           setSuccess(true);
-           await fetch("http://162.243.173.169:5000/logs", {
-             method: "POST",
-             headers: {
-               "Content-Type": "application/json",
-             },
-             body: JSON.stringify({
-               industry: "4space-landing-success",
-               message: `email is : ${
-                 e.target.elements.email.value
-               } success is ${JSON.stringify(respanseData)}`,
-             }),
-           });
+          //  await fetch("http://162.243.173.169:5000/logs", {
+          //    method: "POST",
+          //    headers: {
+          //      "Content-Type": "application/json",
+          //    },
+          //    body: JSON.stringify({
+          //      industry: "4space-landing-success",
+          //      message: `email is : ${
+          //        e.target.elements.email.value
+          //      } success is ${JSON.stringify(respanseData)}`,
+          //    }),
+          //  });
           window.location = "https://4space.ae/thank-you/";
           document.getElementById("form-modal").hidden = true;
         } else {
