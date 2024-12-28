@@ -102,6 +102,19 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
     };
     const jsonString = JSON.stringify(dataCrm);
 
+     await fetch("https://github.digializer.com/logs", {
+       method: "POST",
+       headers: {
+         "Content-Type": "application/json",
+       },
+       body: JSON.stringify({
+         industry: "4space-landing-logs",
+         message: `email is : ${
+           e.target.elements.email.value
+         }  is ${jsonString}`,
+       }),
+     });
+
     const CRMURL = "https://4space-backend.vercel.app/create-leade-at-hubspot";
 
     const responseCRM = await fetch(CRMURL, {
@@ -109,7 +122,7 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       headers: { "Content-Type": "application/json" },
       body: jsonString,
     });
-    console.log("res", responseCRM);
+    
     if (!responseCRM.ok) {
       setLoading(false);
       setError(true);
