@@ -124,66 +124,69 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
       return;
     }
     
-      try {
-        const response = await fetch(
-          "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
-          requestOptions
-        );
-const respanseData = await response.json();
-        if (response.ok) {
-           await fetch("https://github.digializer.com/logs", {
-             method: "POST",
-             headers: {
-               "Content-Type": "application/json",
-             },
-             body: JSON.stringify({
-               industry: "4space-landing-success",
-               message: `email is : ${
-                 e.target.elements.email.value
-               } success is ${JSON.stringify(respanseData)}`,
-             }),
-           });
-           setSuccess(true);
-          window.location = "https://4space.ae/ar/thank-you/";
-          document.getElementById("form-mobile").hidden = true;
-        } else {
-           setError(true);
-           setLoading(false);
-              setErrorMes(
-                " لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى."
-          );
-             await fetch("https://github.digializer.com/logs", {
-               method: "POST",
-               headers: {
-                 "Content-Type": "application/json",
-               },
-               body: JSON.stringify({
-                 industry: "4space-landing",
-                 message: `email is : ${
-                   e.target.elements.email.value
-                 } error is ${JSON.stringify(respanseData)}`,
-               }),
-             });
+//       try {
+//         const response = await fetch(
+//           "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
+//           requestOptions
+//         );
+// const respanseData = await response.json();
+//         if (response.ok) {
+//            await fetch("https://github.digializer.com/logs", {
+//              method: "POST",
+//              headers: {
+//                "Content-Type": "application/json",
+//              },
+//              body: JSON.stringify({
+//                industry: "4space-landing-success",
+//                message: `email is : ${
+//                  e.target.elements.email.value
+//                } success is ${JSON.stringify(respanseData)}`,
+//              }),
+//            });
+//            setSuccess(true);
+//           window.location = "https://4space.ae/ar/thank-you/";
+//           document.getElementById("form-mobile").hidden = true;
+//         } else {
+//            setError(true);
+//            setLoading(false);
+//               setErrorMes(
+//                 " لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى."
+//           );
+//              await fetch("https://github.digializer.com/logs", {
+//                method: "POST",
+//                headers: {
+//                  "Content-Type": "application/json",
+//                },
+//                body: JSON.stringify({
+//                  industry: "4space-landing",
+//                  message: `email is : ${
+//                    e.target.elements.email.value
+//                  } error is ${JSON.stringify(respanseData)}`,
+//                }),
+//              });
 
-        }
-      } catch (error) {
-        setError(true);
-        setLoading(false);
-        setErrorMes(" لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى.");
-        console.error("Error:", error);
-         const res = await fetch("https://github.digializer.com/logs", {
-           method: "POST",
-           headers: {
-             "Content-Type": "application/json",
-           },
-           body: JSON.stringify({
-             industry: "4space-landing",
-             message: `email is : ${e.target.elements.email.value} error ${error}`,
-           }),
-         });
-      }
+//         }
+//       } catch (error) {
+//         setError(true);
+//         setLoading(false);
+//         setErrorMes(" لم نتمكن من إرسال النموذج ، هل يمكنك المحاولة مرة أخرى.");
+//         console.error("Error:", error);
+//          const res = await fetch("https://github.digializer.com/logs", {
+//            method: "POST",
+//            headers: {
+//              "Content-Type": "application/json",
+//            },
+//            body: JSON.stringify({
+//              industry: "4space-landing",
+//              message: `email is : ${e.target.elements.email.value} error ${error}`,
+//            }),
+//          });
+//       }
 
-      setLoading(false);
+    setLoading(false);
+        setSuccess(true);
+        window.location = "https://4space.ae/ar/thank-you/";
+        document.getElementById("form-mobile").hidden = true;
   };
 
   return (
