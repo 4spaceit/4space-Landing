@@ -105,7 +105,7 @@ const SendEmail = () => {
 
     if (
       e.target.elements.email.value === "user@4space" &&
-      e.target.elements.password.value === "4Space!Secure2025"
+      e.target.elements.password.value === "4Space!Secure2025Change"
     ) {
       SetShowContent(true);
       sessionStorage.setItem("is-login", true);
