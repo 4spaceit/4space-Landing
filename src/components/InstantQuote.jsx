@@ -118,18 +118,18 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
 
     const CRMURL = "https://4space-backend.vercel.app/create-leade-at-hubspot";
 
-    const responseCRM = await fetch(CRMURL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: jsonString,
-    });
+    // const responseCRM = await fetch(CRMURL, {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: jsonString,
+    // });
     
-    if (!responseCRM.ok) {
-      setLoading(false);
-      setError(true);
-      setErrorMes("fail submit lead,please try again")
-      return
-    }
+    // if (!responseCRM.ok) {
+    //   setLoading(false);
+    //   setError(true);
+    //   setErrorMes("fail submit lead,please try again")
+    //   return
+    // }
      
       try {
         const response = await fetch(
