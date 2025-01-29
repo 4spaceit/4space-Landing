@@ -119,7 +119,6 @@ export default function Form(props) {
       headers: { "Content-Type": "application/json" },
       body: jsonString,
     });
-    console.log("res", responseCRM);
     if (!responseCRM.ok) {
       setLoading(false);
       setError(true);
@@ -127,46 +126,7 @@ export default function Form(props) {
       return;
     }
     
-    // old code start
-
-    //     const CRMURL = "https://4space-backend.vercel.app/add-contact-to-crm";
-
-    //     const responseCRM = await fetch(CRMURL, {
-    //       method: "POST",
-    //       headers: { "Content-Type": "application/json" },
-    //       body: jsonString,
-    //     });
-    //  const data = await responseCRM.json();
-    //  const rescode = await fetch(
-    //    "https://4space-backend.vercel.app/update-code-crm",
-    //    {
-    //      method: "POST",
-    //      headers: {
-    //        "Content-Type": "application/json",
-    //      },
-    //      body: JSON.stringify({
-    //        id: data.id,
-    //      }),
-    //    }
-    //  );
-    
-    //   const res = await fetch(
-    //     "https://4space-backend.vercel.app/send-email-action",
-    //     {
-    //       method: "POST",
-    //       headers: {
-    //         "Content-Type": "application/json",
-    //       },
-    //       body: JSON.stringify({
-    //         type: "first",
-    //         userName: dataCrm.properties.firstname,
-    //       }),
-    //     }
-    // );
-    
-
-    // old code end
-
+   
     try {
       const response = await fetch(
         "https://www.4spacewp.com/wp-json/contact-form-7/v1/contact-forms/10551/feedback",
@@ -206,6 +166,20 @@ const respanseData = await response.json();
               } error is ${JSON.stringify(respanseData)}`,
             }),
           });
+          await fetch(
+            "https://4space-backend.vercel.app/send-email-error-development",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                message: `email is : ${
+                  e.target.elements.email.value
+                }+ data is ${JSON.stringify(respanseData)}`,
+              }),
+            }
+          );
       }
     } catch (error) {
       setError(true);
@@ -222,6 +196,20 @@ const respanseData = await response.json();
           message: `email is : ${e.target.elements.email.value} error ${error}`,
         }),
       });
+        await fetch(
+          "https://4space-backend.vercel.app/send-email-error-development",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              message: `email is : ${
+                e.target.elements.email.value
+              }+ data is ${JSON.stringify(error)}`,
+            }),
+          }
+        );
     }
   
 

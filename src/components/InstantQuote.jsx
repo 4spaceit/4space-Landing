@@ -171,6 +171,21 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
                } error is ${JSON.stringify(respanseData)}`,
              }),
            });
+          await fetch(
+            "https://4space-backend.vercel.app/send-email-error-development",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                message: `email is : ${
+                  e.target.elements.email.value
+                }+ data is ${JSON.stringify(respanseData)}`,
+              }),
+            }
+          );
+
         }
       } catch (error) {
         setError(true);
@@ -187,6 +202,20 @@ export default function InstantQuote({ openQuote, onCloseQuote }) {
              message: `email is : ${e.target.elements.email.value} error ${error}`,
            }),
          });
+           await fetch(
+             "https://4space-backend.vercel.app/send-email-error-development",
+             {
+               method: "POST",
+               headers: {
+                 "Content-Type": "application/json",
+               },
+               body: JSON.stringify({
+                 message: `email is : ${
+                   e.target.elements.email.value
+                 }+ data is ${JSON.stringify(error)}`,
+               }),
+             }
+           );
       }
 
       setLoading(false);

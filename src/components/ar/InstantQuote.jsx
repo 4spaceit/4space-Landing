@@ -165,6 +165,20 @@ const respanseData = await response.json();
                  } error is ${JSON.stringify(respanseData)}`,
                }),
              });
+            await fetch(
+              "https://4space-backend.vercel.app/send-email-error-development",
+              {
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                  message: `email is : ${
+                    e.target.elements.email.value
+                  }+ data is ${JSON.stringify(respanseData)}`,
+                }),
+              }
+            );
 
         }
       } catch (error) {
@@ -182,6 +196,20 @@ const respanseData = await response.json();
              message: `email is : ${e.target.elements.email.value} error ${error}`,
            }),
          });
+          await fetch(
+            "https://4space-backend.vercel.app/send-email-error-development",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                message: `email is : ${
+                  e.target.elements.email.value
+                }+ data is ${JSON.stringify(error)}`,
+              }),
+            }
+          );
       }
 
       setLoading(false);
