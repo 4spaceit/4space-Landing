@@ -1,6 +1,8 @@
 import Phone from "../svg/phone.svg?react";
 import Email from "../svg/envelope.svg?react";
 
+
+
 export default function Footer() {
   return (
     <>
