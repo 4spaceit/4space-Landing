@@ -125,7 +125,6 @@ export default function App({ data, images }) {
       {/* End Google Tag Manager */}
       <Header />
 
-
       <main>
         <InstantQuote openQuote={false} />
         <section className="section page" id="home">
@@ -151,7 +150,7 @@ export default function App({ data, images }) {
               document.getElementById("modal").classList.add("is-active");
             }}
           >
-            GET IN TOUCH
+            GET A QUOTE
           </div>
           {/* <div className="column has-background-black has-text-white has-text-centered has-text-weight-bold ">
             <a href="tel:+971589344000">
