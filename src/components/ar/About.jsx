@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-import HeroImage from "../../../public/assets/Hero photo 01.jpg";
+import HeroImage from "../../../public/assets/Hero photo 01.png";
 
 export default function About() {
   return (
@@ -9,7 +9,7 @@ export default function About() {
       >
       <Parallax
         bgImage={HeroImage}
-        strength={200}
+        strength={300}
         className="Para-placeholder"
         style={{
           overflow: "hidden",
