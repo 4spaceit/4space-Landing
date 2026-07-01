@@ -1,3 +1,100 @@
+// import { Fade } from "react-awesome-reveal";
+
+// export default function Awards() {
+//   return (
+//     <section className="page awards section awards-grid" id="awards">
+//       <div className="container">
+//         <Fade triggerOnce={true} fraction={0.5}>
+//           <h2 className="has-text-black has-text-centered py-6">AWARDS</h2>
+//           <div className="columns is-multiline is-mobile is-1-desktop is-variable grid is-centered">
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/1.PNG"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/2.jpg"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/3.png"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/4.png"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/5.PNG"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/6.png"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/7.png"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/8.png"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/9.png"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//             <div className="column is-half-mobile is-3-tablet">
+//               <img
+//                 src="/assets/awards/10.png"
+//                 width={200}
+//                 loading="lazy"
+//                 alt="award image"
+//               />
+//             </div>
+//           </div>
+//         </Fade>
+//       </div>
+//     </section>
+//   );
+// }
+
 import { Fade } from "react-awesome-reveal";
 
 export default function Awards() {
@@ -6,24 +103,24 @@ export default function Awards() {
       <div className="container">
         <Fade triggerOnce={true} fraction={0.5}>
           <h2 className="has-text-black has-text-centered py-6">AWARDS</h2>
-          <div className="columns is-multiline is-mobile is-6-desktop is-variable grid is-centered">
-            <div className="column is-half-mobile is-3-tablet">
+          <div className="columns is-multiline is-mobile is-1-desktop is-variable grid is-centered">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
-                src="/assets/awards/2.png"
+                src="/assets/awards/1.PNG"
                 width={200}
                 loading="lazy"
                 alt="award image"
               />
             </div>
-            <div className="column is-half-mobile is-3-tablet">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
-                src="/assets/awards/5.png"
+                src="/assets/awards/2.jpg"
                 width={200}
                 loading="lazy"
                 alt="award image"
               />
             </div>
-            <div className="column is-half-mobile is-3-tablet">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
                 src="/assets/awards/3.png"
                 width={200}
@@ -31,7 +128,7 @@ export default function Awards() {
                 alt="award image"
               />
             </div>
-            <div className="column is-half-mobile is-3-tablet">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
                 src="/assets/awards/4.png"
                 width={200}
@@ -39,24 +136,24 @@ export default function Awards() {
                 alt="award image"
               />
             </div>
-            <div className="column is-half-mobile is-3-tablet">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
-                src="/assets/awards/6.jpg"
+                src="/assets/awards/5.PNG"
                 width={200}
                 loading="lazy"
                 alt="award image"
               />
             </div>
 
-            <div className="column is-half-mobile is-3-tablet">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
-                src="/assets/awards/1.png"
+                src="/assets/awards/6.png"
                 width={200}
                 loading="lazy"
                 alt="award image"
               />
             </div>
-            <div className="column is-half-mobile is-3-tablet">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
                 src="/assets/awards/7.png"
                 width={200}
@@ -64,9 +161,25 @@ export default function Awards() {
                 alt="award image"
               />
             </div>
-            <div className="column is-half-mobile is-3-tablet">
+            <div className="column is-half-mobile is-one-fifth-desktop">
               <img
                 src="/assets/awards/8.png"
+                width={200}
+                loading="lazy"
+                alt="award image"
+              />
+            </div>
+            <div className="column is-half-mobile is-one-fifth-desktop">
+              <img
+                src="/assets/awards/9.png"
+                width={200}
+                loading="lazy"
+                alt="award image"
+              />
+            </div>
+            <div className="column is-half-mobile is-one-fifth-desktop">
+              <img
+                src="/assets/awards/10.png"
                 width={200}
                 loading="lazy"
                 alt="award image"

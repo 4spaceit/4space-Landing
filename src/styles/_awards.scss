@@ -1,3 +1,35 @@
+// .awards-grid{
+//   background: #ffffff;
+//   //filter: brightness(0.9);
+
+//   h3{
+//     font-size: 2rem;
+//     font-weight: 300;
+//     margin-bottom: 1rem;
+//     color: $dark;
+//     text-align: center;
+//   }
+
+//  ul.blocks-gallery-grid {
+//    display: flex;
+//    flex-wrap: wrap;
+//    align-content: center;
+//    justify-content: space-between;
+//    li.blocks-gallery-item {
+//      flex-basis: auto;
+//      width: 100%;
+//      max-width: 120px;
+//    }
+//  }
+// }
+
+// .awards-grid{
+//   .columns{
+//     align-items: center;
+//     justify-content: center;
+//   }
+// }
+
 .awards-grid{
   background: #ffffff;
   //filter: brightness(0.9);
@@ -27,5 +59,15 @@
   .columns{
     align-items: center;
     justify-content: center;
+  }
+
+  .column {
+    flex: 0 0 50%;
+    max-width: 50%;
+
+    @media screen and (min-width: 1024px) {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
   }
 }
