@@ -1,5 +1,6 @@
 import { Parallax } from "react-parallax";
-import HeroImage from "../../public/assets/Hero photo 01.png";
+// import HeroImage from "../../public/assets/Hero photo 01.png";
+import HeroImage from "../../public/assets/team-Photo-4SPACE.png";
 
 export default function About() {
   return (

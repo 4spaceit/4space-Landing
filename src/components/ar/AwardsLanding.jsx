@@ -219,21 +219,34 @@ export default function Awards() {
             </div>
             <div className="column is-half-mobile is-one-fifth-desktop">
               <img
-                src="/assets/awards/1.PNG"
+                src="/assets/awards/1-1.PNG"
                 width={200}
                 loading="lazy"
                 alt="award image"
               />
             </div>
-
             <div className="column is-half-mobile is-one-fifth-desktop">
+              <img
+                src="/assets/awards/1.png"
+                width={200}
+                loading="lazy"
+                alt="award image"
+              />
+              {/* <img
+                src="/assets/awards/1-1.PNG"
+                width={200}
+                loading="lazy"
+                alt="award image"
+              /> */}
+            </div>
+            {/* <div className="column is-half-mobile is-one-fifth-desktop">
               <img
                 src="/assets/awards/10.png"
                 width={200}
                 loading="lazy"
                 alt="award image"
               />
-            </div>
+            </div> */}
             <div className="column is-half-mobile is-one-fifth-desktop">
               <img
                 src="/assets/awards/9.png"
