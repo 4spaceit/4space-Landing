@@ -1,7 +1,7 @@
 // import React from 'react';
 
 import { useEffect, useState } from "react";
-import Logo from "../svg/logo_black.svg?react";
+import Logo from "../svg/4SPACE_Logo-White.svg?react";
 
 const SendEmail = () => {
   const fourSpace = "4Space";
@@ -26,12 +26,15 @@ const SendEmail = () => {
   const [openModel, SetOpenModel] = useState(false);
   const [openModelProjectInf, SetOpenModelProjectInf] = useState(false);
   const [email, setEmail] = useState("");
-  const [emailType,setEmailType]=useState("")
+  const [emailType, setEmailType] = useState("");
   const [contactProjectInf, setContactProjectInf] = useState();
   // const [contactTypeAndEmail, setContactTypeAndEmail] = useState({});
   const [emailBody, setEmailBody] = useState("");
-  const [emailLang,setEmailLang]=useState("")
-  const [emailIndustryLink, setEmailIndustryLink] = useState({ text: "", link: "" });
+  const [emailLang, setEmailLang] = useState("");
+  const [emailIndustryLink, setEmailIndustryLink] = useState({
+    text: "",
+    link: "",
+  });
   const [industryLinks, setIndustryLinks] = useState({
     Other:
       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
@@ -44,7 +47,7 @@ const SendEmail = () => {
     Commercial:
       "https://drive.google.com/file/d/1pR-QN1iOrG_WocMBZ1cBV7HOFMczxHhK/view",
     Architecture:
-     "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
+      "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
     Hotel:
       "https://drive.google.com/file/d/1qFB-ZGssp04ue8PZRiPFiFcbpRZaIN8m/view",
     Leisure:
@@ -52,37 +55,37 @@ const SendEmail = () => {
     Cultural:
       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
   });
-   const [industryLinksAr, setIndustryLinksAr] = useState({
-     Other:
-       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
-     Restaurant:
-       "https://drive.google.com/file/d/1ywLB1UARigKMtv_tM1QSoP5gZPIiQGi2/view",
-     Retail:
-       "https://drive.google.com/file/d/1KAXq-zxWhzJqDIANn51tTKjyFt4tRL8y/view",
-     Residential:
-       "https://drive.google.com/file/d/1ajXSzwIkXgA3ZYK-8lBlrFWizFdbN89h/view",
-     Commercial:
-       "https://drive.google.com/file/d/1pR-QN1iOrG_WocMBZ1cBV7HOFMczxHhK/view",
-     Architecture:
+  const [industryLinksAr, setIndustryLinksAr] = useState({
+    Other:
+      "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+    Restaurant:
+      "https://drive.google.com/file/d/1ywLB1UARigKMtv_tM1QSoP5gZPIiQGi2/view",
+    Retail:
+      "https://drive.google.com/file/d/1KAXq-zxWhzJqDIANn51tTKjyFt4tRL8y/view",
+    Residential:
+      "https://drive.google.com/file/d/1ajXSzwIkXgA3ZYK-8lBlrFWizFdbN89h/view",
+    Commercial:
+      "https://drive.google.com/file/d/1pR-QN1iOrG_WocMBZ1cBV7HOFMczxHhK/view",
+    Architecture:
       "https://drive.google.com/file/d/1q4X_5E4XIoQsZias341SZ6UhyQbULj_D/view",
-     Hotel:
-       "https://drive.google.com/file/d/1qFB-ZGssp04ue8PZRiPFiFcbpRZaIN8m/view",
-     Leisure:
-       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
-     Cultural:
-       "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
-   });
+    Hotel:
+      "https://drive.google.com/file/d/1qFB-ZGssp04ue8PZRiPFiFcbpRZaIN8m/view",
+    Leisure:
+      "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+    Cultural:
+      "https://drive.google.com/file/d/138zy_5V0syvpQHemEvIKxbAjo439f9vj/view",
+  });
   const [contactId, setContactId] = useState();
   const [encodeID, setEncodeId] = useState("");
-  const [userName, setUserName] = useState("")
-  const [isActive, setIsActive]=useState(false)
+  const [userName, setUserName] = useState("");
+  const [isActive, setIsActive] = useState(false);
   const [deleteConfirmationText, setDeleteConfirmationText] = useState("");
 
   useEffect(() => {
     if (sessionStorage.getItem("is-login")) {
       SetShowContent(true);
-  } 
-},[])
+    }
+  }, []);
 
   function textToHTMLMarkup(text) {
     // Escape special characters in the text
@@ -116,59 +119,57 @@ const SendEmail = () => {
     e.preventDefault();
     setLoadingSendEmail(true);
     const emailBody = textToHTMLMarkup(e.target.elements.emailBody.value);
-    let res
+    let res;
     if (emailType === "Qualified") {
-      
       //  https://4space-backend.vercel.app
       if (!encodeID) {
-        console.log("here is is")
-         const rescode = await fetch(
-           "https://4space-backend.vercel.app/update-code-crm",
-           {
-             method: "POST",
-             headers: {
-               "Content-Type": "application/json",
-             },
-             body: JSON.stringify({
-               id: contactId,
-             }),
-           }
-         );
-     }
-        res = await fetch("https://4space-backend.vercel.app/send-email", {
+        console.log("here is is");
+        const rescode = await fetch(
+          "https://4space-backend.vercel.app/update-code-crm",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              id: contactId,
+            }),
+          },
+        );
+      }
+      res = await fetch("https://4space-backend.vercel.app/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          email,
+          emailBody,
+          contactId,
+          encodeID: encodeID ? encodeID : btoa(contactId),
+          emailIndustryLink,
+          emailLang,
+          userName,
+        }),
+      });
+    } else {
+      // https://4space-backend.vercel.app
+      res = await fetch(
+        "https://4space-backend.vercel.app/unqualified-contact",
+        {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
+            contactId: contactId,
             email,
             emailBody,
-            contactId,
-            encodeID: encodeID ? encodeID : btoa(contactId),
-            emailIndustryLink,
-            emailLang,
             userName,
+            emailLang,
           }),
-        });
-      
-    } else {
-      // https://4space-backend.vercel.app
-       res = await fetch(
-         "https://4space-backend.vercel.app/unqualified-contact",
-         {
-           method: "POST",
-           headers: {
-             "Content-Type": "application/json",
-           },
-           body: JSON.stringify({
-             contactId: contactId,
-             email,
-             emailBody,
-             userName,
-             emailLang,
-           }),
-         }
-       );
+        },
+      );
     }
     if (res.status == 200) {
       setContacts(contacts.filter((contact) => contact.id != contactId));
@@ -216,7 +217,7 @@ const SendEmail = () => {
   // https://4space-backend.vercel.app
   const getContacts = async () => {
     const response = await fetch(
-      "https://4space-backend.vercel.app/first-complete-form"
+      "https://4space-backend.vercel.app/first-complete-form",
     );
     const data = await response.json();
     setContacts(data.contactsData);
@@ -224,70 +225,75 @@ const SendEmail = () => {
   };
 
   const deleteLead = async (leadId) => {
-      setLoadingSendEmail(true);
-    const res = await fetch(`https://4space-backend.vercel.app/delete-lead/${leadId}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
+    setLoadingSendEmail(true);
+    const res = await fetch(
+      `https://4space-backend.vercel.app/delete-lead/${leadId}`,
+      {
+        method: "DELETE",
+        headers: {
+          "Content-Type": "application/json",
+        },
       },
-    });
-        if (res.status == 200) {
-          setContacts(contacts.filter((contact) => contact.id != leadId));
-          if (deleteConfirmationText === "CV") {
-              const res = await fetch("https://4space-backend.vercel.app/send-email-cv", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({
-                  userName,
-                  email,
-                  emailLang,
-                }),
-              });
-            console.log("send email")
-          } else if (deleteConfirmationText === "Supplier") {
-             const res = await fetch(
-               "https://4space-backend.vercel.app/send-email-supplier",
-               {
-                 method: "POST",
-                 headers: {
-                   "Content-Type": "application/json",
-                 },
-                 body: JSON.stringify({
-                   userName,
-                   email,
-                   emailLang,
-                 }),
-               }
-             );
-             console.log("send email");
-          }
-        } else {
-          setError(true);
-        }
-        setIsActive(false)
-        setLoadingSendEmail(false);
-  
-  }
-  useEffect(() => { 
+    );
+    if (res.status == 200) {
+      setContacts(contacts.filter((contact) => contact.id != leadId));
+      if (deleteConfirmationText === "CV") {
+        const res = await fetch(
+          "https://4space-backend.vercel.app/send-email-cv",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              userName,
+              email,
+              emailLang,
+            }),
+          },
+        );
+        console.log("send email");
+      } else if (deleteConfirmationText === "Supplier") {
+        const res = await fetch(
+          "https://4space-backend.vercel.app/send-email-supplier",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              userName,
+              email,
+              emailLang,
+            }),
+          },
+        );
+        console.log("send email");
+      }
+    } else {
+      setError(true);
+    }
+    setIsActive(false);
+    setLoadingSendEmail(false);
+  };
+  useEffect(() => {
     getContacts();
   }, []);
 
-    useEffect(() => {
-      const textarea = document.getElementById("custom-textarea");
-      if (textarea) {
-        const lines = textarea.value.split("\n");
-        const longestLineLength = Math.max(...lines.map((line) => line.length));
-        const padding = Math.floor(
-          (textarea.clientWidth - longestLineLength * 8) / 2
-        ); // Adjust the multiplier based on the font size and style
-        const styledLines = lines.map((line) =>
-          line.padStart(padding + line.length)
-        );
-        textarea.value = styledLines.join("\n");
-      }
-    }, []);
+  useEffect(() => {
+    const textarea = document.getElementById("custom-textarea");
+    if (textarea) {
+      const lines = textarea.value.split("\n");
+      const longestLineLength = Math.max(...lines.map((line) => line.length));
+      const padding = Math.floor(
+        (textarea.clientWidth - longestLineLength * 8) / 2,
+      ); // Adjust the multiplier based on the font size and style
+      const styledLines = lines.map((line) =>
+        line.padStart(padding + line.length),
+      );
+      textarea.value = styledLines.join("\n");
+    }
+  }, []);
   return (
     <div>
       {!showContent && (
@@ -468,7 +474,7 @@ const SendEmail = () => {
                             className="button "
                             onClick={() => {
                               setContactProjectInf(
-                                ele.properties.project_description
+                                ele.properties.project_description,
                               );
                               SetOpenModelProjectInf(true);
                             }}
@@ -511,7 +517,7 @@ Kind regards,
     .4Space 
  .ونحن نتطلع دائما” للرد من قبلكم 
 أطيب التحيات،`
-                                } `
+                                } `,
                               );
                               setEmailType("Qualified");
                               // setEmail("Qualified");
@@ -520,12 +526,12 @@ Kind regards,
                               setEmailIndustryLink({
                                 text:
                                   ele.properties.hs_language != "ar"
-                                    ?`${
+                                    ? `${
                                         ele.properties.industry === "Other"
                                           ? "4SPACE Company Profile 2024"
                                           : `4SPACE Company Profile 2024 ${ele.properties.industry}`
                                       }`
-                                    :  `${
+                                    : `${
                                         ele.properties.industry === "Other"
                                           ? "رابطًا لملفنا التعريفي الخاص بيع بالتجزئة بنا"
                                           : `${
@@ -579,7 +585,7 @@ Kind regards,
     إذا كان هناك أي شيء آخر يمكننا مساعدتك به أو إذا كان لديك أي مشاريع أخرى، لا تتردد في التواصل معنا
    شكرًا مرة أخرى على اهتمامك بالعمل معنا 
     أطيب التحيات،`
-                                } `
+                                } `,
                               );
                               // setEmail("Qualified");
                               setEmail(ele.properties.email);

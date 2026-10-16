@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Logo from "../../svg/logo_black.svg?react";
-import Menu from "../../svg/menu0.svg?react";
 import { Link } from "react-scroll";
+import Logo from "../../svg/4SPACE_Logo-White.svg?react";
+import Menu from "../../svg/menu0.svg?react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
@@ -16,17 +16,91 @@ export default function Header() {
         >
           <div className="navbar-brand">
             <Logo />
-            <button onClick={() => setOpen((v) => !v)} className={`navbar-burger burger link-touch ${open ? "is-active" : ""}`} aria-label="Menu" > <Menu /> </button>
+            <button
+              onClick={() => setOpen((v) => !v)}
+              className={`navbar-burger burger link-touch ${open ? "is-active" : ""}`}
+              aria-label="Menu"
+            >
+              {" "}
+              <Menu />{" "}
+            </button>
           </div>
           <div className={`navbar-menu link-touch ${open ? "is-active" : ""}`}>
             <div className="navbar-end">
-              <Link rel="nofollow" to="projects" spy={true} offset={-50} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > Проекты </Link>
-              <Link rel="nofollow" to="about" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > О нас </Link>
-              <Link rel="nofollow" to="our-clients" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > Клиенты </Link>
-              <Link rel="nofollow" to="testimonial" offset={-50} spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > Отзывы </Link>
-              <Link rel="nofollow" to="awards" spy={true} smooth={true} className="navbar-item" onClick={() => setOpen(false)} > Награды </Link>
-              <button className="button is-primary is-outlined is-hidden-touch " id="formButton" >
-                <Link rel="nofollow" spy={true} smooth={true} onClick={() => { document.getElementById("modal").classList.add("is-active"); }} > Оставить запрос </Link>
+              <Link
+                rel="nofollow"
+                to="projects"
+                spy={true}
+                offset={-50}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                Проекты{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="about"
+                offset={-50}
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                О нас{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="our-clients"
+                offset={-50}
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                Клиенты{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="testimonial"
+                offset={-50}
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                Отзывы{" "}
+              </Link>
+              <Link
+                rel="nofollow"
+                to="awards"
+                spy={true}
+                smooth={true}
+                className="navbar-item"
+                onClick={() => setOpen(false)}
+              >
+                {" "}
+                Награды{" "}
+              </Link>
+              <button
+                className="button is-primary is-outlined is-hidden-touch "
+                id="formButton"
+              >
+                <Link
+                  rel="nofollow"
+                  spy={true}
+                  smooth={true}
+                  onClick={() => {
+                    document.getElementById("modal").classList.add("is-active");
+                  }}
+                >
+                  {" "}
+                  Оставить запрос{" "}
+                </Link>
               </button>
             </div>
           </div>

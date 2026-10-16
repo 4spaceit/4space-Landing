@@ -1,21 +1,152 @@
+// import { useState } from "react";
+// import { Link } from "react-scroll";
+// import Logo from "../../svg/4SPACE_Logo-White.svg?react";
+// import Menu from "../../svg/menu0.svg?react";
+
+// export default function Header() {
+//   const [open, setOpen] = useState(false);
+
+//   return (
+//     <header className=" is-active " id="header">
+//       <div className="container ">
+//         <nav
+//           className="navbar is-dark py-1 is-fixed-top mobile-padding is-expanded"
+//           role="navigation"
+//           aria-label="main navigation"
+//         >
+//           <div className="navbar-brand">
+//             <Logo />
+//             <button
+//               onClick={() => setOpen((v) => !v)}
+//               className={`navbar-burger burger link-touch ${
+//                 open ? "is-active" : ""
+//               }`}
+//               aria-label="Menu"
+//             >
+//               <Menu />
+//             </button>
+//           </div>
+//           <div className={`navbar-menu link-touch ${open ? "is-active" : ""}`}>
+//             <div className="navbar-end">
+//               <Link
+//                 rel="nofollow"
+//                 to="projects"
+//                 spy={true}
+//                 offset={-50}
+//                 smooth={true}
+//                 className="navbar-item"
+//                 onClick={() => setOpen(false)}
+//               >
+//                 {" "}
+//                 المشاريع{" "}
+//               </Link>
+//               <Link
+//                 rel="nofollow"
+//                 to="about"
+//                 offset={-50}
+//                 spy={true}
+//                 smooth={true}
+//                 className="navbar-item"
+//                 onClick={() => setOpen(false)}
+//               >
+//                 {" "}
+//                 من نحن{" "}
+//               </Link>
+//               <Link
+//                 rel="nofollow"
+//                 to="our-clients"
+//                 offset={-50}
+//                 spy={true}
+//                 smooth={true}
+//                 className="navbar-item"
+//                 onClick={() => setOpen(false)}
+//               >
+//                 {" "}
+//                 عملائنا{" "}
+//               </Link>
+//               <Link
+//                 rel="nofollow"
+//                 to="testimonial"
+//                 offset={-50}
+//                 spy={true}
+//                 smooth={true}
+//                 className="navbar-item"
+//                 onClick={() => setOpen(false)}
+//               >
+//                 {" "}
+//                 أراء عملائنا{" "}
+//               </Link>
+//               <Link
+//                 rel="nofollow"
+//                 to="awards"
+//                 spy={true}
+//                 smooth={true}
+//                 className="navbar-item"
+//                 onClick={() => setOpen(false)}
+//               >
+//                 {" "}
+//                 جوائز{" "}
+//               </Link>
+//               <button
+//                 className="py-2 px-4   "
+//                 id="formButton"
+//                 style={{
+//                   backgroundColor: "white",
+//                   borderRadius: "10px",
+//                   cursor: "pointer",
+//                 }}
+//               >
+//                 <Link
+//                   rel="nofollow"
+//                   spy={true}
+//                   smooth={true}
+//                   style={{
+//                     fontFamily: "NotoNaskhArabic-Regular",
+//                     color: "#000000",
+//                     fontSize: "1rem",
+//                   }}
+//                   onClick={() => {
+//                     document.getElementById("modal").classList.add("is-active");
+//                   }}
+//                 >
+//                   {" "}
+//                   استفسر عن مشروع{" "}
+//                 </Link>
+//               </button>
+//             </div>
+//           </div>
+//         </nav>
+//       </div>
+//     </header>
+//   );
+// }
+
 import { useState } from "react";
-import Logo from "../../svg/logo_black.svg?react";
-import Menu from "../../svg/menu0.svg?react";
 import { Link } from "react-scroll";
+import logoUrl from "../../svg/4SPACE_Logo-White.svg";
+import Menu from "../../svg/menu0.svg?react";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className=" is-active " id="header">
-      <div className="container ">
+    <header className="is-active" id="header">
+      <div className="container">
         <nav
           className="navbar is-dark py-1 is-fixed-top mobile-padding is-expanded"
           role="navigation"
           aria-label="main navigation"
         >
           <div className="navbar-brand">
-            <Logo />
+            <Link
+              to="header"
+              smooth={true}
+              className="navbar-item brand-logo-item"
+              style={{ cursor: "pointer" }}
+              onClick={() => setOpen(false)}
+            >
+              <img src={logoUrl} alt="4SPACE" className="brand-logo" />
+            </Link>
             <button
               onClick={() => setOpen((v) => !v)}
               className={`navbar-burger burger link-touch ${
@@ -37,8 +168,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                {" "}
-                المشاريع{" "}
+                المشاريع
               </Link>
               <Link
                 rel="nofollow"
@@ -49,8 +179,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                {" "}
-                من نحن{" "}
+                من نحن
               </Link>
               <Link
                 rel="nofollow"
@@ -61,8 +190,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                {" "}
-                عملائنا{" "}
+                عملائنا
               </Link>
               <Link
                 rel="nofollow"
@@ -73,8 +201,7 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                {" "}
-                أراء عملائنا{" "}
+                أراء عملائنا
               </Link>
               <Link
                 rel="nofollow"
@@ -84,13 +211,16 @@ export default function Header() {
                 className="navbar-item"
                 onClick={() => setOpen(false)}
               >
-                {" "}
-                جوائز{" "}
+                جوائز
               </Link>
               <button
-                className="py-2 px-4   "
+                className="py-2 px-4"
                 id="formButton"
-                style={{ backgroundColor: "white", borderRadius: "10px", cursor: "pointer" }}
+                style={{
+                  backgroundColor: "white",
+                  borderRadius: "10px",
+                  cursor: "pointer",
+                }}
               >
                 <Link
                   rel="nofollow"
@@ -99,14 +229,14 @@ export default function Header() {
                   style={{
                     fontFamily: "NotoNaskhArabic-Regular",
                     color: "#000000",
-                     fontSize: "1rem"
+                    fontSize: "1rem",
                   }}
                   onClick={() => {
+                    setOpen(false);
                     document.getElementById("modal").classList.add("is-active");
                   }}
                 >
-                  {" "}
-                  استفسر عن مشروع{" "}
+                  استفسر عن مشروع
                 </Link>
               </button>
             </div>
